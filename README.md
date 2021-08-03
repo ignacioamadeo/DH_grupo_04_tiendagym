@@ -9,3 +9,7 @@ Los profesionales independientes, especialmente de la rama de servicios empresar
 No existen plataformas que concentren esta oferta y les den visibilidad a rubros y/profesionales que no tienen lugar público de trabajo.
 
 El objetivo del proyecto es construír una plataforma de oferta de estos servicios que permitan conectar una oferta de calidad con una demanda remota.
+
+En síntesis, el desarrollo de este proyecto estará dirigido a aquellas personas (profesionales) que vean la necesidad de expandir su radio de trabajo, disminuido por el avance de la pandemia o por el hecho de implementar nuevas herramientas tecnológicas para la captación de clientes. 
+
+Por otra parte, también apuntara a personas (no profesionales) que requieran servicios específicos. El objetivo de este sitio será brindarle al usuario una navegación practica y sencilla para resolver sus necesidades. 
