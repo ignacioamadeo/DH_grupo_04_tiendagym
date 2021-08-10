@@ -4,4 +4,12 @@ Debido al avance de la pandemia, muchas personas se vieron en la necesidad de re
 
 También estará dirigida a entrenadores, profesores, instructores, etc. A todo el sector deportivo que requiera de implementos de la mejor calidad en el mercado. 
 
+Links de paginas web de donde hemos tomado inspiracion: 
+
+https://www.hoistfitness.com/
+https://www.turbysport.com.ar/
+https://barrasolimpicasjr.com.ar/
+https://www.mercadolibre.com.ar/
+https://www.amazon.com/
+
 Participantes: Augusto Rojas, Gustavo Avila e Ignacio Amadeo
