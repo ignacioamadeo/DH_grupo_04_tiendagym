@@ -4,7 +4,8 @@
   "description": "Remote Jobs web",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ignacioamadeo/rejo/issues"
   },
-  "homepage": "https://github.com/ignacioamadeo/rejo#readme"
+  "homepage": "https://github.com/ignacioamadeo/rejo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
