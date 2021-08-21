@@ -34,11 +34,23 @@ header{
     display: flex;
 }
 
+.busqueda i{
+  margin: 5px 0px 0px 15px
+}
+
+.busqueda p{
+    margin-left: 20px;
+    margin-top: 5px;
+} 
+
 .loginCarrito{
-    display: flex;
+    display: flex;  
     
-    
-    
+}
+
+.loginCarrito i{
+    margin:10px 5px 5px;
+    font-size: 20px;
 }
 
 
@@ -47,8 +59,16 @@ header{
 footer{
   
     background-color: #1F7A8C;
-    position: relative;
-    top: 1500px;
+  
+}
+
+
+.empresa{
+    text-align: center;
+}
+
+.redesSociales{
+    text-align: center;
 }
 
 /* >>> Tablet: */
