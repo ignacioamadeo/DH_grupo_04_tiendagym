@@ -5,8 +5,21 @@
     box-sizing: border-box;
 }
 
-/* >>> Tener en cuenta el mobile first: */
+/* >>> Acá tener en cuenta el mobile first: */
 
+header{
+    height: 60px;
+    width: 1020px;
+    background-color: #022B3A;
+}
+
+footer{
+    height: 120px;
+    width: 1020px;
+    background-color: #1F7A8C;
+    position: relative;
+    top: 1500px;
+}
 
 /* >>> Tablet: */
 @media (min-width: 481){
@@ -23,5 +36,5 @@
 /* >>> Compu muy grande: */
 @media (min-width: 1280px){
 
-    
+
 }
