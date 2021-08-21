@@ -1,5 +1,27 @@
+/* >>> Style reset: */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* >>> Tener en cuenta el mobile first: */
+
+
+/* >>> Tablet: */
+@media (min-width: 481){
+
+
+}
+
+/* >>> Compu normal: */
+@media (min-width: 769){
+
+
+}
+
+/* >>> Compu muy grande: */
+@media (min-width: 1280px){
+
+    
 }
