@@ -8,14 +8,44 @@
 /* >>> Acá tener en cuenta el mobile first: */
 
 header{
-    height: 60px;
-    width: 1020px;
+   
     background-color: #022B3A;
 }
+.navecion{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.headerLogo{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    display: flex;
+    
+
+}
+
+.busqueda{
+    width: 200px;
+    height: 25px;
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+}
+
+.loginCarrito{
+    display: flex;
+    
+    
+    
+}
+
+
+
 
 footer{
-    height: 120px;
-    width: 1020px;
+  
     background-color: #1F7A8C;
     position: relative;
     top: 1500px;
