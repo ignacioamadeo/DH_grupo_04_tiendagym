@@ -19,17 +19,19 @@ header{
 }
 .mainHeaderTop{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
 .logoPrincipal{
-    width: 200px;
+    width: 250px;
 }
 
 .busqueda{
     width: 35%;
+    min-width: 210px;
     height: 25px;
     background-color: white;
     margin-top: 5px;
@@ -42,7 +44,7 @@ header{
 }
 
 .busqueda p{
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 5px;
 } 
 
@@ -63,9 +65,9 @@ header{
     background-color: white;
     color: #022B3A;
     display: block;
-    max-width: 50px;
-    padding: 12px 0;
-    border-radius: 10px;
+    max-width: 40px;
+    padding: 6px 0;
+    border-radius: 30px;
     text-align: center;
     margin: auto;
 }
@@ -74,6 +76,14 @@ header{
 
 .mainHeaderBottom{
     display: none;
+}
+
+/*<!-- Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar" -->*/
+
+.carrouselPrincipalHome{
+    width: 100vw;
+    object-fit: cover;
+    height: 40%;
 }
 
 /*<-- A partir de acá va la parte footer -->*/
@@ -94,12 +104,18 @@ footer{
 
 /* >>> Tablet: */
 @media (min-width: 481px){
-
-
+    .botonMenuMobile{
+        display: none;
+    }
 }
 
 /* >>> Compu normal: */
 @media (min-width: 769px){
+
+/*<-- A partir de acá va la parte superior del header con menu para la version desktop -->*/
+.mainHeaderTop{
+    flex-direction: row;
+}
 
 /*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
 .mainHeaderBottom{
@@ -119,11 +135,16 @@ footer{
 .mainHeaderBottom li{
     padding: 2px 6px 4px 6px ;
 }
+.botonMenuMobile{
+    display: none;
+}
 
 }
 
 /* >>> Compu muy grande: */
 @media (min-width: 1280px){
-
+    .botonMenuMobile{
+        display: none;
+    }
 
 }
