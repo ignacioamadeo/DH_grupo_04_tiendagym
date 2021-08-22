@@ -21,6 +21,7 @@ header{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logoPrincipal{
@@ -28,15 +29,16 @@ header{
 }
 
 .busqueda{
-    width: 200px;
+    width: 35%;
     height: 25px;
     background-color: white;
     margin-top: 5px;
     display: flex;
+    font-size: 12px;
 }
 
 .busqueda i{
-  margin: 5px 0px 0px 15px
+  margin: 5px 0px 0px 15px;
 }
 
 .busqueda p{
@@ -46,12 +48,14 @@ header{
 
 .loginCarrito{
     display: flex;  
-    
+    color: white;
+    padding: 5px 10px 5px 5px;
 }
 
 .loginCarrito i{
-    margin:10px 5px 5px;
+    padding: 5px 10px 5px 10px;
     font-size: 20px;
+    color: white;
 }
 
 .botonMenuMobile{
@@ -69,10 +73,7 @@ header{
 /*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
 
 .mainHeaderBottom{
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    color: white;
+    display: none;
 }
 
 /*<-- A partir de acá va la parte footer -->*/
@@ -92,14 +93,32 @@ footer{
 }
 
 /* >>> Tablet: */
-@media (min-width: 481){
+@media (min-width: 481px){
 
 
 }
 
 /* >>> Compu normal: */
-@media (min-width: 769){
+@media (min-width: 769px){
 
+/*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
+.mainHeaderBottom{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: white;
+}
+.mainHeaderBottom ul{
+    font-size: 14px;
+    list-style: none;
+    text-decoration: none;
+    color: #e1e5f2;
+    display: flex;
+    padding: 5px 0;
+    }
+.mainHeaderBottom li{
+    padding: 2px 6px 4px 6px ;
+}
 
 }
 
