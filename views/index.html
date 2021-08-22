@@ -7,26 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda GYM, tu bienestar online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <section class="navecion">
-        <div class="headerLogo"> Logo </div>
-        <nav class="busqueda">
-            <!--Aca va menu de navegacion (no lo pusimos en el wireframe)--> 
-            <p>Buscar en TienadGym</p><i class="fas fa-search"></i>
-        </nav>
-        <nav class="loginCarrito">
-            <i class="fas fa-user-circle">
-            <a href="#"></a></i>
-      
-            <i class="fas fa-shopping-cart">
-            <a href="#"></a></i>
-        </nav>
+        <!--A partir de acá va la parte superior del header con logo, buscador y login-->
+        <section class="navegacionSup">
+            <div class="headerLogo"> Logo </div>
+            <nav class="busqueda">
+                <p>Buscar en TienadGym</p><i class="fas fa-search"></i>
+            </nav>
+            <nav class="loginCarrito">
+                <i class="fas fa-user-circle">
+                    <a href="#"></a></i>
+
+                <i class="fas fa-shopping-cart">
+                    <a href="#"></a></i>
+            </nav>
+            <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
+        </section>
+        <section class="navegacionInf">
+            <ul class="menuInf">
+                <li>Noticias</li>
+                <li>Ofertas</li>
+                <li>Hogar</li>
+                <li>Empresas</li>
+            </ul>
         </section>
     </header>
+    <!--Aca termina header y comienza main de la web -->
     <main>
         <section>
             <!--Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar"-->
@@ -64,18 +77,18 @@
     <footer>
         <!--Aca iría pie de web estandarizado con links y redes-->
         <div class="empresa">
-        <section>
-            <h5>Preguntas frecuentes</h5>
-        </section>
-        <section>
-            <h5>Quienes somos</h5>
-        </section>
-        <section>
-            <h5>Contacto</h5>
-        </section>
-        <section>
-            <h5>Dirección</h5>
-        </section>
+            <section>
+                <h5>Preguntas frecuentes</h5>
+            </section>
+            <section>
+                <h5>Quienes somos</h5>
+            </section>
+            <section>
+                <h5>Contacto</h5>
+            </section>
+            <section>
+                <h5>Dirección</h5>
+            </section>
         </div>
         <section class="redesSociales">
             <h5>Siguenos</h5>

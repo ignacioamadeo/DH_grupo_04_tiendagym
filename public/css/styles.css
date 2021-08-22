@@ -5,13 +5,19 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+
 /* >>> Acá tener en cuenta el mobile first: */
+
+/*<-- A partir de acá va la parte superior del header con logo, buscador y login -->*/
 
 header{
    
     background-color: #022B3A;
 }
-.navecion{
+.navegacionSup{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -53,15 +59,22 @@ header{
     font-size: 20px;
 }
 
+/*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
 
+.navegacionInf{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+}
 
+/*<-- A partir de acá va la parte footer -->*/
 
 footer{
   
     background-color: #1F7A8C;
   
 }
-
 
 .empresa{
     text-align: center;
