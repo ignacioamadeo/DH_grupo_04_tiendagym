@@ -17,19 +17,14 @@ header{
    
     background-color: #022B3A;
 }
-.navegacionSup{
+.mainHeaderTop{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-.headerLogo{
-    width: 40px;
-    height: 40px;
-    background-color: red;
-    display: flex;
-    
-
+.logoPrincipal{
+    width: 200px;
 }
 
 .busqueda{
@@ -59,9 +54,21 @@ header{
     font-size: 20px;
 }
 
+.botonMenuMobile{
+    font-size: 22px;
+    background-color: white;
+    color: #022B3A;
+    display: block;
+    max-width: 50px;
+    padding: 12px 0;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
 /*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
 
-.navegacionInf{
+.mainHeaderBottom{
     display: flex;
     justify-content: space-between;
     text-decoration: none;
