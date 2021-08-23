@@ -108,6 +108,49 @@ footer{
     text-align: center;
 }
 
+
+
+/*aqui desarrollare el main del carrito de compra para version mobile*/
+.controlador{
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, 0.692);
+    width: 90%;
+    margin: auto;
+    
+ 
+      
+ }
+ 
+ .imagenP {
+     width: 100px;
+     height: 100px;
+     background-color: red;
+     margin: auto;
+ }
+ 
+ .pago{
+     display: block;
+ }
+ .retiro{
+     display: block;
+ }
+ 
+ .buttonCart{
+     display: block;
+     margin: auto;
+     width: 70px;
+     height: 40px;
+     border-radius: 10px;
+ }
+ 
+
+
+
+
+
+
+
 /* >>> Tablet: */
 @media (min-width: 481px){
     .botonMenuMobile{

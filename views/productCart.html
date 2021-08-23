@@ -22,10 +22,10 @@
                 <p>Buscar en Tienda Gym</p><i class="fas fa-search"></i>
             </nav>
             <nav class="loginCarrito">
-                <a href="#"><i class="fas fa-user-circle">
-                    </i></a>
-                    <a href="./carrito"><i class="fas fa-shopping-cart">
-                    </i></a>
+                <i class="fas fa-user-circle">
+                    <a href="#"></a></i>
+                <i class="fas fa-shopping-cart">
+                    <a href="#"></a></i>
             </nav>
         </div>
         <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
@@ -43,40 +43,57 @@
         </a>
     </header>
     <!--Aca termina header y comienza main de la web -->
-    <main>
-        <section>
-            <!--Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar"-->
-        <img src="./images/pexels-victor-freitas-841130.jpg" class="carrouselPrincipalHome">
-        </section>
-        <section>
-            <header>
-                <!--Aca iría titulo alternativo seccion homepage-->
-            </header>
-            <article>
-                <!--1 Aca iría cada artículo de la homepage-->
-            </article>
-            <article>
-                <!--2 Aca iría cada artículo de la homepage-->
-            </article>
-            <article>
-                <!--3 Aca iría cada artículo de la homepage-->
-            </article>
-            <article>
-                <!--4 Aca iría cada artículo de la homepage-->
-            </article>
-            <article>
-                <!--5 Aca iría cada artículo de la homepage-->
-            </article>
-            <article>
-                <!--6 Aca iría cada artículo de la homepage-->
-            </article>
-            <article>
-                <!--7 Aca iría cada artículo de la homepage-->
-            </article>
-            <article>
-                <!--8 Aca iría cada artículo de la homepage-->
-            </article>
-        </section>
+     <main class="control">
+            <div class="controlador">
+            <section>
+                <h1>Nombre del Produto</h1>
+            </section>
+            <section>
+                <article class="imagenP">
+                  <p>imagendelproducto</p>
+                </article>
+            </section>
+            <section>
+                <p>descripcion del producto</p>
+            </section>
+            <section>
+                <p>agregar cantidad</p>
+            </section>
+            <section>
+                <p>Continuar comprando</p>
+            </section>
+            <section>
+                <p>descuento</p>
+            </section>
+            <section class="precio">
+                <article>
+                    precio final
+                </article>
+            </section>
+            <section class="medioDePago">
+                <form action="/medio" method="POST">
+                <label class="pago">Medio de pago</label>
+               <label>Debito
+                   <input type="radio" name="medio" value="debito">
+                </label>
+                <label>Credito
+                    <input type="radio" name="medio" value="credito">
+                </label>
+                <label>MercadoPago
+                    <input type="radio" name="medio" value="mercadopago">
+                </label> 
+                <label class="retiro">Retiro por local
+                    <input type="radio" name="retiro" value="local">
+                </label>
+                <label class="retiro">Envio a domicilio
+                    <input type="radio" name="retiro" name="domicilio">
+                </label>
+               <div class="buttonCart"><button type="submit">Comprar</button></div>
+    
+                </form>
+            </section>
+            </div>
+    
     </main>
     <footer>
         <!--Aca iría pie de web estandarizado con links y redes-->
