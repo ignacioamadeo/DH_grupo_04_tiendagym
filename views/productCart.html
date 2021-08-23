@@ -76,7 +76,7 @@
                 
              <section class="controlDesktop">
                 <article class="imgProdCart2">
-                    <p>imagen del produto</p>
+                   <img src="/img/biciFijaPanther4.jpg" alt="no se encontro imagen">
                 </article>
                 <section class="descrProd">
                     <p>descripcion del producto</p>
@@ -86,14 +86,28 @@
                 </section>
                 <section class="contCompra">
                     <p>Continuar comprando</p>
-                </section>
-                <section class="cupon">
-                    <p>descuento</p>
-                </section>
+                </section> 
                 <section class="total">
-                    <p>precio final</p>
+                    <h5>precio</h5>
+                   <h5>total parcial</h5>
+                    <h5>descuento</h5>
                 </section>
 
+            </section>
+               
+                <section class="cupon">
+                    <form action="/descuento" method="POST">
+                       <p><label for="">Cupon</label>
+                        <input type="text" name="cupon">
+                    </p>
+                    <p>
+                        <button type="submit">Enviar</button>
+                    </p>
+                    </form>
+                </section>
+
+            <section class="totaCart">
+                <h3>TOTAL</h3>
             </section>
 
             <section class="medioDePago">
