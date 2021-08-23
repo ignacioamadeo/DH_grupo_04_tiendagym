@@ -38,6 +38,7 @@ body{
     margin-top: 5px;
     display: flex;
     font-size: 12px;
+    border-radius: 10px;
 }
 
 .busqueda i{
@@ -112,36 +113,94 @@ footer{
 
 /*aqui desarrollare el main del carrito de compra para version mobile*/
 .controlador{
+  
     text-align: center;
     line-height: 40px;
     background-color: rgba(255, 255, 255, 0.692);
     width: 90%;
     margin: auto;
-    
- 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bold;
       
  }
  
  .imagenP {
-     width: 100px;
-     height: 100px;
+     width: 40%;
+     height: 150px;
      background-color: red;
      margin: auto;
  }
+
+ .desProduCart{
+     background-color: white;
+     width: 80%;
+     margin: auto;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     border-radius: 10px;
+ }
+ .masCantCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+
+ .contComprandoCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+ .descuentoCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+
+ .precioCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+
+ 
  
  .pago{
      display: block;
+     background-color: white;
+     width: 80%;
+     margin: auto;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     border-radius: 10px;
  }
  .retiro{
      display: block;
  }
  
- .buttonCart{
+ .buttonCart button{
      display: block;
      margin: auto;
      width: 70px;
      height: 40px;
      border-radius: 10px;
+ }
+
+ .MasPromoCart{
+     text-align: center;
  }
  
 
@@ -196,6 +255,26 @@ footer{
     justify-content: space-around;
 }
 
+
+/*aqui desarrollare el main del carrito de compra para version desktop*/
+
+
+   
+
+
+.imagenP {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    
+    
+   
+    
+   
+    
+}
+
+
 }
 
 /* >>> Compu muy grande: */
@@ -205,3 +284,9 @@ footer{
     }
 
 }
+
+
+
+
+
+
