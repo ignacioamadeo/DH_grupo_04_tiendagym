@@ -202,6 +202,10 @@ footer{
  .MasPromoCart{
      text-align: center;
  }
+
+ .controlDesktop{
+     display: none;
+ }
  
 
 
@@ -258,21 +262,21 @@ footer{
 
 /*aqui desarrollare el main del carrito de compra para version desktop*/
 
-
-   
-
-
-.imagenP {
-    width: 150px;
+.controlador{
+    display: none;
+}
+.controlDesktop{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgba(255, 255, 255, 0.692);
+}
+.imgProdCart2{
+    width: 200px;
     height: 150px;
     background-color: red;
-    
-    
-   
-    
-   
-    
+    display: flex;
 }
+
 
 
 }
