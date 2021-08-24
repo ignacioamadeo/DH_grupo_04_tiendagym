@@ -237,6 +237,66 @@ footer{
  
 
 
+ /*aqui desarrollare el main del detalle del producto para version mobile*/
+
+ .produCarat{
+    margin: 10px;
+     border-top: solid 1px grey;
+     color: grey;
+ }
+
+ .imagenProd{
+    text-align: center;
+ }
+
+ .imagenProd img{
+     width: 200px;
+     height: 200px;
+     margin: 5px;
+ }
+
+ .mediosProduc{
+     line-height: 20px;
+     display: inline-block;
+ }
+ .parrDestacado{
+     color: rgb(183, 226, 243);
+ }
+
+ .stockProduc{
+     margin-top: 25px;
+     margin-bottom: 25px;
+ }
+ .stockProduc p{
+     margin: auto;
+     margin-top: 10px;
+     width: 90%;
+     background-color: white;
+     padding: 5px;
+     border-radius: 10px;
+     color: black;
+     font-weight: bold;
+ }
+
+ .stockProduc i{
+     text-align: left;
+ }
+
+ .finalizarProd{
+     text-align: center;
+     margin-bottom: 20px;
+ }
+
+ .finalizarProd .comprar{
+     width: 90%;
+     background-color: rgb(183, 226, 243);
+     margin: auto;
+     padding: 5px;
+     border-radius: 10px;
+ }
+
+
+
 
 
 

@@ -11,6 +11,10 @@ app.get('/carrito', (req,res)=>{
     res.sendFile(path.join(__dirname,'./views/productCart.html'))
 });
 
+app.get('/productDetail',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./views/productDetail.html'))
+})
+
 const puerto = process.env.PORT || 3000
 
 app.listen(puerto,()=>
