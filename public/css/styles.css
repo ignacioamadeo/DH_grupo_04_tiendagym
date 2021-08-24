@@ -239,14 +239,23 @@ footer{
 
  /*aqui desarrollare el main del detalle del producto para version mobile*/
 
+
+ .tituloProducDetail{
+     margin: 10px;
+     font-size: 20px;
+     border-top: solid 1px grey;
+     padding: 5px;
+ }
+
  .produCarat{
     margin: 10px;
-     border-top: solid 1px grey;
      color: grey;
  }
 
  .imagenProd{
     text-align: center;
+    background-color: white;
+    margin: none;
  }
 
  .imagenProd img{
@@ -295,9 +304,33 @@ footer{
      border-radius: 10px;
  }
 
+ .finalizarProd .add{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+ }
 
+ .finalizarProd .rebaja{
+    width: 90%;
+    background-color: rgb(183, 226, 243);
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+ }
 
+ .servicioDetai{
+     display: flex;
+     flex-wrap: nowrap;
+     margin-bottom: 5px;
+ }
 
+ .servicioDetai i{
+     margin-right: 10px;
+ }
 
 
 
