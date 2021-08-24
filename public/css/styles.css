@@ -132,11 +132,11 @@ footer{
     padding: 10px;
  }
  
- .imagenP {
-     width: 40%;
+ .imagenP img {
+     width: 150px;
      height: 150px;
-     background-color: red;
      margin: auto;
+     border: solid 5px grey;
  }
 
  .desProduCart{
@@ -173,6 +173,10 @@ footer{
     border-radius: 10px;
  }
 
+ .cupon{
+     display: none;
+ }
+
  .precioCart{
     background-color: white;
     width: 80%;
@@ -200,9 +204,17 @@ footer{
      margin: auto;
      margin-top: 10px;
      margin-bottom: 10px;
-     border-radius: 10px;
-     
+     border-radius: 10px; 
  }
+
+ .totaCart{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
  .retiro{
      display: block;
  }
@@ -306,11 +318,12 @@ footer{
 .descrProd{
     display: flex;
     width: 30%;
-    height: 10%;
-    background-color: white;
-    margin-top: 40px;
-  
-    
+    height: 10%; 
+    margin-top: 40px; 
+}
+
+.descrProd p{
+    font-weight: bold;
 }
 
 .cantidadCart{
@@ -319,7 +332,17 @@ footer{
     height: 60px;
     background-color: white;
     margin-top: 20px;
+}
 
+.cantidadCart p{
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cantidadCart i{
+    margin-top: 20px;
+  
 }
 
 .contCompra{
@@ -337,15 +360,25 @@ footer{
 
 .total{
     display: flex;
+    flex-direction: column;
     width: 150px;
     background-color: white;
     margin-right: 10px;
-  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 25px;
+    border-radius: 10px;
+}
+
+.total h5{
+    margin-left: 3px;
 }
 
 .cupon{
+    display: block;
     text-align: right;
     margin-right:40px ;
+    font-weight: bold;
 }
 
 .totaCart{
