@@ -3,19 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
 }
 
-body{
-    font-family: 'Urbanist', sans-serif;
+main{
+    background-color: white;
 }
 
 /* >>> Acá tener en cuenta el mobile first: */
 
 /*<-- A partir de acá va la parte superior del header con logo, buscador y login -->*/
 
-body{
-    background-color: #022B3A;
-}
 
 .mainHeaderTop{
     display: flex;
@@ -91,6 +89,35 @@ body{
     object-fit: cover;
     height: 40%;
 }
+
+/*<-- A partir de acá va el main de la homepage con la grilla de productos en oferta -->*/
+
+.homeGrillaProductos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homeGrillaProductos img{
+    max-width: 200px;
+}
+
+.homeGrillaProductos article{
+    display: inline-block;
+    border-radius: 10px;
+    border-color: rgb(163, 163, 163);
+    border-width: 0.5px;
+    border-style: solid;
+    margin: 5px 10px 5px 10px;
+}
+
+.homeGrillaProductos ul{
+    font-size: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+
+
 
 /*<-- A partir de acá va la parte footer -->*/
 
