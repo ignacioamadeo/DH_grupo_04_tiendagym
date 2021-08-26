@@ -239,7 +239,9 @@ footer{
 
  /*aqui desarrollare el main del detalle del producto para version mobile*/
 
-
+ .deskProduct{
+     display: none;
+ }
  .tituloProducDetail{
      margin: 10px;
      font-size: 20px;
@@ -523,8 +525,84 @@ footer{
 }
 
 
+/*aqui desarrollare el main del detalle del producto para version Desktop*/
+
+.productDetailMobile{
+    display: none;
+}
+
+.tituloProducDetail{
+    display: none;
+}
+
+.deskProduct{
+    display: flex;
+    justify-content:space-around;
+  
+}
+
+.perfilProductDesk{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px white;
+    
+}
+.tituloProducDesk{
+    display: flex; 
+    flex-direction: column;
+    border: solid 1px white;
 
 }
+.tituloProducDesk h1{
+    color: white;
+    margin-left: 10px;
+}
+
+.imgDetailDesk{
+    text-align: center;
+}
+
+.imgDetailDesk img{
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.mediosDtailDesk{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+
+.contado{
+    font-size: 30px;
+}
+
+.stockDetailDesk{
+    margin-left: 10px;
+}
+
+.stockDetailDesk h3{
+    color: rgb(183, 226, 243);
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 /* >>> Compu muy grande: */
 @media (min-width: 1280px){
