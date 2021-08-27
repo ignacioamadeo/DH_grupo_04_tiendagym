@@ -578,6 +578,8 @@ footer{
 .deskProduct{
     display: flex;
     justify-content:space-around;
+    width: 90%;
+    margin: auto;
   
 }
 
@@ -688,7 +690,20 @@ footer{
  .subTituloProdDesk h4{
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-left: 20px;
  }
+
+ .caracDesk{
+     display: flex;
+ }
+
+ .caracDesk1{
+     margin-left: 30px;
+ }
+
+ .caracDesk2{
+    margin-left: 60px;
+}
 
  .okProducDesk{
     display: flex;
