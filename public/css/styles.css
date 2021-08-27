@@ -717,8 +717,45 @@ footer{
  }
 
 
-}
+ .sobreElProducDesk0{
+     display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+    
+ }
 
+ .subTituloSobreDesk{
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+
+ .sobreElProducDesk{
+   
+    margin-right: 30px;
+    
+
+ }
+
+ .sobreElProducDesk1{
+     display: flex;
+ }
+
+ .sobreElProducDeskP{
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+
+ .sobreElProducDeskP1{
+     margin-left: 100px;
+     width: 40%;
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+
+ 
+
+}
 
 
 
