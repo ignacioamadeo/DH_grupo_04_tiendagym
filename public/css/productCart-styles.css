@@ -3,6 +3,15 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
 /*aqui desarrollare el main del carrito de compra para version mobile*/
+
+.contendeorProductCart{
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
 .controlador{
   
     text-align: center;
