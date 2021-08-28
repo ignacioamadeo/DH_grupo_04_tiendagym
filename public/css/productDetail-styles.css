@@ -169,38 +169,49 @@
     display: none;
 }
 
+.contenedorCentralProductDesk{
+    width: 100%;
+    background-color: #cbe5f1;
+    padding: 40px;
+}
+
 .deskProduct{
     display: flex;
     justify-content:space-around;
-    width: 90%;
-    height: 95;
+    
+    
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
-    border: solid 1px black;
+    border: solid 1px rgba(0,0,0,0.1);
     border-radius: 20px;
+    background-color: white;
   
 }
 
 .perfilProductDesk{
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
+    
     
 }
 .tituloProducDesk{
     display: flex; 
     flex-direction: column;
-    border: solid 1px black;
-
+    margin-top: 20px;
+    border-left: solid 1px rgba(0,0,0,0.2);
+   
 }
 .tituloProducDesk h1{
     color: black;
     margin-left: 10px;
+    font-size: 25px;
 }
 
 .imgDetailDesk{
     text-align: center;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .imgDetailDesk img{
@@ -212,9 +223,10 @@
 
 .mediosDtailDesk{
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 40px;
     margin-bottom: 10px;
     margin-left: 10px;
+    
 
 }
 
@@ -224,7 +236,7 @@
 
 .stockDetailDesk{
     margin-left: 10px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .stockDetailDesk h3{
@@ -243,10 +255,13 @@
 }
 
 .finalizarProdDesk{
-    
+    width: 90%;
     text-align: center;
+    margin: auto;
     margin-top: 100px;
     margin-bottom: 50px;
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+    padding-bottom: 50px;
 }
 
 
@@ -269,7 +284,7 @@
     background-color:rgb(88, 213, 238);
     margin:auto;
     padding: 10px;
-    color: black;
+    color: blue;
     border-radius: 10px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -300,12 +315,11 @@
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 20px;
     color: blue;
     font-weight: bold;
     font-size: 20px;
-    border: solid 1px black;
     width: 90%;
     height: 30px;
  }
@@ -347,12 +361,16 @@
 
  .sobreElProducDesk0{
      display: flex;
+     
     margin-left: 30px;
     margin-top: 30px;
     
+    
  }
  
-
+ .formSobreDesk{
+    flex-grow: 0.25;
+ }
 
  .subTituloSobreDesk1{
      margin-top: 10px;
@@ -362,8 +380,14 @@
  .sobreElProducDesk{
    
     margin-right: 30px;
-    
+   
+ }
 
+ 
+ .sobreElProducDesk01{
+  
+    margin-right: 30px;
+    
  }
 
  .sobreElProducDesk1{
@@ -376,7 +400,7 @@
  }
 
  .firmDesk1{
-     border: solid 0.5px black;
+    border: solid 0.5px rgba(0,0,0,0.1);
  }
 
  .sobreElProducDeskP{
@@ -391,6 +415,14 @@
      margin-top: 10px;
      margin-bottom: 10px;
  }
+    .otrosProductDetailDesk{
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+
+
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
@@ -405,6 +437,8 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
 @media (min-width: 1280px){
 
-
+    .deskProduct{
+        max-width: 1200px;
+    }
 
 }
