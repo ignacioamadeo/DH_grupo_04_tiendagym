@@ -1,6 +1,10 @@
-/* >>> Acá tener en cuenta el mobile first: */
-
 /* >>> Recordar que en la style.css hay un reset de margin, padding y border-box a 0 */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
+
+main{
+    background-color: white;
+}
 
 /*<!-- Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar" -->*/
 

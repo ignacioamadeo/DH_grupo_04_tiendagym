@@ -3,8 +3,7 @@
 /* >>> Recordar que en la style.css hay un reset de margin, padding y border-box a 0 */
 
 
-/*<-- A partir de acá va la parte superior del header con logo, buscador y login -->*/
-
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
 .mainHeaderTop{
     display: flex;

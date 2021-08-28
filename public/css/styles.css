@@ -4,16 +4,14 @@
 @import url('productCart-styles.css');
 @import url('productDetail-styles.css');
 
-/* >>> Style reset (usarlo solo en esta stylesheet): */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
+
+/* Style reset (usarlo solo en esta stylesheet): */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Urbanist', sans-serif;
-}
-
-main{
-    background-color: white;
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
