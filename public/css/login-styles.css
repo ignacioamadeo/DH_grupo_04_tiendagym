@@ -1,0 +1,74 @@
+/* >>> Acá tener siempre en cuenta el mobile first: */
+
+/* >>> Recordar que en la style.css hay un reset de margin, padding y border-box a 0 */
+
+/* >>> estilos de login*/
+.formLogin{
+    background-color: #b8bcee;
+    position: relative;
+    top: 30px;
+    display: flex;
+    margin: auto;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.formLogin form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+
+.formLogin button {
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    border-style: none;
+    padding: 10px 25px 10px 25px;
+    margin: 0 10px 0 10px;
+    font-size: 16px;
+  }
+
+  .formLogin button:hover {
+    background-color: #5f5f5f;
+    color: white;
+  }
+
+  .formLogin input {
+    border-radius: 12px;
+    border-color: #c7c7c7;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 10px 0 10px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+  }
+
+  .logoHeaderLogin{
+      width: 90%;
+      margin: 0 auto; 
+  }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
+@media (min-width: 481px){
+
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
+@media (min-width: 769px){
+
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
+@media (min-width: 1280px){
+
+
+
+}

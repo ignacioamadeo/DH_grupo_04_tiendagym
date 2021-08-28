@@ -1,0 +1,258 @@
+/* >>> Acá tener siempre en cuenta el mobile first: */
+
+/* >>> Recordar que en la style.css hay un reset de margin, padding y border-box a 0 */
+
+/*aqui desarrollare el main del carrito de compra para version mobile*/
+.controlador{
+  
+    text-align: center;
+    line-height: 40px;
+    background-color: #dad8d8;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+      
+ }
+
+ .nomProCart{
+     text-align: center;
+    padding: 10px;
+ }
+ 
+ .imagenP img {
+     width: 150px;
+     height: 150px;
+     margin: auto;
+     border: solid 5px grey;
+ }
+
+ .desProduCart{
+     background-color: white;
+     width: 80%;
+     margin: auto;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     border-radius: 10px;
+ }
+ .masCantCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+
+ .contComprandoCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+ .descuentoCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+
+ .cupon{
+     display: none;
+ }
+
+ .precioCart{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+
+ .medioDePago{
+     width: 90%;
+     background-color: #dad8d8;
+     margin: auto;
+     padding: 10px;
+     text-align: center;
+     border-radius: 10px;
+     line-height: 30px;
+ }
+ 
+ 
+ .pago{
+     display: block;
+     background-color: white;
+     width: 80%;
+     margin: auto;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     border-radius: 10px; 
+ }
+
+ .totaCart{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+ .retiro{
+     display: block;
+ }
+ 
+ .buttonCart button{
+     display: block;
+     margin: auto;
+     width: 70px;
+     height: 40px;
+     border-radius: 10px;
+ }
+
+ .MasPromoCart{
+     text-align: center;
+ }
+
+ .controlDesktop{
+     display: none;
+ }
+ 
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
+@media (min-width: 481px){
+
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
+@media (min-width: 769px){
+
+/*aqui desarrollare el main del carrito de compra para version desktop*/
+
+
+    .controlador{
+        display: none;
+    }
+    .controlDesktop{
+        display: flex;
+        flex-wrap: wrap;
+        background-color:#dad8d8;
+        margin: auto;
+        margin-bottom: 10px;
+        width: 90%;
+        justify-content: space-between;
+        border-radius: 10px;
+    
+       
+    }
+    .imgProdCart2{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        border: solid 3px grey;
+    }
+    
+    .descrProd{
+        display: flex;
+        width: 30%;
+        height: 10%; 
+        margin-top: 40px; 
+    }
+    
+    .descrProd p{
+        font-weight: bold;
+    }
+    
+    .cantidadCart{
+        display: flex;
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        margin-top: 20px;
+    }
+    
+    .cantidadCart p{
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .cantidadCart i{
+        margin-top: 20px;
+      
+    }
+    
+    .contCompra{
+        display: flex;
+        width: 100px;
+        height: 40px;
+        background-color: white;
+        margin-top: 30px;
+        text-align: center;
+        border-radius: 10px;
+     
+    }
+    
+    
+    
+    .total{
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        background-color: white;
+        margin-right: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        line-height: 25px;
+        border-radius: 10px;
+    }
+    
+    .total h5{
+        margin-left: 3px;
+    }
+    
+    .cupon{
+        display: block;
+        text-align: right;
+        margin-right:40px ;
+        font-weight: bold;
+    }
+    
+    .totaCart{
+        width: 90%;
+        background-color: white;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: solid 1px black;
+    }
+    
+    .totaCart h3{
+        margin-left: 10px;
+    }
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
+@media (min-width: 1280px){
+
+
+
+}

@@ -1,0 +1,59 @@
+/* >>> Acá tener en cuenta el mobile first: */
+
+/* >>> Recordar que en la style.css hay un reset de margin, padding y border-box a 0 */
+
+/*<!-- Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar" -->*/
+
+.carrouselPrincipalHome{
+    width: 100vw;
+    object-fit: cover;
+    height: 40%;
+}
+
+/*<-- A partir de acá va el main de la homepage con la grilla de productos en oferta -->*/
+
+.homeGrillaProductos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homeGrillaProductos img{
+    max-width: 200px;
+}
+
+.homeGrillaProductos article{
+    display: inline-block;
+    border-radius: 10px;
+    border-color: rgb(163, 163, 163);
+    border-width: 0.5px;
+    border-style: solid;
+    margin: 5px 10px 5px 10px;
+}
+
+.homeGrillaProductos ul{
+    font-size: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
+@media (min-width: 481px){
+
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
+@media (min-width: 769px){
+
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
+@media (min-width: 1280px){
+
+
+
+}

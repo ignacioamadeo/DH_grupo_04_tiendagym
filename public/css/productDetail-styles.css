@@ -1,0 +1,363 @@
+/* >>> Acá tener siempre en cuenta el mobile first: */
+
+/* >>> Recordar que en la style.css hay un reset de margin, padding y border-box a 0 */
+
+/*aqui desarrollare el main del detalle del producto para version mobile*/
+
+.deskProduct{
+    display: none;
+}
+.tituloProducDetail{
+    margin: 10px;
+    font-size: 20px;
+    border-top: solid 1px grey;
+    padding: 5px;
+}
+
+.produCarat{
+   margin: 10px;
+    color: black;
+}
+
+.imagenProd{
+   text-align: center;
+   background-color: white;
+   margin: none;
+}
+
+.imagenProd img{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+.mediosProduc{
+    line-height: 20px;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+.parrDestacado{
+    color: blue;
+}
+
+.stockProduc{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: black;
+}
+.stockProduc p{
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.stockProduc i{
+    text-align: left;
+}
+
+.finalizarProd{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.finalizarProd .comprar{
+    width: 90%;
+    background-color: rgb(183, 226, 243);
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+  
+}
+
+.finalizarProd .add{
+   width: 90%;
+   background-color: blue;
+   margin: auto;
+   padding: 5px;
+   border-radius: 10px;
+   margin-top: 10px;
+   color: white;
+}
+
+.finalizarProd .rebaja{
+   width: 90%;
+   background-color: rgb(183, 226, 243);
+   margin: auto;
+   padding: 5px;
+   border-radius: 10px;
+   margin-top: 10px;
+    color: black;
+}
+
+.servicioDetai{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 5px;
+    color: blue;
+    font-weight: bold;
+}
+
+.servicioDetai i{
+    margin-right: 10px;
+}
+
+.descripProd{
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: solid 1px black;
+}
+
+.subTituloProd h4{
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+
+
+.listaProd{
+   border-bottom: solid 1px black;
+   
+}
+
+.listaProd li{
+    margin-left:10px;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.okProduc{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    
+}
+.okProduc i{
+    display: flex;
+    margin-right: 10px;    
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
+@media (min-width: 481px){
+
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
+@media (min-width: 769px){
+
+/*aqui desarrollare el main del detalle del producto para version Desktop*/
+
+.productDetailMobile{
+    display: none;
+}
+
+.tituloProducDetail{
+    display: none;
+}
+
+.deskProduct{
+    display: flex;
+    justify-content:space-around;
+    width: 90%;
+    margin: auto;
+  
+}
+
+.perfilProductDesk{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    
+}
+.tituloProducDesk{
+    display: flex; 
+    flex-direction: column;
+    border: solid 1px black;
+
+}
+.tituloProducDesk h1{
+    color: black;
+    margin-left: 10px;
+}
+
+.imgDetailDesk{
+    text-align: center;
+}
+
+.imgDetailDesk img{
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.mediosDtailDesk{
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+
+.contado{
+    font-size: 30px;
+}
+
+.stockDetailDesk{
+    margin-left: 10px;
+}
+
+.stockDetailDesk h3{
+    color: black;
+    line-height: 35px;
+}
+
+.stockDetailDesk label{
+    color: black;
+    font-size: 20px;
+}
+
+.stockDetailDesk select{
+    color: black;
+    font-size: 16px;
+}
+
+.finalizarProdDesk{
+    
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+ .comprarDesk{
+    width: 80%;
+    height: 40px;
+    background-color: blue;
+    margin:auto;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+ }
+
+
+
+ .addDesk{
+    width: 80%;
+    height: 40px;
+    background-color:rgb(88, 213, 238);
+    margin:auto;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+ }
+
+ .rebajaDesk{
+    width: 80%;
+    height: 40px;
+    background-color: blue;
+    margin:auto;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+ }
+
+ .subTituloProdDesk h4{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+ }
+
+ .caracDesk{
+     display: flex;
+ }
+
+ .caracDesk1{
+     margin-left: 30px;
+ }
+
+ .caracDesk2{
+    margin-left: 60px;
+}
+
+ .okProducDesk{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+ }
+
+ .okProducDesk i{
+    display: flex;
+    margin-right: 10px; 
+ }
+
+
+ .sobreElProducDesk0{
+     display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+    
+ }
+
+ .subTituloSobreDesk{
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+
+ .sobreElProducDesk{
+   
+    margin-right: 30px;
+    
+
+ }
+
+ .sobreElProducDesk1{
+     display: flex;
+ }
+
+ .sobreElProducDeskP{
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+
+ .sobreElProducDeskP1{
+     margin-left: 100px;
+     width: 40%;
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
+@media (min-width: 1280px){
+    .botonMenuMobile{
+        display: none;
+    }
+
+
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
+@media (min-width: 1280px){
+
+
+
+}
