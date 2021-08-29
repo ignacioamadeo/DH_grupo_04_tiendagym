@@ -2,8 +2,9 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
-/* >>> estilos de login*/
-.formLogin{
+/* >>> estilos de register*/
+
+.formRegister{
     background-color: #b8bcee;
     position: relative;
     top: 30px;
@@ -15,7 +16,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.formLogin form{
+.formRegister form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -23,7 +24,7 @@
     text-align: center;
 }
 
-.formLogin button {
+.formRegister button {
     border-radius: 12px;
     transition-duration: 0.4s;
     border-style: none;
@@ -32,12 +33,12 @@
     font-size: 16px;
   }
 
-  .formLogin button:hover {
+  .formRegister button:hover {
     background-color: #5f5f5f;
     color: white;
   }
 
-  .formLogin input {
+  .formRegister input {
     border-radius: 12px;
     border-color: #c7c7c7;
     border-style: solid;
@@ -48,11 +49,11 @@
   }
 
   .logoHeaderLogin{
-      width: 90%;
-      margin: 0 auto; 
-  }
+    width: 90%;
+    margin: 0 auto; 
+}
 
-  .myVideo {
+.myVideo {
     left: 50%;
     max-height: 100%;
     position: absolute;
