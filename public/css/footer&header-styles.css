@@ -84,8 +84,9 @@
 
 footer{
     background-color: #e1e5f2;
+    display: flex;
+    justify-content: space-around;
 }
-
 
 .footerLinks{
     text-align: center;
@@ -138,9 +139,14 @@ footer{
 
 /*<-- A partir de acá va la parte footer para la versión desktop -->*/
 
-.footer{
-    display: flex;
-    justify-content: space-around;
+.footerLinks{
+    display: inline-block;
 }
+
+.redesSociales{
+    display: inline-block;
+}
+
+
 }
 
