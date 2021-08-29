@@ -94,6 +94,7 @@
      text-align: center;
      border-radius: 10px;
      line-height: 30px;
+     font-weight: bold;
  }
  
  
@@ -104,7 +105,8 @@
      margin: auto;
      margin-top: 10px;
      margin-bottom: 10px;
-     border-radius: 10px; 
+     border-radius: 10px;
+     
  }
 
  .totaCart{
@@ -126,6 +128,12 @@
      width: 70px;
      height: 40px;
      border-radius: 10px;
+     font-weight: bold;
+     background-color: #7e7ef1;
+ }
+
+ .buttonCart button:hover{
+     background-color: blue;
  }
 
  .MasPromoCart{
@@ -194,6 +202,7 @@
         height: 60px;
         background-color: white;
         margin-top: 20px;
+        border-radius: 10px;
     }
     
     .cantidadCart p{
@@ -215,6 +224,7 @@
         margin-top: 30px;
         text-align: center;
         border-radius: 10px;
+        font-weight: bold;
      
     }
     
@@ -235,12 +245,21 @@
     .total h5{
         margin-left: 3px;
     }
+
+    .eliminarProduct{
+        width: 90%;
+        margin: auto;
+        font-weight: bold;
+    }
     
     .cupon{
+        width: 90%;
         display: block;
         text-align: right;
-        margin-right:40px ;
+        margin: auto;
         font-weight: bold;
+     
+
     }
     
     .totaCart{
@@ -262,6 +281,8 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
 @media (min-width: 1280px){
 
-
+    .contendeorProductCart{
+        max-width: 1200px;
+    }
 
 }
