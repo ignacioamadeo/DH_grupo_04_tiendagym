@@ -2,6 +2,10 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
+.productIndBarraLat{
+    display: none;
+}
+
 .productIndArticulos{
     text-align: left;
     box-sizing: border-box;
@@ -10,12 +14,13 @@
     justify-content: space-around;
     align-items: center;
     max-width: 1000px;
+    padding: 15px 10px 15px 10px;
 }
 
 .productIndArticulos article{
-    margin: 10px 5px 10px 5px;
+    margin: 10px 0;
     border-radius: 5px;
-    max-width: 300px;
+    max-width: 280px;
     position: relative;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
@@ -85,6 +90,7 @@
 }
 
 .productIndBarraLat{
+    display: inline-block;
     height: 100%;
     width: 200px;
     position: fixed;
@@ -93,18 +99,52 @@
     left: 0;
     background-color: #022B3A;
     overflow-x: hidden;
-    padding-top: 105px;
+    padding-top: 105;
 }
 
-.productIndBarraLat div{
+.productIndBarraLat ul{
+    padding: 150px 0 0 0;   
+}
+
+.productIndBarraLat ul li{
+    display: block;
     color:white;
-    text-align: center;
+    list-style: none;
+    text-align: left;
+    border-radius: 5px;
+    margin: 15px 15px;
+    transition: 1s;
+    background-color: #1F7A8C;
+}
+
+.productIndBarraLat ul li :hover{
+    background-color: greenyellow;
+}
+
+.latEnvioProducto{
     font-size: 12px;
+    padding: 10px 15px; 
 }
 
-
+.latCuotasProducto{
+    font-size: 12px;    
+    padding: 10px 15px;
 }
 
+.latDisponibleProducto{
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+.productIndBarraLat ul li i{
+    color: white;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    padding: 5px 0;
+}
+
+}
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
 @media (min-width: 1280px){
 
