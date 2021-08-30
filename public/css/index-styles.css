@@ -40,13 +40,17 @@
 }
 
 .homeGrillaProductos ul{
-    color: white;
     position: relative;
     top: -50px;
+}
+
+.homeGrillaProductos ul li{
+    color: white;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 100;
     text-align: center;
     list-style: none;
+    text-shadow: 2px 2px 4px black;
 }
 
 .imagenesCategorias {
