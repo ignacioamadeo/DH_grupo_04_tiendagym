@@ -114,12 +114,12 @@ footer{
 .redesSociales{
     color: #022B3A;
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
     margin: auto 0 auto 0;
 }
 
-.redesSociales i{
-    padding: 0 2px;
+.redesSociales a i{
+    padding: 0 6px;
 }
 
 
