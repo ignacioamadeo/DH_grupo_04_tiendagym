@@ -13,6 +13,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    color: rgba(37, 37, 37, 0.9);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
