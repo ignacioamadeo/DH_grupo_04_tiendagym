@@ -138,6 +138,11 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
 @media (min-width: 1280px){
 
-
-
+    .mainHeaderTop{
+        max-width: 1200px;
+        margin: auto;
+    }
+.mainHeader{
+  background-color:  #022B3A;
+}
 }
