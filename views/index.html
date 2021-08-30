@@ -38,24 +38,26 @@
             </ul>
         </nav>
     <!--Dejo botón para versión mobile: -->
-        <a href="#" class=botonMenuMobile>
+    <div class="mainHeaderMobile"> 
+    <a href="#" class=botonMenuMobile>
             <i class="fas fa-dumbbell"></i>
         </a>
+    </div>   
     </header>
     <!--Aca termina header y comienza main de la web -->
     <main>
-        <section>
-            <div class="carrouselHome">
+        <section class="carrouselHome">
             <!--Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar"-->
-        <video autoplay muted loop class="videoHome">
-                <source src="./images/vid-flexiones-4812848.mp4" type="video/mp4">
-        </video>
-            </div>
+            <img src="./images/pexels-lukas-669584.jpg">
         </section>
+        <section class="instruccionesHome">
+            <img src="./images/logo-cart.png">
+            <img src="./images/logo-flecha.png">
+            <img src="./images/logo-pago.png">
+            <img src="./images/logo-flecha.png">
+            <img src="./images/logo-delivery.png">
+        </section>     
         <section class="homeGrillaProductos">
-            <header>
-                <!--Aca iría titulo alternativo seccion homepage-->
-            </header>
             <article>
                 <img src="./images/pexels-karl-solano-2780762.jpg" class="imagenesCategorias">
                 <ul>
@@ -73,12 +75,17 @@
                     <li>Máquinas</li>
                 </ul>            </article>
             <article>
-                <img src="./images/pexels-karolina-grabowska-4498574.jpg" class="imagenesCategorias">
+                <img src="./images/pexels-cottonbro-4761352.jpg" class="imagenesCategorias">
                 <ul>
                     <li>Indumentaria</li>
                 </ul>            
             </article>
         </section>
+        <!--
+        <section class="homePreFooter">
+                <img src="./images/pexels-mikhail-nilov-6740821.jpg" class="imagenPreFooter">
+        </section>
+        -->
     </main>
     <footer>
         <!--Aca iría pie de web estandarizado con links y redes-->
@@ -91,10 +98,9 @@
         </ul>
     </div>
         <div class="redesSociales">
-            <h5>Siguenos</h5>
+            <i class="fab fa-whatsapp"></i>
             <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-whatsapp-square"></i>
+            <i class="fab fa-instagram"></i>
         </div>
     </footer>
 </body>
