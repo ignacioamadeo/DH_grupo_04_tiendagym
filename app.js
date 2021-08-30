@@ -19,6 +19,10 @@ app.get('/login',(req,res)=>{
     res.sendFile(path.join(__dirname,'./views/login.html'))
 })
 
+app.get('/productIndex',(req,res)=>{
+    res.sendFile(path.join(__dirname,'./views/productIndex.html'))
+})
+
 
 const puerto = process.env.PORT || 3000
 
