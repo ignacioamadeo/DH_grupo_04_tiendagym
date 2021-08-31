@@ -9,9 +9,6 @@
     margin: auto;
 }
 
-
-
-
 .controlador{
   
     text-align: center;
@@ -28,8 +25,10 @@
  }
 
  .nomProCart{
-     text-align: center;
-    padding: 10px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    font-weight: 400;
  }
  
  .imagenP img {
@@ -163,6 +162,9 @@
     .controlador{
         display: none;
     }
+
+    /*acá va el diseño de las tarjetas ohorizontales de productos*/
+
     .controlDesktop{
         display: flex;
         flex-wrap: wrap;
@@ -170,30 +172,30 @@
         margin: auto;
         margin-bottom: 10px;
         width: 90%;
-        justify-content: space-between;
+        justify-content: space-around;
         border-radius: 10px;
-    
-       
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     }
+
     .imgProdCart2{
         width: 100px;
         height: 100px;
         display: flex;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        border: solid 3px grey;
+        margin: auto;
+        border: solid 0.5px grey;
+        border-radius: 10px;
     }
     
     .descrProd{
-        display: flex;
+        display: inline-block;
         width: 30%;
         height: 10%; 
-        margin-top: 40px; 
+        margin: auto;
     }
     
     .descrProd p{
-        font-weight: bold;
+        font-size: 14px;
+        font-weight: 200;
     }
     
     .cantidadCart{
@@ -201,23 +203,67 @@
         width: 60px;
         height: 60px;
         background-color: white;
-        margin-top: 20px;
+        margin: auto;
         border-radius: 10px;
     }
     
     .cantidadCart p{
         margin: auto;
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 15px;
+        font-weight: 600;
     }
     
     .cantidadCart i{
-        margin-top: 20px;
+        margin: auto;
+        font-size: 10px;
+        color: rgb(53, 53, 53);
       
     }
     
-    .contCompra{
+    .totCartApertura{
         display: flex;
+        flex-direction: column;
+        width: 150px;
+        background-color: white;
+        margin: 20px auto;
+        line-height: 25px;
+        border-radius: 10px;
+    }   
+    
+    .totCartApertura p{
+        margin-left: 3px;   
+    }
+
+    .totCartPrecioParcial{
+        font-size: 18;
+        font-weight: 400;
+    }
+
+    .totCartPrecioDescuento{
+        font-size: 14;
+        font-weight: 200;
+    }
+
+    .totCartPrecioIva{
+        font-size: 12;
+        font-weight: 100;
+    }
+
+    .totCartPrecioEnvio{
+        font-size: 12;
+        font-weight: 100;
+    }
+
+    /* ^ acá termina la caja gris de producto ^ */
+
+    .eliminarProduct{
+        width: 90%;
+        margin: auto;
+        font-weight: bold;
+    }
+        
+    .contCompra{
+        display: inline-block;
         width: 100px;
         height: 40px;
         background-color: white;
@@ -225,33 +271,7 @@
         text-align: center;
         border-radius: 10px;
         font-weight: bold;
-     
     }
-    
-    
-    
-    .total{
-        display: flex;
-        flex-direction: column;
-        width: 150px;
-        background-color: white;
-        margin-right: 10px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        line-height: 25px;
-        border-radius: 10px;
-    }
-    
-    .total h5{
-        margin-left: 3px;
-    }
-
-    .eliminarProduct{
-        width: 90%;
-        margin: auto;
-        font-weight: bold;
-    }
-    
     .cupon{
         width: 90%;
         display: block;

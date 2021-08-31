@@ -22,10 +22,10 @@
                 <p>Buscar en Tienda Gym</p><i class="fas fa-search"></i>
             </nav>
             <nav class="loginCarrito">
-                <i class="fas fa-user-circle">
-                    <a href="#"></a></i>
-                <i class="fas fa-shopping-cart">
-                    <a href="#"></a></i>
+                <a href="./login"><i class="fas fa-user-circle">
+                    </i></a>
+                <a href="./productCart"><i class="fas fa-shopping-cart">
+                    </i></a>
             </nav>
         </div>
         <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
@@ -37,79 +37,79 @@
                 <li>Empresas</li>
             </ul>
         </nav>
-    <!--Dejo botón para versión mobile: -->
-        <a href="#" class=botonMenuMobile>
-            <i class="fas fa-dumbbell"></i>
-        </a>
+        <!--Dejo botón para versión mobile: -->
+        <div class="mainHeaderMobile">
+            <a href="#" class=botonMenuMobile>
+                <i class="fas fa-dumbbell"></i>
+            </a>
+        </div>
     </header>
     <!--Aca termina header y comienza main de la web -->
-     <main class="control">
-         <section class="contendeorProductCart">
-           
+    <main class="control">
+        <section class="contendeorProductCart">
             <section class="nomProCart">
                 <h1>Bicicleta Fija Panther pro</h1>
             </section>
-         <div class="controlador">
+            <div class="controlador">
                 <article class="imagenP">
-             <img src="/img/biciFijaPanther4.jpg" alt="">
+                    <img src="/img/biciFijaPanther4.jpg" alt="">
                 </article>
-            <section class="desProduCart">
-                <p>Bicicleta fija Panther Pro BF102 para spinning negra y roja</p>
-            </section>
-            <section class="masCantCart">
-                <i class="fas fa-minus"></i><p>001</p><i class="fas fa-plus-circle"></i>
-            </section>
-            <section class="contComprandoCart">
-                <p>Continuar comprando</p>
-            </section>
-            <section class="descuentoCart">
-                <p>descuento</p>
-            </section>
-            <section class="precioCart">
-                <article>
-                    precio final
-                </article>
-            </section>
-        </div> 
-          
+                <section class="desProduCart">
+                    <p>Bicicleta fija Panther Pro BF102 para spinning negra y roja</p>
+                </section>
+                <section class="masCantCart">
+                    <i class="fas fa-minus"></i>
+                    <p>001</p><i class="fas fa-plus-circle"></i>
+                </section>
+                <section class="contComprandoCart">
+                    <p>Continuar comprando</p>
+                </section>
+                <section class="descuentoCart">
+                    <p>descuento</p>
+                </section>
+                <section class="precioCart">
+                    <article>
+                        precio final
+                    </article>
+                </section>
+            </div>
 
-          
-                
-             <section class="controlDesktop">
+    <!--DESKTOP: Acá comienza tarjeta horizontal de producto: -->
+            <section class="controlDesktop">
                 <article class="imgProdCart2">
-                   <img src="/img/biciFijaPanther4.jpg" alt="no se encontro imagen">
+                    <img src="/img/biciFijaPanther4.jpg" alt="no se encontro imagen">
                 </article>
                 <section class="descrProd">
                     <p>Bicicleta fija Panther Pro BF102 para spinning negra y roja</p>
                 </section>
                 <section class="cantidadCart">
-                    <i class="fas fa-minus"></i><p>001</p><i class="fas fa-plus-circle"></i>
+                    <i class="fas fa-minus"></i>
+                    <p>001</p><i class="fas fa-plus-circle"></i>
                 </section>
-                <section class="contCompra">
-                    <p>Continuar comprando</p>
-                </section> 
-                <section class="total">
-                    <h5>precio</h5>
-                   <h5>total parcial</h5>
-                    <h5>descuento</h5>
-                    <h5>IVA(21%)</h5>
-                    <h5>costo de envio</h5>
+                <section class="totCartApertura">
+                    <p class="totCartPrecio">precio</p>
+                    <p class="totCartPrecioParcial">total parcial</p>
+                    <p class="totCartPrecioDescuento">descuento</p>
+                    <p class="totCartPrecioIva">IVA(21%)</p>
+                    <p class="totCartPrecioEnvio">costo de envio</p>
                 </section>
-
             </section>
+    <!--DESKTOP: ^ Acá termina tarjeta horizontal de producto ^ -->
 
             <h5 class="eliminarProduct">Eliminar</h5>
-               
-                <section class="cupon">
-                    <form action="/descuento" method="POST">
-                       <p><label for="">Cupon</label>
+            <section class="contCompra">
+                <p>Continuar comprando</p>
+            </section>
+            <section class="cupon">
+                <form action="/descuento" method="POST">
+                    <p><label for="">Cupon</label>
                         <input type="text" name="cupon">
                     </p>
                     <p>
                         <button type="submit">Enviar</button>
                     </p>
-                    </form>
-                </section>
+                </form>
+            </section>
 
             <section class="totaCart">
                 <h3>TOTAL</h3>
@@ -117,24 +117,24 @@
 
             <section class="medioDePago">
                 <form action="/medio" method="POST">
-                <label class="pago">Medio de pago</label>
-               <label>Debito
-                   <input type="radio" name="medio" value="debito">
-                </label>
-                <label>Credito
-                    <input type="radio" name="medio" value="credito">
-                </label>
-                <label>MercadoPago
-                    <input type="radio" name="medio" value="mercadopago">
-                </label> 
-                <label class="retiro">Retiro por local
-                    <input type="radio" name="retiro" value="local">
-                </label>
-                <label class="retiro">Envio a domicilio
-                    <input type="radio" name="retiro" name="domicilio">
-                </label>
-               <div class="buttonCart"><button type="submit">Comprar</button></div>
-    
+                    <label class="pago">Medio de pago</label>
+                    <label>Debito
+                        <input type="radio" name="medio" value="debito">
+                    </label>
+                    <label>Credito
+                        <input type="radio" name="medio" value="credito">
+                    </label>
+                    <label>MercadoPago
+                        <input type="radio" name="medio" value="mercadopago">
+                    </label>
+                    <label class="retiro">Retiro por local
+                        <input type="radio" name="retiro" value="local">
+                    </label>
+                    <label class="retiro">Envio a domicilio
+                        <input type="radio" name="retiro" name="domicilio">
+                    </label>
+                    <div class="buttonCart"><button type="submit">Comprar</button></div>
+
                 </form>
             </section>
 
@@ -142,26 +142,27 @@
             <section>
                 <h3 class="MasPromoCart">Otras Promociones</h3>
                 <article>
-                    
+
                 </article>
             </section>
-        </section>    
-    
+        </section>
+
     </main>
     <footer>
         <!--Aca iría pie de web estandarizado con links y redes-->
-        <ul class="footerLinks">
-            <li>Preguntas frecuentes</li>
-            <li>Quienes somos</li>
-            <li>Contacto</li>
-            <li>Dirección</li>
-        </ul>
-        <section class="redesSociales">
-            <h5>Siguenos</h5>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-whatsapp-square"></i>
-        </section>
+        <div class="footerLinks">
+            <ul>
+                <li>Preguntas frecuentes</li>
+                <li>Quienes somos</li>
+                <li>Contacto</li>
+                <li>Dirección</li>
+            </ul>
+        </div>
+        <div class="redesSociales">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i href=# class="fab fa-facebook"></i></a>
+            <a href="#"><i href=# class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 </body>
 
