@@ -46,9 +46,12 @@
     </header>
     <!--Aca termina header y comienza main de la web -->
     <main class="control">
-        <section class="contendeorProductCart">
+        <section class="contenedorProductCart">
+            <section class="contCompra">
+                <p>Continuar comprando</p>
+            </section>
             <section class="nomProCart">
-                <h1>Bicicleta Fija Panther pro</h1>
+                <h1>Elementos en tu carrito de compras</h1>
             </section>
             <div class="controlador">
                 <article class="imagenP">
@@ -74,8 +77,8 @@
                 </section>
             </div>
 
-    <!--DESKTOP: Acá comienza tarjeta horizontal de producto: -->
-            <section class="controlDesktop">
+    <!--DESKTOP: Acá comienza tarjeta horizontal de cada producto/artículo: -->
+            <article class="controlDesktop">
                 <article class="imgProdCart2">
                     <img src="/img/biciFijaPanther4.jpg" alt="no se encontro imagen">
                 </article>
@@ -93,28 +96,21 @@
                     <p class="totCartPrecioIva">IVA(21%)</p>
                     <p class="totCartPrecioEnvio">costo de envio</p>
                 </section>
-            </section>
+                <h5 class="eliminarProduct">Eliminar producto</h5>
+            </article>
     <!--DESKTOP: ^ Acá termina tarjeta horizontal de producto ^ -->
 
-            <h5 class="eliminarProduct">Eliminar</h5>
-            <section class="contCompra">
-                <p>Continuar comprando</p>
-            </section>
+    <!--DESKTOP: Acá comienza todo elemento que aplique a todos los productos: -->
             <section class="cupon">
                 <form action="/descuento" method="POST">
-                    <p><label for="">Cupon</label>
-                        <input type="text" name="cupon">
-                    </p>
-                    <p>
-                        <button type="submit">Enviar</button>
-                    </p>
+                    <label for="">Cupón de descuento</label>
+                    <input type="text" name="cupon">
+                    <button type="submit">Cargar</button>
                 </form>
             </section>
-
             <section class="totaCart">
                 <h3>TOTAL</h3>
             </section>
-
             <section class="medioDePago">
                 <form action="/medio" method="POST">
                     <label class="pago">Medio de pago</label>
@@ -133,20 +129,17 @@
                     <label class="retiro">Envio a domicilio
                         <input type="radio" name="retiro" name="domicilio">
                     </label>
-                    <div class="buttonCart"><button type="submit">Comprar</button></div>
+                    <div class="buttonCart"><button type="submit">COMPRAR</button></div>
 
                 </form>
             </section>
-
-
-            <section>
-                <h3 class="MasPromoCart">Otras Promociones</h3>
-                <article>
-
-                </article>
-            </section>
+                <!--Aca va foto gigante con carrousel y abajo "
+                <section class="proCartCarrousel">
+                    <img src="./images/pexels-lukas-669584.jpg">
+                </section>
+                -->
         </section>
-
+  <!--DESKTOP: ^ Acá termina todo elemento que aplique a todos los productos ^ -->
     </main>
     <footer>
         <!--Aca iría pie de web estandarizado con links y redes-->

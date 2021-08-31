@@ -4,13 +4,12 @@
 
 /*aqui desarrollare el main del carrito de compra para version mobile*/
 
-.contendeorProductCart{
+.contenedorProductCart{
     width: 90%;
     margin: auto;
 }
 
 .controlador{
-  
     text-align: center;
     line-height: 40px;
     background-color: #dad8d8;
@@ -21,14 +20,13 @@
     margin-top: 10px;
     border-radius: 10px;
     font-weight: bold;
-      
  }
 
  .nomProCart{
     text-align: center;
-    padding: 20px 0;
-    font-size: 12px;
-    font-weight: 400;
+    padding: 30px 0;
+    font-size: 16px;
+    font-weight: 600;
  }
  
  .imagenP img {
@@ -87,13 +85,15 @@
 
  .medioDePago{
      width: 90%;
-     background-color: #dad8d8;
-     margin: auto;
+     background-color: #BFDBF7;
+     margin: 10px auto 20px auto;
      padding: 10px;
      text-align: center;
      border-radius: 10px;
      line-height: 30px;
-     font-weight: bold;
+     font-weight: 200;
+     font-size: 14px;
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
  }
  
  
@@ -105,15 +105,14 @@
      margin-top: 10px;
      margin-bottom: 10px;
      border-radius: 10px;
-     
+     font-weight: 500;
+     font-size: 16px;
  }
 
  .totaCart{
     width: 90%;
     background-color: white;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 20px auto 10px auto;
     border-radius: 10px;
     border: solid 1px black;
 }
@@ -122,22 +121,36 @@
  }
  
  .buttonCart button{
+     color: whitesmoke;
      display: block;
-     margin: auto;
-     width: 70px;
-     height: 40px;
+     margin: 10px auto;
+     width: 100px;
+     height: 38px;
      border-radius: 10px;
-     font-weight: bold;
-     background-color: #7e7ef1;
+     font-weight: 400;
+     font-size: 14px;
+     background-color: #1F7A8C;
+     transition: 0.5s; 
+     border-style: solid;
+     border-color: whitesmoke;
+     border-width: 1px;
  }
 
  .buttonCart button:hover{
-     background-color: blue;
+     background-color: #BFDBF7;
  }
 
- .MasPromoCart{
-     text-align: center;
- }
+.proCartCarrousel{
+    display: block;
+    max-height: 300px;
+    width: 100vw;   
+    overflow: hidden;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
+}
+
+.proCartCarrousel img{
+    max-width: 100%;
+}
 
  .controlDesktop{
      display: none;
@@ -156,14 +169,23 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
 @media (min-width: 769px){
 
-/*aqui desarrollare el main del carrito de compra para version desktop*/
+/* DESKTOP: aqui desarrollare el main del carrito de compra para version desktop*/
 
 
     .controlador{
         display: none;
     }
 
-    /*acá va el diseño de las tarjetas ohorizontales de productos*/
+    .contCompra{
+        text-align: right; 
+        font-weight: 200;
+        font-size: 14px;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }       
+
+    /* DESKTOP: acá va el diseño de las tarjetas horizontales de productos*/
 
     .controlDesktop{
         display: flex;
@@ -177,12 +199,11 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     }
 
-    .imgProdCart2{
-        width: 100px;
-        height: 100px;
+    .imgProdCart2 {
+        width: 150px;
+        height: 145px;
         display: flex;
         margin: auto;
-        border: solid 0.5px grey;
         border-radius: 10px;
     }
     
@@ -229,71 +250,89 @@
         line-height: 25px;
         border-radius: 10px;
     }   
-    
-    .totCartApertura p{
-        margin-left: 3px;   
+
+    .totCartPrecio{
+        padding: 10px 0 0 10px;
+        font-size: 16px;
+        font-weight: 400;
     }
 
     .totCartPrecioParcial{
-        font-size: 18;
+        padding: 0 0 0 10px;
+        font-size: 14px;
         font-weight: 400;
     }
 
     .totCartPrecioDescuento{
-        font-size: 14;
+        padding: 0 0 0 10px;
+        font-size: 12px;
         font-weight: 200;
     }
 
     .totCartPrecioIva{
-        font-size: 12;
+        padding: 0 0 0 10px;
+        font-size: 10px;
         font-weight: 100;
-    }
+    }   
 
     .totCartPrecioEnvio{
-        font-size: 12;
+        padding: 0 0 10px 10px;
+        font-size: 10px;
         font-weight: 100;
     }
 
-    /* ^ acá termina la caja gris de producto ^ */
-
     .eliminarProduct{
-        width: 90%;
-        margin: auto;
-        font-weight: bold;
+        color: gray;
+        text-align: right;
+        width: 100%;
+        font-weight: 400;   
+        font-size: 12px;
+        padding: 5px 28px 10px 0;
     }
-        
-    .contCompra{
-        display: inline-block;
-        width: 100px;
-        height: 40px;
-        background-color: white;
-        margin-top: 30px;
-        text-align: center;
-        border-radius: 10px;
-        font-weight: bold;
-    }
+
+    /* DESKTOP: ^ acá termina la caja gris de producto ^ */
+
     .cupon{
         width: 90%;
         display: block;
         text-align: right;
-        margin: auto;
+        margin: 18px auto;
         font-weight: bold;
-     
-
     }
-    
+
+    .cupon form label{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .cupon form input{
+        width: 100px;
+        height: 22px;
+    }
+
+    .cupon form button{
+        width: 50px;
+        height: 25px;  
+        margin-right: 10px;
+    }
+ 
     .totaCart{
         width: 90%;
-        background-color: white;
+        background-color: #1F7A8C;
         margin: auto;
-        margin-top: 10px;
+        margin-top: 20px;
         margin-bottom: 10px;
-        border-radius: 10px;
-        border: solid 1px black;
+        border-radius: 5px;
+        border-color: rgba(255, 255, 255, 0);   
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     }
     
     .totaCart h3{
+        color: white;
         margin-left: 10px;
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 400;
     }
 
 }
@@ -301,7 +340,7 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
 @media (min-width: 1280px){
 
-    .contendeorProductCart{
+    .contenedorProductCart{
         max-width: 1200px;
     }
 
