@@ -13,3 +13,9 @@ https://www.mercadolibre.com.ar/
 https://www.amazon.com/
 
 Participantes: Augusto Rojas, Gustavo Avila e Ignacio Álvarez
+
+
+
+Tablero de trabajo
+
+https://trello.com/b/Bdph7MU2/proyecto-integrador-tiendagym
