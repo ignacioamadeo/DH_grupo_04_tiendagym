@@ -19,3 +19,6 @@ Participantes: Augusto Rojas, Gustavo Avila e Ignacio Álvarez
 Tablero de trabajo
 
 https://trello.com/b/Bdph7MU2/proyecto-integrador-tiendagym
+
+## FeedBack Sprint 1
+Chicos su propuesta es interesante espero verla en accion  calificacion (10/10)
