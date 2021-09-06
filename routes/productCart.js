@@ -1,9 +1,10 @@
 const express= require('express');
 const router = express.Router();
+const productCartController=require('../controllers/productCartController.js');
 
-router.get('/', (req,res)=>{
-    res.render('productCart')
-});
+
+
+router.get('/', productCartController.productCart);
 
 
 

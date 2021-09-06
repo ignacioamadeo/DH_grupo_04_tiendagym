@@ -1,10 +1,10 @@
 const express=require('express');
 const router=express.Router();
+const registerController=require('../controllers/registerController.js');
 
 
-router.get('/',(req,res)=>{
-    res.render('register');
-});
+
+router.get('/', registerController.register);
 
 
 

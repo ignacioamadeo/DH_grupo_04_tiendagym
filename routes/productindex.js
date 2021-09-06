@@ -1,10 +1,9 @@
 const express=require('express');
 const router=express.Router();
+const productIndexController=require('../controllers/productIndexController.js');
 
 
-router.get('/',(req,res)=>{
-    res.render('productIndex');
-})
+router.get('/', productIndexController.productIndex);
 
 
 
