@@ -1,13 +1,20 @@
 const express=require('express');
 const app=express();
 const path=require('path');
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+let rutasIndex= require('./routes/index.js');
 
 app.use(express.static(path.join(__dirname,'./public')));
 
-app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname,'./views/index.html'))
-});
+//==========================================================================
+
+ app.use('/', rutasIndex); //====> dentro del router hay que usar el metodo render, sino no rompe todo.
+
+//   app.get('/', (req, res)=>{
+//       res.sendFile(path.join(__dirname,'./views/index.ejs'))
+//   });
+
+
 app.get('/productCart', (req,res)=>{
     res.sendFile(path.join(__dirname,'./views/productCart.html'))
 });
