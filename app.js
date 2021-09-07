@@ -9,6 +9,8 @@ let rutasProductDetail=require('./routes/productDetail.js');
 let rutasProductIndex=require('./routes/productindex.js');
 let rutasLogin=require('./routes/login.js');
 let rutasRegister=require('./routes/register.js');
+let rutasNewProduct=require('./routes/newProduct.js');
+let rutasModifyProduct=require('./routes/modifyProduct.js');
 //===========================================================================
 app.use(express.static(path.join(__dirname,'./public')));
 
@@ -57,6 +59,16 @@ app.use('/register', rutasRegister);
 // app.get('/register',(req,res)=>{
 //     res.sendFile(path.join(__dirname,'./views/register.html'))
 // })
+
+
+app.use('/newProduct', rutasNewProduct);
+
+//Es nuevo
+
+
+app.use('/modifyProduct', rutasModifyProduct);
+
+//Es nuevo
 
 
 const puerto = process.env.PORT || 3000
