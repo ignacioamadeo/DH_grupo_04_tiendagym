@@ -1,49 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda GYM, tu bienestar online</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet">
-</head>
+<%- include('./partials/head') %>
 
 <body>
-    <header class="mainHeader">
-        <!--A partir de acá va la parte superior del header con logo, buscador y login-->
-        <div class="mainHeaderTop">
-            <img src="./images/tgym_logos-03.png" class="logoPrincipal">
-            <nav class="busqueda">
-                <p>Buscar en Tienda Gym</p><i class="fas fa-search"></i>
-            </nav>
-            <nav class="loginCarrito">
-                <a href="./login"><i class="fas fa-user-circle">
-                    </i></a>
-                <a href="./productCart"><i class="fas fa-shopping-cart">
-                    </i></a>
-            </nav>
-        </div>
-        <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
-        <nav class="mainHeaderBottom">
-            <ul class="menuInferior">
-                <li>Noticias</li>
-                <li>Ofertas</li>
-                <li>Hogar</li>
-                <li>Empresas</li>
-            </ul>
-        </nav>
-        <!--Dejo botón para versión mobile: -->
-        <div class="mainHeaderMobile">
-            <a href="#" class=botonMenuMobile>
-                <i class="fas fa-dumbbell"></i>
-            </a>
-        </div>
-    </header>
+   <%- include('./partials/header') %>
+   
     <!--Aca termina header y comienza main de la web -->
     <main>
         <section class="carrouselHome">
@@ -91,22 +53,7 @@
         </section>
         -->
     </main>
-    <footer>
-        <!--Aca iría pie de web estandarizado con links y redes-->
-        <div class="footerLinks">
-            <ul>
-                <li>Preguntas frecuentes</li>
-                <li>Quienes somos</li>
-                <li>Contacto</li>
-                <li>Dirección</li>
-            </ul>
-        </div>
-        <div class="redesSociales">
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i href=# class="fab fa-facebook"></i></a>
-            <a href="#"><i href=# class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
+  <%- include('./partials/footer') %>
 </body>
 
 </html>
