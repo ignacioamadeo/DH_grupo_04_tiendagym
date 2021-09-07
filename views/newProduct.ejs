@@ -8,14 +8,50 @@
     <%- include('./partials/header') %>
     
     <!--Main -->
-    <main>
+    <section class="homeGrillaProductos">
         <article>
             <img src="./images/pexels-karl-solano-2780762.jpg" class="imagenesCategorias">
             <ul>
-                <a href="./productIndex"> <li>Ingresar un nuevo producto</li> </a>
+                <a href="./productIndex"> <li>Carga de nuevos productos</li> </a>
             </ul>
         </article>
-    </main>
+    </section>
+
+    <form>
+        <div>
+            <label> Nombre del producto</label> 
+        </div>
+        <div> 
+            <input type="text" name="email" placeholder="usuario@dominio.com">
+        </div>
+        <div>
+            <label> Descripción </label>
+        </div>
+        <div>
+            <input type="text" name="username" placeholder="pepito" minlength="6" maxlength="10">
+        </div>
+        <div>
+            <label> Categoría </label>
+        </div>
+        <div>
+            <input type= "text" name="password" minlength="6" maxlength="10">
+        </div>
+        <div>
+            <label> Precio </label>
+        </div>
+        <div>
+            <input type= "text" name="password" minlength="6" maxlength="10">
+        </div>
+        <div>
+            <button type="reset"> Borrar</button>
+        </div>
+        <div>
+            <button type="submit"> Crear Usuario </button>
+        </div>
+        <div class = "terminosLogin">
+            <a href="#"> Modificar un producto existente </a>
+        </div>
+    </form>
     
     <!-- Footer importado -->
     <%- include('./partials/footer') %>
