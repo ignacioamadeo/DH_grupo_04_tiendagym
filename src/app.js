@@ -3,7 +3,8 @@ const app=express();
 const path=require('path');
 //apartir de aca comienza el sprint3 con el metodo set para ejs y las rutas
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/views'); // al crear la carpeta src y agregarle views, o crear varias carpetas dentro de views, es neceserio agregar este codigo
+
 let rutasIndex= require('./routes/index.js');
 let rutasCarrito=require('./routes/productCart.js');
 let rutasProductDetail=require('./routes/productDetail.js');
@@ -13,7 +14,7 @@ let rutasRegister=require('./routes/register.js');
 let rutasNewProduct=require('./routes/newProduct.js');
 let rutasModifyProduct=require('./routes/modifyProduct.js');
 //===========================================================================
-app.use(express.static(path.join(__dirname,'../public')));
+app.use(express.static(path.join(__dirname,'../public'))); //=======>al crear la carpeta src se debe agregar un punto "." mas a la ruta public 
 
 //==========================================================================
 
