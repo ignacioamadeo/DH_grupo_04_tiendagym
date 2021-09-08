@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- Header importado -->
-    <%- include('./partials/head') %>
+<!-- Header importado -->
+<%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/header') %>
-    
-    <!--Main -->
-    <section class="homeGrillaProductos">
-        <article>
-            <img src="./images/pexels-karl-solano-2780762.jpg" class="imagenesCategorias">
-            <ul>
-                <a href="./productIndex"> <li>Carga de nuevos productos</li> </a>
-            </ul>
-        </article>
-    </section>
+    <body>
+        <%- include('./partials/header') %>
 
-    <form>
-        <div>
-            <label> Nombre del producto</label> 
-        </div>
-        <div> 
-            <input type="text" name="email" placeholder="usuario@dominio.com">
-        </div>
-        <div>
-            <label> Descripción </label>
-        </div>
-        <div>
-            <input type="text" name="username" placeholder="pepito" minlength="6" maxlength="10">
-        </div>
-        <div>
-            <label> Categoría </label>
-        </div>
-        <div>
-            <input type= "text" name="password" minlength="6" maxlength="10">
-        </div>
-        <div>
-            <label> Precio </label>
-        </div>
-        <div>
-            <input type= "text" name="password" minlength="6" maxlength="10">
-        </div>
-        <div>
-            <button type="reset"> Borrar</button>
-        </div>
-        <div>
-            <button type="submit"> Crear Usuario </button>
-        </div>
-        <div class = "terminosLogin">
-            <a href="#"> Modificar un producto existente </a>
-        </div>
-    </form>
-    
-    <!-- Footer importado -->
-    <%- include('./partials/footer') %>
-</body>
+            <!--Main -->
+            <main class="webAdmin">
+                <section class="homeGrillaProductos">
+                    <article>
+                        <img src="./images/pexels-life-of-pix-8264.jpg" class="imagenesCategorias">
+                        <ul>
+                            <a href="./productIndex">
+                                <li>Sistema de gestión de productos</li>
+                                <li>Carga de nuevos productos</li>
+                            </a>
+                        </ul>
+                    </article>
+                </section>
+                <section class="formNewProduct">
+                    <form action="/newProduct" method=POST>
+
+                        <label for="prodNombre">Nombre de producto</label>
+                        <input type="text" name="prodNombre" id="prodNombre" placeholder="Cinta de correr CYNT 234rpm">
+
+                        <label for="prodDescripcion">Descripción</label>
+                        <textarea name="prodDescripcion"
+                            id="prodDescripcion">Escribir descripción del producto...</textarea>
+
+                        <label for="prodFotos">Cargar fotos producto:</label>
+                        <input type="file" name="prodFotos" accept=".jpg" multiple>
+
+                        <label for="prodCategoria">Categoría:</label>
+                        <select name="prodCategoria">
+                            <option value="#funcPilYog">Funcional, pilates y yoga</option>
+                            <option value="#PesDisBar">Pesas, discos y barras</option>
+                            <option value="#Maq">Máquinas</option>
+                            <option value="#Ind">Indumentaria</option>
+                        </select>
+
+                        <label>Precio</label>
+                        <input type="text" name="prodPrecio" placeholder="$20.000">
+
+                        <label>Descuento</label>
+                        <input type="text" name="prodDescuento" placeholder="%25">
+
+                        <label>Envío gratis</label>
+                        <input type="checkbox" name="envioGratis" value="envioGratisSi">
+
+                        <button type="borrar">Resetear formulario</button>
+                        <button type="guardar">Guardar producto</button>
+                    </form>
+                </section>
+            </main>
+            <!-- Footer importado -->
+            <%- include('./partials/footer') %>
+    </body>
+
 
 </html>

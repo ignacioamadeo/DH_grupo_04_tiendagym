@@ -2,6 +2,65 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
+.formNewProduct{
+    display: flex;
+    align-items: center;
+}
+
+.formNewProduct form {
+    margin: auto;
+}
+
+
+.formNewProduct form label{
+    display: block;
+    margin: 10px auto;
+    font-size: 13px;
+}
+
+.formNewProduct form input{
+    color: darkgrey;
+    display: block;
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 5px;
+    border-color: darkgrey;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    width: 70vw;
+    max-width: 400px;
+}
+
+.formNewProduct form textarea{
+    color: darkgrey;
+    display: block;
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 5px;
+    border-color: darkgrey;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    width: auto;
+    width: 70vw;
+    max-width: 400px;
+}
+
+.formNewProduct form button{
+    color: darkgrey;
+    display: block;
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 5px;
+    border-color: darkgrey;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    width: auto;
+    width: 70vw;
+    max-width: 400px;
+}
 
 
 
