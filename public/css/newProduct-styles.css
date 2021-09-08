@@ -2,6 +2,52 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
+
+.adminHeader{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.adminHeader article{
+    background-color: rgba(255, 255, 255, 0.384);
+    display: inline-block;
+    border-radius: 10px;
+    border-color: rgb(163, 163, 163);
+    border-width: 0.5px;
+    border-style: solid;
+    min-width: 300px;
+    max-height: 150px;
+    max-width: 900px;
+    width: 90vw;
+    margin: 10px auto 10px auto;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
+}
+
+.adminHeader ul{
+    position: relative;
+    top: -70px;
+}
+
+.adminHeader ul li{
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    list-style: none;
+    padding: 2px 0;
+    text-shadow: 2px 2px 4px black;
+}
+
+.newProductHeaderImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: -10;
+  }
+
 .formNewProduct{
     display: flex;
     align-items: center;
@@ -19,12 +65,12 @@
 }
 
 .formNewProduct form input{
-    color: darkgrey;
+    color: rgb(116, 116, 116);
     display: block;
     margin: 10px auto;
     font-size: 12px;
     padding: 5px;
-    border-color: darkgrey;
+    border-color: rgb(116, 116, 116);
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
@@ -33,12 +79,12 @@
 }
 
 .formNewProduct form textarea{
-    color: darkgrey;
+    color: rgb(116, 116, 116);
     display: block;
     margin: 10px auto;
     font-size: 12px;
     padding: 5px;
-    border-color: darkgrey;
+    border-color: rgb(116, 116, 116);
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
@@ -48,12 +94,35 @@
 }
 
 .formNewProduct form button{
-    color: darkgrey;
+    color: rgb(116, 116, 116);
     display: block;
     margin: 10px auto;
     font-size: 12px;
     padding: 5px;
-    border-color: darkgrey;
+    border-color: rgb(116, 116, 116);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    width: auto;
+    width: 70vw;
+    max-width: 400px;
+    transition: 0.5s;
+}
+
+.formNewProduct form button:hover{
+    color: rgb(255, 255, 255);
+    background-color:rgb(66, 66, 66);
+}
+
+
+.prodBusqueda{
+    color: rgb(116, 116, 116);
+    display: block;
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 5px;
+    border-color: rgb(116, 116, 116);
+    background-color: #ebdf40;
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
@@ -62,6 +131,20 @@
     max-width: 400px;
 }
 
+.prodBusqueda i{
+  margin: auto;
+  display: inline-block;
+}
+
+.prodBusqueda p{
+    font-size: 12px;
+    padding: 5px;
+    display: inline-block;
+} 
+
+.newProdEnvioCheckbox{
+    display: flex;
+}
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */

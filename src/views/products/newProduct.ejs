@@ -9,14 +9,12 @@
 
             <!--Main -->
             <main class="webAdmin">
-                <section class="homeGrillaProductos">
+                <section class="adminHeader">
                     <article>
-                        <img src="./images/pexels-life-of-pix-8264.jpg" class="imagenesCategorias">
+                        <img src="./images/pexels-life-of-pix-8264.jpg" class="newProductHeaderImage">
                         <ul>
-                            <a href="./productIndex">
-                                <li>Sistema de gestión de productos</li>
-                                <li>Carga de nuevos productos</li>
-                            </a>
+                            <li>Sistema de gestión de productos</li>
+                            <li>Carga de nuevos productos</li>
                         </ul>
                     </article>
                 </section>
@@ -25,6 +23,9 @@
 
                         <label for="prodNombre">Nombre de producto</label>
                         <input type="text" name="prodNombre" id="prodNombre" placeholder="Cinta de correr CYNT 234rpm">
+
+                        <label for="prodID">ID stock</label>
+                        <input type="text" name="prodID" id="prodNombre" placeholder="CDC210812">
 
                         <label for="prodDescripcion">Descripción</label>
                         <textarea name="prodDescripcion"
@@ -47,8 +48,13 @@
                         <label>Descuento</label>
                         <input type="text" name="prodDescuento" placeholder="%25">
 
-                        <label>Envío gratis</label>
-                        <input type="checkbox" name="envioGratis" value="envioGratisSi">
+                        <label>Cantidad</label>
+                        <input type="number" name="prodCantidad" placeholder="1">
+
+                        <div class="newProdEnvioCheckbox">
+                            <label>Envío gratis</label>
+                            <input type="checkbox" name="envioGratis" value="envioGratisSi">
+                        </div>
 
                         <button type="borrar">Resetear formulario</button>
                         <button type="guardar">Guardar producto</button>
