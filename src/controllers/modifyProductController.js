@@ -1,7 +1,7 @@
 let productCartController = {
 
     productCart: (req,res)=>{
-        res.render('modifyProduct')
+        res.render('products/modifyProduct')
     }
     
     

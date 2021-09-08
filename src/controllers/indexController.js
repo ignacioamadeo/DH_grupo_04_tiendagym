@@ -1,6 +1,6 @@
 let indexController = {
     index: (req, res)=>{
-        res.render('index')
+        res.render('users/index')
     }
 
 }

@@ -3,6 +3,7 @@ const app=express();
 const path=require('path');
 //apartir de aca comienza el sprint3 con el metodo set para ejs y las rutas
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 let rutasIndex= require('./routes/index.js');
 let rutasCarrito=require('./routes/productCart.js');
 let rutasProductDetail=require('./routes/productDetail.js');
@@ -12,7 +13,7 @@ let rutasRegister=require('./routes/register.js');
 let rutasNewProduct=require('./routes/newProduct.js');
 let rutasModifyProduct=require('./routes/modifyProduct.js');
 //===========================================================================
-app.use(express.static(path.join(__dirname,'./public')));
+app.use(express.static(path.join(__dirname,'../public')));
 
 //==========================================================================
 

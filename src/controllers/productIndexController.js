@@ -1,7 +1,7 @@
 let productIndexController= {
 
 productIndex: (req,res)=>{
-    res.render('productIndex');
+    res.render('products/productIndex');
 }
 
 
