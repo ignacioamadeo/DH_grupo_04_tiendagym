@@ -22,3 +22,5 @@ https://trello.com/b/Bdph7MU2/proyecto-integrador-tiendagym
 
 ## FeedBack Sprint 1
 Chicos su propuesta es interesante espero verla en accion  calificacion (10/10)
+## FeedBack Sprint 2
+Chicos su web es Sencilla , puntual , y el login con el video en el fondo es gran detalle , calificacion (10/ 10) , sigan asi me encanto .
