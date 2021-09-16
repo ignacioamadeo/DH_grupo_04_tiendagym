@@ -1,0 +1,45 @@
+[
+  
+    {
+        "id":1,
+        "img":"./img/biciFijaPanther4.jpg",
+        "precio":"$ 26.999",
+        "cuotas":"$ 3.829",
+        "nombre":"Bici fija Panther Pro"
+    },
+    {
+        "id":2,
+        "img":"./img/eliptico2.jpg",
+        "precio":"$ 51.424",
+        "cuotas":"$ 7.292",
+        "nombre":"Caminadora Eliptico Magnetico profesional"
+    },
+    {
+        "id":3,
+        "img":"./img/caminadora.jpg",
+        "precio":"$ 72.990",
+        "cuotas":"$ 10.350",
+        "nombre":"Cinta de correr eléctrica Enerfit"
+    },
+    {
+        "id":4,
+        "img":"./img/miniEscalador.jpg",
+        "precio":"$ 9.999",
+        "cuotas":"$ 1.418",
+        "nombre":"Mini stepper Jdm Sport Con Bandas Es-018"
+    },
+    {
+        "id":5,
+        "img":"./img/remo.jpg",
+        "precio":"$ 59.990",
+        "cuotas":"$ 8.507",
+        "nombre":"Maquina Simulador De Remo Magnetico Plegable Jbh 32b"
+    },
+    {
+        "id":6,
+        "img":"./img/airBike.jpg",
+        "precio":"$ 149.999",
+        "cuotas":"$ 12.499",
+        "nombre":"Bicicleta Fija de aire Air Bike"
+    }
+]
