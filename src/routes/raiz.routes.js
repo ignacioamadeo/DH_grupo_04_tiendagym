@@ -6,18 +6,19 @@ const router=express.Router();
 router.use('/', require('./home.routes.js'));
 
 //CARRITO:
-router.use('/productCart',require('./productCart.js'));
+router.use('/productCart',require('./productCart.routes.js'));
 
-//router.use('/productDetail', require('./productDetail.js'));
+//DETALLE DE PRODUCTO:
+router.use('/productDetail', require('./productDetail.routes.js'));
 
 //LOGIN:
 router.use('/login', require('./login.routes.js'));
 
 //ÍNDICE DE TODOS LOS PRODUCTOS:
-router.use('/productIndex', require('./productindex.js'));
+router.use('/productIndex', require('./productindex.routes.js'));
 
 //REGISTRO DE NUEVO USUARIO:
-router.use('/register', require('./register.js'));
+router.use('/register', require('./register.routes.js'));
 
 //REGISTRO DE NUEVO PRODUCTO:
 router.use('/newProduct', require('./newProduct.routes.js'));
@@ -25,6 +26,5 @@ router.use('/newProduct', require('./newProduct.routes.js'));
 //MODIFICAR UN PRODUCTO EXISTENTE:
 router.use('/modifyProduct', require('./modifyProduct.routes.js'));
 
-
-
+//Exporto todo:
 module.exports=router;
