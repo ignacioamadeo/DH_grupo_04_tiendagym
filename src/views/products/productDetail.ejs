@@ -9,16 +9,17 @@
     <!--Aca termina header y comienza main de la web -->
     <main>
         <!---->
-      
-        <h1 class="tituloProducDetail">Bicicleta fija Panther Pro BF102 para spinning negra y roja</h1>
+       
+        <h1 class="tituloProducDetail"><%= product.nombre %></h1>
+        
         <header class="productDetailMobile">
         <article class="imagenProd">
-            <img src="/img/biciFijaPanther4.jpg" alt="no hay imagen disponible">
+            <img src=<%= product.img %> alt="no hay imagen disponible">
         </article>
         <section class="produCarat">
         <article class="mediosProduc">
-            <p class="precioPrductMobile">$ 26.999</p>
-            <p class="cuotasProductMobile">en 12x $3.829</p>
+            <p class="precioPrductMobile"><%= product.precio %></p>
+            <p class="cuotasProductMobile">en 12x <%= product.cuotas %></p>
             <p class="parrDestacado">ver medios de pagos</p>
         </article>
         <article class="stockProduc">
@@ -77,7 +78,7 @@
          <header class="deskProduct">
              <section class="perfilProductDesk">
             <article class="imgDetailDesk"> 
-                <img src="/img/biciFijaPanther4.jpg" alt="no se encontro la imagen">
+                <img src=<%= product.img %> alt="no se encontro la imagen">
             </article>
 
             <article class="subTituloProdDesk">
@@ -114,11 +115,11 @@
         </section>
              <section class="tituloProducDesk">
                  <article>
-                     <h1>Bicicleta fija Panther Pro BF102 para spinning negra y roja</h1>
+                     <h1><%= product.nombre %></h1>
                  </article>
                  <article class="mediosDtailDesk">
-                    <p class="contado">$ 26.999</p>
-                    <p>en 12x $3.829</p>
+                    <p class="contado"><%= product.precio %></p>
+                    <p>en 12x <%= product.cuotas %></p>
                     <p class="parrDestacado">ver medios de pagos</p>
                 </article>
                 <article class="stockDetailDesk">
