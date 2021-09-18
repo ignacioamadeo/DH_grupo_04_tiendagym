@@ -5,7 +5,7 @@ router.use('/', require('./index.js'));
 
 router.use('/productCart',require('./productCart.js'));
 
-router.use('/productDetail', require('./productDetail.js'));
+//router.use('/productDetail', require('./productDetail.js'));
 
 router.use('/login', require('./login.js'));
 
