@@ -1,12 +1,14 @@
-let productIndexController= {
 
-productIndex: (req,res)=>{
-    res.render('products/productIndex'); //al crear carpetas en views y agregarle archivos, la ruta en el controlador debera ser nombrada con el nombre de la carpeta a la que pertenece
+//1º Llamo a la base de datos (en este caso objeto json) y la asigno a la variable db:
+const db=require('../modules/procuctsIndex.json');
+
+/*2º MAndo al archivo index.ejs la base de datos a través de la variable products:
+*/
+let productIndexController = {
+    productIndex: (req, res, next)=>{
+        res.render('products/productIndex', {productInfo: db}) 
+    }
+
 }
-
-
-
-}
-
 
 module.exports=productIndexController;
