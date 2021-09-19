@@ -1,0 +1,11 @@
+
+
+[
+    {
+        "userID": 1,
+        "email":  "rojasaugus@gmail.com",
+        "username": "pepito",
+        "password": "verysafe12345",
+        "passwordcheck": "verysafe12345"
+    }
+]
