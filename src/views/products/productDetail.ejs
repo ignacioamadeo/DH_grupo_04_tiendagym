@@ -1,167 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head') %>
+<%- include('../partials/head') %>
 
-<body>
-    <%- include('../partials/header') %>
-    
-    <!--Aca termina header y comienza main de la web -->
-    <main>
-        <!---->
-       
-        <h1 class="tituloProducDetail"> <%= product.prodNombre %> </h1>
-        
-        <header class="productDetailMobile">
-        <article class="imagenProd">
-            <img src=<%= product.prodFotos %> alt="no hay imagen disponible">
-        </article>
-        <section class="produCarat">
-        <article class="mediosProduc">
-            <p class="precioPrductMobile"><%= product.prodPrecio %></p>
-            <p class="cuotasProductMobile">en <%= product.prodCantidadCuotas %>x <%= product.prodPrecioCuotas %></p>
-            <p class="parrDestacado">ver medios de pagos</p>
-        </article>
-        <article class="stockProduc">
-            <h3>Stock disponible</h3>
-            <p>cantidad: 1<i class="fas fa-chevron-right"></p></i>
-        </article>
-        <article class="finalizarProd">
-            <a href="#"><h5 class="comprar">Comprar</h5></a>
-            <a href="#"><h5 class="add">Agregar al carrito</h5></a>
-            <a href="#"><h5 class="rebaja">Cupón de descuento </h5></a>
-        </article>
-        <article class="servicioDetai">
-            <i class="fas fa-truck"></i><p>Formas de envio</p>
-        </article>
-        <article class="servicioDetai">
-            <i class="fas fa-exchange-alt"></i><p>Garantia</p>
-        </article>
-        </section>
-        <!---->
-        <section class="descripProd">
-        <!---->
-        <article class="subTituloProd">
-            <h4>Sobre este producto</h4>
-        </article>
-        
-            <ul class="listaProd">
-                <li>Sistema de resistencia mecánica que se maneja desde la perilla de ajuste.</li>
-                <li>Incluye computadora con múltiples funciones.</li>
-                <li>Soporta hasta 100kg.</li>
-                <li>El asiento se ajusta verticalmente.</li>
-                <li>El manubrio se adapta a las necesidades de quien lo usa.</li>
-                <li>Su estructura es de acero.</li>
-                <li>Para entrenar si impacto y mejorar la salud integral.</li>
-            </ul>
-    
-        <article class="subTituloProd">
-            <h4>Características de Panther Pro BF102</h4>
-        </article>
-        <article class="okProduc">
-            <i class="far fa-check-circle"></i><p>Tipo de bicicleta fija: <b>Spinning</b></p>
-        </article>
-        <article class="okProduc">
-            <i class="far fa-check-circle"></i><p>Tipo de resistencia: <b>Mecánico</b></p>
-        </article>
-        <article class="okProduc">
-            <i class="far fa-check-circle"></i><p>Peso máximo soportado: <b>100 kg</b></p>
-        </article>
-        <article class="okProduc">
-            <i class="far fa-check-circle"></i><p>Con computadora: <b>Sí</b></p>
-        </article>
-        </section>
-        </header>
-     
-         <!--DESDE ACA COMIENZA LA VERSION DESKTOP-->
-      <section class="contenedorCentralProductDesk">  
-         <header class="deskProduct">
-             <section class="perfilProductDesk">
-            <article class="imgDetailDesk"> 
-                <img src=<%= product.prodFotos %> alt="no se encontro la imagen">
-            </article>
+    <body>
+        <%- include('../partials/header') %>
 
-            <article class="subTituloProdDesk">
-                <h4>Características de Panther Pro BF102</h4>
-            </article>
-        <header class="caracDesk">
-            <section class="caracDesk1">
-            <article class="okProducDesk">
-                <i class="far fa-check-circle"></i><p>Tipo de bicicleta fija: <b>Spinning</b></p>
-            </article>
-            <article class="okProducDesk">
-                <i class="far fa-check-circle"></i><p>Tipo de resistencia: <b>Mecánico</b></p>
-            </article>
-            </section>
-            <section  class="caracDesk2">
-            <article class="okProducDesk">
-                <i class="far fa-check-circle"></i><p>Peso máximo soportado: <b>100 kg</b></p>
-            </article>
-            <article class="okProducDesk">
-                <i class="far fa-check-circle"></i><p>Con computadora: <b>Sí</b></p>
-            </article>
-            </section>
-        </header>
+            <!--Aca termina header y comienza main de la web -->
+            <main>
+                <!---->
 
-        <%- include('../partials/caracteristicasProduct') %>
+                <h1 class="tituloProducDetail">
+                    <%= product.prodNombre %>
+                </h1>
 
-             <article class="otrosProductDetailDesk">
-                  <h3>Otros Productos</h3>
-              </article> 
+                <header class="productDetailMobile">
+                    <article class="imagenProd">
+                        <img src=<%=product.prodFotos %> alt="no hay imagen disponible">
+                    </article>
+                    <section class="produCarat">
+                        <article class="mediosProduc">
+                            <p class="precioPrductMobile">
+                                <%= product.prodPrecio %>
+                            </p>
+                            <p class="cuotasProductMobile">en <%= product.prodCantidadCuotas %>x <%=
+                                        product.prodPrecioCuotas %>
+                            </p>
+                            <p class="parrDestacado">ver medios de pagos</p>
+                        </article>
+                        <article class="stockProduc">
+                            <h3>Stock disponible</h3>
+                            <p>cantidad: 1<i class="fas fa-chevron-right"></p></i>
+                        </article>
+                        <article class="finalizarProd">
+                            <a href="#">
+                                <h5 class="comprar">Comprar</h5>
+                            </a>
+                            <a href="#">
+                                <h5 class="add">Agregar al carrito</h5>
+                            </a>
+                            <a href="#">
+                                <h5 class="rebaja">Cupón de descuento </h5>
+                            </a>
+                        </article>
+                        <article class="servicioDetai">
+                            <i class="fas fa-truck"></i>
+                            <p>Formas de envio</p>
+                        </article>
+                        <article class="servicioDetai">
+                            <i class="fas fa-exchange-alt"></i>
+                            <p>Garantia</p>
+                        </article>
+                    </section>
+                    <!---->
+                    <section class="descripProd">
+                        <!---->
+                        <article class="subTituloProd">
+                            <h4>Sobre este producto</h4>
+                        </article>
+
+                        <ul class="listaProd">
+                            <li>Sistema de resistencia mecánica que se maneja desde la perilla de ajuste.</li>
+                            <li>Incluye computadora con múltiples funciones.</li>
+                            <li>Soporta hasta 100kg.</li>
+                            <li>El asiento se ajusta verticalmente.</li>
+                            <li>El manubrio se adapta a las necesidades de quien lo usa.</li>
+                            <li>Su estructura es de acero.</li>
+                            <li>Para entrenar si impacto y mejorar la salud integral.</li>
+                        </ul>
+
+                        <article class="subTituloProd">
+                            <h4>Características de Panther Pro BF102</h4>
+                        </article>
+                        <article class="okProduc">
+                            <i class="far fa-check-circle"></i>
+                            <p>Tipo de bicicleta fija: <b>Spinning</b></p>
+                        </article>
+                        <article class="okProduc">
+                            <i class="far fa-check-circle"></i>
+                            <p>Tipo de resistencia: <b>Mecánico</b></p>
+                        </article>
+                        <article class="okProduc">
+                            <i class="far fa-check-circle"></i>
+                            <p>Peso máximo soportado: <b>100 kg</b></p>
+                        </article>
+                        <article class="okProduc">
+                            <i class="far fa-check-circle"></i>
+                            <p>Con computadora: <b>Sí</b></p>
+                        </article>
+                    </section>
+                </header>
+
+                <!--DESDE ACA COMIENZA LA VERSION DESKTOP-->
+                <section class="contenedorCentralProductDesk">
+                    <header class="deskProduct">
+                        <section class="perfilProductDesk">
+                            <article class="imgDetailDesk">
+                                <img src=<%=product.prodFotos %> alt="no se encontro la imagen">
+                            </article>
+
+                            <article class="subTituloProdDesk">
+                                <h4>Características de   <%= product.prodNombre %></h4>
+                            </article>
+                            <header class="caracDesk">
+                                <section class="caracDesk1">
+                                    <article class="okProducDesk">
+                                        <i class="far fa-check-circle"></i>
+                                        <p>Tipo de bicicleta fija: <b>Spinning</b></p>
+                                    </article>
+                                    <article class="okProducDesk">
+                                        <i class="far fa-check-circle"></i>
+                                        <p>Tipo de resistencia: <b>Mecánico</b></p>
+                                    </article>
+                                </section>
+                                <section class="caracDesk2">
+                                    <article class="okProducDesk">
+                                        <i class="far fa-check-circle"></i>
+                                        <p>Peso máximo soportado: <b>100 kg</b></p>
+                                    </article>
+                                    <article class="okProducDesk">
+                                        <i class="far fa-check-circle"></i>
+                                        <p>Con computadora: <b>Sí</b></p>
+                                    </article>
+                                </section>
+                            </header>
+                            <section class="caracDestokDetail">
+                                <p>
+                                    <%= product.prodDescripcion %>
+                                </p>
+                            </section>
+
+
+
+                            <article class="otrosProductDetailDesk">
+                                <h3>Otros Productos</h3>
+                            </article>
 
 
 
 
-        </section>
-             <section class="tituloProducDesk">
-                 <article>
-                     <h1><%= product.prodNombre %></h1>
-                 </article>
-                 <article class="mediosDtailDesk">
-                    <p class="contado"><%= product.prodPrecio %></p>
-                    <p>en 12x <%= product.prodPrecioCuotas %></p>
-                    <p class="parrDestacado">ver medios de pagos</p>
-                </article>
-                <article class="stockDetailDesk">
-                    <h3>Stock disponible</h3>
-                   <form action="/cantidad" method="GET">
-                    <label>Cantidad:</label>
-                    <select name="cantidad">
-                        <option value="1">1 unidad</option>
-                        <option value="2">2 unidad</option>
-                        <option value="3">3 unidad</option>
-                        <option value="4">4 unidad</option>
-                    </select>
-                </form>
-                 </article>
-                <article class="finalizarProdDesk">
-                    <a href="#"><h5 class="comprarDesk">Comprar</h5></a>
-                    <h5 class="addDesk">Agregar al carrito</h5>
-                    <h5 class="rebajaDesk">Cupón de descuento </h5>
-                </article>
+                        </section>
+                        <section class="tituloProducDesk">
+                            <article>
+                                <h1>
+                                    <%= product.prodNombre %>
+                                </h1>
+                            </article>
+                            <article class="mediosDtailDesk">
+                                <p class="contado">
+                                    <%= product.prodPrecio %>
+                                </p>
+                                <p>en 12x <%= product.prodPrecioCuotas %>
+                                </p>
+                                <p class="parrDestacado">ver medios de pagos</p>
+                            </article>
+                            <article class="stockDetailDesk">
+                                <h3>Stock disponible</h3>
+                                <form action="/cantidad" method="GET">
+                                    <label>Cantidad:</label>
+                                    <select name="cantidad">
+                                        <option value="1">1 unidad</option>
+                                        <option value="2">2 unidad</option>
+                                        <option value="3">3 unidad</option>
+                                        <option value="4">4 unidad</option>
+                                    </select>
+                                </form>
+                            </article>
+                            <article class="finalizarProdDesk">
+                                <a href="#">
+                                    <h5 class="comprarDesk">Comprar</h5>
+                                </a>
+                                <h5 class="addDesk">Agregar al carrito</h5>
+                                <h5 class="rebajaDesk">Cupón de descuento </h5>
+                            </article>
 
-                <article class="servicioDetaiDesk">
-                    <i class="fas fa-truck"></i><p>Formas de envio</p>
-                </article>
-                <p>Envios a todo el país</p>
-                <article class="servicioDetaiDesk">
-                    <i class="fas fa-exchange-alt"></i><p>Garantia</p>
-                </article>
-                <p>Garantía de fábrica: 12 meses</p>
+                            <article class="servicioDetaiDesk">
+                                <i class="fas fa-truck"></i>
+                                <p>Formas de envio</p>
+                            </article>
+                            <p>Envios a todo el país</p>
+                            <article class="servicioDetaiDesk">
+                                <i class="fas fa-exchange-alt"></i>
+                                <p>Garantia</p>
+                            </article>
+                            <p>Garantía de fábrica: 12 meses</p>
 
-                <article class="imgTarjetasDesk">
-                    <img src="/img/todasLasTarjetas.jpg" alt="no se encontro la imagen">
-                </article>
+                            <article class="imgTarjetasDesk">
+                                <img src="/img/todasLasTarjetas.jpg" alt="no se encontro la imagen">
+                            </article>
 
-             </section>
-         </header>
-        
-       </section> 
-     
+                        </section>
+                    </header>
 
-       
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+                </section>
+
+
+
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
 
 </html>
