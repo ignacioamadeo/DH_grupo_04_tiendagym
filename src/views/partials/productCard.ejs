@@ -1,10 +1,10 @@
 <article class="tarjetaProducto">
-    <div class="imagenProducto"><img src="./images/bici-fija-panther-pro-bf102.jpg"></div>
+    <div class="imagenProducto"><img src=<%= item.prodFotos %>></div>
     <ul>
-        <li class="precioProducto"><%= item.precio %></li>
-        <li class="cuotasProducto"><%= item.cuotas %></li>
-        <li class="nombreProducto"><%= item.nombre %></li>
-        <li class="envioProducto"><%= item.nombre %></li>
+        <li class="precioProducto"><%= item.prodPrecio %></li>
+        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li>
+        <li class="nombreProducto"><%= item.prodNombre %></li>
+        <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li>
     </ul>
 </article>
 
