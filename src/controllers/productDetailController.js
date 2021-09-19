@@ -9,7 +9,7 @@ const db = require('../databases/baseProductos.json');
 let productDetailController = {
 
 productDetail: (req,res)=>{
-    let product = db.find(item => item.id == req.params.idProductDetail)
+    let product = db.find(item => item.prodID == req.params.idProductDetail)
     res.render('products/productDetail', {product:product}); 
 
 }

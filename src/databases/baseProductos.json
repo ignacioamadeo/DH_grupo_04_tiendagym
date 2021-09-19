@@ -1,45 +1,75 @@
 [
   
     {
-        "id":1,
-        "img":"../img/biciFijaPanther4.jpg",
-        "precio":"$ 26.999",
-        "cuotas":"$ 3.829",
-        "nombre":"Bici fija Panther Pro"
+        "prodID":1,
+        "prodFotos":"../img/biciFijaPanther4.jpg",
+        "prodPrecio":"$ 26.999",
+        "prodPrecioCuotas":"$ 3.829",
+        "prodNombre":"Bici fija Panther Pro",
+        "prodDescripcion": "Descripción de producto",
+        "prodCategoria": "Categoría producto",
+        "prodDescuento": "20%",
+        "prodCantidad": 3,
+        "envioGratis": "TRUE"
     },
     {
-        "id":2,
-        "img":"../img/eliptico2.jpg",
-        "precio":"$ 51.424",
-        "cuotas":"$ 7.292",
-        "nombre":"Caminadora Eliptico Magnetico profesional"
+        "prodID":2,
+        "prodFotos":"../img/eliptico2.jpg",
+        "prodPrecio":"$ 51.424",
+        "prodPrecioCuotas":"$ 7.292",
+        "prodNombre":"Caminadora Eliptico Magnetico profesional",
+        "prodDescripcion": "Descripción de producto",
+        "prodCategoria": "Categoría producto",
+        "prodDescuento": "20%",
+        "prodCantidad": 3,
+        "envioGratis": "TRUE"
     },
     {
-        "id":3,
-        "img":"../img/caminadora.jpg",
-        "precio":"$ 72.990",
-        "cuotas":"$ 10.350",
-        "nombre":"Cinta de correr eléctrica Enerfit"
+        "prodID":3,
+        "prodFotos":"../img/caminadora.jpg",
+        "prodPrecio":"$ 72.990",
+        "prodPrecioCuotas":"$ 10.350",
+        "prodNombre":"Cinta de correr eléctrica Enerfit",
+        "prodDescripcion": "Descripción de producto",
+        "prodCategoria": "Categoría producto",
+        "prodDescuento": "20%",
+        "prodCantidad": 3,
+        "envioGratis": "TRUE"
     },
     {
-        "id":4,
-        "img":"../img/miniEscalador.jpg",
-        "precio":"$ 9.999",
-        "cuotas":"$ 1.418",
-        "nombre":"Mini stepper Jdm Sport Con Bandas Es-018"
+        "prodID":4,
+        "prodFotos":"../img/miniEscalador.jpg",
+        "prodPrecio":"$ 9.999",
+        "prodPrecioCuotas":"$ 1.418",
+        "prodNombre":"Mini stepper Jdm Sport Con Bandas Es-018",
+        "prodDescripcion": "Descripción de producto",
+        "prodCategoria": "Categoría producto",
+        "prodDescuento": "20%",
+        "prodCantidad": 3,
+        "envioGratis": "TRUE"
     },
     {
-        "id":5,
-        "img":"../img/remo.jpg",
-        "precio":"$ 59.990",
-        "cuotas":"$ 8.507",
-        "nombre":"Maquina Simulador De Remo Magnetico Plegable Jbh 32b"
+        "prodID":5,
+        "prodFotos":"../img/remo.jpg",
+        "prodPrecio":"$ 59.990",
+        "prodPrecioCuotas":"$ 8.507",
+        "prodNombre":"Maquina Simulador De Remo Magnetico Plegable Jbh 32b",
+        "prodDescripcion": "Descripción de producto",
+        "prodCategoria": "Categoría producto",
+        "prodDescuento": "20%",
+        "prodCantidad": 3,
+        "envioGratis": "TRUE"
     },
     {
-        "id":6,
-        "img":"../img/airBike.jpg",
-        "precio":"$ 149.999",
-        "cuotas":"$ 12.499",
-        "nombre":"Bicicleta Fija de aire Air Bike"
+        "prodID":6,
+        "prodFotos":"../img/airBike.jpg",
+        "prodPrecio":"$ 149.999",
+        "prodPrecioCuotas":"$ 12.499",
+        "prodNombre":"Bicicleta Fija de aire Air Bike",
+        "prodDescripcion": "Descripción de producto",
+        "prodCategoria": "Categoría producto",
+        "prodDescuento": "20%",
+        "prodCantidad": 3,
+        "envioGratis": "TRUE"
     }
 ]

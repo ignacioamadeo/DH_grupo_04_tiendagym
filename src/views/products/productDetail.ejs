@@ -10,16 +10,16 @@
     <main>
         <!---->
        
-        <h1 class="tituloProducDetail"><%= product.nombre %></h1>
+        <h1 class="tituloProducDetail"> <%= product.prodNombre %> </h1>
         
         <header class="productDetailMobile">
         <article class="imagenProd">
-            <img src=<%= product.img %> alt="no hay imagen disponible">
+            <img src=<%= product.prodFotos %> alt="no hay imagen disponible">
         </article>
         <section class="produCarat">
         <article class="mediosProduc">
-            <p class="precioPrductMobile"><%= product.precio %></p>
-            <p class="cuotasProductMobile">en 12x <%= product.cuotas %></p>
+            <p class="precioPrductMobile"><%= product.prodPrecio %></p>
+            <p class="cuotasProductMobile">en 12x <%= product.prodPrecioCuotas %></p>
             <p class="parrDestacado">ver medios de pagos</p>
         </article>
         <article class="stockProduc">
@@ -78,7 +78,7 @@
          <header class="deskProduct">
              <section class="perfilProductDesk">
             <article class="imgDetailDesk"> 
-                <img src=<%= product.img %> alt="no se encontro la imagen">
+                <img src=<%= product.prodFotos %> alt="no se encontro la imagen">
             </article>
 
             <article class="subTituloProdDesk">
@@ -115,11 +115,11 @@
         </section>
              <section class="tituloProducDesk">
                  <article>
-                     <h1><%= product.nombre %></h1>
+                     <h1><%= product.prodNombre %></h1>
                  </article>
                  <article class="mediosDtailDesk">
-                    <p class="contado"><%= product.precio %></p>
-                    <p>en 12x <%= product.cuotas %></p>
+                    <p class="contado"><%= product.prodPrecio %></p>
+                    <p>en 12x <%= product.prodPrecioCuotas %></p>
                     <p class="parrDestacado">ver medios de pagos</p>
                 </article>
                 <article class="stockDetailDesk">
