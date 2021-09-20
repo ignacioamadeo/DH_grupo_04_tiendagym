@@ -1,9 +1,9 @@
 <article class="tarjetaProducto">
-    <div class="imagenProducto"><img src=<%= item.prodFotos %>></div>
+    <a href="./productDetail/<%= item.prodID %>"><div class="imagenProducto"><img src=<%= item.prodFotos %>></div></a>
     <ul>
         <li class="precioProducto"><%= item.prodPrecio %></li>
         <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li>
-        <li class="nombreProducto"><%= item.prodNombre %></li>
+        <a href="./productDetail/<%= item.prodID %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
         <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li>
     </ul>
 </article>

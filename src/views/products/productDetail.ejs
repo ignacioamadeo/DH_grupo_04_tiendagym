@@ -30,7 +30,15 @@
                         </article>
                         <article class="stockProduc">
                             <h3>Stock disponible</h3>
-                            <p>cantidad: 1<i class="fas fa-chevron-right"></p></i>
+                            <form action="/cantidad" method="GET">
+                                <label>Cantidad:</label>
+                                <select name="cantidad">
+                                    <% for(let i=1; i <= product.prodCantidad; i++){ %>
+                                    <option value="<%= i %>"><%= i %> unidad</option>
+                            
+                                    <% } %>
+                                </select>
+                            </form>
                         </article>
                         <article class="finalizarProd">
                             <a href="#">
@@ -74,19 +82,19 @@
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p>Tipo de bicicleta fija: <b>Spinning</b></p>
+                            <p><%= product.prodDescrip1 %></p>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p>Tipo de resistencia: <b>Mecánico</b></p>
+                            <p><%= product.prodDescrip2 %></p>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p>Peso máximo soportado: <b>100 kg</b></p>
+                            <p><%= product.prodDescrip3 %></b></p>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p>Con computadora: <b>Sí</b></p>
+                            <p><%= product.prodDescrip4 %></p>
                         </article>
                     </section>
                 </header>
@@ -106,21 +114,21 @@
                                 <section class="caracDesk1">
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p>Tipo de bicicleta fija: <b>Spinning</b></p>
+                                        <p><%= product.prodDescrip1 %></p>
                                     </article>
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p>Tipo de resistencia: <b>Mecánico</b></p>
+                                        <p><%= product.prodDescrip2 %></p>
                                     </article>
                                 </section>
                                 <section class="caracDesk2">
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p>Peso máximo soportado: <b>100 kg</b></p>
+                                        <p><%= product.prodDescrip3 %></p>
                                     </article>
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p>Con computadora: <b>Sí</b></p>
+                                        <p><%= product.prodDescrip4 %></p>
                                     </article>
                                 </section>
                             </header>
@@ -159,10 +167,10 @@
                                 <form action="/cantidad" method="GET">
                                     <label>Cantidad:</label>
                                     <select name="cantidad">
-                                        <option value="1">1 unidad</option>
-                                        <option value="2">2 unidad</option>
-                                        <option value="3">3 unidad</option>
-                                        <option value="4">4 unidad</option>
+                                        <% for(let i=1; i <= product.prodCantidad; i++){ %>
+                                        <option value="<%= i %>"><%= i %> unidad</option>
+                                
+                                        <% } %>
                                     </select>
                                 </form>
                             </article>
