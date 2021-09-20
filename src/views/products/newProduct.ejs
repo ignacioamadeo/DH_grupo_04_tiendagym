@@ -19,7 +19,8 @@
                     </article>
                 </section>
                 <section class="formNewProduct">
-                    <form action="/newProduct" method=POST>
+                    <form action="/newProduct" method=POST 
+                    enctype="multipart/form-data">
 
                         <label for="prodNombre">Nombre de producto</label>
                         <input type="text" name="prodNombre" id="prodNombre" placeholder="Cinta de correr CYNT 234rpm">
@@ -48,7 +49,7 @@
                         id="prodDescrip4">Escribir descripción del producto...</textarea>
 
                         <label for="prodFotos">Cargar fotos producto:</label>
-                        <input type="file" name="prodFotos" accept=".jpg" multiple>
+                        <input type="file" name="prodFotos" >
 
                         <label for="prodCategoria">Categoría:</label>
                         <select name="prodCategoria">

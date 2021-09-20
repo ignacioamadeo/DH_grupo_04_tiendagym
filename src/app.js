@@ -17,7 +17,7 @@ app.use(express.json());
 //let rutasNewProduct=require('./routes/newProduct.js');
 //let rutasModifyProduct=require('./routes/modifyProduct.js');
 //===========================================================================
-app.use(express.static(path.join(__dirname,'../public'))); //=======>al crear la carpeta src se debe agregar un punto "." mas a la ruta public 
+app.use(express.static(path.join(__dirname,'./public'))); //=======>al crear la carpeta src se debe agregar un punto "." mas a la ruta public 
 
 //==========================================================================
 
