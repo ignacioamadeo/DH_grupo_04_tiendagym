@@ -9,6 +9,7 @@ const productNewController = require('../controllers/newProductController.js');
 
 //3º Llamo a la propiedad de ese controlador:
 router.get('/', productNewController.productNew);
+router.post('/', productNewController.create );
 
 //4º Exporto todo:
 module.exports = router
