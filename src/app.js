@@ -5,6 +5,9 @@ const path=require('path');
 app.set('view engine', 'ejs');
 app.set("views", path.join(__dirname, "./views")); // al crear la carpeta src y agregarle views, o crear varias carpetas dentro de views, es neceserio agregar este codigo
 
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 //let rutasIndex= require('./routes/index.js');
 //let rutasCarrito=require('./routes/productCart.js');
 //let rutasProductDetail=require('./routes/productDetail.js');

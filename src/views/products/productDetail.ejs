@@ -33,10 +33,12 @@
                             <form action="/cantidad" method="GET">
                                 <label>Cantidad:</label>
                                 <select name="cantidad">
-                                    <% for(let i=1; i <= product.prodCantidad; i++){ %>
-                                    <option value="<%= i %>"><%= i %> unidad</option>
-                            
-                                    <% } %>
+                                    <% for(let i=1; i <=product.prodCantidad; i++){ %>
+                                        <option value="<%= i %>">
+                                            <%= i %> unidad
+                                        </option>
+
+                                        <% } %>
                                 </select>
                             </form>
                         </article>
@@ -66,35 +68,38 @@
                         <article class="subTituloProd">
                             <h4>Sobre este producto</h4>
                         </article>
-
-                        <ul class="listaProd">
-                            <li>Sistema de resistencia mecánica que se maneja desde la perilla de ajuste.</li>
-                            <li>Incluye computadora con múltiples funciones.</li>
-                            <li>Soporta hasta 100kg.</li>
-                            <li>El asiento se ajusta verticalmente.</li>
-                            <li>El manubrio se adapta a las necesidades de quien lo usa.</li>
-                            <li>Su estructura es de acero.</li>
-                            <li>Para entrenar si impacto y mejorar la salud integral.</li>
-                        </ul>
+                        <section class="caracDestokDetail">
+                            <p>
+                                <%= product.prodDescripcion %>
+                            </p>
+                        </section>
 
                         <article class="subTituloProd">
                             <h4>Características de Panther Pro BF102</h4>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p><%= product.prodDescrip1 %></p>
+                            <p>
+                                <%= product.prodDescrip1 %>
+                            </p>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p><%= product.prodDescrip2 %></p>
+                            <p>
+                                <%= product.prodDescrip2 %>
+                            </p>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p><%= product.prodDescrip3 %></b></p>
+                            <p>
+                                <%= product.prodDescrip3 %></b>
+                            </p>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
-                            <p><%= product.prodDescrip4 %></p>
+                            <p>
+                                <%= product.prodDescrip4 %>
+                            </p>
                         </article>
                     </section>
                 </header>
@@ -108,27 +113,36 @@
                             </article>
 
                             <article class="subTituloProdDesk">
-                                <h4>Características de   <%= product.prodNombre %></h4>
+                                <h4>Características de <%= product.prodNombre %>
+                                </h4>
                             </article>
                             <header class="caracDesk">
                                 <section class="caracDesk1">
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p><%= product.prodDescrip1 %></p>
+                                        <p>
+                                            <%= product.prodDescrip1 %>
+                                        </p>
                                     </article>
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p><%= product.prodDescrip2 %></p>
+                                        <p>
+                                            <%= product.prodDescrip2 %>
+                                        </p>
                                     </article>
                                 </section>
                                 <section class="caracDesk2">
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p><%= product.prodDescrip3 %></p>
+                                        <p>
+                                            <%= product.prodDescrip3 %>
+                                        </p>
                                     </article>
                                     <article class="okProducDesk">
                                         <i class="far fa-check-circle"></i>
-                                        <p><%= product.prodDescrip4 %></p>
+                                        <p>
+                                            <%= product.prodDescrip4 %>
+                                        </p>
                                     </article>
                                 </section>
                             </header>
@@ -167,10 +181,12 @@
                                 <form action="/cantidad" method="GET">
                                     <label>Cantidad:</label>
                                     <select name="cantidad">
-                                        <% for(let i=1; i <= product.prodCantidad; i++){ %>
-                                        <option value="<%= i %>"><%= i %> unidad</option>
-                                
-                                        <% } %>
+                                        <% for(let i=1; i <=product.prodCantidad; i++){ %>
+                                            <option value="<%= i %>">
+                                                <%= i %> unidad
+                                            </option>
+
+                                            <% } %>
                                     </select>
                                 </form>
                             </article>
