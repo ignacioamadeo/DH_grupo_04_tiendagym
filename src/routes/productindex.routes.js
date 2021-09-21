@@ -8,7 +8,14 @@ const router=express.Router();
 const productIndexController=require('../controllers/productIndexController.js');
 
 //3º Llamo a la propiedad de ese controlador:
-router.get('/', productIndexController.productIndex);
+router.get('/maquinas', productIndexController.productIndex);
+
+router.get('/yoga', productIndexController.productYoga);
+
+router.get('/barras', productIndexController.productBarras);
+
+router.get('/indumentaria', productIndexController.productIndumentaria);
+
 
 //4º Exporto todo:
 module.exports=router;
