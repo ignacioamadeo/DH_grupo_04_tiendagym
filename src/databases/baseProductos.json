@@ -11,7 +11,7 @@
         "prodDescrip2": "Tipo de resistencia: Mecánico",
         "prodDescrip3": "Peso máximo soportado: 100 kg",
         "prodDescrip4": "Con computadora: Sí",
-        "prodCategoria":"Máquinas",
+        "prodCategoria": "#Maq",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
@@ -28,7 +28,7 @@
         "prodDescrip2": "Peso máximo de usuario: 160 kg",
         "prodDescrip3": "Tipo de resistencia: Magnética",
         "prodDescrip4": "Monitor: Sí",
-        "prodCategoria": "Máquinas",
+        "prodCategoria": "#Maq",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
@@ -45,7 +45,7 @@
         "prodDescrip2": "Peso máximo soportado: 130 kg",
         "prodDescrip3": "Velocidad máxima: 16 km/h",
         "prodDescrip4": "Es plegable: Sí",
-        "prodCategoria": "Máquinas",
+        "prodCategoria": "#Maq",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
@@ -62,7 +62,7 @@
         "prodDescrip2": "Tecnología: Hidráulica",
         "prodDescrip3": "Peso máximo soportado: 100 kg",
         "prodDescrip4": "Ancho x Profundidad x Altura: 35 cm x 47 cm x 23 cm",
-        "prodCategoria": "Máquinas",
+        "prodCategoria": "#Maq",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
@@ -79,7 +79,7 @@
         "prodDescrip2": "Es plegable: Sí",
         "prodDescrip3": "Largo x Ancho: 185 m x 55 cm",
         "prodDescrip4": "Cantidad de niveles de intensidad: 10",
-        "prodCategoria": "Máquinas",
+        "prodCategoria": "#Maq",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
@@ -96,7 +96,7 @@
         "prodDescrip2": "Peso máximo soportado: 130 kg",
         "prodDescrip3": "Tipo de resistencia: De aire",
         "prodDescrip4": "Con computadora: Sí",
-        "prodCategoria": "Máquinas",
+        "prodCategoria": "#Maq",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
@@ -113,7 +113,7 @@
         "prodDescrip2": "antideslizante",
         "prodDescrip3": "Espesor: 6 mm",
         "prodDescrip4": "Material: PVC",
-        "prodCategoria": "Funcional, pilates y yoga",
+        "prodCategoria": "#funcPilYog",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
@@ -130,9 +130,57 @@
         "prodDescrip2": "Material: Cromada",
         "prodDescrip3": "Diámetro: 50 mm",
         "prodDescrip4": "Incluye topes para barra: Sí",
-        "prodCategoria": "Pesas, discos y barras",
+        "prodCategoria": "#PesDisBar",
         "prodDescuento": "20%",
         "prodCantidad": 3,
         "envioGratis": "TRUE"
+    },
+    {
+        "prodID": 9,
+        "prodFotos": "../img/calzasHombres.jpg",
+        "prodPrecio": "$ 7.250",
+        "prodCantidadCuotas": 6,
+        "prodPrecioCuotas": "$ 1.209",
+        "prodNombre": "Calza Corta Running Hombre Osx Chicago",
+        "prodDescripcion": "Calza Corta Alta Compresion Bolsillos laterales .    Bolsillo trasero ",
+        "prodDescrip1": "Género: Hombre",
+        "prodDescrip2": "Tipo de calza: Deportiva",
+        "prodDescrip3": "Tipo de largo: Corto",
+        "prodDescrip4": "Tiro de la calza: Medio",
+        "prodCategoria": "#Ind",
+        "prodDescuento": "20%",
+        "prodCantidad": 3,
+        "envioGratis": "TRUE"
+    },
+    {
+        "prodID": "10",
+        "prodFotos": "../img/prodFotos-1632252255821-232977799calzalargaHombre.jpg",
+        "prodPrecio": "2.199",
+        "prodCantidadCuotas": "12",
+        "prodNombre": "Calza Larga Spandex Termica Compresion Running Rugby",
+        "prodDescripcion": "Calza Larga Termica Body Therm Negra ",
+        "prodDescrip1": "Género: Hombre",
+        "prodDescrip2": "Tipo de calza: LARGA",
+        "prodDescrip3": "Composición: Poliester y Spandex",
+        "prodDescrip4": "Material principal: Poliéster",
+        "prodCategoria": "#Ind",
+        "prodDescuento": "",
+        "prodCantidad": "5"
+    },
+    {
+        "prodID": "11",
+        "prodFotos": "../img/prodFotos-1632253440044-839930585calzasMujer.jpg",
+        "prodPrecio": "$6.280",
+        "prodCantidadCuotas": "6",
+        "prodPrecioCuotas": "$1.046",
+        "prodNombre": "Calza Corta Running Trail Mujer Osx",
+        "prodDescripcion": "Calza Corta\r\nBolsillo trasero con CierreBolsillo lateral con CierreTextil ultra DryRespirable",
+        "prodDescrip1": "Género: Mujer",
+        "prodDescrip2": "Tipo de largo: Corto",
+        "prodDescrip3": "Composición: Poliéster / elastano",
+        "prodDescrip4": "Tiro de la calza: Medio",
+        "prodCategoria": "#Ind",
+        "prodDescuento": "",
+        "prodCantidad": "4"
     }
 ]

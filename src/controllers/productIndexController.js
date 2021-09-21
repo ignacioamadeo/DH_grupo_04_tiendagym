@@ -8,19 +8,19 @@ const db=require('../databases/baseProductos.json');
 
 let productIndexController = {
     productIndex: (req, res, next)=>{
-       let product=db.filter(item => item.prodCategoria == "Máquinas"); 
+       let product=db.filter(item => item.prodCategoria == "#Maq"); 
         res.render('products/productIndex', {productInfo:product }) 
     },
     productYoga: (req, res, next)=>{
-        let product=db.filter(item => item.prodCategoria == "Funcional, pilates y yoga"); 
+        let product=db.filter(item => item.prodCategoria == "#funcPilYog"); 
          res.render('products/productIndex', {productInfo:product }) 
      },
      productBarras: (req, res, next)=>{
-        let product=db.filter(item => item.prodCategoria == "Pesas, discos y barras"); 
+        let product=db.filter(item => item.prodCategoria == "#PesDisBar"); 
          res.render('products/productIndex', {productInfo:product }) 
      },
      productIndumentaria: (req, res, next)=>{
-        let product=db.filter(item => item.prodCategoria == "Indumentaria"); 
+        let product=db.filter(item => item.prodCategoria == "#Ind"); 
          res.render('products/productIndex', {productInfo:product }) 
      }
     

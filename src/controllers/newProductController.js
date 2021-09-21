@@ -18,9 +18,9 @@ let productNewController = {
        let producto={
         prodID: req.body.prodID,
         prodFotos:`../img/${archivo.filename}`,
-        prodPrecio:req.body.prodPrecio,
+        prodPrecio: "$ " + req.body.prodPrecio,
         prodCantidadCuotas: req.body.prodCantidadCuotas,
-        prodPrecioCuotas:req.body.prodPrecioCuotas,
+        prodPrecioCuotas: "$ " + req.body.prodPrecioCuotas,
         prodNombre:req.body.prodNombre,
         prodDescripcion: req.body.prodDescripcion,
         prodDescrip1:req.body.prodDescrip1,
