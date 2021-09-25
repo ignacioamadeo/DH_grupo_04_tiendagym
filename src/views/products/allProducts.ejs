@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+    <!--Termina header y comienza main de la web -->
+    <main class="mainProductIndex">
+        <section class="productIndBarraLat">
+            <ul>
+                <li class="latEnvioProducto">Envío gratis<i class="fas fa-toggle-on"></i></li>
+                <li class="latCuotasProducto">Cuotas sin interés<i class="fas fa-toggle-on"></i></li>
+                <li class="latDisponibleProducto">Disponible en local<i class="fas fa-toggle-on"></i></li>
+            </ul>
+
+        </section>
+        <h2>Funcional, Pilates y Yoga</h2>
+        <section class="productIndArticulos">
+            <% productInfo.filter(function(product){ %>
+                <% if (product.prodCategoria == "#funcPilYog") { %>
+                <%- include('../partials/productCard', {item:product}) %>
+                <% } %>
+              <% }); %>
+        </section>
+
+        <h2>Pesas, Discos y Barras</h2>
+        <section class="productIndArticulos">
+            <% productInfo.forEach(function(product){ %>
+                <% if (product.prodCategoria == "#PesDisBar") { %>
+                <%- include('../partials/productCard', {item:product}) %>
+                <% } %>
+              <% }); %>
+        </section>
+
+        <h2>Máquinas</h2>
+        <section class="productIndArticulos">
+            <% productInfo.forEach(function(product){ %>
+                <% if (product.prodCategoria == "#Maq") { %>
+                <%- include('../partials/productCard', {item:product}) %>
+                <% } %>
+              <% }); %>
+        </section>
+
+        <h2>Indumentaria</h2>
+        <section class="productIndArticulos">
+            <% productInfo.forEach(function(product){ %>
+                <% if (product.prodCategoria == "#Ind") { %>
+                <%- include('../partials/productCard', {item:product}) %>
+                <% } %>
+              <% }); %>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

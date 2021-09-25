@@ -39,6 +39,10 @@ let productNewController = {
       });
 
         res.send(producto)
+    },
+    all: (req,res)=>{
+       
+        res.render('products/allProducts', {productInfo:data })
     }
     
     }
