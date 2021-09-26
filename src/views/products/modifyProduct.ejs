@@ -8,37 +8,48 @@
         <%- include('../partials/header') %>
 
             <!--Main -->
-            <!--Header: -->
             <main class="webAdmin">
                 <section class="adminHeader">
                     <article>
                         <img src="./images/pexels-life-of-pix-8264.jpg" class="newProductHeaderImage">
                         <ul>
                             <li>Sistema de gestión de productos</li>
-                            <li>Modificación de productos existentes</li>
+                            <li>Carga de nuevos productos</li>
                         </ul>
                     </article>
                 </section>
-                <!--Comienza formulario: -->
                 <section class="formNewProduct">
-                    <form action="/newProduct" method=POST>
+                    <form action="/modifyProduct/edit/<%= products.prodID %>?_method=PUT" method='POST' 
+                    enctype="multipart/form-data">
 
-                        <label for="prodBusqueda">Buscar producto existente:</label>
-                        <nav class="prodBusqueda">
-                            <p>Buscar producto/s por nombre / ID</p><i class="fas fa-search"></i>
-                        </nav>
                         <label for="prodNombre">Nombre de producto</label>
-                        <input type="text" name="prodNombre" id="prodNombre" placeholder="Cinta de correr CYNT 234rpm">
+                        <input type="text" name="prodNombre" id="prodNombre"placeholder="<%= products.prodNombre %>">
 
                         <label for="prodID">ID stock</label>
-                        <input type="text" name="prodID" id="prodNombre" placeholder="CDC210812">
+                        <input type="text" name="prodID" id="prodNombre" placeholder="<%= products.prodID %>">
 
                         <label for="prodDescripcion">Descripción</label>
                         <textarea name="prodDescripcion"
-                            id="prodDescripcion">Escribir descripción del producto...</textarea>
+                            id="prodDescripcion"><%= products.prodDescripcion %></textarea>
+
+                         <label for="prodDescrip1">Descripción-A</label>
+                         <textarea name="prodDescrip1"
+                         id="prodDescrip1"><%= products.prodDescrip1 %></textarea> 
+
+                         <label for="prodDescrip2">Descripción-B</label>
+                        <textarea name="prodDescrip2"
+                        id="prodDescrip2"><%= products.prodDescrip2 %></textarea> 
+                        
+                        <label for="prodDescrip3">Descripción-C</label>
+                        <textarea name="prodDescrip3"
+                        id="prodDescrip3"><%= products.prodDescrip3 %></textarea>
+
+                        <label for="prodDescrip4">Descripción-D</label>
+                        <textarea name="prodDescrip4"
+                        id="prodDescrip4"><%= products.prodDescrip4 %></textarea>
 
                         <label for="prodFotos">Cargar fotos producto:</label>
-                        <input type="file" name="prodFotos" accept=".jpg" multiple>
+                        <input type="file" name="prodFotos" >
 
                         <label for="prodCategoria">Categoría:</label>
                         <select name="prodCategoria">
@@ -49,23 +60,32 @@
                         </select>
 
                         <label>Precio</label>
-                        <input type="text" name="prodPrecio" placeholder="$20.000">
+                        <input type="text" name="prodPrecio" placeholder="<%= products.prodPrecio %>">
 
                         <label>Descuento</label>
-                        <input type="text" name="prodDescuento" placeholder="%25">
+                        <input type="text" name="prodDescuento" placeholder="<%= products.prodDescuento %>">
+
+                        <label>Precio en Cuotas</label>
+                        <input type="text" name="prodPrecioCuotas" placeholder="<%= products.prodPrecioCuotas %>">
+
+                        <label>Cuotas sin interés</label>
+                        <input type="number" name="prodCantidadCuotas" placeholder="<%= products.prodCantidadCuotas %>" min="0" max="12">
 
                         <label>Cantidad</label>
-                        <input type="number" name="prodCantidad" placeholder="1" min="0">
+                        <input type="number" name="prodCantidad" placeholder="<%= products.prodCantidad %>" min="0">
 
                         <div class="newProdEnvioCheckbox">
                             <label>Envío gratis</label>
                             <input type="checkbox" name="envioGratis" value="envioGratisSi">
                         </div>
 
-                        <button type="borrar">Resetear formulario</button>
-                        <button type="guardar">Guardar producto</button>
+                        <button type="reset">Resetear formulario</button>
+                        <button type="submit">Guardar producto</button>
                     </form>
+
+                  
                 </section>
+                <a href="/newProduct/allProducts">Todos los productos</a>
             </main>
             <!-- Footer importado -->
             <%- include('../partials/footer') %>

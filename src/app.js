@@ -8,6 +8,9 @@ app.set("views", path.join(__dirname, "./views")); // al crear la carpeta src y 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
+const methodOverride = require('method-override');
+
+
 //let rutasIndex= require('./routes/index.js');
 //let rutasCarrito=require('./routes/productCart.js');
 //let rutasProductDetail=require('./routes/productDetail.js');
@@ -21,6 +24,7 @@ app.use(express.static(path.join(__dirname,'./public'))); //=======>al crear la 
 
 //==========================================================================
 
+app.use(methodOverride('_method'));
  //app.use('/', rutasIndex); //====> dentro del router hay que usar el metodo render, sino no rompe todo.
 
 //   app.get('/', (req, res)=>{

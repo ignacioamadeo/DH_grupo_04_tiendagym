@@ -1,3 +1,8 @@
+let data=require('../databases/baseProductos.json')
+const fs=require('fs');
+const path=require('path');
+
+
 //MODIFICAR UN PRODUCTO EXISTENTE:
 
 //Renderizo el ejs correspondiente:
@@ -5,7 +10,53 @@
 let productModifyController = {
 
     productModify: (req,res)=>{
-        res.render('products/modifyProduct')
+        let id=req.params.id
+      let  products = data.find(product => product.prodID  == id)
+        res.render('products/modifyProduct',{products:products})
+    },
+    edit:(req,res)=>{
+       let id=req.params.id 
+       let product=data.findIndex(item=> item.prodID == id)
+       const archivo = req.file;
+
+       data[product]={
+        prodID: req.body.prodID,
+        prodFotos:`../img/${archivo.filename}`,
+        prodPrecio: "$ " + req.body.prodPrecio,
+        prodCantidadCuotas: req.body.prodCantidadCuotas,
+        prodPrecioCuotas: "$ " + req.body.prodPrecioCuotas,
+        prodNombre:req.body.prodNombre,
+        prodDescripcion: req.body.prodDescripcion,
+        prodDescrip1:req.body.prodDescrip1,
+        prodDescrip2:req.body.prodDescrip2,
+        prodDescrip3:req.body.prodDescrip3,
+        prodDescrip4:req.body.prodDescrip4,
+        prodCategoria: req.body.prodCategoria,
+        prodDescuento: req.body.prodDescuento,
+        prodCantidad: req.body.prodCantidad,
+        envioGratis: req.body.envioGratis,
+       } 
+       
+       fs.writeFileSync(path.join(__dirname,'../databases/baseProductos.json'), JSON.stringify(data, null, 4), {
+        encoding: "utf8",
+      });
+
+        res.render('products/allProducts',{productInfo:data})
+    },
+
+
+    destroy:(req,res)=>{
+        let id=req.params.id;
+         data=data.filter(item=>item.prodID != id)
+        fs.writeFileSync(
+			path.join(__dirname, '../databases/baseProductos.json'),
+			JSON.stringify(data, null, 4),
+			{
+			  encoding: "utf8",
+			}
+            );
+            res.send('La solicitud fue exitiosa')
+
     }
 
     }

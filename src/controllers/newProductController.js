@@ -43,7 +43,9 @@ let productNewController = {
     all: (req,res)=>{
        
         res.render('products/allProducts', {productInfo:data })
-    }
+    },
+
+
     
     }
     

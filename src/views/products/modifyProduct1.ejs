@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Header importado -->
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <!--Main -->
+            <!--Header: -->
+            <main class="webAdmin">
+                <section class="adminHeader">
+                    <article>
+                        <img src="./images/pexels-life-of-pix-8264.jpg" class="newProductHeaderImage">
+                        <ul>
+                            <li>Sistema de gestión de productos</li>
+                            <li>Modificación de productos existentes</li>
+                        </ul>
+                    </article>
+                </section>
+                <!--Comienza formulario: -->
+                <section class="formNewProduct">
+                    <form action="/newProduct" method=POST>
+
+                        <label for="prodBusqueda">Buscar producto existente:</label>
+                        <nav class="prodBusqueda">
+                            <p>Buscar producto/s por nombre / ID</p><i class="fas fa-search"></i>
+                        </nav>
+                        <label for="prodNombre">Nombre de producto</label>
+                        <input type="text" name="prodNombre" id="prodNombre" value="<%= products.prodNombre %>">
+
+                        <label for="prodID">ID stock</label>
+                        <input type="text" name="prodID" id="prodNombre" value="<%= products.prodNombre %>">
+
+                        <label for="prodDescripcion">Descripción</label>
+                        <textarea name="prodDescripcion"
+                            id="prodDescripcion">Escribir descripción del producto...</textarea>
+
+                        <label for="prodFotos">Cargar fotos producto:</label>
+                        <input type="file" name="prodFotos" accept=".jpg" multiple>
+
+                        <label for="prodCategoria">Categoría:</label>
+                        <select name="prodCategoria">
+                            <option value="#funcPilYog">Funcional, pilates y yoga</option>
+                            <option value="#PesDisBar">Pesas, discos y barras</option>
+                            <option value="#Maq">Máquinas</option>
+                            <option value="#Ind">Indumentaria</option>
+                        </select>
+
+                        <label>Precio</label>
+                        <input type="text" name="prodPrecio" placeholder="$20.000">
+
+                        <label>Descuento</label>
+                        <input type="text" name="prodDescuento" placeholder="%25">
+
+                        <label>Cantidad</label>
+                        <input type="number" name="prodCantidad" placeholder="1" min="0">
+
+                        <div class="newProdEnvioCheckbox">
+                            <label>Envío gratis</label>
+                            <input type="checkbox" name="envioGratis" value="envioGratisSi">
+                        </div>
+
+                        <button type="borrar">Resetear formulario</button>
+                        <button type="guardar">Guardar producto</button>
+                    </form>
+                </section>
+            </main>
+            <!-- Footer importado -->
+            <%- include('../partials/footer') %>
+    </body>
+
+
+</html>
