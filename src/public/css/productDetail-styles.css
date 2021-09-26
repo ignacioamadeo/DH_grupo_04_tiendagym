@@ -289,7 +289,7 @@
 /* Mitad derecha, título 6: Stock y cantidad*/
 
 .stockDetailDesk{
-    margin: 50px 0 50px 0;
+    margin: 30px 0 30px 0;
 }
 
 .stockDetailDeskText{
@@ -308,6 +308,7 @@
 .stockDetailDesk select{
     color: white;
     font-size: 15px;
+    width: 45%;
     padding: 5px 10px;
     border-radius: 2px;
     border-style: solid;
@@ -322,7 +323,7 @@
     text-align: center;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     border-bottom: solid 1px rgba(0,0,0,0.2);
     padding-bottom: 20px;
     border-top: solid 1px rgba(0,0,0,0.2);
@@ -396,57 +397,71 @@
 /* Mitad derecha, bloque de info sobre medios de pago y envios:*/
 
  .servicioDetaiDesk{
-    color: #1F7A8C;
-    font-size:15px;
-    display: flex;
-    flex-wrap: nowrap;
+    font-size:14px;
     margin-bottom: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
     font-weight: bold;
  }
 
  
  .servicioDetaiDesk p{
-    display: inline-block;
-    padding: 10px 10px;
+    display: block;
+    padding: 5px 10px;
+    color: #1F7A8C;
  }
 
+ .servicioDetaiDesk p i{
+    color: #1F7A8C;
+    transition: 1s;
+ }
+
+ .servicioDetaiDesk p i:hover{
+    rotate: 30;
+ }
 
 
  .imgTarjetasDesk{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
   }
  
   .imgTarjetasDesk img{
-     width: 80%;
+     width: 70%;
   }
  
 
 
 /* ^^^^^^ Mitad derecha detalle de producto versión desktop ^^^^^^ */
 
+/* >>>>>>>>>>>>>>> Mitad IZQUIERDA (detalles del producto): */
+
 .imgDetailDesk{
     text-align: center;
     background-color: white;
     border-radius: 10px;
 }
-
 .imgDetailDesk img{
     width: 50%;
     margin-top: 10px;
     margin-bottom: 20px;
-    
 }
 
+/* Mitad izquierda , subtítulo:*/
 
-
- .subTituloProdDesk h4{
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 20px;
+.subTituloProdDesk{
+    margin: 10px auto;
  }
+
+ .subTituloProdDesk h4{ 
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 300;
+    
+ }
+
+ /* Mitad izquierda , características parametrizadas:*/
 
  .caracDesk{
      display: flex;
@@ -470,6 +485,23 @@
     display: flex;
     margin-right: 10px; 
  }
+
+ /* Mitad izquierda , descripcion párrafo:*/
+
+ .caracDestokDetail{
+    width: 70%;
+    margin:auto;
+    margin-top: 40px;
+    border: dotted 5px #1fc1e9;
+    padding: 20px;
+}
+
+.caracDestokDetail p{
+    line-height: 30px;
+    text-align: justify;
+    font-size: 15px;
+    
+}
 
 
  .sobreElProducDesk0{
@@ -536,21 +568,6 @@
         margin-bottom: 30px;
     }
 
-
-    .caracDestokDetail{
-        width: 70%;
-        margin:auto;
-        margin-top: 40px;
-        border: dotted 5px #1fc1e9;
-        padding: 20px;
-    }
-
-    .caracDestokDetail p{
-        line-height: 30px;
-        text-align: justify;
-        font-size: 20px;
-        
-    }
 
 
 }
