@@ -39,7 +39,7 @@ let productNewController = {
         encoding: "utf8",
       });
 
-        res.send(producto)
+        res.redirect('./newProduct/allProducts')
     }
     else{
         res.render('products/newProduct')
