@@ -2,6 +2,7 @@
 <html lang="en">
 
     <%- include('../partials/head') %>
+   
 <body>
     <video autoplay muted loop class="myVideo">
         <source src=".\videos\vid-funcional-4761426.mp4" type="video/mp4">
@@ -9,31 +10,73 @@
     <main>
         <!--Comienza y termina main de la web con el formulario de register -->
         <div class = "formRegister">
-            <form>
-                <img class="logoHeaderLogin" src=".\images\tgym_logos-09.png" alt="No encontre Imagen">
+            <form action="/register/accepted" method="POST">
+                <a href="./"><img class="logoHeaderLogin" src=".\images\tgym_logos-09.png" alt="No encontre Imagen"></a>
+              
                 <div>
-                    <label> Correo Electronico</label> 
+                    <label> </label> 
                 </div>
                 <div> 
-                    <input type="text" name="email" placeholder="usuario@dominio.com">
+                    <input type="text" name="firstName" placeholder="Nombre"
+                     value="<%= locals.old && old.firstName ? old.firstName : ''%>">
+                </div>
+                <% if (locals.errors && errors.firstName) { %>
+                    <div class="msg-errors">
+                        <%= errors.firstName.msg %>
+                    </div>
+                    <% } %>
+                <div>
+                    <label></label> 
+                </div>
+                <div> 
+                    <input type="text" name="lastName" placeholder="Apellido"
+                    value="<%= locals.old && old.lastName ? old.lastName : ''%>">
+                </div>
+                <% if (locals.errors && errors.lastName) { %>
+                    <div class="msg-errors">
+                        <%= errors.lastName.msg %>
+                    </div>
+                    <% } %>
+                <div>
+                    <label> </label> 
+                </div>
+                <div> 
+                    <input type="email" name="email" placeholder="Correo Electronico"
+                    value="<%= locals.old && old.email ? old.email : ''%>">
+                </div>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="msg-errors">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                <div>
+                    <label></label>
                 </div>
                 <div>
-                    <label> Usuario </label>
+                    <input type="text" name="username" placeholder="Usuario" minlength="6" maxlength="10"
+                    value="<%= locals.old && old.username ? old.username : ''%>">
+                </div>
+                <% if (locals.errors && errors.username) { %>
+                    <div class="msg-errors">
+                        <%= errors.username.msg %>
+                    </div>
+                    <% } %>
+                <div>
+                    <label>  </label>
                 </div>
                 <div>
-                    <input type="text" name="username" placeholder="pepito" minlength="6" maxlength="10">
+                    <input type= "password" name="password" minlength="6" maxlength="10" placeholder="Contraseña">
+                </div>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="msg-errors">
+                        <%= errors.password.msg %>
+                    </div>
+                    <% } %>
+                <div>
+                    <label> Agregar imagen </label>
                 </div>
                 <div>
-                    <label> Contraseña </label>
-                </div>
-                <div>
-                    <input type= "text" name="password" minlength="6" maxlength="10">
-                </div>
-                <div>
-                    <label> Repetir contraseña </label>
-                </div>
-                <div>
-                    <input type= "text" name="passwordcheck" minlength="6" maxlength="10">
+                    <input type= "file" name="image" >
                 </div>
                 <div>
                     <button type="reset"> Borrar</button>

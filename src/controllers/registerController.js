@@ -1,4 +1,5 @@
 //REGISTRO DE NUEVO USUARIO:
+const {validationResult}=require('express-validator')
 
 //Renderizo el ejs correspondiente:
 
@@ -6,8 +7,22 @@ let registerController = {
 
 register:(req,res)=>{
     res.render('users/register'); 
-}
+},
+accepted:(req,res,next)=>{
+    let errors=validationResult(req);  
 
+    if(errors.isEmpty()){
+    res.send('aceptado')
+
+    }
+    else{
+        res.render('users/register',
+         {errors:errors.mapped(),
+            old: req.body
+        })
+
+}
+}
 
 }
 
