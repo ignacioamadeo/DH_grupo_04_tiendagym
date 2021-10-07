@@ -1,4 +1,5 @@
 //REGISTRO DE NUEVO USUARIO:
+const User=require('../models/User')
 const {validationResult}=require('express-validator')
 
 //Renderizo el ejs correspondiente:
@@ -11,8 +12,14 @@ register:(req,res)=>{
 accepted:(req,res,next)=>{
     let errors=validationResult(req);  
 
+    let userToCreate = {
+        ...req.body,
+        image: req.file.filename
+    }
+
     if(errors.isEmpty()){
-    res.send('aceptado')
+     let userCreate =User.create(userToCreate)   
+    res.redirect('/login')
 
     }
     else{

@@ -1,0 +1,137 @@
+[
+ {
+  "id": 1,
+  "firstName": "Augusto",
+  "lastName": "Rojas",
+  "email": "rojasaugus@gmail.com",
+  "username": "pepito",
+  "password": "verysafe12345",
+  "image": ""
+ },
+ {
+  "id": 2,
+  "firstName": "Juan",
+  "lastName": "Perez",
+  "email": "juanperez@gmail.com",
+  "username": "pejuan",
+  "password": "aswqklu2",
+  "image": ""
+ },
+ {
+  "id": 3,
+  "firstName": "Lucas",
+  "lastName": "Gozales",
+  "email": "lucasgonzalez@gmail.com",
+  "username": "gonzalu",
+  "password": "klio432",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "firstName": "Lucas",
+  "lastName": "Barrionuevo",
+  "email": "barrionuevoogym@gmail.com",
+  "username": "bngym",
+  "password": "mancuernas4546",
+  "image": ""
+ },
+ {
+  "id": 5,
+  "firstName": "Dario",
+  "lastName": "Gozales",
+  "email": "gymlocal@gmail.com",
+  "username": "localg",
+  "password": "barrasloc4s",
+  "image": ""
+ },
+ {
+  "id": 6,
+  "firstName": "German",
+  "lastName": "Avila",
+  "email": "mateorosca@gmail.com",
+  "username": "materos",
+  "password": "beatles1980'",
+  "image": ""
+ },
+ {
+  "id": 7,
+  "firstName": "Juan",
+  "lastName": "Roman",
+  "email": "juanron@gmail.com",
+  "username": "juanron",
+  "password": "ronchettihous3",
+  "image": ""
+ },
+ {
+  "id": 8,
+  "firstName": "Gustavo",
+  "lastName": "Avila",
+  "email": "avilagus@gmail.com",
+  "username": "rippedgus",
+  "password": "carreoalteam4",
+  "image": ""
+ },
+ {
+  "id": 9,
+  "firstName": "German",
+  "lastName": "Amado",
+  "email": "amadeusig@gmail.com",
+  "username": "amad3us",
+  "password": "m4gicm4n",
+  "image": ""
+ },
+ {
+  "id": 10,
+  "firstName": "Matias",
+  "lastName": "Jesus",
+  "email": "matimio@gmail.com",
+  "username": "matim0n",
+  "password": "pokem0nf4n",
+  "image": ""
+ },
+ {
+  "id": 11,
+  "firstName": "Facundo",
+  "lastName": "Arana",
+  "email": "lordsauron@gmail.com",
+  "username": "sauronlifts",
+  "password": "3y30fl0rd",
+  "image": ""
+ },
+ {
+  "id": 12,
+  "firstName": "Silvina",
+  "lastName": "Escudero",
+  "email": "darthmuscles@gmail.com",
+  "username": "sithtrains",
+  "password": "d4rks1d3",
+  "image": ""
+ },
+ {
+  "id": 13,
+  "firstName": "Martin",
+  "lastName": "Abalos",
+  "email": "abalos@gmail.com",
+  "username": "abalos1",
+  "password": "123456789",
+  "image": "image-1633634022164-550648823profile.jpg"
+ },
+ {
+  "id": 14,
+  "firstName": "Gaston",
+  "lastName": "Gimenes",
+  "email": "gimenezg@gmail.com",
+  "username": "gimenezoo",
+  "password": "12345678",
+  "image": "image-1633634465404-220865483profile.jpg"
+ },
+ {
+  "id": 15,
+  "firstName": "Nicolas",
+  "lastName": "Fernandez",
+  "email": "fernandeznic@gmail.com",
+  "username": "fernaNico",
+  "password": "12345678",
+  "image": "image-1633636027751-69882064profile.jpg"
+ }
+]
