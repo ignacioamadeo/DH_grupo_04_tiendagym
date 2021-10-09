@@ -133,5 +133,14 @@
   "username": "fernaNico",
   "password": "12345678",
   "image": "image-1633636027751-69882064profile.jpg"
+ },
+ {
+  "id": 16,
+  "firstName": "Aldana",
+  "lastName": "Rodriguez",
+  "email": "aldiro@gmail.com",
+  "username": "adlireina",
+  "password": "$2a$10$w2hcIYWKqpXJ8MohRk9LIewrxD3Ki.Zo3CG.6QWyyJuhHtNFZ.zAu",
+  "image": "image-1633788725175-75304306profile.jpg"
  }
 ]

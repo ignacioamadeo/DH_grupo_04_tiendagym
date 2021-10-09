@@ -11,7 +11,7 @@ const validacion= require('../middleware/validacionesRegister.js')
 
 //3º Llamo a la propiedad de ese controlador:
 router.get('/', registerController.register);
-router.post('/accepted', upload.single('image') ,validacion, registerController.accepted)
+router.post('/', upload.single('image') ,validacion, registerController.accepted)
 
 //4º Exporto todo:
 module.exports=router;
