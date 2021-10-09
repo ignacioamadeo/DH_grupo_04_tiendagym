@@ -10,6 +10,7 @@ const loginController=require('../controllers/loginController.js');
 //3º Llamo a la propiedad de ese controlador:
 router.get('/', loginController.login);
 router.post('/', loginController.accept)
+router.get('/profile', loginController.profile)
 
 //4º Exporto todo:
 module.exports=router;

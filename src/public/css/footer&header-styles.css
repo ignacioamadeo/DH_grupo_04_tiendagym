@@ -56,7 +56,7 @@
 .loginCarrito{
     display: flex;  
     color: white;
-    padding: 5px 30px;
+    padding: 5px 10px;
 }
 
 .loginCarrito i{
@@ -85,6 +85,18 @@
     -webkit-box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.73); 
     box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.73);
 }
+
+.profileUser{
+    width: 20%;
+    text-align: center;
+    
+}
+.profileUser img{
+    width: 50%;
+    border-radius: 50%;
+   
+  }
+
 
 /*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
 
@@ -213,6 +225,19 @@ footer{
     border: none;
     margin-top: 2.5px;
 }
+
+.profileUser{
+    width: 100px;
+    text-align: center;
+   
+   
+    
+}
+.profileUser img{
+    width: 50%;
+    border-radius: 50%;
+   
+  }
 
 /*<-- A partir de acá va la parte footer para la versión desktop -->*/
 

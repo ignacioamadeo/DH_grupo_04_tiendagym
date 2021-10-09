@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+
+<main>
+    <h1>Bienvenido <%= user.username%></h1>
+    <section class="imgProfile">
+        <img src="/imgRegister/<%= user.image%>" alt="No se encontro la imagen">
+    </section>  
+    <section>
+        <h3>Nombre: <%= user.firstName%> </h3>
+        <h3>Apellido: <%= user.lastName%> </h3>
+        <h3>Email: <%= user.email%> </h3>
+    </section>  
+
+</main>
+
+<%- include('../partials/footer') %>
+    
+</body>
+</html>

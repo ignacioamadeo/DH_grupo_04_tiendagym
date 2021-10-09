@@ -33,6 +33,10 @@ let loginController = {
                 }
             }
         })
+},
+
+profile:(req,res)=>{
+    res.render('users/profile',{ user: req.session.userLogged});
 }
 }
 /*Recordar que al crear carpetas en views y agregarle archivos, 
