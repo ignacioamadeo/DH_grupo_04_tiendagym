@@ -142,5 +142,14 @@
   "username": "adlireina",
   "password": "$2a$10$w2hcIYWKqpXJ8MohRk9LIewrxD3Ki.Zo3CG.6QWyyJuhHtNFZ.zAu",
   "image": "image-1633788725175-75304306profile.jpg"
+ },
+ {
+  "id": 17,
+  "firstName": "Gustavo",
+  "lastName": "Avila",
+  "email": "victorg.avila@gmail.com",
+  "username": "gtiavo",
+  "password": "$2a$10$I6metaLpaPRpGsUcXxLkRencomEbOWaBQSEclF3cbBM4NgPdva/Tq",
+  "image": "image-1633791976390-388112391foto1.jpg"
  }
 ]

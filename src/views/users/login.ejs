@@ -9,11 +9,16 @@
     <!--Comienza y termina main de la web con el formulario de login -->
     <main>
         <div class="formLogin">
-            <form>
+            <form action="/login" method="POST">
                 <a href="./"><img class="logoHeaderLogin" src=".\images\tgym_logos-09.png" alt="No encontre Imagen"></a>
                 <div>
                     <label>Ingrese email</label>
                 </div>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="msg-errors">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
                 <div>
                     <input type="text" name="email"  >
                 </div>
