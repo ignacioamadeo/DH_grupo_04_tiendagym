@@ -6,11 +6,13 @@ const router=express.Router();
 
 //2º Importo controlador: 
 const loginController=require('../controllers/loginController.js');
+const guestMiddleware=require('../middleware/guestMiddleware');
+const authMiddleware=require('../middleware/authMiddleware');
 
 //3º Llamo a la propiedad de ese controlador:
-router.get('/', loginController.login);
+router.get('/', guestMiddleware ,loginController.login);
 router.post('/', loginController.accept)
-router.get('/profile', loginController.profile)
+router.get('/profile', authMiddleware ,loginController.profile)
 
 //4º Exporto todo:
 module.exports=router;
