@@ -9,6 +9,7 @@ const homeController=require('../controllers/homeController.js');
 
 //3º Llamo a la propiedad de ese controlador:
 router.get('/', homeController.home);
+router.get('/search', homeController.search)
 
 //4º Exporto todo:
 module.exports=router;

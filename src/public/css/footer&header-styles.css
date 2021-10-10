@@ -29,7 +29,7 @@
 .busqueda{
     width: 35%;
     min-width: 210px;
-    height: 25px;
+    height: 30px;
     background-color: white;
     margin: 0 0 10px 0;
     display: flex;
@@ -46,6 +46,12 @@
     font-size: 13px;
     color:#3b5964 ;
 } 
+.search{
+    width: 95%;
+    height: 25px;
+    border: none;
+    margin-top: 2.5px;
+}
 
 .loginCarrito{
     display: flex;  
@@ -125,6 +131,21 @@ footer{
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
 @media (min-width: 481px){
+    .searchForm{
+        width: 95%;
+        
+    }
+    .busqueda i{
+       margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+    .search{
+        width: 95%;
+        height: 25px;
+        border: none;
+        margin-top: 2.5px;
+    }
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
@@ -173,6 +194,24 @@ footer{
 
 .botonMenuMobile{
     display: none;
+}
+
+
+
+.searchForm{
+    width: 95%;
+    
+}
+.busqueda i{
+   margin-left: 20px;
+    margin-right: 20px;
+  }
+
+.search{
+    width: 95%;
+    height: 25px;
+    border: none;
+    margin-top: 2.5px;
 }
 
 /*<-- A partir de acá va la parte footer para la versión desktop -->*/

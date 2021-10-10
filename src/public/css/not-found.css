@@ -1,0 +1,38 @@
+.fondoError {
+    background-image: url('https://i.pinimg.com/originals/f4/95/9e/f4959eb4f559ad409d281396f5e70c93.jpg') ;
+   
+}
+.errorClass{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.tituloError{
+    width: 200px;
+    color: rgb(23, 23, 26);
+    font-size: 40px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    text-transform:uppercase;
+}
+
+.descripError{
+    width: 200px;
+    margin-left: 1100px;
+margin-top: 20px;
+font-size: 30px;
+font-weight: bold;
+color: rgb(247, 12, 188);
+text-transform:uppercase;
+}
+
+.volerError{
+    width: 200px;
+    background-color: rgba(0, 0, 255, 0.534);
+    color: white;
+    font-size: 40px;
+    margin-left: 1100px;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-transform:uppercase;
+}

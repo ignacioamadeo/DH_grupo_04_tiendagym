@@ -15,6 +15,7 @@ let productModifyController = {
         res.render('products/modifyProduct',{products:products})
     },
     edit:(req,res)=>{
+      if(req.file){
        let id=req.params.id 
        let product=data.findIndex(item=> item.prodID == id)
        const archivo = req.file;
@@ -42,6 +43,11 @@ let productModifyController = {
       });
 
         res.render('products/allProducts',{productInfo:data})
+    }
+    else{
+      let id=req.params.id
+      res.redirect(`../${id}`)
+  } 
     },
 
 

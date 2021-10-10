@@ -1,9 +1,13 @@
 <header class="mainHeader">
     <!--A partir de acá va la parte superior del header con logo, buscador y login-->
     <div class="mainHeaderTop">
-        <img src="../images/tgym_logos-03.png" class="logoPrincipal">
+        <a href="../"><img src="../images/tgym_logos-03.png" class="logoPrincipal"></a>
         <nav class="busqueda">
-            <p>Buscar en Tienda Gym</p><i class="fas fa-search"></i>
+            <i class="fas fa-search"></i>
+            <form action="/search" method="GET" class="searchForm">
+                <input type="text" name="search" class="search">
+                
+            </form>
         </nav>
         <nav class="loginCarrito">
             <a href="../login"><i class="fas fa-user-circle">

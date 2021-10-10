@@ -14,6 +14,7 @@ let productNewController = {
         res.render('products/newProduct') //al crear carpetas en views y agregarle archivos, la ruta en el controlador debera ser nombrada con el nombre de la carpeta a la que pertenece
     },
     create:(req,res,next)=>{
+        if(req.file){
         const archivo = req.file;
        let producto={
         prodID: req.body.prodID,
@@ -38,7 +39,11 @@ let productNewController = {
         encoding: "utf8",
       });
 
-        res.send(producto)
+        res.redirect('./newProduct/allProducts')
+    }
+    else{
+        res.render('products/newProduct')
+    }
     },
     all: (req,res)=>{
        
