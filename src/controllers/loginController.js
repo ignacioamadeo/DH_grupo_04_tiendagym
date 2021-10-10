@@ -17,7 +17,7 @@ let loginController = {
                  delete userToLogin.password;
                  req.session.userLogged = userToLogin;
                  res.redirect('/')
-             }
+             }else{
               res.render('users/login', {
                  errors: {
                      email:{
@@ -25,7 +25,8 @@ let loginController = {
                      }
                  }
              });
-        }
+            }
+        } else {
          res.render('users/login', {
             errors: {
                 email:{
@@ -33,6 +34,7 @@ let loginController = {
                 }
             }
         });
+    }
 },
 
 profile:(req,res)=>{
