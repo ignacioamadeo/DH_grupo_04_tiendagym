@@ -11,9 +11,9 @@ const authMiddleware=require('../middleware/authMiddleware');
 
 //3º Llamo a la propiedad de ese controlador:
 router.get('/', guestMiddleware ,loginController.login);
-router.post('/', loginController.accept)
-router.get('/profile', authMiddleware ,loginController.profile)
-
+router.post('/', loginController.accept);
+router.get('/profile', authMiddleware ,loginController.profile);
+router.get('/logout', loginController.logout )
 //4º Exporto todo:
 module.exports=router;
 

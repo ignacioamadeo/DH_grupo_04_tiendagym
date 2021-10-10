@@ -9,12 +9,13 @@
 <main>
     <h1>Bienvenido <%= user.username%></h1>
     <section class="imgProfile">
-        <img src="/imgRegister/<%= user.image%>" alt="No se encontro la imagen">
+        <img src="/imgRegister/<%= user.image %>" alt="No se encontro la imagen">
     </section>  
     <section>
         <h3>Nombre: <%= user.firstName%> </h3>
         <h3>Apellido: <%= user.lastName%> </h3>
         <h3>Email: <%= user.email%> </h3>
+        <a href="../login/logout">Cerrar Session</a>
     </section>  
 
 </main>

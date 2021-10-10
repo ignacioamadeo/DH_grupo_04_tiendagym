@@ -65,6 +65,13 @@
     color: white;
 }
 
+.loginCarrito2 i{
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+    color: white;
+}
+
 .mainHeaderMobile{
     display: block;
     max-width: 100%;

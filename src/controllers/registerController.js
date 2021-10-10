@@ -14,7 +14,7 @@ accepted:(req,res,next)=>{
     let errors=validationResult(req);
     let userInDB = User.findByField('email', req.body.email)  
     if(userInDB ){
-        return res.render('users/register',
+         res.render('users/register',
         {errors:{
             email:{
                 msg:'Este email ya esta registrado'

@@ -10,7 +10,7 @@ let loginController = {
         res.render('users/login') 
     },
     accept:(req,res)=>{
-        let userToLogin= User.findByField('email', req.body.email);
+        let userToLogin= User.findByField( 'email', req.body.email);
         if(userToLogin){
             let isOKThePass= bcrypt.compareSync(req.body.password, userToLogin.password )
              if( isOKThePass ){
@@ -18,25 +18,30 @@ let loginController = {
                  req.session.userLogged = userToLogin;
                  res.redirect('/')
              }
-             return res.render('users/login', {
+              res.render('users/login', {
                  errors: {
                      email:{
                          msg: 'Las credendicales son inválidas'
                      }
                  }
-             })
+             });
         }
-        return res.render('users/login', {
+         res.render('users/login', {
             errors: {
                 email:{
                     msg: 'No se encuentra este mail en nuestra base de datos'
                 }
             }
-        })
+        });
 },
 
 profile:(req,res)=>{
     res.render('users/profile',{ user: req.session.userLogged});
+},
+
+logout:(req,res)=>{
+  req.session.destroy();
+  res.redirect('/');  
 }
 }
 /*Recordar que al crear carpetas en views y agregarle archivos, 
