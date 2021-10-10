@@ -21,6 +21,9 @@ let homeController = {
        }
       
         res.render('products/search', {productInfo:productsResults})
+    },
+    construction:(req,res)=>{
+        res.render('pagConstruc')
     }
 
 }

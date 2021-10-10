@@ -1,0 +1,19 @@
+.construction{
+    background-image: url('https://www.apsso.com.ar/wp-content/uploads/2016/03/Sitio-en-construccion.jpg') ;
+}
+
+.box-back{
+    width: 20%;
+   
+   margin: auto;
+    background-color: rgba(0, 0, 255, 0.473);
+    border-radius: 10px;
+}
+
+.volerConstru{
+    font-size: 30px;
+
+    color: rgb(236, 232, 240);
+   text-align: center;
+   margin-top: 50px;
+}

@@ -85,6 +85,10 @@ width: 100px;
   font-size: 10px;
 }
 
+.msg-errors{
+  color: rgb(243, 17, 17);
+}
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
 @media (min-width: 481px){
 
