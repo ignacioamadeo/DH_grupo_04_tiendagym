@@ -241,10 +241,52 @@ footer{
     
 }
 .profileUser img{
-    width: 50%;
+    width: 60%;
     border-radius: 50%;
    
   }
+
+.barraProfile{
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    
+    
+}
+  .barraProfile li a{
+    padding:10px 12px;
+    display:block;
+    background-color: rgb(129, 212, 250);
+    color: white;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+
+  .barraProfile li a:hover{
+    background-color:#4343438c;
+   
+  }
+
+  .barraProfile > ul{
+      float: right;
+  }
+li{
+    list-style: none;
+}
+  .barraProfile li ul{
+      display: none;
+    position: absolute;
+    min-width:130px;
+    list-style: none;
+    
+  
+  }
+
+  .barraProfile  li:hover > ul {
+      display: block;
+    
+  } 
+
+
 
 /*<-- A partir de acá va la parte footer para la versión desktop -->*/
 

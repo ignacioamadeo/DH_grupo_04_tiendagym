@@ -12,8 +12,20 @@
        
         <nav class="loginCarrito">
             <% if (locals.isLogged) { %>
-                <a href="../login/profile" class="profileUser"><img src="/imgRegister/<%= locals.userLogged.image%>" alt="No se encontro la imagen"></a>
-                
+
+                <ul class="barraProfile">
+                    <li><a href="../login/profile"><%= locals.userLogged.username%></a>
+                        <ul>
+                            <li><a href="../construction">Configuración</a></li>
+                            <li><a href="../construction">Mis Compras</a></li>
+                            <li><a href="../construction">Mis Tarjetas</a></li>
+                            <li><a href="../login/logout">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              
+                  <a href="../login/profile" class="profileUser"><img src="/imgRegister/<%= locals.userLogged.image%>" alt="No se encontro la imagen"></a>
+                 
             <a href="../productCart" class="loginCarrito2" ><i class="fas fa-shopping-cart">
             </i></a>
                 <% } else { %>
@@ -29,10 +41,10 @@
     <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
     <nav class="mainHeaderBottom">
         <ul class="menuInferior">
-            <a href="./construction"><li>Noticias</li></a>
-            <a href="./construction"><li>Ofertas</li></a>
-            <a href="./construction"><li>Hogar</li></a>
-            <a href="./construction"><li>Empresas</li></a>
+            <a href="../construction"><li>Noticias</li></a>
+            <a href="../construction"><li>Ofertas</li></a>
+            <a href="../construction"><li>Hogar</li></a>
+            <a href="../construction"><li>Empresas</li></a>
         </ul>
     </nav>
     <!--Dejo botón para versión mobile: -->
