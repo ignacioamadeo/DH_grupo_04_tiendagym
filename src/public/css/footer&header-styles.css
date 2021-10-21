@@ -53,17 +53,26 @@
     margin-top: 2.5px;
 }
 
-.loginCarrito{
+.loginCarrito {
     display: flex;  
     color: white;
     padding: 5px 10px;
+    justify-content:center;
+  
+    
+    
 }
+
+
 
 .loginCarrito i{
     padding: 5px 10px 5px 10px;
     font-size: 20px;
     color: white;
+   
 }
+
+
 
 .loginCarrito2 i{
     margin-top: 10px;
@@ -94,14 +103,22 @@
 }
 
 .profileUser{
-    width: 20%;
-    text-align: center;
-    
+    width: 80%;
+   margin-right: 20px;
+   
 }
 .profileUser img{
-    width: 50%;
+    width: 50px;
     border-radius: 50%;
    
+   
+    
+   
+  }
+
+  .barraProfile{
+      display: none;
+
   }
 
 
@@ -164,6 +181,15 @@ footer{
         height: 25px;
         border: none;
         margin-top: 2.5px;
+    }
+
+    .profileUser{
+        width: 20%;
+    }
+
+    .profileUser img{
+        width: 50%;
+        border-radius: 50%;
     }
 }
 
@@ -247,6 +273,7 @@ footer{
   }
 
 .barraProfile{
+    display: block;
     margin-top: 5px;
     background-color: rgba(255, 255, 255, 0);
     
@@ -258,7 +285,7 @@ footer{
     background-color: rgb(129, 212, 250);
     color: white;
     font-size: 17px;
-    border-radius: 5px;
+  
   }
 
   .barraProfile li a:hover{

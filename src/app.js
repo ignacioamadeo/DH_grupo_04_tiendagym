@@ -23,9 +23,7 @@ app.use(methodOverride('_method'));
 //CONFIG PUBLIC - Hago pública la carpeta public:
 app.use(express.static(path.join(__dirname,'./public'))); 
 
-//CONFIG ERROR 404 - edirijo a renderizar pag 404 si viene error:
-app.use((req,res,next)=>{
-res.status(404).render('not-found')})
+
 
 //CONFIG MIDDLEWARE - :
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
@@ -41,6 +39,11 @@ RUTEO:
 
 //LLAMO a archivo principal de rutas cuando se entra a localhost:3000/
 app.use('/', require('./routes/raiz.routes'));
+
+
+//CONFIG ERROR 404 - edirijo a renderizar pag 404 si viene error:
+app.use((req,res,next)=>{
+    res.status(404).render('not-found')})
 
 
 /* --- 
