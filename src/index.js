@@ -1,9 +1,11 @@
-//Uso este archivo para dar de alta el servidor y llamar a app.js:
+/* Uso este archivo para dar de alta 
+el servidor y llamar a app.js. */
 
-const app=require ('./app');
+//IMPORTAR APP.JS- Llamo al contenido del archivo app.js:
+const app = require ('./app');
 
-const puerto = process.env.PORT || 3000
-
+//CONFIG SERVER - Doy de alta el SERVIDOR LOCAL:
+const puerto = process.env.PORT || 3000;
 app.listen(puerto,()=>
     console.log(`el puerto ${puerto} esta activo`)
-)
+);

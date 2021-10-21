@@ -1,39 +1,51 @@
-const express=require('express');
-const app=express();
-const path=require('path');
-const methodOverride = require('method-override');
+/* --- 
+CONFIGURACIÓN GENERAL DE LA APP: 
+--- */
 
+//CONFIG EXPRESS - Llamo paquete Express:
+const express = require('express');
+const app = express();
 
-
-const userLoggedMiddleware=require('./middleware/userLoggedMiddleware');
+//CONFIG SESSION - Llamo a paquete Express-session (para login y cookies):
 const session = require('express-session');
-//apartir de aca comienza el sprint3 con el metodo set para ejs y las rutas
-app.set('view engine', 'ejs');
-app.set("views", path.join(__dirname, "./views")); // al crear la carpeta src y agregarle views, o crear varias carpetas dentro de views, es neceserio agregar este codigo
 
+//CONFIG PATH - Llamo paquete Path:
+const path = require('path');
+
+//CONFIG EJS - Establecer ejs como motor de plantillas:
+app.set('view engine', 'ejs');
+app.set("views", path.join(__dirname, "./views")); 
+
+//CONFIG FORMS - Para adaptar métodos PUT y DELETE de forms para html:
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+//CONFIG PUBLIC - Hago pública la carpeta public:
+app.use(express.static(path.join(__dirname,'./public'))); 
+
+//CONFIG ERROR 404 - edirijo a renderizar pag 404 si viene error:
+app.use((req,res,next)=>{
+res.status(404).render('not-found')})
+
+//CONFIG MIDDLEWARE - :
+const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
 app.use(express.json());
 app.use(session({ secret: 'shhhh', resave: false, saveUninitialized: false,}))
 app.use(userLoggedMiddleware);
 app.use(express.urlencoded({extended:false}));
 
 
+/* --- 
+RUTEO: 
+--- */
 
-
-//===========================================================================
-app.use(express.static(path.join(__dirname,'./public'))); //=======>al crear la carpeta src se debe agregar un punto "." mas a la ruta public 
-
-//==========================================================================
-
-app.use(methodOverride('_method'));
- 
-
-
+//LLAMO a archivo principal de rutas cuando se entra a localhost:3000/
 app.use('/', require('./routes/raiz.routes'));
 
 
+/* --- 
+EXPORT: 
+--- */
 
-
-app.use((req,res,next)=>{
-res.status(404).render('not-found')})
-
+//EXPORTO todo:
 module.exports=app;

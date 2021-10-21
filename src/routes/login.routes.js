@@ -5,7 +5,7 @@ const express=require('express');
 const router=express.Router();
 
 //2º Importo controlador: 
-const loginController=require('../controllers/loginController.js');
+const loginController=require('../controllers/loginController.js'); //Renderizo EJS login.
 const guestMiddleware=require('../middleware/guestMiddleware');
 const authMiddleware=require('../middleware/authMiddleware');
 
