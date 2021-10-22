@@ -41,7 +41,7 @@ RUTEO:
 app.use('/', require('./routes/raiz.routes'));
 
 
-//CONFIG ERROR 404 - edirijo a renderizar pag 404 si viene error:
+//CONFIG ERROR 404 - redirijo a renderizar pag 404 si viene error:
 app.use((req,res,next)=>{
     res.status(404).render('not-found')})
 
