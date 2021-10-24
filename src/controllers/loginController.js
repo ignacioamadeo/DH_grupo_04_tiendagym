@@ -17,6 +17,10 @@ let loginController = {
                  delete userToLogin.password;
                  req.session.userLogged = userToLogin;
                  res.redirect('/')
+                 if (req.body.recordame != undefined){
+                     res.cookie('recordame',
+                     userToLogin.email, {maxAge: 60000})
+                 }
              }else{
               res.render('users/login', {
                  errors: {

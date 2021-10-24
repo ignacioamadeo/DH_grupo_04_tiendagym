@@ -27,12 +27,13 @@ app.use(express.static(path.join(__dirname,'./public')));
 
 //CONFIG MIDDLEWARE - :
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
+const recordameMiddleware = require('./middleware/recordameMiddleware');
 app.use(express.json());
 app.use(session({ secret: 'shhhh', resave: false, saveUninitialized: false,}))
 app.use(userLoggedMiddleware);
 app.use(express.urlencoded({extended:false}));
-
-
+app.use(cookieParser());
+app.use(recordameMiddleware);
 /* --- 
 RUTEO: 
 --- */
