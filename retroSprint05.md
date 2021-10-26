@@ -37,3 +37,7 @@ atomizar las rutas, controladores, etc en muchos archivos (tenemos 1 por página
 
 5. Dejar de hacer
 estresarnos.
+
+
+
+JIRA: https://gtiavo.atlassian.net/jira/software/projects/PIT/boards/2

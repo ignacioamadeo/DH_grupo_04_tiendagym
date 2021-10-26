@@ -282,7 +282,7 @@ footer{
   .barraProfile li a{
     padding:10px 12px;
     display:block;
-    background-color: rgb(129, 212, 250);
+    background-color: rgba(129, 212, 250, 0.459);
     color: white;
     font-size: 17px;
   
