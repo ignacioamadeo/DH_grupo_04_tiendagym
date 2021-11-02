@@ -1,4 +1,4 @@
-let data=require('../databases/baseProductos.json')
+let data=require('../db/baseProductos.json')
 const fs=require('fs');
 const path=require('path');
 

@@ -1,4 +1,4 @@
-const data=require('../databases/baseProductos.json')
+const data=require('../db/baseProductos.json')
 
 //HOME:
 

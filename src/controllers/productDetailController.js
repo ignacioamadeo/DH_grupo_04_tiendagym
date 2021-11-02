@@ -2,7 +2,7 @@
 
 //Llamo a la base de datos (en este caso objeto json) y la asigno a la variable db:
 
-const db = require('../databases/baseProductos.json');
+const db = require('../db/baseProductos.json');
 
 //Renderizo el ejs correspondiente:
 

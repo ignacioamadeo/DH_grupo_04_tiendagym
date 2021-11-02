@@ -3,7 +3,7 @@ const path=require('path');
 
 
 const User ={
-    fileName:path.join(__dirname,'../databases/users/baseUsers.json'),
+    fileName:path.join(__dirname,'../db/users/baseUsers.json'),
 
     getData: function(){
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8')) 

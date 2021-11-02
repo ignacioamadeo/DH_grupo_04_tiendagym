@@ -1,6 +1,6 @@
 
 const fs=require('fs');
-const data=require('../databases/baseProductos.json');
+const data=require('../db/baseProductos.json');
 const path=require('path');
 
 
