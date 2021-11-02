@@ -16,11 +16,12 @@ let loginController = {
              if( isOKThePass ){
                  delete userToLogin.password;
                  req.session.userLogged = userToLogin;
-                 res.redirect('/')
-                 if (req.body.recordame != undefined){
+                 if (req.body.recordame){
                      res.cookie('recordame',
-                     userToLogin.email, {maxAge: 60000})
-                 }
+                     req.body.email, {maxAge: 60000})
+                    }
+                    res.redirect('/')
+                
              }else{
               res.render('users/login', {
                  errors: {
