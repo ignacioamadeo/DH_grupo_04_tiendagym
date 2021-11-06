@@ -7,22 +7,22 @@ module.exports = (sequelize, DataTypes)=>{
             autoIncrement: true 
         },
         firstName:{
-            type: DataTypes.STRING  
+            type: DataTypes.STRING(20)  
         },
         lastName:{
-            type: DataTypes.STRING  
+            type: DataTypes.STRING(20)  
         },
         email:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING(40)
         },
         username:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING(20)
         },
         password:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING(20)
         },
         image:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING(100)
         },
         userType:{
             type:DataTypes.BOOLEAN 

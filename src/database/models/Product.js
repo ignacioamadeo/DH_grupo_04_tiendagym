@@ -1,14 +1,55 @@
-module.exports = (sequelize, dataTypes)=>{
+module.exports = (sequelize, DataTypes)=>{
     let alias = 'Products';
     let cols ={
-        prodID:{
-
+        id:{
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true 
+        },
+        prodImg:{
+            type: DataTypes.STRING(200)  
+        },
+        prodPrecio:{
+            type: DataTypes.INTEGER 
+        },
+        prodCantidadCuotas:{
+            type: DataTypes.BOOLEAN 
+        },
+        proNombre:{
+            type: DataTypes.STRING(100)  
+        },
+        envioGratis:{
+            type: DataTypes.BOOLEAN 
+        },
+        prodCategoria:{
+            type: DataTypes.STRING(100)  
+        },
+        prodCantidad:{
+            type: DataTypes.BOOLEAN
+        },
+        prodDescrip1:{
+            type:DataTypes.STRING(200) 
+        },
+        prodDescrip0:{
+            type:DataTypes.TEXT 
+        },
+        prodDescrip2:{
+            type: DataTypes.STRING(200) 
+        },
+        prodDescrip3:{
+            type: DataTypes.STRING(200)
+        },
+        prodDescrip4:{
+            type: DataTypes.STRING(200)
+        },
+        prodDesc:{
+            type: DataTypes.BOOLEAN
         },
         
 
     };
     let config = {
-        tableName:'products',
+        tableName:'productos',
         timestamps: false
     }
 
