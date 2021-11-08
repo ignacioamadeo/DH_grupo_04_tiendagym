@@ -2,10 +2,9 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "tiendaGYM",
+    "database": "tiendagym",
     "host": "localhost",
-    "dialect": "mysql",
-    "Port":"3306"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

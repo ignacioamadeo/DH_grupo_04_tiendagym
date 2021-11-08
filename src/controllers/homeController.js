@@ -1,5 +1,6 @@
-const data=require('../db/baseProductos.json')
-
+// const data=require('../db/baseProductos.json')
+const db = require('../database/models');
+const OP = db.Sequelize.Op
 //HOME:
 
 //Renderizo el ejs correspondiente:
@@ -12,15 +13,24 @@ let homeController = {
 
     search: (req, res, next) => {
         let busqueda = req.query.search
-        let productsResults = [];
+        // let productsResults = [];
 
-        for (let i = 0; i < data.length; i++) {
-            let products = data[i].prodNombre.toLowerCase()
-            if (products.includes(busqueda)) {
-                productsResults.push(data[i])
+        db.Products.findAll({
+            where:{
+                prodNombre: {[OP.like]:`%${busqueda}%`}
             }
         }
-        res.render('products/search', { productInfo: productsResults })
+        ).then(resultados =>{
+            
+            res.render('products/search', { productInfo: resultados })
+        })
+        .catch(error => res.send(error))
+        // for (let i = 0; i < data.length; i++) {
+        //     let products = data[i].prodNombre.toLowerCase()
+        //     if (products.includes(busqueda)) {
+        //         productsResults.push(data[i])
+        //     }
+        // }
     },
 
     construction: (req, res) => {

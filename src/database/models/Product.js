@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes)=>{
         prodCantidadCuotas:{
             type: DataTypes.BOOLEAN 
         },
-        proNombre:{
+        prodNombre:{
             type: DataTypes.STRING(100)  
         },
         envioGratis:{
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes)=>{
         prodDescrip1:{
             type:DataTypes.STRING(200) 
         },
-        prodDescrip0:{
+        prodDescrip:{
             type:DataTypes.TEXT 
         },
         prodDescrip2:{

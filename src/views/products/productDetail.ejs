@@ -15,12 +15,12 @@
 
                 <header class="productDetailMobile">
                     <article class="imagenProd">
-                        <img src=<%=product.prodFotos %> alt="no hay imagen disponible">
+                        <img src='<%=product.prodImg %>' alt="no hay imagen disponible">
                     </article>
                     <section class="produCarat">
                         <article class="mediosProduc">
                             <p class="precioPrductMobile">
-                                <%= product.prodPrecio %>
+                               $ <%= product.prodPrecio %>
                             </p>
                             <p class="cuotasProductMobile">en <%= product.prodCantidadCuotas %>x <%=
                                         product.prodPrecioCuotas %>
@@ -69,12 +69,12 @@
                         </article>
                         <section class="caracDestokDetail">
                             <p>
-                                <%= product.prodDescripcion %>
+                                <%= product.prodDescrip %>
                             </p>
                         </section>
 
                         <article class="subTituloProd">
-                            <h4>Características de Panther Pro BF102</h4>
+                            <h4>Características de  <%= product.prodNombre %></h4>
                         </article>
                         <article class="okProduc">
                             <i class="far fa-check-circle"></i>
@@ -108,7 +108,7 @@
                     <header class="deskProduct">
                         <section class="perfilProductDesk">
                             <article class="imgDetailDesk">
-                                <img src=<%=product.prodFotos %> alt="no se encontro la imagen">
+                                <img src=<%=product.prodImg %> alt="no se encontro la imagen">
                             </article>
 
                             <article class="subTituloProdDesk">
@@ -147,7 +147,7 @@
                             </header>
                             <section class="caracDestokDetail">
                                 <p>
-                                    <%= product.prodDescripcion %>
+                                    <%= product.prodDescrip %>
                                 </p>
                             </section>
 
@@ -170,7 +170,7 @@
                             </article>
                             <article class="mediosDtailDesk">
                                 <p class="contado">
-                                    <%= product.prodPrecio %>
+                                   $ <%= product.prodPrecio %>
                                 </p>
                                 <p class="deskProdCuotas">en 12x <%= product.prodPrecioCuotas %>
                                 </p>
