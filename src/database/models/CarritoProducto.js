@@ -24,7 +24,10 @@ module.exports = (sequelize,DataTypes)=>{
     };
     config = {
         tableName:'carritosProductos',
-        timestamps: true
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false
     };
     const CarritoProducto = sequelize.define(alias,cols,config);
     return CarritoProducto;
