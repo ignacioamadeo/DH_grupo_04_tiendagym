@@ -19,18 +19,17 @@
                     </article>
                 </section>
                 <section class="formNewProduct">
-                    <form action="/modifyProduct/edit/<%= products.prodID %>?_method=PUT" method='POST' 
+                    <form action="/modifyProduct/edit/<%= products.id %>?_method=PUT" method='POST' 
                     enctype="multipart/form-data">
 
                         <label for="prodNombre">Nombre de producto</label>
                         <input type="text" name="prodNombre" id="prodNombre"placeholder="<%= products.prodNombre %>">
 
-                        <label for="prodID">ID stock</label>
-                        <input type="text" name="prodID" id="prodNombre" placeholder="<%= products.prodID %>">
+                       
 
                         <label for="prodDescripcion">Descripción</label>
-                        <textarea name="prodDescripcion"
-                            id="prodDescripcion"><%= products.prodDescripcion %></textarea>
+                        <textarea name="prodDescrip"
+                            id="prodDescripcion"><%= products.prodDescrip %></textarea>
 
                          <label for="prodDescrip1">Descripción-A</label>
                          <textarea name="prodDescrip1"
@@ -49,7 +48,7 @@
                         id="prodDescrip4"><%= products.prodDescrip4 %></textarea>
 
                         <label for="prodFotos">Cargar fotos producto:</label>
-                        <input type="file" name="prodFotos" >
+                        <input type="file" name="prodImg" >
 
                         <label for="prodCategoria">Categoría:</label>
                         <select name="prodCategoria">

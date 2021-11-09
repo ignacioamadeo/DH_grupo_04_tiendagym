@@ -20,15 +20,15 @@
             <% productInfo.filter(function(item){ %>
                 <% if (item.prodCategoria == "#funcPilYog") { %>
                     <article class="tarjetaProducto">
-                        <a href="../productDetail/<%= item.prodID %>"><div class="imagenProducto"><img src=<%= item.prodFotos %>></div></a>
+                        <a href="../productDetail/<%= item.id %>"><div class="imagenProducto"><img src=<%= item.prodImg %>></div></a>
                         <ul>
-                            <li class="precioProducto"><%= item.prodPrecio %></li>
+                            <li class="precioProducto">$ <%= item.prodPrecio %></li>
                             <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li>
-                            <a href="./productDetail/<%= item.prodID %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
+                            <a href="./productDetail/<%= item.id %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
                             <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li>
                         </ul>
-                        <a href="/modifyProduct/<%= item.prodID  %>">Editar</a>
-                        <form action="../modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <a href="/modifyProduct/<%= item.id  %>">Editar</a>
+                        <form action="../modifyProduct/delete/<%= item.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit">ELIMINAR</button>
                     </article>
                 <% } %>
@@ -40,15 +40,15 @@
             <% productInfo.forEach(function(item){ %>
                 <% if (item.prodCategoria == "#PesDisBar") { %>
                     <article class="tarjetaProducto">
-                        <a href="../productDetail/<%= item.prodID %>"><div class="imagenProducto"><img src=<%= item.prodFotos %>></div></a>
+                        <a href="../productDetail/<%= item.id %>"><div class="imagenProducto"><img src=<%= item.prodImg %>></div></a>
                         <ul>
-                            <li class="precioProducto"><%= item.prodPrecio %></li>
+                            <li class="precioProducto">$ <%= item.prodPrecio %></li>
                             <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li>
-                            <a href="./productDetail/<%= item.prodID %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
+                            <a href="./productDetail/<%= item.id %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
                             <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li>
                         </ul>
-                        <a href="/modifyProduct/<%= item.prodID  %>">Editar</a>
-                        <form action="../modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <a href="/modifyProduct/<%= item.id  %>">Editar</a>
+                        <form action="../modifyProduct/delete/<%= item.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit">ELIMINAR</button>
                     </article>
                 <% } %>
@@ -60,15 +60,15 @@
             <% productInfo.forEach(function(item){ %>
                 <% if (item.prodCategoria == "#Maq") { %>
                     <article class="tarjetaProducto">
-                        <a href="../productDetail/<%= item.prodID %>"><div class="imagenProducto"><img src=<%= item.prodFotos %>></div></a>
+                        <a href="../productDetail/<%= item.id %>"><div class="imagenProducto"><img src=<%= item.prodImg %>></div></a>
                         <ul>
-                            <li class="precioProducto"><%= item.prodPrecio %></li>
+                            <li class="precioProducto">$ <%= item.prodPrecio %></li>
                             <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li>
-                            <a href="./productDetail/<%= item.prodID %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
+                            <a href="./productDetail/<%= item.id %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
                             <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li>
                         </ul>
-                        <a href="/modifyProduct/<%= item.prodID  %>">Editar</a>
-                        <form action="../modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <a href="/modifyProduct/<%= item.id  %>">Editar</a>
+                        <form action="../modifyProduct/delete/<%= item.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit">ELIMINAR</button>
                     </article>
                 <% } %>
@@ -80,15 +80,15 @@
             <% productInfo.forEach(function(item){ %>
                 <% if (item.prodCategoria == "#Ind") { %>
                     <article class="tarjetaProducto">
-                        <a href="../productDetail/<%= item.prodID %>"><div class="imagenProducto"><img src=<%= item.prodFotos %>></div></a>
+                        <a href="../productDetail/<%= item.id %>"><div class="imagenProducto"><img src=<%= item.prodImg %>></div></a>
                         <ul>
-                            <li class="precioProducto"><%= item.prodPrecio %></li>
+                            <li class="precioProducto">$ <%= item.prodPrecio %></li>
                             <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li>
-                            <a href="./productDetail/<%= item.prodID %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
+                            <a href="./productDetail/<%= item.id %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
                             <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li>
                         </ul>
-                        <a href="/modifyProduct/<%= item.prodID  %>">Editar</a>
-                        <form action="../modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <a href="/modifyProduct/<%= item.id  %>">Editar</a>
+                        <form action="../modifyProduct/delete/<%= item.id  %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit">ELIMINAR</button>
                     </article>
                 <% } %>

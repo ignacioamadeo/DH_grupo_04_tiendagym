@@ -16,7 +16,7 @@ const upload=require('../middleware/multerProducts');
 
 //3º Llamo a la propiedad de ese controlador:
 router.get('/', productNewController.productNew);
-router.post('/',upload.single('prodFotos') , productNewController.create );
+router.post('/',upload.single('prodImg') , productNewController.create );
 
 router.get('/allProducts', productNewController.all)
 
