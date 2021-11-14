@@ -1,16 +1,16 @@
 module.exports = (sequelize, DataTypes) =>{
     alias = 'Cupones';
     cols = {
-        id:{
+        cuponID:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true 
         },
         cuponPerc:{
-            type:DataTypes.STRING(10) 
+            type:DataTypes.INTEGER
         },
         cuponUsado:{
-            type:DataTypes.BOOLEAN 
+            type:DataTypes.INTEGER
         },
         cuponPass:{
             type:DataTypes.STRING(20)

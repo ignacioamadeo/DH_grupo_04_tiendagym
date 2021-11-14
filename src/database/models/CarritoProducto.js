@@ -1,7 +1,7 @@
 module.exports = (sequelize,DataTypes)=>{
     alias = 'CarritosProductos';
     cols = {
-        id:{
+        carritoProductoID:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true 
@@ -9,24 +9,24 @@ module.exports = (sequelize,DataTypes)=>{
         carritoID:{
             type: DataTypes.INTEGER
         },
-        productoID:{
+        prodID:{
             type: DataTypes.INTEGER
         },
         productQ:{
-            type:DataTypes.STRING(10) 
+            type:DataTypes.INTEGER
         },
-        createAt:{
+        createdAt:{
             type:DataTypes.DATE 
         },
-        updateAt:{
+        updatedAt:{
             type:DataTypes.DATE
         },
     };
     config = {
         tableName:'carritosProductos',
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        createdAt: 'createdAt',
+        updatedAt: 'createdAt',
         deletedAt: false
     };
     const CarritoProducto = sequelize.define(alias,cols,config);

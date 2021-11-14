@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes)=>{
     let alias = 'Products';
     let cols ={
-        id:{
+        prodID:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true 
@@ -13,19 +13,19 @@ module.exports = (sequelize, DataTypes)=>{
             type: DataTypes.INTEGER 
         },
         prodCantidadCuotas:{
-            type: DataTypes.BOOLEAN 
+            type: DataTypes.INTEGER 
         },
         prodNombre:{
             type: DataTypes.STRING(100)  
         },
         envioGratis:{
-            type: DataTypes.BOOLEAN 
+            type: DataTypes.INTEGER 
         },
         prodCategoria:{
             type: DataTypes.STRING(100)  
         },
         prodCantidad:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.INTEGER
         },
         prodDescrip1:{
             type:DataTypes.STRING(200) 
@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes)=>{
             type: DataTypes.STRING(200)
         },
         prodDesc:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.INTEGER
         },
         
 

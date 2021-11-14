@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes)=>{
     alias ='Carrito';
     cols={
-        id:{
+        carritoID:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true 
@@ -15,20 +15,20 @@ module.exports = (sequelize, DataTypes)=>{
         createdAt:{
             type:DataTypes.DATE 
         },
-        updateAt:{
+        updatedAt:{
             type:DataTypes.DATE 
         },
         tipoPago:{
             type:DataTypes.STRING(20) 
         },
         compraOK:{
-            type: DataTypes.BOOLEAN 
+            type: DataTypes.INTEGER
         },
         pagoOK:{
-            type: DataTypes.BOOLEAN 
+            type: DataTypes.INTEGER 
         },
         envioOK:{
-            type: DataTypes.BOOLEAN 
+            type: DataTypes.INTEGER 
         },
         direccionEnvio:{
             type:DataTypes.STRING(100)
