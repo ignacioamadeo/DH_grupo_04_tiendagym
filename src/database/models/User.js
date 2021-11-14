@@ -35,5 +35,15 @@ module.exports = (sequelize, DataTypes)=>{
     }
 
     const User = sequelize.define(alias, cols, config);
+
+//Asocio la relación 1 a 1 con "Carrito" con el ID userID como FK:
+
+    User.associate = function(models){
+        User.hasOne(models.Carrito,{
+            as: 'userID',
+            foreignKey: 'userID'
+        })
+    }
+
     return User;   
 }
