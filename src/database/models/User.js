@@ -1,5 +1,9 @@
 module.exports = (sequelize, DataTypes)=>{
+
+    //1º Defino alias con el que voy a llamar a la tabla en el CRUD y relaciones:
     let alias = 'Users';
+
+    //2º Replico las columnas de la BBDD y sus tipos de datos:    
     let cols = {
         userID:{
             type: DataTypes.INTEGER,
@@ -29,21 +33,24 @@ module.exports = (sequelize, DataTypes)=>{
         }
 
     };
+
+    //3º Replico el nombre y otras configuraciones de la tabla original:
     let config ={
         tableName: 'users',
         timestamps: false
     }
 
+    //4º Cierro todo definiendo el nombre de la variable que contiene todos estos datos:
     const User = sequelize.define(alias, cols, config);
 
-//Asocio la relación 1 a 1 con "Carrito" con el ID userID como FK:
-
+    //5º Asocio la relación 1 a 1 con "Carrito" con el ID userID como FK:
     User.associate = function(models){
         User.hasOne(models.Carrito,{
             as: 'userID',
             foreignKey: 'userID'
         })
     }
-
+    
+    //6º Devuelvo la variable:
     return User;   
 }

@@ -1,10 +1,10 @@
 //Acá se estila poner todo en el module.exports, pero podría definirse aparte y luego exportar todo.
 module.exports = (sequelize, DataTypes) => {
 
-    //Defino alias con el que voy a llamar a la tabla en el CRUD y relaciones:
+    //1º Defino alias con el que voy a llamar a la tabla en el CRUD y relaciones:
     alias = 'Carrito';
 
-    //Replico las columnas de la BBDD y sus tipos de datos:
+    //2º Replico las columnas de la BBDD y sus tipos de datos:
     cols = {
         carritoID: {
             type: DataTypes.INTEGER,
@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
 
-    //Replico el nombre y otras configuraciones de la tabla original:
+    //3º Replico el nombre y otras configuraciones de la tabla original:
     config = {
         tableName: 'carrito',
         timestamps: true,
@@ -55,17 +55,21 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false
     }
     
-    //Cierro todo definiendo el nombre de la variable que contiene todos estos datos:
+    //º4 Cierro todo definiendo el nombre de la variable que contiene todos estos datos:
     const Carrito = sequelize.define(alias, cols, config);
 
-    //Asocio la relación 1 a 1 con "Carrito" con el ID userID como FK:
+    //5º Asocio tablas:
     Carrito.associate = function (models) {
-        Carrito.belongsTo(models.User, {
+        Carrito.belongsTo(models.User, { //Relación 1 a 1 con "User" con el ID userID como FK.
             as: 'userID',
             foreignKey: 'userID'
+        }),
+        Carrito.belongsTo(models.Cupon,{ //Relación 1 a 1 con "Cupon" con el ID cuponID como FK.
+            as: 'cuponID',
+            foreignKey: 'cuponID'
         })
     }
 
-    //Devuelvo la variable:
+    //6º Devuelvo la variable:
     return Carrito;
 }
