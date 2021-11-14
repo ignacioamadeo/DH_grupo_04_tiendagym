@@ -64,9 +64,18 @@ module.exports = (sequelize, DataTypes) => {
             as: 'userID',
             foreignKey: 'userID'
         }),
+
         Carrito.belongsTo(models.Cupon,{ //Relación 1 a 1 con "Cupon" con el ID cuponID como FK.
             as: 'cuponID',
             foreignKey: 'cuponID'
+        }),
+        
+        Carrito.belongsToMany(models.Product, { //Relación muchos a muchos con tabla CarritoPRoducto como Pivot
+            as: 'carrito',
+            through: 'CarritoProducto',
+            foreignKey: 'carritoID',
+            otherKey: 'prodID',
+            timestamps: true
         })
     }
 
