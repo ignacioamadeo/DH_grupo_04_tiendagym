@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('../partials/head') %>
 
-<%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
 
-<body>
-   <%- include('../partials/header') %>
-   
     <!--Aca termina header y comienza main de la web -->
     <main>
-        <section class="carrouselHome">
-            <!--Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar"-->
-            <img src="./images/pexels-lukas-669584.jpg">
-            <!-- <img src="./images/logo-wp.png" class="clickToWP"> -->
-        </section>
-        <section class="instruccionesHome">
-            <img src="./images/logo-cart.png">
-            <img src="./images/logo-flecha.png">
-            <img src="./images/logo-pago.png">
-            <img src="./images/logo-flecha.png">
-            <img src="./images/logo-delivery.png">
-        </section>
-        <section class="homeGrillaProductos">
-            <article>
-                <img src="./images/pexels-karl-solano-2780762.jpg" class="imagenesCategorias">
-                <ul>
-                    <a href="./productIndex/yoga"> <li>Funcional, pilates y yoga</li> </a>
-                </ul>
-            </article>
-            <article>
-                <img src="./images/pexels-victor-freitas-685531.jpg" class="imagenesCategorias">
-                <ul>
-                    <a href="./productIndex/barras"><li>Pesas, discos y barras</li></a>
-                </ul>
-            </article>
-            <article>
-                <img src="./images/pexels-cottonbro-7690207.jpg" class="imagenesCategorias">
-                <ul>
-                    <a href="./productIndex/maquinas"> <li>Máquinas</li></a>
-                </ul>
-            </article>
-            <article>
-                <img src="./images/pexels-cottonbro-4761352.jpg" class="imagenesCategorias">
-                <ul>
-                    <a href="./productIndex/indumentaria"><li>Indumentaria</li></a>
-                </ul>
-            </article>
-        </section>
+      <section class="carrouselHome">
+        <!--Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar"-->
+        <img src="./images/pexels-lukas-669584.jpg" />
+        <!-- <img src="./images/logo-wp.png" class="clickToWP"> -->
+      </section>
+      <section class="instruccionesHome">
+        <img src="./images/logo-cart.png" />
+        <img src="./images/logo-flecha.png" />
+        <img src="./images/logo-pago.png" />
+        <img src="./images/logo-flecha.png" />
+        <img src="./images/logo-delivery.png" />
+      </section>
+      <section class="homeGrillaProductos">
+        <article>
+          <img
+            src="./images/pexels-karl-solano-2780762.jpg"
+            class="imagenesCategorias"
+          />
+          <ul>
+            <a href="./productIndex/yoga">
+              <li>Funcional, pilates y yoga</li>
+            </a>
+          </ul>
+        </article>
+        <article>
+          <img
+            src="./images/pexels-victor-freitas-685531.jpg"
+            class="imagenesCategorias"
+          />
+          <ul>
+            <a href="./productIndex/barras"><li>Pesas, discos y barras</li></a>
+          </ul>
+        </article>
+        <article>
+          <img
+            src="./images/pexels-cottonbro-7690207.jpg"
+            class="imagenesCategorias"
+          />
+          <ul>
+            <a href="./productIndex/maquinas"> <li>Máquinas</li></a>
+          </ul>
+        </article>
+        <article>
+          <img
+            src="./images/pexels-cottonbro-4761352.jpg"
+            class="imagenesCategorias"
+          />
+          <ul>
+            <a href="./productIndex/indumentaria"><li>Indumentaria</li></a>
+          </ul>
+        </article>
+      </section>
 
-        <!--
+      <!--
         <section class="homePreFooter">
                 <img src="./images/pexels-mikhail-nilov-6740821.jpg" class="imagenPreFooter">
         </section>
         -->
     </main>
-  <%- include('../partials/footer') %>
-</body>
-
+    <%- include('../partials/footer') %>
+  </body>
 </html>

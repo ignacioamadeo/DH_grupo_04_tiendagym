@@ -1,94 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Header importado -->
+  <%- include('../partials/head') %>
 
-<!-- Header importado -->
-<%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
 
-    <body>
-        <%- include('../partials/header') %>
+    <!--Main -->
+    <main class="webAdmin">
+      <section class="adminHeader">
+        <article>
+          <img
+            src="./images/pexels-life-of-pix-8264.jpg"
+            class="newProductHeaderImage"
+          />
+          <ul>
+            <li>Sistema de gestión de productos</li>
+            <li>Carga de nuevos productos</li>
+          </ul>
+        </article>
+      </section>
+      <section class="formNewProduct">
+        <form
+          action="/modifyProduct/edit/<%= products.id %>?_method=PUT"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <label for="prodNombre">Nombre de producto</label>
+          <input
+            type="text"
+            name="prodNombre"
+            id="prodNombre"
+            placeholder="<%= products.prodNombre %>"
+          />
 
-            <!--Main -->
-            <main class="webAdmin">
-                <section class="adminHeader">
-                    <article>
-                        <img src="./images/pexels-life-of-pix-8264.jpg" class="newProductHeaderImage">
-                        <ul>
-                            <li>Sistema de gestión de productos</li>
-                            <li>Carga de nuevos productos</li>
-                        </ul>
-                    </article>
-                </section>
-                <section class="formNewProduct">
-                    <form action="/modifyProduct/edit/<%= products.id %>?_method=PUT" method='POST' 
-                    enctype="multipart/form-data">
+          <label for="prodDescripcion">Descripción</label>
+          <textarea name="prodDescrip" id="prodDescripcion">
+<%= products.prodDescrip %></textarea
+          >
 
-                        <label for="prodNombre">Nombre de producto</label>
-                        <input type="text" name="prodNombre" id="prodNombre"placeholder="<%= products.prodNombre %>">
+          <label for="prodDescrip1">Descripción-A</label>
+          <textarea name="prodDescrip1" id="prodDescrip1">
+<%= products.prodDescrip1 %></textarea
+          >
 
-                       
+          <label for="prodDescrip2">Descripción-B</label>
+          <textarea name="prodDescrip2" id="prodDescrip2">
+<%= products.prodDescrip2 %></textarea
+          >
 
-                        <label for="prodDescripcion">Descripción</label>
-                        <textarea name="prodDescrip"
-                            id="prodDescripcion"><%= products.prodDescrip %></textarea>
+          <label for="prodDescrip3">Descripción-C</label>
+          <textarea name="prodDescrip3" id="prodDescrip3">
+<%= products.prodDescrip3 %></textarea
+          >
 
-                         <label for="prodDescrip1">Descripción-A</label>
-                         <textarea name="prodDescrip1"
-                         id="prodDescrip1"><%= products.prodDescrip1 %></textarea> 
+          <label for="prodDescrip4">Descripción-D</label>
+          <textarea name="prodDescrip4" id="prodDescrip4">
+<%= products.prodDescrip4 %></textarea
+          >
 
-                         <label for="prodDescrip2">Descripción-B</label>
-                        <textarea name="prodDescrip2"
-                        id="prodDescrip2"><%= products.prodDescrip2 %></textarea> 
-                        
-                        <label for="prodDescrip3">Descripción-C</label>
-                        <textarea name="prodDescrip3"
-                        id="prodDescrip3"><%= products.prodDescrip3 %></textarea>
+          <label for="prodFotos">Cargar fotos producto:</label>
+          <input type="file" name="prodImg" />
 
-                        <label for="prodDescrip4">Descripción-D</label>
-                        <textarea name="prodDescrip4"
-                        id="prodDescrip4"><%= products.prodDescrip4 %></textarea>
+          <label for="prodCategoria">Categoría:</label>
+          <select name="prodCategoria">
+            <option value="#funcPilYog">Funcional, pilates y yoga</option>
+            <option value="#PesDisBar">Pesas, discos y barras</option>
+            <option value="#Maq">Máquinas</option>
+            <option value="#Ind">Indumentaria</option>
+          </select>
 
-                        <label for="prodFotos">Cargar fotos producto:</label>
-                        <input type="file" name="prodImg" >
+          <label>Precio</label>
+          <input
+            type="text"
+            name="prodPrecio"
+            placeholder="<%= products.prodPrecio %>"
+          />
 
-                        <label for="prodCategoria">Categoría:</label>
-                        <select name="prodCategoria">
-                            <option value="#funcPilYog">Funcional, pilates y yoga</option>
-                            <option value="#PesDisBar">Pesas, discos y barras</option>
-                            <option value="#Maq">Máquinas</option>
-                            <option value="#Ind">Indumentaria</option>
-                        </select>
+          <label>Descuento</label>
+          <input
+            type="text"
+            name="prodDescuento"
+            placeholder="<%= products.prodDescuento %>"
+          />
 
-                        <label>Precio</label>
-                        <input type="text" name="prodPrecio" placeholder="<%= products.prodPrecio %>">
+          <label>Precio en Cuotas</label>
+          <input
+            type="text"
+            name="prodPrecioCuotas"
+            placeholder="<%= products.prodPrecioCuotas %>"
+          />
 
-                        <label>Descuento</label>
-                        <input type="text" name="prodDescuento" placeholder="<%= products.prodDescuento %>">
+          <label>Cuotas sin interés</label>
+          <input
+            type="number"
+            name="prodCantidadCuotas"
+            placeholder="<%= products.prodCantidadCuotas %>"
+            min="0"
+            max="12"
+          />
 
-                        <label>Precio en Cuotas</label>
-                        <input type="text" name="prodPrecioCuotas" placeholder="<%= products.prodPrecioCuotas %>">
+          <label>Cantidad</label>
+          <input
+            type="number"
+            name="prodCantidad"
+            placeholder="<%= products.prodCantidad %>"
+            min="0"
+          />
 
-                        <label>Cuotas sin interés</label>
-                        <input type="number" name="prodCantidadCuotas" placeholder="<%= products.prodCantidadCuotas %>" min="0" max="12">
+          <div class="newProdEnvioCheckbox">
+            <label>Envío gratis</label>
+            <input type="checkbox" name="envioGratis" value="envioGratisSi" />
+          </div>
 
-                        <label>Cantidad</label>
-                        <input type="number" name="prodCantidad" placeholder="<%= products.prodCantidad %>" min="0">
-
-                        <div class="newProdEnvioCheckbox">
-                            <label>Envío gratis</label>
-                            <input type="checkbox" name="envioGratis" value="envioGratisSi">
-                        </div>
-
-                        <button type="reset">Resetear formulario</button>
-                        <button type="submit">Guardar producto</button>
-                    </form>
-
-                  
-                </section>
-                <a href="/newProduct/allProducts">Todos los productos</a>
-            </main>
-            <!-- Footer importado -->
-            <%- include('../partials/footer') %>
-    </body>
-
-
+          <button type="reset">Resetear formulario</button>
+          <button type="submit">Guardar producto</button>
+        </form>
+      </section>
+      <a href="/newProduct/allProducts">Todos los productos</a>
+    </main>
+    <!-- Footer importado -->
+    <%- include('../partials/footer') %>
+  </body>
 </html>

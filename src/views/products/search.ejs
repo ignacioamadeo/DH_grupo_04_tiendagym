@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('../partials/head') %>
 
-    <%- include('../partials/head') %>
-
-<body>
+  <body>
     <%- include('../partials/header') %>
     <!--Termina header y comienza main de la web -->
     <main class="mainProductIndex">
-        <section class="productIndBarraLat">
-            <ul>
-                <li class="latEnvioProducto">Envío gratis<i class="fas fa-toggle-on"></i></li>
-                <li class="latCuotasProducto">Cuotas sin interés<i class="fas fa-toggle-on"></i></li>
-                <li class="latDisponibleProducto">Disponible en local<i class="fas fa-toggle-on"></i></li>
-            </ul>
-
-        </section>
-        <section class="productIndArticulos">
-            <% productInfo.forEach(function(product){ %>
-                <%- include('../partials/productCard', {item:product}) %>
-              <% }); %>
-        </section>
+      <section class="productIndBarraLat">
+        <ul>
+          <li class="latEnvioProducto">
+            Envío gratis<i class="fas fa-toggle-on"></i>
+          </li>
+          <li class="latCuotasProducto">
+            Cuotas sin interés<i class="fas fa-toggle-on"></i>
+          </li>
+          <li class="latDisponibleProducto">
+            Disponible en local<i class="fas fa-toggle-on"></i>
+          </li>
+        </ul>
+      </section>
+      <section class="productIndArticulos">
+        <% productInfo.forEach(function(product){ %> <%-
+        include('../partials/productCard', {item:product}) %> <% }); %>
+      </section>
     </main>
     <%- include('../partials/footer') %>
-</body>
-
+  </body>
 </html>

@@ -1,109 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('../partials/head') %>
 
-    <%- include('../partials/head') %>
-
-<body>
+  <body>
     <%- include('../partials/header') %>
-    
+
     <!--Aca termina header y comienza main de la web -->
     <main class="control">
-        <section class="contenedorProductCart">
-            <section class="contCompra">
-                <p>Continuar comprando</p>
-            </section>
-            <section class="nomProCart"> 
-                <h1>Elementos en tu carrito de compras</h1>
-            </section>
-            <div class="controlador">
-                <article class="imagenP">
-                    <img src="/img/biciFijaPanther4.jpg" alt="">
-                </article>
-                <section class="desProduCart">
-                    <p>Bicicleta fija Panther Pro BF102 para spinning negra y roja</p>
-                </section>
-                <section class="masCantCart">
-                    <i class="fas fa-minus"></i>
-                    <p>001</p><i class="fas fa-plus-circle"></i>
-                </section>
-                <section class="contComprandoCart">
-                    <p>Continuar comprando</p>
-                </section>
-                <section class="descuentoCart">
-                    <p>descuento</p>
-                </section>
-                <section class="precioCart">
-                    <article>
-                        precio final
-                    </article>
-                </section>
-            </div>
+      <section class="contenedorProductCart">
+        <section class="contCompra">
+          <p>Continuar comprando</p>
+        </section>
+        <section class="nomProCart">
+          <h1>Elementos en tu carrito de compras</h1>
+        </section>
+        <div class="controlador">
+          <article class="imagenP">
+            <img src="/img/biciFijaPanther4.jpg" alt="" />
+          </article>
+          <section class="desProduCart">
+            <p>Bicicleta fija Panther Pro BF102 para spinning negra y roja</p>
+          </section>
+          <section class="masCantCart">
+            <i class="fas fa-minus"></i>
+            <p>001</p>
+            <i class="fas fa-plus-circle"></i>
+          </section>
+          <section class="contComprandoCart">
+            <p>Continuar comprando</p>
+          </section>
+          <section class="descuentoCart">
+            <p>descuento</p>
+          </section>
+          <section class="precioCart">
+            <article>precio final</article>
+          </section>
+        </div>
 
-    <!--DESKTOP: Acá comienza tarjeta horizontal de cada producto/artículo: -->
-            <article class="controlDesktop">
-                <article class="imgProdCart2">
-                    <img src="/img/biciFijaPanther4.jpg" alt="no se encontro imagen">
-                </article>
-                <section class="descrProd">
-                    <p>Bicicleta fija Panther Pro BF102 para spinning negra y roja</p>
-                </section>
-                <section class="cantidadCart">
-                    <i class="fas fa-minus"></i>
-                    <p>001</p><i class="fas fa-plus-circle"></i>
-                </section>
-                <section class="totCartApertura">
-                    <p class="totCartPrecio">precio</p>
-                    <p class="totCartPrecioParcial">total parcial</p>
-                    <p class="totCartPrecioDescuento">descuento</p>
-                    <p class="totCartPrecioIva">IVA(21%)</p>
-                    <p class="totCartPrecioEnvio">costo de envio</p>
-                </section>
-                <h5 class="eliminarProduct">Eliminar producto</h5>
-            </article>
-    <!--DESKTOP: ^ Acá termina tarjeta horizontal de producto ^ -->
+        <!--DESKTOP: Acá comienza tarjeta horizontal de cada producto/artículo: -->
+        <article class="controlDesktop">
+          <article class="imgProdCart2">
+            <img src="/img/biciFijaPanther4.jpg" alt="no se encontro imagen" />
+          </article>
+          <section class="descrProd">
+            <p>Bicicleta fija Panther Pro BF102 para spinning negra y roja</p>
+          </section>
+          <section class="cantidadCart">
+            <i class="fas fa-minus"></i>
+            <p>001</p>
+            <i class="fas fa-plus-circle"></i>
+          </section>
+          <section class="totCartApertura">
+            <p class="totCartPrecio">precio</p>
+            <p class="totCartPrecioParcial">total parcial</p>
+            <p class="totCartPrecioDescuento">descuento</p>
+            <p class="totCartPrecioIva">IVA(21%)</p>
+            <p class="totCartPrecioEnvio">costo de envio</p>
+          </section>
+          <h5 class="eliminarProduct">Eliminar producto</h5>
+        </article>
+        <!--DESKTOP: ^ Acá termina tarjeta horizontal de producto ^ -->
 
-    <!--DESKTOP: Acá comienza todo elemento que aplique a todos los productos: -->
-            <section class="cupon">
-                <form action="/descuento" method="POST">
-                    <label for="">Cupón de descuento</label>
-                    <input type="text" name="cupon">
-                    <button type="submit">Cargar</button>
-                </form>
-            </section>
-            <section class="totaCart">
-                <h3>TOTAL</h3>
-            </section>
-            <section class="medioDePago">
-                <form action="/medio" method="POST">
-                    <label class="pago">Medio de pago</label>
-                    <label>Debito
-                        <input type="radio" name="medio" value="debito">
-                    </label>
-                    <label>Credito
-                        <input type="radio" name="medio" value="credito">
-                    </label>
-                    <label>MercadoPago
-                        <input type="radio" name="medio" value="mercadopago">
-                    </label>
-                    <label class="retiro">Retiro por local
-                        <input type="radio" name="retiro" value="local">
-                    </label>
-                    <label class="retiro">Envio a domicilio
-                        <input type="radio" name="retiro" name="domicilio">
-                    </label>
-                    <div class="buttonCart"><button type="submit">COMPRAR</button></div>
-
-                </form>
-            </section>
-                <!--Aca va foto gigante con carrousel y abajo "
+        <!--DESKTOP: Acá comienza todo elemento que aplique a todos los productos: -->
+        <section class="cupon">
+          <form action="/descuento" method="POST">
+            <label for="">Cupón de descuento</label>
+            <input type="text" name="cupon" />
+            <button type="submit">Cargar</button>
+          </form>
+        </section>
+        <section class="totaCart">
+          <h3>TOTAL</h3>
+        </section>
+        <section class="medioDePago">
+          <form action="/medio" method="POST">
+            <label class="pago">Medio de pago</label>
+            <label
+              >Debito
+              <input type="radio" name="medio" value="debito" />
+            </label>
+            <label
+              >Credito
+              <input type="radio" name="medio" value="credito" />
+            </label>
+            <label
+              >MercadoPago
+              <input type="radio" name="medio" value="mercadopago" />
+            </label>
+            <label class="retiro"
+              >Retiro por local
+              <input type="radio" name="retiro" value="local" />
+            </label>
+            <label class="retiro"
+              >Envio a domicilio
+              <input type="radio" name="retiro" name="domicilio" />
+            </label>
+            <div class="buttonCart"><button type="submit">COMPRAR</button></div>
+          </form>
+        </section>
+        <!--Aca va foto gigante con carrousel y abajo "
                 <section class="proCartCarrousel">
                     <img src="./images/pexels-lukas-669584.jpg">
                 </section>
                 -->
-        </section>
-  <!--DESKTOP: ^ Acá termina todo elemento que aplique a todos los productos ^ -->
+      </section>
+      <!--DESKTOP: ^ Acá termina todo elemento que aplique a todos los productos ^ -->
     </main>
     <%- include('../partials/footer') %>
-</body>
-
+  </body>
 </html>

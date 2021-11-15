@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <%- include('../partials/head') %>
-<body>
+  <%- include('../partials/head') %>
+  <body>
     <video autoplay muted loop class="myVideo">
-        <source src=".\videos\vid-funcional-4761426.mp4" type="video/mp4">
+      <source src=".\videos\vid-funcional-4761426.mp4" type="video/mp4" />
     </video>
     <!--Comienza y termina main de la web con el formulario de login -->
     <main>
-        <div class="formLogin">
-            <form action="/login" method="POST">
-                <a href="./"><img class="logoHeaderLogin" src=".\images\tgym_logos-09.png" alt="No encontre Imagen"></a>
-                <div>
-                    <label>Ingrese email</label>
-                </div>
-                <% if (locals.errors && errors.email) { %>
-                    <div class="msg-errors">
-                        <%= errors.email.msg %>
-                    </div>
-                    <% } %>
-                <div>
-                    <input type="text" name="email"  >
-                </div>
-                <div>
-                    <label>Contraseña</label>
-                </div>
-                <div>
-                    <input type="password" name="password" minlength="6" maxlength="10">
-                </div>
-                <div>
-                    <label>Recordame</label>
-                </div>
-                <div>
-                   <input type="checkbox" name="recordame" id="">
-                </div>
-                <div>
-                    <button type="reset" class="loginBotonTipo1">Borrar</button>
-                    <button type="submit" class="loginBotonTipo1">Continuar</button>
-                </div>
-                <div>
-                    <a href="./register"><button type= "button" class="loginBotonTipo2">Registrarse</button></a>
-                </div>
-                <div class="terminosLogin">
-                    <a href="#">Términos y condiciones</a>
-                    <a href="./"> - Volver al sitio</a>
-                </div>
-            </form>
-        </div>
+      <div class="formLogin">
+        <form action="/login" method="POST">
+          <a href="./"
+            ><img
+              class="logoHeaderLogin"
+              src=".\images\tgym_logos-09.png"
+              alt="No encontre Imagen"
+          /></a>
+          <div>
+            <label>Ingrese email</label>
+          </div>
+          <% if (locals.errors && errors.email) { %>
+          <div class="msg-errors"><%= errors.email.msg %></div>
+          <% } %>
+          <div>
+            <input type="text" name="email" />
+          </div>
+          <div>
+            <label>Contraseña</label>
+          </div>
+          <div>
+            <input
+              type="password"
+              name="password"
+              minlength="6"
+              maxlength="10"
+            />
+          </div>
+          <div>
+            <label>Recordame</label>
+          </div>
+          <div>
+            <input type="checkbox" name="recordame" id="" />
+          </div>
+          <div>
+            <button type="reset" class="loginBotonTipo1">Borrar</button>
+            <button type="submit" class="loginBotonTipo1">Continuar</button>
+          </div>
+          <div>
+            <a href="./register"
+              ><button type="button" class="loginBotonTipo2">
+                Registrarse
+              </button></a
+            >
+          </div>
+          <div class="terminosLogin">
+            <a href="#">Términos y condiciones</a>
+            <a href="./"> - Volver al sitio</a>
+          </div>
+        </form>
+      </div>
     </main>
-</body>
-
+  </body>
 </html>

@@ -1,33 +1,30 @@
 //Ejecuto paquetes:
-const express=require('express');
-const router=express.Router();
-
+const express = require("express");
+const router = express.Router();
 
 //USER: HOME:
-router.use('/', require('./home.routes.js'));
+router.use("/", require("./home.routes.js"));
 
 //USER: LOGIN:
-router.use('/login', require('./login.routes.js'));
+router.use("/login", require("./login.routes.js"));
 
 //USER: REGISTRO DE NUEVO USUARIO:
-router.use('/register', require('./register.routes.js'));
-
+router.use("/register", require("./register.routes.js"));
 
 //PRODUCT: MODIFICAR UN PRODUCTO EXISTENTE:
-router.use('/modifyProduct', require('./modifyProduct.routes.js'));
+router.use("/modifyProduct", require("./modifyProduct.routes.js"));
 
 //PRODUCT: REGISTRO DE NUEVO PRODUCTO:
-router.use('/newProduct', require('./newProduct.routes.js'));
+router.use("/newProduct", require("./newProduct.routes.js"));
 
 //PRODUCT:CARRITO:
-router.use('/productCart',require('./productCart.routes.js'));
+router.use("/productCart", require("./productCart.routes.js"));
 
 //PRODUCT:DETALLE DE PRODUCTO:
-router.use('/productDetail', require('./productDetail.routes.js'));
+router.use("/productDetail", require("./productDetail.routes.js"));
 
 //PRODUCT: ÍNDICE DE TODOS LOS PRODUCTOS:
-router.use('/productIndex', require('./productindex.routes.js'));
-
+router.use("/productIndex", require("./productindex.routes.js"));
 
 //Exporto todo:
-module.exports=router;
+module.exports = router;

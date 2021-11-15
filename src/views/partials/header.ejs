@@ -1,58 +1,61 @@
 <header class="mainHeader">
-    <!--A partir de acá va la parte superior del header con logo, buscador y login-->
-    <div class="mainHeaderTop">
-        <a href="../"><img src="../images/tgym_logos-03.png" class="logoPrincipal"></a>
-        <nav class="busqueda">
-            <i class="fas fa-search"></i>
-            <form action="/search" method="GET" class="searchForm">
-                <input type="text" name="search" class="search">
-                
-            </form>
-        </nav>
-       
-        <nav class="loginCarrito">
-            <% if (locals.isLogged) { %>
-
-                <ul class="barraProfile">
-                    <li><a href="/login/profile"><%= locals.userLogged.username%></a>
-                        <ul>
-                            <li><a href="../construction">Configuración</a></li>
-                            <li><a href="../construction">Mis Compras</a></li>
-                            <li><a href="../construction">Mis Tarjetas</a></li>
-                            <li><a href="../login/logout">Cerrar Sesión</a></li>
-                        </ul>
-                    </li>
-                </ul>
-              
-                  <a href="/login/profile" class="profileUser"><img src="/imgRegister/<%= locals.userLogged.image%>" alt="No se encontro la imagen"></a>
-                 
-            <a href="../productCart" class="loginCarrito2" ><i class="fas fa-shopping-cart">
-            </i></a>
-                <% } else { %>
-            <a href="../login"><i class="fas fa-user-circle">
-                </i></a>
-                <a href="../productCart" ><i class="fas fa-shopping-cart">
-                </i></a>
-                <% } %>
-
-        </nav>
-        
-    </div>
-    <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
-    <nav class="mainHeaderBottom">
-        <ul class="menuInferior">
-            <a href="../construction"><li>Noticias</li></a>
-            <a href="../construction"><li>Ofertas</li></a>
-            <a href="../construction"><li>Hogar</li></a>
-            <a href="../construction"><li>Empresas</li></a>
-        </ul>
+  <!--A partir de acá va la parte superior del header con logo, buscador y login-->
+  <div class="mainHeaderTop">
+    <a href="../"
+      ><img src="../images/tgym_logos-03.png" class="logoPrincipal"
+    /></a>
+    <nav class="busqueda">
+      <i class="fas fa-search"></i>
+      <form action="/search" method="GET" class="searchForm">
+        <input type="text" name="search" class="search" />
+      </form>
     </nav>
-    <!--Dejo botón para versión mobile: -->
-    <div class="mainHeaderMobile">
-        <a href="#" class=botonMenuMobile>
-            <i class="fas fa-dumbbell"></i>
-        </a>
-    </div>
+
+    <nav class="loginCarrito">
+      <% if (locals.isLogged) { %>
+
+      <ul class="barraProfile">
+        <li>
+          <a href="/login/profile"><%= locals.userLogged.username%></a>
+          <ul>
+            <li><a href="../construction">Configuración</a></li>
+            <li><a href="../construction">Mis Compras</a></li>
+            <li><a href="../construction">Mis Tarjetas</a></li>
+            <li><a href="../login/logout">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <a href="/login/profile" class="profileUser"
+        ><img
+          src="/imgRegister/<%= locals.userLogged.image%>"
+          alt="No se encontro la imagen"
+      /></a>
+
+      <a href="../productCart" class="loginCarrito2"
+        ><i class="fas fa-shopping-cart"> </i
+      ></a>
+      <% } else { %>
+      <a href="../login"><i class="fas fa-user-circle"> </i></a>
+      <a href="../productCart"><i class="fas fa-shopping-cart"> </i></a>
+      <% } %>
+    </nav>
+  </div>
+  <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
+  <nav class="mainHeaderBottom">
+    <ul class="menuInferior">
+      <a href="../construction"><li>Noticias</li></a>
+      <a href="../construction"><li>Ofertas</li></a>
+      <a href="../construction"><li>Hogar</li></a>
+      <a href="../construction"><li>Empresas</li></a>
+    </ul>
+  </nav>
+  <!--Dejo botón para versión mobile: -->
+  <div class="mainHeaderMobile">
+    <a href="#" class="botonMenuMobile">
+      <i class="fas fa-dumbbell"></i>
+    </a>
+  </div>
 </header>
 
 <!--Aca está el header de web estandarizado, a importar en las páginas que lo necesiten-->

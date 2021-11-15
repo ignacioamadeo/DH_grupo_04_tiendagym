@@ -5,7 +5,7 @@ IMPORTO:
 --- */
 
 //IMPORTAR APP.JS- Llamo al contenido del archivo app.js:
-const app = require ('./app');
+const app = require("./app");
 
 /* --- 
 CONFIGURACIÓN GENERAL: 
@@ -13,6 +13,4 @@ CONFIGURACIÓN GENERAL:
 
 //CONFIG SERVER - Doy de alta el SERVIDOR LOCAL:
 const puerto = process.env.PORT || 3000;
-app.listen(puerto,()=>
-    console.log(`el puerto ${puerto} esta activo`)
-);
+app.listen(puerto, () => console.log(`el puerto ${puerto} esta activo`));
