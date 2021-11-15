@@ -35,11 +35,15 @@ module.exports = (sequelize, DataTypes) => {
         Cupon.belongsTo(models.Carrito, {
             as: 'carritoID',
             foreignKey: 'carritoID'
-        }),
+        })
+        
+        /*Alternativa B, hacer ambas relaciones en el mismo archivo:
+        ,
         Carrito.hasOne(models.Cupon, { //Relación 1 a 1 con "Cupon" con el ID cuponID como FK.
             as: 'cuponID',
             foreignKey: 'cuponID'
         })
+        */
     }
 
     //6º Devuelvo la variable:
