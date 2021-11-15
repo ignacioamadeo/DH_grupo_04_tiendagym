@@ -1,3 +1,11 @@
+/*
+¿NO FALTARÁ ESTO?:
+
+const Sequelize = require('sequelize');
+const sequelize = require('./database'); 
+const Product = require('Product');
+*/
+
 //Acá se estila poner todo en el module.exports, pero podría definirse aparte y luego exportar todo.
 module.exports = (sequelize, DataTypes) => {
 
@@ -59,17 +67,22 @@ module.exports = (sequelize, DataTypes) => {
     const Carrito = sequelize.define(alias, cols, config);
 
     //5º Asocio tablas:
-    Carrito.associate = function (models) {
+        Carrito.associate = function (models) { 
+
+        /* //En lugar de hacerlo acá lo pruebo en user.
         Carrito.belongsTo(models.User, { //Relación 1 a 1 con "User" con el ID userID como FK.
             as: 'userID',
             foreignKey: 'userID'
         }),
+        */
 
+        /*
         Carrito.belongsTo(models.Cupon,{ //Relación 1 a 1 con "Cupon" con el ID cuponID como FK.
             as: 'cuponID',
             foreignKey: 'cuponID'
         }),
-        
+        */
+
         Carrito.belongsToMany(models.Product, { //Relación muchos a muchos con tabla CarritoPRoducto como Pivot
             as: 'carrito',
             through: 'CarritoProducto',

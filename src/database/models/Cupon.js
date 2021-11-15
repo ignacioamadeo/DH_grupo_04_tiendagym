@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    
+
     //1º Defino alias con el que voy a llamar a la tabla en el CRUD y relaciones:
     alias = 'Cupones';
 
@@ -33,6 +33,10 @@ module.exports = (sequelize, DataTypes) => {
     //5º Asocio la relación 1 a 1 con "Carrito" con el ID cuponID como FK:
     Cupon.associate = function (models) {
         Cupon.belongsTo(models.Carrito, {
+            as: 'carritoID',
+            foreignKey: 'carritoID'
+        }),
+        Carrito.hasOne(models.Cupon, { //Relación 1 a 1 con "Cupon" con el ID cuponID como FK.
             as: 'cuponID',
             foreignKey: 'cuponID'
         })
