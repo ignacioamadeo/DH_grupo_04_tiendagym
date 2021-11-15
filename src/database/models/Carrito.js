@@ -78,7 +78,6 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: true
         })
     }
-
     //6º Devuelvo la variable:
     return Carrito;
 }
