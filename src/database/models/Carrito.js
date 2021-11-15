@@ -69,17 +69,17 @@ module.exports = (sequelize, DataTypes) => {
     //5º Asocio tablas:
         Carrito.associate = function (models) { 
         
-        Carrito.belongsTo(models.User, { //Relación 1 a 1 con "User" con el ID userID como FK.
-            as: 'userID',
+        Carrito.belongsTo(models.Users, { //Relación 1 a 1 con "User" con el ID userID como FK.
+            as: 'user',
             foreignKey: 'userID'
         }),
 
-        Carrito.belongsTo(models.Cupon,{ //Relación 1 a 1 con "Cupon" con el ID cuponID como FK.
-            as: 'cuponID',
+        Carrito.belongsTo(models.Cupones,{ //Relación 1 a 1 con "Cupon" con el ID cuponID como FK.
+            as: 'cupon',
             foreignKey: 'cuponID'
         }),
 
-        Carrito.belongsToMany(models.Product, { //Relación muchos a muchos con tabla CarritoPRoducto como Pivot
+        Carrito.belongsToMany(models.Products, { //Relación muchos a muchos con tabla CarritoPRoducto como Pivot
             as: 'carrito',
             through: 'CarritoProducto',
             foreignKey: 'carritoID',

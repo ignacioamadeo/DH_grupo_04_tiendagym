@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     //5º Asocio la relación 1 a 1 con "Carrito" con el ID cuponID como FK:
     Cupon.associate = function (models) {
         Cupon.belongsTo(models.Carrito, {
-            as: 'carritoID',
+            as: 'carrito',
             foreignKey: 'carritoID'
         })
         

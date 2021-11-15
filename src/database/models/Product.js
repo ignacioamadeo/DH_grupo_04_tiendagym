@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
 
     //5º Asocio tablas:
     Product.associate = function (models) {
-        Product.belongsToMany(models.Product, { //Relación muchos a muchos con tabla CarritoPRoducto como Pivot
+        Product.belongsToMany(models.Products, { //Relación muchos a muchos con tabla CarritoPRoducto como Pivot
             as: 'producto',
             through: 'CarritoProducto',
             foreignKey: 'prodID',
