@@ -1,0 +1,32 @@
+.menuLateral{
+    
+    width: 300px;
+    height: 100%;
+    background-color: #022B3A;
+    position:absolute;
+    z-index: 10;
+    left: -300px;
+}
+
+
+
+.optionsMenu li{
+    color: wheat;
+    margin: 5px;
+    padding: 20px;
+    float:inline-start;
+    list-style: none;
+    border-bottom: 1px solid white;
+    }
+
+    .optionsMenu a{
+        text-decoration: none;
+    }  
+
+
+
+    @media (min-width: 769px){
+        .menuLateral{
+            display: none;
+        }
+    }
