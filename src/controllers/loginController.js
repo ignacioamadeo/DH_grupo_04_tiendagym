@@ -1,5 +1,6 @@
 //LOGIN:
-const User = require("../models/User");
+// const User = require("../models/User");
+const {User} = require('../models/index')
 const bcrypt = require("bcryptjs");
 
 //Renderizo el ejs correspondiente:
@@ -8,19 +9,19 @@ let loginController = {
   login: (req, res) => {
     res.render("users/login");
   },
-  accept: (req, res) => {
-    let userToLogin = User.findByField("email", req.body.email);
+  accept: async (req, res) => {
+    let userToLogin = await User.findByField(req.body.email);
     if (userToLogin) {
-      let isOKThePass = bcrypt.compareSync(
+      let isOKThePass = await bcrypt.compare(
         req.body.password,
         userToLogin.password
       );
       if (isOKThePass) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
-        if (req.body.recordame) {
-          res.cookie("recordame", req.body.email, { maxAge: 60000 });
-        }
+        // if (req.body.recordame) {
+        //   res.cookie("recordame", req.body.email, { maxAge: 60000 });
+        // }
         res.redirect("/");
       } else {
         res.render("users/login", {
@@ -31,7 +32,8 @@ let loginController = {
           },
         });
       }
-    } else {
+    } 
+    else {
       res.render("users/login", {
         errors: {
           email: {

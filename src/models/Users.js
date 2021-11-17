@@ -28,6 +28,18 @@ const Users = {
     });
     return response;
   },
+
+  findByField: function (text) {
+    let userFound = db.Users.findOne({
+      where:{
+        email : text
+      }
+    })
+    .then( function(respuesta){
+     console.log(respuesta)
+    }).catch(error => console.log(error))
+    return userFound
+  }
 };
 
 module.exports = Users;

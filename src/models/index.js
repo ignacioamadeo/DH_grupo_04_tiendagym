@@ -1,6 +1,7 @@
 const Productos = require('./Productos');
+const User = require('./Users')
 
 
 
 
-module.exports= {Productos}
+module.exports= {Productos, User}
