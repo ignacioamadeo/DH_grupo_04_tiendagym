@@ -17,12 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     email: {
       type: DataTypes.STRING(40),
+      unique:true
     },
     username: {
       type: DataTypes.STRING(20),
     },
     password: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(100),
     },
     image: {
       type: DataTypes.STRING(100),

@@ -1,9 +1,9 @@
-const User = require("../models/User");
+const {User} = require("../models");
 
-function userLoggedMiddleware(req, res, next) {
+ function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false;
   let emailInCookie = req.cookies.recordame;
-  let userFromCookie = User.findByField("email", emailInCookie);
+  let userFromCookie =  User.findByField(emailInCookie);
 
   if (userFromCookie) {
     req.session.userLogged = userFromCookie;
