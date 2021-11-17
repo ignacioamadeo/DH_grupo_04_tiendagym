@@ -11,7 +11,7 @@
       </form>
     </nav>
 
-    <nav class="loginCarrito">
+    <nav class="loginCarrito " >
       <% if (locals.isLogged) { %>
 
       <ul class="barraProfile">
@@ -37,8 +37,30 @@
       ></a>
       <% } else { %>
       <a href="../login"><i class="fas fa-user-circle"> </i></a>
-      <a href="../productCart"><i class="fas fa-shopping-cart"> </i></a>
+      <a href="../productCart" id="cartItem"><i class="fas fa-shopping-cart"> </i></a>
       <% } %>
+
+      <article class="btn" id="btn">
+        <table class="cart" id="lista-carrito">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <section class="definirCompra">
+         <a href="#" class="comparA" id="concluirCompra">
+           <h6>Comprar</h6>
+         </a>
+         <br />
+         <a href="#" class="eliminarA" id="eliminarCompra">
+           <h6>Vaciar Carrito</h6></a>
+        </section>
+       </article>
+
     </nav>
   </div>
   <!--A partir de acá va la parte inferior del header con menu para la version desktop -->
