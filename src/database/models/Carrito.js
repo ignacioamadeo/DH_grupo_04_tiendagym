@@ -1,11 +1,3 @@
-/*
-¿NO FALTARÁ ESTO?:
-
-const Sequelize = require('sequelize');
-const sequelize = require('./database'); 
-const Product = require('Product');
-*/
-
 //Acá se estila poner todo en el module.exports, pero podría definirse aparte y luego exportar todo.
 module.exports = (sequelize, DataTypes) => {
   //1º Defino alias con el que voy a llamar a la tabla en el CRUD y relaciones:
