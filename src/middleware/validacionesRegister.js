@@ -1,6 +1,6 @@
 const {body}=require('express-validator');
 
-const validaciones=[
+ const validaciones=[
 body("firstName").notEmpty().withMessage('Debes completar el campo'),
 body("lastName").notEmpty().withMessage('Debes completar el campo'),
 body("email").notEmpty().withMessage('Debes completar el campo').bail()

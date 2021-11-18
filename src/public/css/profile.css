@@ -1,3 +1,34 @@
+.bienvenido{
+    text-align: right;
+    margin-right:40px ;
+}
+.imgProfile{
+    border: 1px solid red;
+    text-align: center;
+    padding: 10px;
+}
 .imgProfile img{
     width: 30%;
+  
+}
+
+.datosProfile{
+    text-align: center;
+}
+.datosProfile h3{
+    padding: 10px;
+}
+.cerrarSession{
+    margin-left: 10px;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.editarProfile{
+   
+    border: 1px solid red;
+}
+.editarProfile form input{
+    margin-left: 10px;
+    padding: 5px;
 }

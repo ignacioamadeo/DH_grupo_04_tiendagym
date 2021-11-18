@@ -1,6 +1,6 @@
 //LOGIN:
 // const User = require("../models/User");
-const {User} = require('../models/index')
+const { User } = require("../models/index");
 const bcrypt = require("bcryptjs");
 
 //Renderizo el ejs correspondiente:
@@ -10,37 +10,61 @@ let loginController = {
     res.render("users/login");
   },
   accept: async (req, res) => {
-    let userToLogin = await User.findByField(req.body.email);
-    if (userToLogin) {
-      let isOKThePass = await bcrypt.compare(
-        req.body.password,
-        userToLogin.password
-      );
-      if (isOKThePass) {
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;
-        // if (req.body.recordame) {
-        //   res.cookie("recordame", req.body.email, { maxAge: 60000 });
-        // }
-        res.redirect("/");
+    try {
+      let userToLogin = await User.findByField(req.body.email);
+      if (userToLogin) {
+        let isOKThePass = await bcrypt.compare(
+          req.body.password,
+          userToLogin.password
+        );
+        if (isOKThePass) {
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
+          if (req.body.recordame) {
+            res.cookie("recordame", req.body.email, { maxAge: 60000 });
+          }
+          res.redirect("/");
+        } else {
+          res.render("users/login", {
+            errors: {
+              email: {
+                msg: "Las credendicales son inválidas",
+              },
+            },
+          });
+        }
       } else {
         res.render("users/login", {
           errors: {
             email: {
-              msg: "Las credendicales son inválidas",
+              msg: "No se encuentra este mail en nuestra base de datos",
             },
           },
         });
       }
-    } 
-    else {
-      res.render("users/login", {
-        errors: {
-          email: {
-            msg: "No se encuentra este mail en nuestra base de datos",
-          },
-        },
-      });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  edit:async(req,res)=>{
+    try {
+      let id=req.params.id
+      let userEdit = {
+        ...req.body,
+        image: req.file.filename,
+      };
+      let newUser = await User.update(userEdit, id);
+      let userToLogin = await User.findByField(req.body.email);
+      if(userToLogin){
+        req.session.userLogged = userToLogin
+
+      }
+      res.redirect('/')
+
+      
+      
+    } catch (error) {
+      console.log(error);
     }
   },
 

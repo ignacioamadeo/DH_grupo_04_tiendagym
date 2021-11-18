@@ -6,17 +6,40 @@
     <%- include('../partials/header') %>
 
     <main>
-      <h1>Bienvenido <%= user.username%></h1>
+      <h1 class="bienvenido">Bienvenido <%= user.username%></h1>
       <section class="imgProfile">
         <img
           src="/imgRegister/<%= user.image %>"
           alt="No se encontro la imagen"
         />
       </section>
-      <section>
-        <h3>Nombre: <%= user.firstName%></h3>
-        <h3>Apellido: <%= user.lastName%></h3>
-        <h3>Email: <%= user.email%></h3>
+      <section class="datosProfile">
+        <h3>Nombre: <%= user.firstName %></h3>
+        <h3>Apellido: <%= user.lastName %></h3>
+        <h3>Email: <%= user.email %></h3>
+      </section>
+      <section class="editarProfile">
+        <p>Editar datos</p>
+        <br>
+        <form action="/login/profile/<%= user.userID %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+           <input name="firstName" value=<%= user.firstName %> >
+           <br>
+           <input name="lastName" value= <%= user.lastName %> >
+           <br>
+           <input name="email" value= <%= user.email %> >
+           <br>
+           <input name="username" value= <%= user.username %> >
+           <br>
+           <input type="file" name="image" />
+           <br>
+           <input type="submit" name="" id="">
+           <br>
+           
+        </form>
+      </section>
+
+      <section class="cerrarSession">
         <a href="../login/logout">Cerrar Session</a>
       </section>
     </main>

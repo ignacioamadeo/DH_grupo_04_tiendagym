@@ -7,18 +7,18 @@ const Users = {
     });
     return response;
   },
-  update: function (user, idUser) {
+  update: async function (user, idUser) {
     const response = db.Users.update(
       {
         ...user,
       },
       {
         where: {
-          id: idUser,
+          userID: idUser,
         },
       }
     );
-    return response;
+    return await response;
   },
   delete: function (idUser) {
     const response = db.Users.destroy({
@@ -29,17 +29,17 @@ const Users = {
     return response;
   },
 
-  findByField: function (text) {
+  findByField: async function (text) {
     let userFound = db.Users.findOne({
-      where:{
-        email : text
-      }
-    })
-    .then( function(respuesta){
-     console.log(respuesta)
-    }).catch(error => console.log(error))
-    return userFound
-  }
+      where: {
+        email: text,
+      },
+    });
+    // .then( function(respuesta){
+    //  console.log(respuesta)
+    // }).catch(error => console.log(error))
+    return await userFound;
+  },
 };
 
 module.exports = Users;

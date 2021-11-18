@@ -1,20 +1,24 @@
-const {User} = require("../models");
+const { User } = require("../models");
 
- function userLoggedMiddleware(req, res, next) {
-  res.locals.isLogged = false;
-  let emailInCookie = req.cookies.recordame;
-  let userFromCookie =  User.findByField(emailInCookie);
+async function userLoggedMiddleware(req, res, next) {
+  try {
+    res.locals.isLogged = false;
+    let emailInCookie = req.cookies.recordame;
+    // let userFromCookie = await User.findByField(emailInCookie);
 
-  if (userFromCookie) {
-    req.session.userLogged = userFromCookie;
+    // if (userFromCookie) {
+    //   req.session.userLogged = userFromCookie;
+    // }
+
+    if (req.session.userLogged) {
+      res.locals.isLogged = true;
+      res.locals.userLogged = req.session.userLogged;
+    }
+
+    next();
+  } catch (error) {
+    console.log(error);
   }
-
-  if (req.session.userLogged) {
-    res.locals.isLogged = true;
-    res.locals.userLogged = req.session.userLogged;
-  }
-
-  next();
 }
 
 module.exports = userLoggedMiddleware;

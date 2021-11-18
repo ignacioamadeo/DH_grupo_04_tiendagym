@@ -3,6 +3,7 @@
 //1º Ejecuto paquetes:
 const express = require("express");
 const router = express.Router();
+const upload = require("../middleware/multerRegister");
 
 //2º Importo controlador:
 const loginController = require("../controllers/loginController.js"); //Renderizo EJS login.
@@ -13,6 +14,7 @@ const authMiddleware = require("../middleware/authMiddleware");
 router.get("/", guestMiddleware, loginController.login);
 router.post("/", loginController.accept);
 router.get("/profile", authMiddleware, loginController.profile);
+router.put('/profile/:id', upload.single("image"), loginController.edit)
 router.get("/logout", loginController.logout);
 //4º Exporto todo:
 module.exports = router;
