@@ -46,23 +46,19 @@ let loginController = {
       console.log(error);
     }
   },
-  edit:async(req,res)=>{
+  edit: async (req, res) => {
     try {
-      let id=req.params.id
+      let id = req.params.id;
       let userEdit = {
         ...req.body,
         image: req.file.filename,
       };
       let newUser = await User.update(userEdit, id);
       let userToLogin = await User.findByField(req.body.email);
-      if(userToLogin){
-        req.session.userLogged = userToLogin
-
+      if (userToLogin) {
+        req.session.userLogged = userToLogin;
       }
-      res.redirect('/')
-
-      
-      
+      res.redirect("/");
     } catch (error) {
       console.log(error);
     }

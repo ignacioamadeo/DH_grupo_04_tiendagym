@@ -1,13 +1,25 @@
 const db = require("../database/models");
 
 const Productos = {
-  create: function (product) {
+  allCategory: async function (text) {
+    try {
+      return await db.Products.findAll({
+        where: {
+          prodCategoria: text,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  create: async function (product) {
     const response = db.Products.create({
       ...product,
     });
-    return response;
+    return await response;
   },
-  update: function (product, idProduct) {
+  update: async function (product, idProduct) {
     const response = db.Products.update(
       {
         ...product,
@@ -18,15 +30,15 @@ const Productos = {
         },
       }
     );
-    return response;
+    return await response;
   },
-  delete: function (idProduct) {
+  delete: async function (idProduct) {
     const response = db.Products.destroy({
       where: {
         id: idProduct,
       },
     });
-    return response;
+    return await response;
   },
 };
 

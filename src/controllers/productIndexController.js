@@ -5,57 +5,44 @@
 // const db=require('../db/baseProductos.json');
 
 const db = require("../database/models");
+const OP = db.Sequelize.Op;
+const { Productos } = require("../models/index");
 
 //Renderizo el ejs correspondiente:
 
 let productIndexController = {
-  productIndex: (req, res, next) => {
+  destacado: (req, res) => {
+    db.Products.findAll({
+      where: {
+        prodPrecio: { [OP.lte]: 10000 },
+      },
+
+      limit: 6,
+    })
+      .then((product) => {
+        res.render("products/listaDestacados", { productInfo: product });
+      })
+      .catch((error) => res.send(error));
+  },
+  productIndex: async (req, res, next) => {
     //    let product=db.filter(item => item.prodCategoria == "#Maq");
-    db.Products.findAll({
-      where: {
-        prodCategoria: "#Maq",
-      },
-    })
-      .then((product) => {
-        res.render("products/productIndex", { productInfo: product });
-      })
-      .catch((error) => res.send(error));
+    let product = await Productos.allCategory("#Maq");
+    res.render("products/productIndex", { productInfo: product });
   },
-  productYoga: (req, res, next) => {
+  productYoga: async (req, res, next) => {
     // let product=db.filter(item => item.prodCategoria == "#funcPilYog");
-    db.Products.findAll({
-      where: {
-        prodCategoria: "#funcPilYog",
-      },
-    })
-      .then((product) => {
-        res.render("products/productIndex", { productInfo: product });
-      })
-      .catch((error) => res.send(error));
+    let product = await Productos.allCategory("#funcPilYog");
+    res.render("products/productIndex", { productInfo: product });
   },
-  productBarras: (req, res, next) => {
+  productBarras: async (req, res, next) => {
     // let product=db.filter(item => item.prodCategoria == "#PesDisBar");
-    db.Products.findAll({
-      where: {
-        prodCategoria: "#PesDisBar",
-      },
-    })
-      .then((product) => {
-        res.render("products/productIndex", { productInfo: product });
-      })
-      .catch((error) => res.send(error));
+    let product = await Productos.allCategory("#PesDisBar");
+    res.render("products/productIndex", { productInfo: product });
   },
-  productIndumentaria: (req, res, next) => {
+  productIndumentaria: async (req, res, next) => {
     // let product=db.filter(item => item.prodCategoria == "#Ind");
-    db.Products.findAll({
-      where: {
-        prodCategoria: "#Ind",
-      },
-    })
-      .then((product) => {
-        res.render("products/productIndex", { productInfo: product });
-      })
-      .catch((error) => res.send(error));
+    let product = await Productos.allCategory("#Ind");
+    res.render("products/productIndex", { productInfo: product });
   },
 };
 

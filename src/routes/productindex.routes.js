@@ -16,6 +16,8 @@ router.get('/barras', productIndexController.productBarras);
 
 router.get('/indumentaria', productIndexController.productIndumentaria);
 
+router.get('/desatcado', productIndexController.destacado);
+
 
 //4º Exporto todo:
 module.exports=router;

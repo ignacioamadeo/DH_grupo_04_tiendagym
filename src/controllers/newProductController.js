@@ -52,13 +52,17 @@ let productNewController = {
       .catch((error) => console.log(error));
   },
 
-  create: (req, res) => {
-    let producto = {
-      ...req.body,
-      prodImg: `../img/${req.file.filename}`,
-    };
-    Productos.create(producto);
-    res.redirect("./newProduct/allProducts");
+  create: async (req, res) => {
+    try {
+      let producto = {
+        ...req.body,
+        prodImg: `../img/${req.file.filename}`,
+      };
+      await Productos.create(producto);
+      res.redirect("./newProduct/allProducts");
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 

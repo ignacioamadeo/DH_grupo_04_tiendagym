@@ -18,8 +18,8 @@ let productModifyController = {
       })
       .catch((error) => console.log(error));
   },
-  edit: (req, res) => {
-    let id = req.params.id;
+  edit: async (req, res) => {
+    
     //     if(req.file){
     //      let id=req.params.id
     //      let product=data.findIndex(item=> item.prodID == id)
@@ -53,19 +53,24 @@ let productModifyController = {
     //     let id=req.params.id
     //     res.redirect(`../${id}`)
     // }
-    let producto = {
-      ...req.body,
-      prodImg: `../img/${req.file.filename}`,
-    };
-    Productos.update(producto, id)
-      .then((resultado) => {
-        res.redirect("/newProduct/allProducts");
-      })
-      .catch((error) => console.log(error));
+   try {
+     let id = req.params.id;
+     let producto = {
+       ...req.body,
+       prodImg: `../img/${req.file.filename}`,
+     };
+    await Productos.update(producto, id)
+       res.redirect("/newProduct/allProducts");
+     
+   } catch (error) {
+     console.log(error);
+   }
+      
+      
   },
 
-  destroy: (req, res) => {
-    let id = req.params.id;
+  destroy: async (req, res) => {
+    
     //      data=data.filter(item=>item.prodID != id)
     //     fs.writeFileSync(
     // 	path.join(__dirname, '../databases/baseProductos.json'),
@@ -75,12 +80,16 @@ let productModifyController = {
     // 	}
     //         );
     //         res.send('La solicitud fue exitiosa')
-
-    Productos.delete(id)
-      .then((solicitud) => {
-        res.redirect("/newProduct/allProducts");
-      })
-      .catch((error) => console.log(error));
+    try {
+      let id = req.params.id;
+     await Productos.delete(id)
+          res.redirect("/newProduct/allProducts");
+      
+    } catch (error) {
+      console.log(error);
+    }
+     
+      
   },
 };
 
