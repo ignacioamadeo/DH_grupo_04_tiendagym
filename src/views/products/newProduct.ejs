@@ -31,11 +31,17 @@
             id="prodNombre"
             placeholder="Cinta de correr CYNT 234rpm"
           />
+          <% if (locals.errors && errors.prodNombre) { %>
+            <div class="msg-errors"><%= errors.prodNombre.msg %></div>
+            <% } %>
 
           <label for="prodDescripcion">Descripción</label>
           <textarea name="prodDescrip" id="prodDescripcion">
 Escribir descripción del producto...</textarea
           >
+   <% if (locals.errors && errors.prodDescrip) { %>
+          <div class="msg-errors"><%= errors.prodDescrip.msg %></div>
+          <% } %>
 
           <label for="prodDescrip1">Descripción-A</label>
           <textarea name="prodDescrip1" id="prodDescrip1">

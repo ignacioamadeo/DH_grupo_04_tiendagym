@@ -6,12 +6,12 @@ const router = express.Router();
 
 //2º Importo controlador:
 const productNewController = require("../controllers/newProductController.js");
-
+const validaciones = require('../middleware/validacionesProducts');
 const upload = require("../middleware/multerProducts");
 
 //3º Llamo a la propiedad de ese controlador:
 router.get("/", productNewController.productNew);
-router.post("/", upload.single("prodImg"), productNewController.create);
+router.post("/", upload.single("prodImg"),validaciones, productNewController.create);
 
 router.get("/allProducts", productNewController.all);
 

@@ -24,7 +24,7 @@
       </section>
       <section class="formNewProduct">
         <form
-          action="/modifyProduct/edit/<%= products.id %>?_method=PUT"
+          action="/modifyProduct/edit/<%= products.prodID %>?_method=PUT"
           method="POST"
           enctype="multipart/form-data"
         >
@@ -33,13 +33,20 @@
             type="text"
             name="prodNombre"
             id="prodNombre"
-            placeholder="<%= products.prodNombre %>"
+            value="<%= products.prodNombre %>"
           />
+          <% if (locals.errors && errors.prodNombre) { %>
+            <div class="msg-errors"><%= errors.prodNombre.msg %></div>
+            <% } %>
 
           <label for="prodDescripcion">Descripción</label>
           <textarea name="prodDescrip" id="prodDescripcion">
 <%= products.prodDescrip %></textarea
           >
+          
+          <% if (locals.errors && errors.prodDescrip) { %>
+                 <div class="msg-errors"><%= errors.prodDescrip.msg %></div>
+                 <% } %>
 
           <label for="prodDescrip1">Descripción-A</label>
           <textarea name="prodDescrip1" id="prodDescrip1">
@@ -76,28 +83,28 @@
           <input
             type="text"
             name="prodPrecio"
-            placeholder="<%= products.prodPrecio %>"
+            value="<%= products.prodPrecio %>"
           />
 
           <label>Descuento</label>
           <input
             type="text"
             name="prodDescuento"
-            placeholder="<%= products.prodDescuento %>"
+            value="<%= products.prodDescuento %>"
           />
 
           <label>Precio en Cuotas</label>
           <input
             type="text"
             name="prodPrecioCuotas"
-            placeholder="<%= products.prodPrecioCuotas %>"
+            value="<%= products.prodPrecioCuotas %>"
           />
 
           <label>Cuotas sin interés</label>
           <input
             type="number"
             name="prodCantidadCuotas"
-            placeholder="<%= products.prodCantidadCuotas %>"
+            value="<%= products.prodCantidadCuotas %>"
             min="0"
             max="12"
           />
@@ -106,7 +113,7 @@
           <input
             type="number"
             name="prodCantidad"
-            placeholder="<%= products.prodCantidad %>"
+            value="<%= products.prodCantidad %>"
             min="0"
           />
 

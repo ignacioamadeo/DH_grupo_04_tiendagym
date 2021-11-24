@@ -2,6 +2,7 @@
 // const User = require("../models/User");
 const { User } = require("../models/index");
 const bcrypt = require("bcryptjs");
+const { validationResult } = require("express-validator");
 
 //Renderizo el ejs correspondiente:
 
@@ -12,36 +13,45 @@ let loginController = {
   accept: async (req, res) => {
     try {
       let userToLogin = await User.findByField(req.body.email);
-      if (userToLogin) {
+      let errors = validationResult(req);
+      if (userToLogin && errors.isEmpty()) {
         let isOKThePass = await bcrypt.compare(
           req.body.password,
           userToLogin.password
         );
-        if (isOKThePass) {
+
+        if (isOKThePass ) {
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
           if (req.body.recordame) {
             res.cookie("recordame", req.body.email, { maxAge: 60000 });
           }
           res.redirect("/");
-        } else {
-          res.render("users/login", {
-            errors: {
-              email: {
-                msg: "Las credendicales son inválidas",
-              },
-            },
-          });
-        }
-      } else {
+        } 
+        // else {
+        //   res.render("users/login", {
+        //     errors: {
+        //       email: {
+        //         msg: "Las credendicales son inválidas",
+        //       },
+        //     },
+        //   });
+        // }
+      } 
+      else {
         res.render("users/login", {
-          errors: {
-            email: {
-              msg: "No se encuentra este mail en nuestra base de datos",
-            },
-          },
+          errors:errors.mapped()
         });
       }
+      // else {
+      //   res.render("users/login", {
+      //     errors: {
+      //       email: {
+      //         msg: "No se encuentra este mail en nuestra base de datos",
+      //       },
+      //     },
+      //   });
+      // }
     } catch (error) {
       console.log(error);
     }

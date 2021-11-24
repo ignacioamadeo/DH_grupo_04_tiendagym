@@ -28,3 +28,5 @@ uso de comentarios en el código.
 
 5. Dejar de hacer
 estresarnos.
+
+JIRA: https://gtiavo.atlassian.net/jira/software/projects/PIT/boards/2

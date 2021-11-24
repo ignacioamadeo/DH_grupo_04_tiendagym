@@ -3,6 +3,7 @@
 // const path=require('path');
 const db = require("../database/models");
 const { Productos } = require("../models");
+const {validationResult}=require('express-validator')
 
 //MODIFICAR UN PRODUCTO EXISTENTE:
 
@@ -54,13 +55,23 @@ let productModifyController = {
     //     res.redirect(`../${id}`)
     // }
    try {
+     let errors=validationResult(req);
      let id = req.params.id;
      let producto = {
        ...req.body,
        prodImg: `../img/${req.file.filename}`,
      };
+     if(errors.isEmpty()){
     await Productos.update(producto, id)
        res.redirect("/newProduct/allProducts");
+     }
+     else{
+      let id = req.params.id;
+      db.Products.findByPk(id)
+      .then((products) => {
+        res.render("products/modifyProduct", { products: products, errors:errors.mapped() });
+      })
+     }
      
    } catch (error) {
      console.log(error);

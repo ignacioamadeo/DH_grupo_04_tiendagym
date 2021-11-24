@@ -9,10 +9,11 @@ const upload = require("../middleware/multerRegister");
 const loginController = require("../controllers/loginController.js"); //Renderizo EJS login.
 const guestMiddleware = require("../middleware/guestMiddleware");
 const authMiddleware = require("../middleware/authMiddleware");
+const validaciones = require('../middleware/validacionesLogin')
 
 //3º Llamo a la propiedad de ese controlador:
 router.get("/", guestMiddleware, loginController.login);
-router.post("/", loginController.accept);
+router.post("/",validaciones, loginController.accept);
 router.get("/profile", authMiddleware, loginController.profile);
 router.put('/profile/:id', upload.single("image"), loginController.edit)
 router.get("/logout", loginController.logout);

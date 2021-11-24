@@ -3,6 +3,7 @@
 // const path=require('path');
 const { Productos } = require("../models/index");
 const db = require("../database/models");
+const {validationResult}= require('express-validator')
 
 //REGISTRO DE NUEVO PRODUCTO:
 
@@ -54,12 +55,18 @@ let productNewController = {
 
   create: async (req, res) => {
     try {
+      let errors = validationResult(req);
       let producto = {
         ...req.body,
         prodImg: `../img/${req.file.filename}`,
       };
+      if(errors.isEmpty()){
       await Productos.create(producto);
       res.redirect("./newProduct/allProducts");
+      }
+      else{
+        res.render('products/newProduct', {errors:errors.mapped()})
+      }
     } catch (error) {
       console.log(error);
     }
