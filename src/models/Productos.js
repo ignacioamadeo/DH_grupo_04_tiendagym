@@ -26,7 +26,7 @@ const Productos = {
       },
       {
         where: {
-          id: idProduct,
+          prodID: idProduct,
         },
       }
     );
@@ -35,7 +35,7 @@ const Productos = {
   delete: async function (idProduct) {
     const response = db.Products.destroy({
       where: {
-        id: idProduct,
+        prodID: idProduct,
       },
     });
     return await response;

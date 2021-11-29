@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     btn.style.display = "block";
   });
 
-  window.addEventListener("click", function () {
+  document.body.addEventListener("click", function () {
     btn.style.display = "none";
   });
 });
@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
     btn.style.display = "block";
   });
 
-  window.addEventListener("click", function () {
+  document.body.addEventListener("click", function () {
     btn.style.display = "none";
   });
 });

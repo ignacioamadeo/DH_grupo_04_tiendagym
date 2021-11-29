@@ -89,6 +89,10 @@ width: 100px;
   color: rgb(243, 17, 17);
 }
 
+.errores ul li{
+  color: red;
+}
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
 @media (min-width: 481px){
 
