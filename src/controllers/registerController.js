@@ -4,6 +4,7 @@ const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const { User } = require("../models");
 
+
 //Renderizo el ejs correspondiente:
 
 let registerController = {
@@ -30,6 +31,8 @@ let registerController = {
         password: await bcrypt.hash(req.body.password, 10),
         image: req.file.filename,
       };
+
+
 
       if (errors.isEmpty()) {
         let userCreate = await User.create(userToCreate);

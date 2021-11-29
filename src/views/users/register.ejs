@@ -95,6 +95,9 @@
           <div>
             <input type="file" name="image" />
           </div>
+          <% if (locals.errors && errors.file) { %>
+            <div class="msg-errors"><%= errors.file.msg %></div>
+            <% } %>
           <div>
             <button type="reset">Borrar</button>
           </div>
