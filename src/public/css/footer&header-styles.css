@@ -121,6 +121,18 @@
 
   }
 
+  .switchD {
+      color:black;
+      font-size: 40px;
+      cursor: pointer;
+  }
+  .switchN {
+    color:black;
+    font-size: 40px;
+    display:none;
+    cursor: pointer;
+}
+
 
 /*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
 
