@@ -1,7 +1,7 @@
 <header class="mainHeader">
   <!--A partir de acá va la parte superior del header con logo, buscador y login-->
   <div class="mainHeaderTop">
-    <a href="../"
+    <a href="../" id="logo"
       ><img src="../images/tgym_logos-03.png" class="logoPrincipal"
     /></a>
     <nav class="busqueda">
@@ -10,6 +10,11 @@
         <input type="text" name="search" class="search" />
       </form>
     </nav>
+    <nav class="apaEnce">
+      <i class="fas fa-toggle-on switchD" ></i> 
+      <i class="fas fa-toggle-off switchN"></i>
+    </nav>
+    
 
     <nav class="loginCarrito " >
       <% if (locals.isLogged) { %>
