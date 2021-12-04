@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+<%- include('../partials/head') %>
+
   <body>
+    <!--VIDEO DE FONDO -->
     <video autoplay muted loop class="myVideo">
       <source src=".\videos\vid-funcional-4761426.mp4" type="video/mp4" />
     </video>
-    <!--Comienza y termina main de la web con el formulario de login -->
+
+    <!--Comienza main de la web con el formulario de login -->
     <main>
       <div class="formLogin">
-        <form action="/login" method="POST">
-          <a href="./"
-            ><img
-              class="logoHeaderLogin"
-              src=".\images\tgym_logos-09.png"
-              alt="No encontre Imagen"
-          /></a>
+        <form action="/login" method="POST" class="formValidationLogin">
+          <a href="./"><img class="logoHeaderLogin" src=".\images\tgym_logos-09.png" alt="No encontre Imagen" /></a>
+         
+          <!--ERRORES de validación (viene de public/js/validacionForm.js) -->
+          <div class="errores">
+            <ul> </ul>
+          </div>
+
+          <!--INPUT MAIL -->
           <div>
             <label>Ingrese email</label>
           </div>
-          <% if (locals.errors && errors.email) { %>
-          <div class="msg-errors"><%= errors.email.msg %></div>
-          <% } %>
           <div>
-            <input type="text" name="email" />
+            <input class="emailL" type="text" name="email" />
           </div>
+          <!--INPUT CONTRASEÑA -->
           <div>
             <label>Contraseña</label>
           </div>
-          <% if (locals.errors && errors.password) { %>
-            <div class="msg-errors"><%= errors.password.msg %></div>
-            <% } %>
           <div>
-            <input
-              type="password"
-              name="password"
-            />
+            <input class="contrasenia" type="password" name="password" />
           </div>
+          <!--INPUT RECORDARME -->
           <div>
-            <label>Recordame</label>
+            <label>Recordarme</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="recordame" id="" />
           </div>
+          <!--BOTONES -->
           <div>
             <button type="reset" class="loginBotonTipo1">Borrar</button>
             <button type="submit" class="loginBotonTipo1">Continuar</button>
           </div>
           <div>
-            <a href="./register"
-              ><button type="button" class="loginBotonTipo2">
+            <a href="./register"><button type="button" class="loginBotonTipo2">
                 Registrarse
-              </button></a
-            >
+              </button></a>
           </div>
+          <!--OTROS LINKS -->
           <div class="terminosLogin">
             <a href="#">Términos y condiciones</a>
             <a href="./"> - Volver al sitio</a>
@@ -60,5 +58,8 @@
         </form>
       </div>
     </main>
+    <!--CONECTO CON EL ARCHIVO DE VALIDACIÓN EN FRONT -->
+    <script src="/js/validacionLogin.js"> </script>
   </body>
+
 </html>

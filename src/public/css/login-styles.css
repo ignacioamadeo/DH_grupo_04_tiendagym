@@ -39,10 +39,16 @@
     border-radius: 12px;
     transition-duration: 0.4s;
     border-style: none;
-    padding: 8px 25px 8px 25px;
-    margin: 5px 10px 0 10px;
+    padding: auto;
+    margin: 5px 10px 0 10px; 
     font-size: 14px;
+    width: 120px;
+    height: 35px;
     text-align: center;
+  }
+
+  .checkbox.input{
+    display: flex;
   }
 
   .formLogin button:hover {
@@ -54,7 +60,6 @@
     border-radius: 12px;
     transition-duration: 0.4s;
     border-style: none;
-    padding: 6px 20px 6px 20px;
     margin: 0 auto;
     font-size: 10px;
     text-align: center;
@@ -70,7 +75,7 @@
     margin: 0 8px 0 8px;
     padding: 10px 0 10px 0;
     text-align: center;
-    width: 68%;
+    width: 80%;
   }
 
   .logoHeaderLogin{
