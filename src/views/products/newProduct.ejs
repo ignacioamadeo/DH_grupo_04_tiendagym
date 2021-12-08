@@ -16,6 +16,12 @@
             src="./images/pexels-life-of-pix-8264.jpg"
             class="newProductHeaderImage"
           />
+
+           <!--ERRORES de validación (viene de public/js/validacionForm.js) -->
+           <div class="errores">
+            <ul id="ulErrores"> </ul>
+          </div>
+
           <ul>
             <li>Sistema de gestión de productos</li>
             <li>Carga de nuevos productos</li>
@@ -108,5 +114,6 @@ Escribir descripción del producto...</textarea
     </main>
     <!-- Footer importado -->
     <%- include('../partials/footer') %>
+    <script src="/js/validacionProduct.js"> </script>
   </body>
 </html>
