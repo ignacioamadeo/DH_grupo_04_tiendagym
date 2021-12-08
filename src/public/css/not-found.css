@@ -36,3 +36,7 @@ text-transform:uppercase;
     border-radius: 10px;
     text-transform:uppercase;
 }
+
+.msg-errors{
+    color:red
+}

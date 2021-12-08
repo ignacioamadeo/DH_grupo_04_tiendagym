@@ -56,8 +56,8 @@ window.addEventListener("load", () => {
       });
     }
     //Recorro todos los valores guardados en Errores para mostrar todos los errores uno debajo del otro:
-    for (r = 0; r < errores.length; r++) {
-      document.querySelector('#ulErrores').innerHTML += "<li>" + errores[r] + "</li>"
-    }
+    // for (r = 0; r < errores.length; r++) {
+    //   document.querySelector('#ulErrores').innerHTML += "<li>" + errores[r] + "</li>"
+    // }
   });
 });

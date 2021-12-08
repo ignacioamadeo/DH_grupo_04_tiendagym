@@ -16,21 +16,22 @@
             src="./images/pexels-life-of-pix-8264.jpg"
             class="newProductHeaderImage"
           />
-           <!--ERRORES de validación (viene de public/js/validacionForm.js) -->
-           <div class="errores">
-            <ul id="ulErrores"> </ul>
-          </div>
           <ul>
             <li>Sistema de gestión de productos</li>
             <li>Carga de nuevos productos</li>
           </ul>
         </article>
       </section>
+      <!--ERRORES de validación (viene de public/js/validacionForm.js) -->
+   <div class="errores" style="text-align: center;">
+     <ul id="ulErrores"> </ul>
+   </div>
       <section class="formNewProduct">
         <form
           action="/modifyProduct/edit/<%= products.prodID %>?_method=PUT"
           method="POST"
           enctype="multipart/form-data"
+          class="validationProduct"
         >
           <label for="prodNombre">Nombre de producto</label>
           <input
@@ -73,7 +74,7 @@
           >
 
           <label for="prodFotos">Cargar fotos producto:</label>
-          <input type="file" name="prodImg" />
+          <input type="file" name="prodImg" id="prodImg" />
 
           <label for="prodCategoria">Categoría:</label>
           <select name="prodCategoria">

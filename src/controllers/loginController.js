@@ -13,14 +13,14 @@ let loginController = {
   accept: async (req, res) => {
     try {
       let userToLogin = await User.findByField(req.body.email);
-      let errors = validationResult(req);
-      if (userToLogin && errors.isEmpty()) {
+      let error = validationResult(req);
+      if (userToLogin && error.isEmpty()) {
         let isOKThePass = await bcrypt.compare(
           req.body.password,
           userToLogin.password
         );
 
-        if (isOKThePass ) {
+        if (isOKThePass && error.isEmpty()) {
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
           if (req.body.recordame) {
@@ -30,17 +30,22 @@ let loginController = {
         } 
         // else {
         //   res.render("users/login", {
-        //     errors: {
-        //       email: {
-        //         msg: "Las credendicales son inválidas",
-        //       },
-        //     },
+        //     errors:error.mapped()
         //   });
         // }
+        else {
+          res.render("users/login", {
+            errors: {
+              email: {
+                msg: "Las credendicales son inválidas",
+              },
+            },
+          });
+        }
       } 
       else {
         res.render("users/login", {
-          errors:errors.mapped()
+          errors:error.mapped()
         });
       }
       // else {

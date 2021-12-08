@@ -26,6 +26,11 @@
           <div>
             <input class="emailL" type="text" name="email" />
           </div>
+          <% if (locals.errors && errors.email) { %>
+            <div class="msg-errors">
+              <%= errors.email.msg %>
+            </div>
+            <% } %>
           <!--INPUT CONTRASEÑA -->
           <div>
             <label>Contraseña</label>
@@ -33,6 +38,11 @@
           <div>
             <input class="contrasenia" type="password" name="password" />
           </div>
+          <% if (locals.errors && errors.password) { %>
+            <div class="msg-errors">
+              <%= errors.password.msg %>
+            </div>
+            <% } %>
           <!--INPUT RECORDARME -->
           <div>
             <label>Recordarme</label>
