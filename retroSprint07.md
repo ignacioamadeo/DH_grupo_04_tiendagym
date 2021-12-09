@@ -27,3 +27,5 @@ Borrar líneas de código del back sin consultar.
 
 5. Dejar de hacer
 estresarnos.
+
+JIRA: https://gtiavo.atlassian.net/jira/software/projects/PIT/boards/2
