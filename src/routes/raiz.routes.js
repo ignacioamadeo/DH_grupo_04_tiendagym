@@ -26,5 +26,10 @@ router.use("/productDetail", require("./productDetail.routes.js"));
 //PRODUCT: ÍNDICE DE TODOS LOS PRODUCTOS:
 router.use("/productIndex", require("./productindex.routes.js"));
 
+
+//APIS
+
+router.use('/', require('./api/users'))
+
 //Exporto todo:
 module.exports = router;
