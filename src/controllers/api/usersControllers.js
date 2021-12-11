@@ -34,7 +34,6 @@ user: async (req,res)=>{
        const user = await Users.findByPk(req.params.id)
        
        res.status(200).json({
-        count: user.length,
         data : {
             id: user.userID,
             name: user.firstName,
@@ -50,7 +49,7 @@ user: async (req,res)=>{
         succes:true
        })
     } catch (error) {
-        res.status(500).json({count: null,data: null, error: error, detail: null ,succes: false})
+        res.status(500).json({data: null, error: error, detail: null ,succes: false})
     }
 }
 }
