@@ -29,7 +29,8 @@ router.use("/productIndex", require("./productindex.routes.js"));
 
 //APIS
 
-router.use('/', require('./api/users'))
+router.use('/', require('./api/users'));
+router.use('/', require('./api/products'))
 
 //Exporto todo:
 module.exports = router;
