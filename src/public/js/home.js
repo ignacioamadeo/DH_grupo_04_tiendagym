@@ -15,16 +15,21 @@ var sticky = subHeaderHome.offsetTop;
 function myFunction() {
   if (window.pageYOffset > sticky) {
     headerHome.classList.add("sticky");
-    logoHeaderHome.style.display = "none";
     subHeaderHome.style.display = "none";
-    logoHeader.src = "";
+    subHeaderHome.style.transition = "display 3s linear" 
+    modeButton.style.display = "none";
+    logoHeader.src = "../images/tgym_logos-08.png";
+    logoHeader.style.width = "60px";
+    logoHeader.style.margin = "0px 0px 0px 8px";
 
   } else {
     headerHome.classList.remove("sticky");
-    logoHeaderHome.style.display = "block";
     modeButton.style.display = "block";
     subHeaderHome.style.display = "flex";
+    subHeaderHome.style.transition = "display 3s linear" 
     logoHeader.src = "../images/tgym_logos-03.png";
+    logoHeader.style.width = "250px";
+    logoHeader.style.margin = "20px 0px 20px 10px";
   }
 } 
 
