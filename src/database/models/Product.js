@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     prodCategoria: {
       type: DataTypes.STRING(100),
+      foreignKey:true
     },
     prodCantidad: {
       type: DataTypes.INTEGER,
@@ -69,6 +70,12 @@ module.exports = (sequelize, DataTypes) => {
       otherKey: "carritoID",
       timestamps: true,
     });
+
+    Product.belongsTo(models.Categories, {
+      as: "categoria",
+      foreignKey: "prodCategoria",
+    });
+
   };
 
   //6º Devuelvo la variable:

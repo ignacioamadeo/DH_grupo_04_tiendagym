@@ -1,11 +1,19 @@
-const { Products } = require("../../database/models");
-const { Productos } = require("../../models");
+const { Products, Categories } = require("../../database/models");
+
 
 const controllers = {
   listProducts: async (req, res) => {
     try {
       let productsList = [];
-      const allProducts = await Products.findAll();
+      let categoryList =[]
+      const allProducts = await Products.findAll({
+        include: [{association: 'categoria'}]
+      });
+      const allCategory = await Categories.findAll({
+        include: [{association : 'producto'}]
+      })
+
+
       allProducts.forEach((item) => {
         const list = {
           id: item.prodID,
@@ -14,20 +22,21 @@ const controllers = {
         };
         return productsList.push(list);
       });
+      allCategory.forEach((item) => {
+        const list = {
+          id: item.id,
+          name: item.name,
+          description: item.code,
+          productos:item.producto.length
+        };
+        return categoryList.push(list);
+      });
 
-      const maq = await Productos.allCategory("#Maq");
-      const funcional = await Productos.allCategory("#funcPilYog");
-      const pesas = await Productos.allCategory("#PesDisBar");
-      const indu = await Productos.allCategory("#Ind");
+   
 
       res.status(200).json({
         count: allProducts.length,
-        countByCategory: {
-          maquinas: maq.length,
-          funcionalYoga: funcional.length,
-          pesasbarras: pesas.length,
-          indumentaria: indu.length,
-        },
+        countByCategory : categoryList,
         data: productsList,
         error: null,
         deatail: "/api/products",
