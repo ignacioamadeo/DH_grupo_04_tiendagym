@@ -5,7 +5,9 @@ let subHeaderHome = document.querySelector(".mainHeaderBottom")
 let logoHeader = document.querySelector(".logoPrincipal")
 let modeButton = document.querySelector(".apaEnce")
 let botonesLoginCarrito = document.querySelector(".loginCarrito")
+let videoCarritoHome = document.querySelector(".videoCarrousel")
 
+videoCarritoHome.playbackRate = 0.6; 
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
