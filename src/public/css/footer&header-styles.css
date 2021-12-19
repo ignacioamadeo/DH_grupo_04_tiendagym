@@ -31,7 +31,7 @@
     min-width: 210px;
     height: 30px;
     background-color: white;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     display: flex;
     border-radius: 10px;
 }
@@ -133,6 +133,18 @@
     cursor: pointer;
 }
 
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 3s; 
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
 
 /*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
 
@@ -144,7 +156,7 @@
 
 footer{
     background-color: #e1e5f2;
-    height: 180px;
+    height: 150px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column; 
