@@ -1,4 +1,8 @@
-//DETALLE DE PRODUCTO:
+/* --- 
+RUTAS DEL DETALLE DE PRODUCTO:
+--- */
+
+//En el archivo raiz.routes.js defino a través de que http voy a acceder a esta ruta.
 
 //1º Ejecuto paquetes:
 const express=require('express');
@@ -13,4 +17,5 @@ router.get('/:idProductDetail', productDetailController.productDetail);
 //4º Exporto todo:
 module.exports=router;
 
-//Nota particular: Volví a dar de alta esta ruta para poder construír la de product index (nacho)
+
+//Flujo entero: index.js > app.js > raiz.routes > 👉🏼 ruta > controllers > models > SQL

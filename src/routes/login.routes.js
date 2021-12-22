@@ -1,4 +1,8 @@
-//LOGIN:
+/* --- 
+RUTAS DEL LOGIN:
+--- */
+
+//En el archivo raiz.routes.js defino a través de que http voy a acceder a esta ruta.
 
 //1º Ejecuto paquetes:
 const express = require("express");
@@ -17,7 +21,8 @@ router.post("/",validaciones, loginController.accept);
 router.get("/profile", authMiddleware, loginController.profile);
 router.put('/profile/:id', upload.single("image"), loginController.edit)
 router.get("/logout", loginController.logout);
+
 //4º Exporto todo:
 module.exports = router;
 
-//En el archivo raiz.routes.js defino a través de que http voy a acceder a esta ruta.
+//Flujo entero: index.js > app.js > raiz.routes > 👉🏼 ruta > controllers > models > SQL

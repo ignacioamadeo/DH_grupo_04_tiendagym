@@ -53,3 +53,5 @@ EXPORT:
 
 //EXPORTO todo:
 module.exports = app;
+
+//Flujo entero: index.js > 👉🏼 app.js > raiz.routes > ruta > controllers > models > SQL

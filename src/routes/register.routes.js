@@ -1,4 +1,8 @@
-//REGISTRO DE NUEVO USUARIO:
+/* --- 
+RUTAS DE REGISTRO NUEVO USUARIO:
+--- */
+
+//En el archivo raiz.routes.js defino a través de que http voy a acceder a esta ruta.
 
 //1º Ejecuto paquetes:
 const express = require("express");
@@ -22,4 +26,5 @@ router.post(
 //4º Exporto todo:
 module.exports = router;
 
-//En el archivo raiz.routes.js defino a través de que http voy a acceder a esta ruta.
+
+//Flujo entero: index.js > app.js > raiz.routes > 👉🏼 ruta > controllers > models > SQL

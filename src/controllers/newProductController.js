@@ -1,18 +1,31 @@
+/* --- 
+CONTROLADORES PARA CRER NUEVO PRODUCTO
+
+FUNCIONALIDADES:
+📌 1) RENDERIZAR PRODUCTOS
+📌 2) CREAR NUEVO PRODUCTO
+--- */
+
+//(viejo config con JSON):
 // const fs=require('fs');
 // const data=require('../db/baseProductos.json');
 // const path=require('path');
+
+//IMPORTO MODELOS: llamo al modelo de bases de datos de productos.
 const { Productos } = require("../models/index");
+//IMPORTO MODELOS: defino carpeta con modelos de Bases de datos.
 const db = require("../database/models");
+//EXPRESS-VALIDATOR: Extrae los errores de validación de una solicitud y los pone a disposición en un objeto Result.
 const {validationResult}= require('express-validator')
 
-//REGISTRO DE NUEVO PRODUCTO:
-
-//Renderizo el ejs correspondiente:
-
 let productNewController = {
+
+  //📌 1) RENDER: Renderizo el ejs correspondiente:
   productNew: (req, res) => {
-    res.render("products/newProduct"); //al crear carpetas en views y agregarle archivos, la ruta en el controlador debera ser nombrada con el nombre de la carpeta a la que pertenece
+    res.render("products/newProduct"); 
   },
+
+  //(VIEJO config con JSON):
   // create:(req,res,next)=>{
   //     if(req.file){
   //     const archivo = req.file;
@@ -45,6 +58,8 @@ let productNewController = {
   //     res.render('products/newProduct')
   // }
   // },
+
+  //nuevo - sequelize: con Sequelize busco todos los productos en la base de datos.
   all: (req, res) => {
     db.Products.findAll()
       .then((data) => {
@@ -53,6 +68,7 @@ let productNewController = {
       .catch((error) => console.log(error));
   },
 
+  //📌 2) CREAR NUEVO PRODUCTO:
   create: async (req, res) => {
     try {
       let errors = validationResult(req);
@@ -73,9 +89,9 @@ let productNewController = {
   },
 };
 
-/*Recordar que al crear carpetas en views y agregarle archivos, 
-la ruta en el controlador debera ser nombrada con el nombre 
-de la carpeta a la que pertenece*/
 
 //Exporto todo con este nombre:
 module.exports = productNewController;
+
+
+//Flujo entero: index.js > app.js > raiz.routes(desacople) > ruta > 👉🏼 controllers > models > SQL

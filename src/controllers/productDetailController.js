@@ -1,26 +1,33 @@
-//DETALLE DE PRODUCTO:
+/* --- 
+CONTROLADORES PARA DETALLES DE PRODUCTOS
 
-//Llamo a la base de datos (en este caso objeto json) y la asigno a la variable db:
+FUNCIONALIDADES:
+📌 1) RENDERIZAR DETALLES PRODUCTO ESPECÌFICO
+--- */
 
-// const db = require('../db/baseProductos.json');
+// (viejo - json) const db = require('../db/baseProductos.json')
+
+//IMPORTO MODELOS: llamo al modelo de bases de datos de productos.
 const db = require("../database/models");
 
-//Renderizo el ejs correspondiente:
-
 let productDetailController = {
+
+  //📌 1) Renderizar detalles producto:
   productDetail: (req, res) => {
-    // let product = db.find(item => item.prodID == req.params.idProductDetail)
+    
+    // (viejo - json) let product = db.find(item => item.prodID == req.params.idProductDetail)
+
+    // (nuevo - sequelize)
     db.Products.findByPk(req.params.idProductDetail)
       .then((product) => {
-        res.render("products/productDetail", { product: product });
+        res.render("products/productDetail", { product: product }); //RENDER ejs con productos
       })
       .catch((error) => res.send(error));
   },
 };
 
-/*Recordar que al crear carpetas en views y agregarle archivos, 
-la ruta en el controlador debera ser nombrada con el nombre 
-de la carpeta a la que pertenece*/
-
 //Exporto todo con este nombre:
 module.exports = productDetailController;
+
+
+//Flujo entero: index.js > app.js > raiz.routes(desacople) > ruta > 👉🏼 controllers > models > SQL

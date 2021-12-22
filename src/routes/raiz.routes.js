@@ -1,3 +1,7 @@
+/* --- 
+RUTEO PARA TENER UN MODELO DESACOPLADO DE RUTAS:
+--- */
+
 //Ejecuto paquetes:
 const express = require("express");
 const router = express.Router();
@@ -26,11 +30,11 @@ router.use("/productDetail", require("./productDetail.routes.js"));
 //PRODUCT: ÍNDICE DE TODOS LOS PRODUCTOS:
 router.use("/productIndex", require("./productindex.routes.js"));
 
-
 //APIS
-
 router.use('/', require('./api/users'));
 router.use('/', require('./api/products'))
 
 //Exporto todo:
 module.exports = router;
+
+//Flujo entero: index.js > app.js > 👉🏼 raiz.routes > ruta > controllers > models > SQL

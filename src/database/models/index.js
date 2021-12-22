@@ -1,3 +1,7 @@
+/* --- 
+CONFIG AUTOMÁTICA DE SEQUELIZE:
+--- */
+
 "use strict";
 
 const fs = require("fs");

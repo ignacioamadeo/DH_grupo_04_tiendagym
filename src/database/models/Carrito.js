@@ -1,4 +1,9 @@
+/* --- 
+MODELO CARRITO - CONEXIÓN CON BBDD EN SQL A TRAVÉS DE SEQUELIZE: 
+--- */
+
 //Acá se estila poner todo en el module.exports, pero podría definirse aparte y luego exportar todo.
+
 module.exports = (sequelize, DataTypes) => {
   //1º Defino alias con el que voy a llamar a la tabla en el CRUD y relaciones:
   alias = "Carrito";
@@ -81,3 +86,6 @@ module.exports = (sequelize, DataTypes) => {
   //6º Devuelvo la variable:
   return Carrito;
 };
+
+
+//Flujo entero: index.js > app.js > raiz.routes(desacople) > ruta > controllers > 👉🏼 models > SQL

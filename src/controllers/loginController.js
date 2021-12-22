@@ -1,18 +1,32 @@
-//LOGIN:
-// const User = require("../models/User");
+/* --- 
+CONTROLADORES PARA LOGIN
+
+FUNCIONALIDADES:
+📌 1) BÚSQUEDA USUARIO EN BASE (accept)
+📌 2) EDITAR USUARIO EXISTENTE (edit)
+📌 3) RENDERIZAR PERFIL USUARIO
+📌 4) LOGOUT
+--- */
+
+// (viejo - JSON) const User = require("../models/User");
+
+//IMPORTO MODELOS: defino carpeta con modelos de Bases de datos.
 const { User } = require("../models/index");
+//BCRYPT: llamo a paquete bcryps para contraseñas.
 const bcrypt = require("bcryptjs");
+//EXPRESS-VALIDATOR: Extrae los errores de validación de una solicitud y los pone a disposición en un objeto Result.
 const { validationResult } = require("express-validator");
 
-//Renderizo el ejs correspondiente:
-
+//RENDER: Renderizo el ejs correspondiente:
 let loginController = {
   login: (req, res) => {
     res.render("users/login");
   },
+
+  //📌 1) LOGIN:
   accept: async (req, res) => {
     try {
-      let userToLogin = await User.findByField(req.body.email);
+      let userToLogin = await User.findByField(req.body.email); //Buscar usuario por mail.
       let error = validationResult(req);
       if (userToLogin && error.isEmpty()) {
         let isOKThePass = await bcrypt.compare(
@@ -61,6 +75,8 @@ let loginController = {
       console.log(error);
     }
   },
+
+  //📌 2) EDITAR USUARIO EXISTENTE:
   edit: async (req, res) => {
     try {
       let id = req.params.id;
@@ -78,20 +94,21 @@ let loginController = {
       console.log(error);
     }
   },
-
+  
+  //📌 3) RENDER PERFIL USUARIO:
   profile: (req, res) => {
     res.render("users/profile", { user: req.session.userLogged });
   },
 
+  //📌 4) DESLOGUEARSE:
   logout: (req, res) => {
     req.session.destroy();
     res.redirect("/");
   },
 };
-/*Recordar que al crear carpetas en views y agregarle archivos, 
-la ruta en el controlador debera ser nombrada con el nombre 
-de la carpeta a la que pertenece*/
 
 //Exporto todo con este nombre:
-
 module.exports = loginController;
+
+
+//Flujo entero: index.js > app.js > raiz.routes(desacople) > ruta > 👉🏼 controllers > models > SQL

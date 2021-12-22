@@ -1,3 +1,7 @@
+/* --- 
+TABLA DE PRODUCTOS - CONEXIÓN CON BBDD EN SQL A TRAVÉS DE SEQUELIZE: 
+--- */
+
 module.exports = (sequelize, DataTypes) => {
   //1º Defino alias con el que voy a llamar a la tabla en el CRUD y relaciones:
   let alias = "Products";
@@ -81,3 +85,6 @@ module.exports = (sequelize, DataTypes) => {
   //6º Devuelvo la variable:
   return Product;
 };
+
+
+//Flujo entero: index.js > app.js > raiz.routes(desacople) > ruta > controllers > 👉🏼 models > SQL

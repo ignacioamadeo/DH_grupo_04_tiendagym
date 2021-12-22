@@ -1,4 +1,8 @@
-//ÍNDICE DE TODOS LOS PRODUCTOS:
+/* --- 
+RUTAS DEL INDEX:
+--- */
+
+//En el archivo raiz.routes.js defino a través de que http voy a acceder a esta ruta.
 
 //1º Ejecuto paquetes:
 const express=require('express');
@@ -21,3 +25,6 @@ router.get('/desatcado', productIndexController.destacado);
 
 //4º Exporto todo:
 module.exports=router;
+
+
+//Flujo entero: index.js > app.js > raiz.routes > 👉🏼 ruta > controllers > models > SQL
