@@ -30,15 +30,20 @@ const Users = {
   },
 
   findByField: async function (text) {
-    let userFound = db.Users.findOne({
-      where: {
-        email: text,
-      },
-    });
-    // .then( function(respuesta){
-    //  console.log(respuesta)
-    // }).catch(error => console.log(error))
-    return await userFound;
+    try {
+      let userFound = db.Users.findOne({
+        where: {
+          email: text,
+        },
+      });
+      // .then( function(respuesta){
+      //  console.log(respuesta)
+      // }).catch(error => console.log(error))
+      return await userFound;
+      
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 

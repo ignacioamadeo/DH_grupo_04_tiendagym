@@ -20,6 +20,7 @@ const { validationResult } = require("express-validator");
 //RENDER: Renderizo el ejs correspondiente:
 let loginController = {
   login: (req, res) => {
+    console.log(req.cookies);
     res.render("users/login");
   },
 
@@ -40,6 +41,7 @@ let loginController = {
           if (req.body.recordame) {
             res.cookie("recordame", req.body.email, { maxAge: 60000 });
           }
+         
           res.redirect("/");
         } 
         // else {
@@ -97,6 +99,7 @@ let loginController = {
   
   //📌 3) RENDER PERFIL USUARIO:
   profile: (req, res) => {
+  
     res.render("users/profile", { user: req.session.userLogged });
   },
 
