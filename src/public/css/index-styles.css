@@ -4,8 +4,11 @@
 
 /*<!-- Aca va foto gigante con carrousel y abajo el "paso a paso de como comprar" -->*/
 
+.bodyHome{
+        background-color: rgb(2, 43, 58);
+}
 
-.carrouselHome{
+.homeCont1{
     display: none;
 }
 
@@ -30,32 +33,13 @@ body{
     transition-delay: 1s;
 }
 
-.videoCarrousel:hover{
-    opacity: 1;
-}
-
-.videoCarrousel:hover + .bienvenidaOverlay{
-    display: block;
-    transition: 1s;
-    transition-delay: 1s;
-}
-
-
-.bienvenidaOverlay{
-    display: none;
-    position: absolute;
-    font-size: 40px;
-    font-weight: 500;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
 
 .homeGrillaProductos{
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    margin: auto auto;
 }
 
 .homeGrillaProductos article{
@@ -66,9 +50,9 @@ body{
     border-width: 0.5px;
     border-style: solid;
     min-width: 350px;
-    max-height: 200px;
-    width: 90vw;
-    margin: 10px auto 10px auto;
+    max-height: 45%;
+    width: 45%;
+    margin: 10px auto;
     box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
     transition: 1s;
     transition-delay: 1s;
@@ -119,26 +103,68 @@ body{
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
 @media (min-width: 769px){
 
-    .carrouselHome{
+    /* <!-- HOME CONTENEDOR 1 --> */
+
+    .homeCont1{
+        position: relative;
         display: block;
-        max-height: 300px;
-        width: 100vw;   
-        top: 138px;
-        overflow: hidden;
+        max-height: 100vh;
+        width: 100vw;
+        overflow: auto;   
+        top: 0px;
         z-index: -20;
         box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
-        transition: 1s;
-        transition-delay: 1s;
-
     }
 
-    .carrouselHome:hover{
-        max-height: 600px;
+   /* <!--Título-->  */
+   .homeCont1Titulo{
+    font-family: 'Lato', sans-serif;
+    font-size: 70px;
+    position: absolute; 
+    display: flex;
+    margin: auto auto;
+    color: white;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+
+/* Titulo: EFECTO DE RESPIRAR 
+.textoInspira {
+    animation: grow 3s linear forwards;
+      animation-iteration-count: 1
+  }
+  @keyframes grow{
+    from{
+      transform: scale(1)
+    }to{
+      transform: scale(1.1);
+    }
+  }
+
+  .textoExhala {
+    animation: shink 3s linear forwards;
+      animation-iteration-count: 1
+  }
+  @keyframes shrink{
+    from{
+      transform: scale(1.1)
+    }to{
+      transform: scale(1);
+    }
+}
+*/
+    /* <!--Sub Título-->  */
+    .homeCont1SubTitulo{
+    position: absolute; 
+    display: flex;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     }
 
-    .carrouselHome img{
-        max-width: 100%;
-    }
 
     .instruccionesHome{
         background-color: #ebebeb;
@@ -186,10 +212,4 @@ body{
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */
 @media (min-width: 1280px){
 
-    .mainHeaderTop{
-        margin: auto;
-    }
-.mainHeader{
-  background-color:  #022B3A;
-}
 }

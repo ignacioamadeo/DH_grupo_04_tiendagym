@@ -1,3 +1,4 @@
+/*
 window.addEventListener("load", function () {
 let logoHeaderHome = document.querySelector(".logoPrincipal");
 let headerHome = document.querySelector(".mainHeaderTop")
@@ -7,7 +8,7 @@ let modeButton = document.querySelector(".apaEnce")
 let botonesLoginCarrito = document.querySelector(".loginCarrito")
 let videoCarritoHome = document.querySelector(".videoCarrousel")
 
-videoCarritoHome.playbackRate = 0.6; 
+//videoCarritoHome.playbackRate = 0.6; 
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
@@ -41,3 +42,4 @@ function myFunction() {
 
 
 })
+*/
