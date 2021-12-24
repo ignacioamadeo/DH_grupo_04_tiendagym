@@ -12,12 +12,13 @@ const router = express.Router();
 const productNewController = require("../controllers/newProductController.js");
 const validaciones = require('../middleware/validacionesProducts');
 const upload = require("../middleware/multerProducts");
+const admiMiddleware = require('../middleware/admiMiddleware');
 
 //3º Llamo a la propiedad de ese controlador:
-router.get("/", productNewController.productNew);
+router.get("/", admiMiddleware ,productNewController.productNew);
 router.post("/", upload.single("prodImg"),validaciones, productNewController.create);
 
-router.get("/allProducts", productNewController.all);
+router.get("/allProducts", admiMiddleware ,productNewController.all);
 
 //4º Exporto todo:
 module.exports = router;

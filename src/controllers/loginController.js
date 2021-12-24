@@ -27,6 +27,7 @@ let loginController = {
   //📌 1) LOGIN:
   accept: async (req, res) => {
     try {
+      let admi = await User.admi()
       let userToLogin = await User.findByField(req.body.email); //Buscar usuario por mail.
       let error = validationResult(req);
       if (userToLogin && error.isEmpty()) {
@@ -37,13 +38,23 @@ let loginController = {
 
         if (isOKThePass && error.isEmpty()) {
           delete userToLogin.password;
-          req.session.userLogged = userToLogin;
+        
+         if( admi.email === userToLogin.email ){
+            req.session.userAdmin = admi
+            console.log(admi.email === userToLogin.email );
+          }
+          else{
+            req.session.userLogged = userToLogin;
+            console.log('Hola Mundo');
+          }
           if (req.body.recordame) {
             res.cookie("recordame", req.body.email, { maxAge: 60000 });
+            console.log('soy una cookie');
           }
          
           res.redirect("/");
         } 
+      
         // else {
         //   res.render("users/login", {
         //     errors:error.mapped()
@@ -58,6 +69,7 @@ let loginController = {
             },
           });
         }
+      
       } 
       else {
         res.render("users/login", {

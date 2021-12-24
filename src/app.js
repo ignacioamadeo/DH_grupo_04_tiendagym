@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, "./public")));
 const cookies = require("cookie-parser");
 const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
 
+
 // const recordameMiddleware = require('./middleware/recordameMiddleware');
 app.use(session({ secret: "shhhh", resave: false, saveUninitialized: false }));
 app.use(cookies());

@@ -45,6 +45,19 @@ const Users = {
       console.log(error);
     }
   },
+
+  admi: async ()=>{
+    try {
+      let admiConfig = db.Users.findOne({
+        where: {
+          userName: 'adminGym',
+        },
+      });
+      return await admiConfig
+    } catch (error) {
+      console.log(error);
+    }
+  }
 };
 
 module.exports = Users;
