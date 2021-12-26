@@ -24,7 +24,9 @@ window.addEventListener("load", function () {
         switchModoA.style.margin = "auto 0px 10px 50px"
         logoLogin.style.margin = "auto 0px 7px 0px "
         logoHeader.style.maxHeight = "50px"
+        logoHeader.style.margin = "auto 170px auto 10px"
         logoHeader.src = "../images/tgym_logos_solo.png"
+
 
       } else {
         //Estado inicial:
@@ -33,11 +35,11 @@ window.addEventListener("load", function () {
         switchModoA.style.margin = "auto 0px auto 50px"
         logoLogin.style.margin = "auto 0px auto 0px"
         logoHeader.style.maxHeight = "68px"
+        logoHeader.style.margin = "auto 0px auto 10px"
         logoHeader.src = "../images/tgym_logos-12.png"
 
       }
     } 
-    
     
     
     
