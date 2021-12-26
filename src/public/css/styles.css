@@ -22,6 +22,10 @@
     font-weight: 100;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
 @media (min-width: 481px){
 
