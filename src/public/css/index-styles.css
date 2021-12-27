@@ -28,7 +28,7 @@ body{
 
 /*<-- DSK: VIDEO PRINCIPAL HOME -->*/
 .videoCarrousel{
-    height: 100%;
+    width: 100%;
     opacity: 0.9;
     transition: 1s;
     transition-delay: 1s;

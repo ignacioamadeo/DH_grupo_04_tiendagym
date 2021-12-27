@@ -17,7 +17,7 @@
 .productIndArticulos article{
     margin: 10px 0;
     border-radius: 5px;
-    width: 280px;
+    width: 300px;
     height: 380px;
     position: relative;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -92,7 +92,7 @@
 @media (min-width: 769px){
 
 .mainProductIndex{
-    margin-left: 200px;
+    margin: auto∫ auto;
 }
 
 

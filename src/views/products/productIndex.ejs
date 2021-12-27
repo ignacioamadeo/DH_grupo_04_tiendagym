@@ -7,8 +7,20 @@
     <%- include('../partials/header') %>
     <!--Termina header y comienza main de la web -->
     <main class="mainProductIndex">
-        <%- include('../partials/menuLateral') %>
-        
+
+   <!-- HOME CONTENEDOR 1 -->
+   <section class="homeCont1">
+    <!--Título-->
+    <div class="homeCont1Titulo textoInspira">
+      Section name
+    </div>
+    <!--Video-->
+    <video autoplay muted loop class="videoCarrousel">
+      <source src=".\videos\pexels-mart-production-7884024.mp4" type="video/mp4" />
+    </video>
+
+  </section>
+
         <section class="productIndArticulos">
             <% productInfo.forEach(function(product){ %>
                 <%- include('../partials/productCard', {item:product}) %>
@@ -16,6 +28,8 @@
         </section>
     </main>
     <%- include('../partials/footer') %>
+
+    <script src="/js/header.js"> </script>
 </body>
 
 </html>
