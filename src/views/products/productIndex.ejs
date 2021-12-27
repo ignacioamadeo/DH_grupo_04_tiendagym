@@ -9,15 +9,6 @@
     <main class="mainProductIndex">
         <%- include('../partials/menuLateral') %>
         
-        <section class="productIndBarraLat">
-            <ul>
-                <li class="latEnvioProducto">Envío gratis<i class="fas fa-toggle-on"></i></li>
-                <li class="latCuotasProducto">Cuotas sin interés<i class="fas fa-toggle-on"></i></li>
-               <li class="latDisponibleProducto">Destacados<i class="fas fa-toggle-on"></i></li>
-            </ul>
-
-        </section>
-        <a href="/productIndex/desatcado"><button>Destacados</button></a>
         <section class="productIndArticulos">
             <% productInfo.forEach(function(product){ %>
                 <%- include('../partials/productCard', {item:product}) %>

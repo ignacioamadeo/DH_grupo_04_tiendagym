@@ -123,16 +123,14 @@ h2{
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(2, 43, 58, 0.5);
     transition: 1s;
 }
 
-.homeGrillaProductos ul:hover{
-    background-color: rgb(2, 43, 58, 0.5);
-}
+
 
 .homeGrillaProductos ul li{
-    color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.842);
     font-size: 20px;
     margin: auto auto;
     font-family: 'Open Sans', sans-serif;
@@ -142,9 +140,7 @@ h2{
     transition: 1s;
 }
 
-.homeGrillaProductos ul li:hover{
-    color: rgba(255, 255, 255, 0.842);
-}
+
 
 /*<-- MOBILE: MOTIVACIONAL -->*/
 .homeCont3{
@@ -163,12 +159,12 @@ h2{
     z-index: -500;
 }
 .imagenesEnvios{
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 20%;
+    max-height: 40%;
     position: relative;
     display: inline-block;
     object-fit: contain;
-    margin: auto auto;
+    margin: 10px auto 10px auto;
     opacity: 0.6;
   }
   .homeCont4{
@@ -212,16 +208,12 @@ h2{
     width: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(124, 124, 124, 0.5);
     transition: 1s;
 }
 
-.homeCont4 ul:hover{
-    background-color: rgba(124, 124, 124, 0.5);
-}
-
 .homeCont4 ul li{
-    color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.842);
     font-size: 20px;
     margin: auto auto;
     font-family: 'Open Sans', sans-serif;
@@ -230,13 +222,6 @@ h2{
     list-style: none;
     transition: 1s;
 }
-
-.homeCont4 ul li:hover{
-    color: rgba(255, 255, 255, 0.842);
-}
-
-  
-
 
 
   .homePreFooter{
@@ -254,7 +239,7 @@ h2{
 
 @media (min-width: 481px){
 
-
+ 
 
 }
 
@@ -269,9 +254,22 @@ h2{
 @media (min-width: 769px){
 
 
-    /*<-- DSK: CATEGORÍAS PRODUCTOS -->*/
+/*<-- DSK: ANIMACIONES EN HOVER CATEGORÍAS PRODUCTOS -->*/
+
 .homeGrillaProductos{
     display: flex;
+}
+.homeGrillaProductos ul{
+    background-color: rgba(2, 43, 58, 0);
+}
+.homeGrillaProductos ul:hover{
+    background-color: rgb(2, 43, 58, 0.5);
+}
+.homeGrillaProductos ul li{
+    color: rgba(255, 255, 255, 0);
+}
+.homeGrillaProductos ul li:hover{
+    color: rgba(255, 255, 255, 0.842);
 }
 
     /* <!-- HOME CONTENEDOR 1 --> */
@@ -305,15 +303,10 @@ h2{
 .titulosDivisor{
     margin: 0px auto 10px auto;
 }
-
-   .homeCont4{
-    display: flex;
-}
+ 
 
 
-    
-         
-
+   /*<-- DESK: AFOOTER  -->*/
     .homePreFooter{
         display: block;
         max-height: 200px;
@@ -373,6 +366,30 @@ h2{
             text-align: center;
            } 
 
+  /*<-- DESK: ANIMACION HOVER ENVIOS  -->*/
+  .homeCont4{
+    display: flex;
+}
+.homeCont4 ul{
+    background-color: rgba(124, 124, 124, 0);
+}
+.homeCont4 ul:hover{
+    background-color: rgba(124, 124, 124, 0.5);
+}
+.homeCont4 ul li{
+    color: rgba(255, 255, 255, 0);
+}
+.homeCont4 ul li:hover{
+    color: rgba(255, 255, 255, 0.842);
+}
+
+           .imagenesEnvios{
+            height: 225px;
+            max-width: 50%;
+            max-height: 50%;
+            margin: auto auto;
+          }
+    
          
 
     

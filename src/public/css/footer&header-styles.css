@@ -117,6 +117,7 @@
       font-size: 35px;
       cursor: pointer;
       margin: auto 0px auto 50px;
+      display:none;
   }
   .switchN {
     color:black;
@@ -124,6 +125,7 @@
     display:none;
     cursor: pointer;
     margin: auto 0px auto 0px;
+    display:none;
 }
 
 /*<-- MOBILE: FOOTER -->*/
@@ -172,6 +174,12 @@ footer{
 ------*/
 
 @media (min-width: 481px){
+
+    .switchD {
+        display:contents;
+    }
+
+   
 
     .searchForm{
         width: 95%;
