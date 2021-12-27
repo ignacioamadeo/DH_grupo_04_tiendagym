@@ -30,16 +30,14 @@
             </div>
 
             <!--Video-->
-            <div class="">
-              <video autoplay muted loop class="videoCarrousel">
-                <source src=".\videos\pexels-mart-production-7884024.mp4" type="video/mp4" />
-              </video>
-            </div>
+            <video autoplay muted loop class="videoCarrousel">
+              <source src=".\videos\pexels-mart-production-7884024.mp4" type="video/mp4" />
+            </video>
 
             <!--Botones-->
-            <div class="botonHome">
+            <!-- <div class="botonHome">
               <button type="button"> Registrarme </button>
-            </div>
+            </div> -->
 
           </section>
 
@@ -67,13 +65,13 @@
 
             <article>
               <img src="./images/pexels-victor-freitas-685531.jpg" class="imagenesCategorias" />
-              <ul class="sobreCategorias"> 
+              <ul class="sobreCategorias">
                 <a href="./productIndex/barras">
                   <li>Pesas, discos y barras</li>
                 </a>
               </ul>
-
             </article>
+
             <article>
               <img src="./images/pexels-cottonbro-7690207.jpg" class="imagenesCategorias" />
               <ul class="sobreCategorias">
@@ -93,73 +91,71 @@
             </article>
           </section>
 
-          <!-- HOME CONTENEDOR 1 -->
-          <section class="homeCont1">
+          <!-- HOME CONTENEDOR 3 -->
+          <section class="homeCont3">
 
-            <!--Imagen lateral-->
-            <div class="homeCont1Imagen">
+            <!--Imagen superior en divisor-->
+            <div class="imagenDivisorTop">
+              <img src="./images/silueta ejercicio.png">
             </div>
 
             <!--Título-->
-            <div class="homeCont1Titulo textoInspira">
-              Cambiá tu ritmo con Tienda GYM
-            </div>
-
-            <!--Sub título-->
-            <div class="homeCont1SubTitulo">
-            </div>
-
-            <!--Video-->
-            <div class="">
-              <video muted loop class="videoCarrousel">
-                <source src=".\videos\pexels-mart-production-7884024.mp4" type="video/mp4" />
-              </video>
-            </div>
-
-            <!--Botones-->
-            <div class="botonHome">
-              <button type="button"> Registrarme </button>
+            <div class="homeCont3Titulo">
+              Un paso más cerca a tu bienestar
             </div>
 
           </section>
 
-          <!-- HOME CONTENEDOR 1 -->
-          <section class="homeCont1">
+          <!--HOME CONTENEDOR 4-->
+          <section class="homeCont4">
 
-            <!--Imagen lateral-->
-            <div class="homeCont1Imagen">
+            <div class="titulosDivisor">
+              <h1>
+                Compra online
+              </h1>
+              <h2>
+                Autogestiona tu compra y recibe los productos en tu hogar
+              </h2>
             </div>
 
-            <!--Título-->
-            <div class="homeCont1Titulo textoInspira">
-              Cambiá tu ritmo con Tienda GYM
-            </div>
+            <article>
+              <img src="./images/search.png" class="imagenesEnvios" />
+              <ul class="sobreCategorias">
+                <a href="/productIndex/desatcado">
+                  <li>Busca el producto</li>
+                  <!-- <li>Equilibra tu cuerpo y tu mente con los mejores elementos para ser un yogui</li> -->
+                </a>
+              </ul>
+            </article>
 
-            <!--Sub título-->
-            <div class="homeCont1SubTitulo">
-            </div>
+            <article>
+              <img src="./images/shopping-cart.png" class="imagenesEnvios" />
+              <ul class="sobreCategorias">
+                <a href="/productCart">
+                  <li>Agregalo al carrito</li>
+                </a>
+              </ul>
 
-            <!--Video-->
-            <div class="">
-              <video muted loop class="videoCarrousel">
-                <source src=".\videos\pexels-mart-production-7884024.mp4" type="video/mp4" />
-              </video>
-            </div>
+            </article>
+            <article>
+              <img src="./images/credit-card.png" class="imagenesEnvios" />
+              <ul class="sobreCategorias">
+                <a href="#">
+                  <li>Gestiona el pago</li>
+                </a>
+              </ul>
+            </article>
 
-            <!--Botones-->
-            <div class="botonHome">
-              <button type="button"> Registrarme </button>
-            </div>
-
+            <article>
+              <img src="./images/package-box.png" class="imagenesEnvios" />
+              <ul class="sobreCategorias">
+                <a href="#">
+                  <li>Elige el envío</li>
+                </a>
+              </ul>
+            </article>
           </section>
 
-          <!--ENVÍOS explicación -->
-          <section class="instruccionesHome">
-            <img src="./images/logo-cart.png" />
-            <img src="./images/logo-flecha.png" />
-            <img src="./images/logo-pago.png" />
-            <img src="./images/logo-flecha.png" />
-            <img src="./images/logo-delivery.png" />
           </section>
 
           <!--
@@ -170,6 +166,7 @@
       </main>
       <%- include('../partials/footer') %>
         <script src="/js/home.js"> </script>
+        <script src="/js/homeFadeIn.js"> </script>
         <script src="/js/header.js"> </script>
   </body>
 
