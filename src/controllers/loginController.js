@@ -41,15 +41,14 @@ let loginController = {
         
          if( admi.email === userToLogin.email ){
             req.session.userAdmin = admi
-            console.log(admi.email === userToLogin.email );
           }
           else{
             req.session.userLogged = userToLogin;
-            console.log('Hola Mundo');
+            
           }
           if (req.body.recordame) {
             res.cookie("recordame", req.body.email, { maxAge: 60000 });
-            console.log('soy una cookie');
+            
           }
          
           res.redirect("/");

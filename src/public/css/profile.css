@@ -1,11 +1,13 @@
 .bienvenido{
     text-align: right;
     margin-right:40px ;
+    
+    
 }
 .imgProfile{
-    border: 1px solid red;
     text-align: center;
     padding: 10px;
+background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/64/55/72/68/700_FO64557268_a1f25e8be1c3fb9b271dbda1b7c0af66.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/fotomurales-patron-de-la-aptitud-garabato-sin-fisuras.jpg.jpg');
 }
 .imgProfile img{
     width: 30%;
@@ -19,16 +21,18 @@
     padding: 10px;
 }
 .cerrarSession{
-    margin-left: 10px;
+    text-align:right;
+    margin-right: 30px;
     margin-top: 40px;
+    margin-bottom: 20px;
     font-size: 25px;
 }
 
 .editarProfile{
-   
-    border: 1px solid red;
+    background-color: cadetblue;
 }
 .editarProfile form input{
     margin-left: 10px;
-    padding: 5px;
+    margin-bottom: 10px;
+    padding: 7px;
 }
