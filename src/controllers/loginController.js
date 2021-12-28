@@ -110,8 +110,14 @@ let loginController = {
   
   //📌 3) RENDER PERFIL USUARIO:
   profile: (req, res) => {
+    if(req.session.userLogged){
+
+      res.render("users/profile", { user: req.session.userLogged });
+    }
+    else if (  req.session.userAdmin){
+      res.render("users/profile", { user: req.session.userAdmin });
+    }
   
-    res.render("users/profile", { user: req.session.userLogged });
   },
 
   //📌 4) DESLOGUEARSE:
