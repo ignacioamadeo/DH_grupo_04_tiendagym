@@ -2,9 +2,6 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
-.productIndBarraLat{
-    display: none;
-}
 
 .productIndArticulos{
     text-align: left;
@@ -20,7 +17,7 @@
 .productIndArticulos article{
     margin: 10px 0;
     border-radius: 5px;
-    width: 280px;
+    width: 300px;
     height: 380px;
     position: relative;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -95,63 +92,10 @@
 @media (min-width: 769px){
 
 .mainProductIndex{
-    margin-left: 200px;
+    margin: auto∫ auto;
 }
 
-.productIndBarraLat{
-    display: inline-block;
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: -50;
-    top: 0;
-    left: 0;
-    background-color: #022B3A;
-    overflow-x: hidden;
-    padding-top: 105;
-}
 
-.productIndBarraLat ul{
-    padding: 150px 0 0 0;   
-}
-
-.productIndBarraLat ul li{
-    display: block;
-    color:white;
-    list-style: none;
-    text-align: left;
-    border-radius: 5px;
-    margin: 15px 15px;
-    transition: 1s;
-    background-color: #1F7A8C;
-}
-
-.productIndBarraLat ul li :hover{
-    background-color: greenyellow;
-}
-
-.latEnvioProducto{
-    font-size: 12px;
-    padding: 10px 15px; 
-}
-
-.latCuotasProducto{
-    font-size: 12px;    
-    padding: 10px 15px;
-}
-
-.latDisponibleProducto{
-    font-size: 12px;
-    padding: 10px 15px;
-}
-
-.productIndBarraLat ul li i{
-    color: white;
-    font-size: 20px;
-    display: block;
-    margin: auto;
-    padding: 5px 0;
-}
 
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu muy grande: */

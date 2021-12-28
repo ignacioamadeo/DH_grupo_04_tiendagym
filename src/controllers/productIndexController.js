@@ -62,6 +62,13 @@ let productIndexController = {
     let product = await Productos.allCategory("#Ind");
     res.render("products/productIndex", { productInfo: product });
   },
+
+  //📌 5) MOSTRAR TODOS LOSPRODUCTOS:
+  productAll: async (req, res, next) => {
+    // let product=db.filter(item => item.prodCategoria == "#Ind");
+    let product = await Productos.findAll;
+    res.render("products/productIndex", { productInfo: product });
+  },
 };
 
 //Exporto todo con este nombre:

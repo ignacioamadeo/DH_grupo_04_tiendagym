@@ -47,8 +47,12 @@
     text-align: center;
   }
 
-  .checkbox.input{
-    display: flex;
+  .checkbox{
+   display: flex;
+   justify-content: center;
+  }
+  .checkbox input{
+    width: 10% !important; 
   }
 
   .formLogin button:hover {

@@ -1,43 +1,36 @@
-window.addEventListener("load", function () {
-let logoHeaderHome = document.querySelector(".logoPrincipal");
-let headerHome = document.querySelector(".mainHeaderTop")
-let subHeaderHome = document.querySelector(".mainHeaderBottom")
-let logoHeader = document.querySelector(".logoPrincipal")
-let modeButton = document.querySelector(".apaEnce")
-let botonesLoginCarrito = document.querySelector(".loginCarrito")
-let videoCarritoHome = document.querySelector(".videoCarrousel")
+//Seleciono video principal de la homepage:
+var imagen = document.querySelector('.homeCont1');
 
-videoCarritoHome.playbackRate = 0.6; 
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-// Get the offset position of the navbar
-var sticky = subHeaderHome.offsetTop;
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    headerHome.classList.add("sticky");
-    subHeaderHome.style.display = "none";
-    subHeaderHome.style.transition = "display 3s linear" 
-    modeButton.style.display = "none";
-    logoHeader.src = "../images/tgym_logos-08.png";
-    logoHeader.style.width = "60px";
-    logoHeader.style.margin = "0px 0px 0px 8px";
-
-  } else {
-    headerHome.classList.remove("sticky");
-    modeButton.style.display = "block";
-    subHeaderHome.style.display = "flex";
-    subHeaderHome.style.transition = "display 3s linear" 
-    logoHeader.src = "../images/tgym_logos-03.png";
-    logoHeader.style.width = "250px";
-    logoHeader.style.margin = "20px 0px 20px 10px";
+//2º Se ejecuta función:
+function fadeOutOnScroll(element) {
+  if (!element) {
+    return;
   }
-} 
+  
+  //3ºCalculo la distancia del tope del elemento al tope de la ventana:
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+  //3ºAltura del elemento:
+  var elementHeight = element.offsetHeight;
+  //3ºDistancia scrolleada para comparar con el alto del elemento:
+  var scrollTop = document.documentElement.scrollTop;
+  
+  //4ºSeteo opacidad inicial:
+  var opacity = 1;
+  
+  //5ºCálculo/seteo de opacidad:
+  if (scrollTop > distanceToTop) {
+    opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+  }
+  
+  if (opacity >= 0) {
+    element.style.opacity = opacity;
+  }
+}
 
+//2º Se ejecuta scrollHandler 
+function scrollHandler() {
+  fadeOutOnScroll(imagen);
+}
 
-
-
-
-
-})
+//1º Cuando el usuario scrollea, se ejecuta la función scrollHandler
+window.addEventListener('scroll', scrollHandler); 

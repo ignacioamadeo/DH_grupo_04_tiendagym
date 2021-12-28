@@ -3,7 +3,7 @@ window.addEventListener('load', function(){
     const menu = document.querySelector('.menuLateral');
     let contador = 1
 
-    menuHamb.addEventListener('click', function(){
+    menuHamb?.addEventListener('click', function(){
 
         if(contador == 1){
      menu.style.left = '0px';

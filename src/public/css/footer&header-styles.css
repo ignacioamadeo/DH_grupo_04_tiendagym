@@ -1,46 +1,46 @@
-/* >>> Acá tener en cuenta el mobile first: */
+/*---- 
+---- 
+---
+📱 VERSIÓN MOBILE 📱 : 
+---
+----
+------*/
 
-/* >>> Recordar que en la style.css hay un reset de margin, padding y border-box a 0 */
-
-
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
-
+/*<-- MOBILE: HEADER -->*/
 .mainHeader{
-    box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.2);
-    position: relative;
-    width: 100%;
-    z-index: 10;
-}
-
-.mainHeaderTop{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-color: #022B3A;
+    background-color: rgb(2, 43, 58);
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.2);
+
 }
 
+/*<-- MOBILE: LOGO -->*/
 .logoPrincipal{
-    width: 250px;
-    margin: 20px 0 20px 10px;
+    max-width: 100vh;
+    margin: auto 0px auto 10px;
+    max-height: 68px;
 }
 
+/*<-- MOBILE: BÚSQUEDA -->*/
 .busqueda{
     width: 35%;
     min-width: 210px;
     height: 30px;
     background-color: white;
-    margin: 10px 0 10px 0;
+    margin: auto 0 auto 0;
     display: flex;
     border-radius: 10px;
 }
-
 .busqueda i{
   margin: auto;
   margin-right: 20px;
 }
-
 .busqueda p{
     margin: auto 20px;
     font-size: 13px;
@@ -53,34 +53,21 @@
     margin-top: 2.5px;
 }
 
+/*<-- MOBILE: LOGIN+CARRITO -->*/
 .loginCarrito {
     display: flex;  
     color: white;
-    padding: 5px 10px;
+    margin: auto 20px auto 0px ;
     justify-content:center;
-  
-    
-    
+
 }
-
-
-
-.loginCarrito i{
-    padding: 5px 10px 5px 10px;
-    font-size: 20px;
+.logoHeaderProfile{
+    font-size: 30px;
     color: white;
-   
+    margin: auto 0px auto 0px;
 }
 
-
-
-.loginCarrito2 i{
-    margin-top: 10px;
-    padding: 5px 10px 5px 10px;
-    font-size: 20px;
-    color: white;
-}
-
+/*<-- MOBILE: HEADER SOLO MOBILE -->*/
 .mainHeaderMobile{
     display: block;
     max-width: 100%;
@@ -88,6 +75,12 @@
     padding: 10px 0;
 }
 
+/*<-- MOBILE: SUBHEADER OCULTAR EN MOBILE -->*/
+.mainHeaderBottom{
+    display: none;
+}
+
+/*<-- MOBILE: BOTÓN SOLO MOBILE -->*/
 .botonMenuMobile{
     font-size: 22px;
     background-color: #1F7A8C;
@@ -102,6 +95,7 @@
     box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.73);
 }
 
+/*<-- MOBILE: IMAGEN USUARIO LOGUEADO -->*/
 .profileUser{
     width: 80%;
    margin-right: 20px;
@@ -109,11 +103,7 @@
 }
 .profileUser img{
     width: 50px;
-    border-radius: 50%;
-   
-   
-    
-   
+    border-radius: 50%;   
   }
 
   .barraProfile{
@@ -121,39 +111,24 @@
 
   }
 
+/*<-- MOBILE: MODO NOCHE -->*/
   .switchD {
-      color:black;
-      font-size: 40px;
+      color:rgb(255, 255, 255);
+      font-size: 35px;
       cursor: pointer;
+      margin: auto 0px auto 50px;
+      display:none;
   }
   .switchN {
     color:black;
     font-size: 40px;
     display:none;
     cursor: pointer;
+    margin: auto 0px auto 0px;
+    display:none;
 }
 
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: 3s; 
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 102px;
-  }
-
-/*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
-
-.mainHeaderBottom{
-    display: none;
-}
-
-/*<-- A partir de acá va la parte footer -->*/
-
+/*<-- MOBILE: FOOTER -->*/
 footer{
     background-color: #e1e5f2;
     height: 150px;
@@ -163,18 +138,21 @@ footer{
     justify-content: space-around;
     margin: 10px 0 0 0;
 }
-
 .footerLinks{
     margin: auto 0 auto 0;
 }
-
 .footerLinks ul li {
     color: #022B3A;
     list-style: none;
     text-align: center;
-    font-size: 13px;
-    font-weight: 200;
-    padding: 5px 0 ;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 6px 0 ;
+    transition: 1s;
+}
+
+.footerLinks ul li :hover {
+    color:rgb(226, 135, 15)
 }
 
 .redesSociales{
@@ -183,14 +161,28 @@ footer{
     font-size: 24px;
     margin: auto 0 auto 0;
 }
-
 .redesSociales a i{
     padding: 0 6px;
 }
 
+/*---- 
+---- 
+---
+📱 TABLET: 📱 : 
+---
+----
+------*/
 
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
 @media (min-width: 481px){
+
+ 
+
+    .switchD {
+        display:contents;
+    }
+
+   
+
     .searchForm{
         width: 95%;
         
@@ -198,6 +190,7 @@ footer{
     .busqueda i{
        margin-left: 20px;
         margin-right: 20px;
+        color: rgb(128, 128, 128);
       }
     
     .search{
@@ -217,25 +210,49 @@ footer{
     }
 }
 
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
+/*---- 
+---- 
+---
+💻 DESKTOP: 💻 : 
+---
+----
+------*/
+
 @media (min-width: 769px){
     
-    .mainHeaderMobile{
+.mainHeaderMobile{
         display: none;
-    }
+ }
 
-    footer{
-        background-color: #e1e5f2;
-        height: 138px;
-        flex-direction: row;
-    }
-
-/*<-- A partir de acá va la parte superior del header con menu para la version desktop -->*/
-.mainHeaderTop{
+/*<-- DESKTOP: HEADER -->*/
+.mainHeader{
+    flex-wrap: wrap;
     flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(2, 43, 58, 0.5);
+    transition: 2s; 
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 3s; 
+  }
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  /*<-- DESKTOP: LOGO -->*/
+.logoPrincipal{
+    max-width: 250px;
+    margin: auto 0px auto 10px;
+    max-height: 68px;
+    transition: 2s;
 }
 
-/*<-- A partir de acá va la parte inferior del header con menu para la version desktop -->*/
+/*<-- DESKTOP: SUB HEADER -->*/
 .mainHeaderBottom{
     display: flex;
     justify-content: space-evenly;
@@ -256,26 +273,23 @@ footer{
     font-weight: 300;
     transition: 1s;
 }
-
 .mainHeaderBottom li:hover{
     color: white;
 }
 
+/*<-- DESKTOP: BOTÓN MOBILE -->*/
 .botonMenuMobile{
     display: none;
 }
 
-
-
+/*<-- DESKTOP: SEARCH -->*/
 .searchForm{
     width: 95%;
-   
 }
 .busqueda i{
    margin-left: 20px;
     margin-right: 20px;
   }
-
 .search{
     width: 95%;
     height: 25px;
@@ -283,25 +297,20 @@ footer{
     margin-top: 2.5px;
 }
 
+/*<-- DESKTOP: PERFIL USUARIO EN BARRA -->*/
 .profileUser{
     width: 100px;
     text-align: center;
-   
-   
-    
 }
 .profileUser img{
     width: 60%;
     border-radius: 50%;
    
   }
-
 .barraProfile{
     display: block;
     margin-top: 5px;
     background-color: rgba(255, 255, 255, 0);
-    
-    
 }
   .barraProfile li a{
     padding:10px 12px;
@@ -309,46 +318,45 @@ footer{
     background-color: rgba(129, 212, 250, 0.459);
     color: white;
     font-size: 17px;
-  
   }
-
   .barraProfile li a:hover{
     background-color:#4343438c;
-   
   }
-
   .barraProfile > ul{
       float: right;
   }
-li{
-    list-style: none;
-}
   .barraProfile li ul{
       display: none;
     position: absolute;
     min-width:130px;
     list-style: none;
-    
-  
   }
-
   .barraProfile  li:hover > ul {
       display: block;
-    
   } 
+  
+/*<-- DESKTOP: GENÉRICO LISTAS -->*/
+li{
+    list-style: none;
+}
 
-
-
-/*<-- A partir de acá va la parte footer para la versión desktop -->*/
-
+/*<-- DESKTOP: FOOTER -->*/
+footer{
+    background-color: #e1e5f2;
+    height: 138px;
+    flex-direction: row;
+}
 .footerLinks{
     display: inline-block;
+}
+.footerLinks ul li {
+    font-size: 13px;
+    font-weight: 200;
 }
 
 .redesSociales{
     display: inline-block;
 }
-
 
 }
 
