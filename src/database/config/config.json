@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "R.zBp8C6om",
-    "database": "tiendagym",
-    "host": "localhost",
+    "username": "franAdmin",
+    "password": "Adrian12234..",
+    "database": "tiendaGYM",
+    "host": "45.79.201.214",
     "dialect": "mysql"
   },
   "test": {

@@ -1,26 +1,26 @@
 window.addEventListener("load", function () {
-  const cartItem1 = document.querySelector(".loginCarrito2");
+  // const cartItem1 = document.querySelector(".loginCarrito2");
 
-  let btn = document.querySelector("#btn");
+  // let btn = document.querySelector("#btn");
 
-  cartItem1.addEventListener("mouseover", function () {
-    btn.style.display = "block";
-  });
+  // cartItem1.addEventListener("mouseover", function () {
+  //   btn.style.display = "block";
+  // });
 
-  document.body.addEventListener("click", function () {
-    btn.style.display = "none";
-  });
+  // document.body.addEventListener("click", function () {
+  //   btn.style.display = "none";
+  // });
 });
 
 window.addEventListener("load", function () {
-  const cartItem2 = document.querySelector("#cartItem");
-  let btn = document.querySelector("#btn");
+  // const cartItem2 = document.querySelector("#cartItem");
+  // let btn = document.querySelector("#btn");
 
-  cartItem2.addEventListener("mouseover", function () {
-    btn.style.display = "block";
-  });
+  // cartItem2.addEventListener("mouseover", function () {
+  //   btn.style.display = "block";
+  // });
 
-  document.body.addEventListener("click", function () {
-    btn.style.display = "none";
-  });
+  // document.body.addEventListener("click", function () {
+  //   btn.style.display = "none";
+  // });
 });

@@ -255,6 +255,10 @@ h2{
 
 
 /*<-- DSK: ANIMACIONES EN HOVER CATEGORÍAS PRODUCTOS -->*/
+.homeGrillaProductos ul li{
+    width: 100%;
+    height: 100%;
+}
 
 .homeGrillaProductos{
     display: flex;
@@ -340,9 +344,10 @@ h2{
             background-color: #022B3A;
         }
       .imagenDivisorTop{
-          height: 40%;
           display: block;
-          margin: auto auto;
+          height: 40%;
+          width: 100%;
+          margin: auto;
           opacity: 0;
           transition: opacity 2s ease, transform 2s ease;
         }
@@ -352,9 +357,10 @@ h2{
         }
 
        .imagenDivisorTop img{
+           display: block;
             height: 100%;
+            width:50%;
             margin: 0 auto;
-            display: block;
         } 
 
         .homeCont3Titulo{

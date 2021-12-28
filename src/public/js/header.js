@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
   let bodyHome = document.querySelector(".bodyHome")
   let busqueda = document.querySelector(".busqueda")
   let switchModoA = document.querySelector(".switchD")
-  let logoLogin = document.querySelector(".logoHeaderProfile")
+  //let logoLogin = document.querySelector(".logoHeaderProfile")
 
   
   /* ---
@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
       headerHome.style.height = "60px";
       busqueda.style.margin = "0 0 11px 0";
       switchModoA.style.margin = "auto 0px 10px 50px"
-      logoLogin.style.margin = "auto 0px 7px 0px "
+      //logoLogin.style.margin = "auto 0px 7px 0px "
       logoHeader.style.maxHeight = "50px"
       logoHeader.style.margin = "auto 170px auto 10px"
       logoHeader.src = "../images/tgym_logos_solo.png"
@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
       headerHome.style.height = "100px";
       busqueda.style.margin = "auto 0 auto 0";
       switchModoA.style.margin = "auto 0px auto 50px"
-      logoLogin.style.margin = "auto 0px auto 0px"
+      //logoLogin.style.margin = "auto 0px auto 0px"
       logoHeader.style.maxHeight = "68px"
       logoHeader.style.margin = "auto 0px auto 10px"
       logoHeader.src = "../images/tgym_logos-12.png"
