@@ -16,13 +16,12 @@ const { Productos } = require("../models/index");
 //IMPORTO MODELOS: defino carpeta con modelos de Bases de datos.
 const db = require("../database/models");
 //EXPRESS-VALIDATOR: Extrae los errores de validación de una solicitud y los pone a disposición en un objeto Result.
-const {validationResult}= require('express-validator')
+const { validationResult } = require("express-validator");
 
 let productNewController = {
-
   //📌 1) RENDER: Renderizo el ejs correspondiente:
   productNew: (req, res) => {
-    res.render("products/newProduct"); 
+    res.render("products/newProduct");
   },
 
   //(VIEJO config con JSON):
@@ -76,22 +75,21 @@ let productNewController = {
         ...req.body,
         prodImg: `../img/${req.file.filename}`,
       };
-      if(errors.isEmpty()){
-      await Productos.create(producto);
-      res.redirect("./newProduct/allProducts");
-      }
-      else{
-        res.render('products/newProduct', {errors:errors.mapped()})
+      if (errors.isEmpty()) {
+        console.log(producto);
+        await Productos.create(producto);
+        res.redirect("./newProduct/allProducts");
+      } else {
+        res.render("products/newProduct", { errors: errors.mapped() });
       }
     } catch (error) {
       console.log(error);
+      res.status(500).json({ msg: error });
     }
   },
 };
 
-
 //Exporto todo con este nombre:
 module.exports = productNewController;
-
 
 //Flujo entero: index.js > app.js > raiz.routes(desacople) > ruta > 👉🏼 controllers > models > SQL

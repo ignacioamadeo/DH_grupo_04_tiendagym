@@ -1,6 +1,6 @@
 function  admiMiddleware(req, res, next) {
 	if (!req.session.userAdmin) {
-		 res.redirect('/');
+		return res.redirect('/');
 	}
 	next();
 }

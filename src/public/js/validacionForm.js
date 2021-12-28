@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     "form.formValidationRegister"
   );
 
-  formularioRegister.addEventListener("submit", (e) => {
+  formularioRegister?.addEventListener("submit", (e) => {
 
     let exprEmail =
       /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; //expresion regular para validar emails

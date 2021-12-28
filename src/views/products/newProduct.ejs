@@ -42,8 +42,7 @@
             <% } %>
 
           <label for="prodDescripcion">Descripción</label>
-          <textarea name="prodDescrip" id="prodDescripcion">
-Escribir descripción del producto...</textarea
+          <textarea name="prodDescrip" id="prodDescripcion" placeholder="Escribir descripción del producto..."></textarea
           >
    <% if (locals.errors && errors.prodDescrip) { %>
           <div class="msg-errors"><%= errors.prodDescrip.msg %></div>
@@ -81,13 +80,13 @@ Escribir descripción del producto...</textarea
           </select>
 
           <label>Precio</label>
-          <input type="text" name="prodPrecio" placeholder="$20.000" />
+          <input type="number" name="prodPrecio" placeholder="$20.000" />
 
           <label>Descuento</label>
-          <input type="text" name="prodDesc" placeholder="%25" />
+          <input type="number" name="prodDesc" placeholder="%25" />
 
           <label>Precio en Cuotas</label>
-          <input type="text" name="prodPrecioCuotas" placeholder="$20.000" />
+          <input type="number" name="prodPrecioCuotas" placeholder="$20.000" />
 
           <label>Cuotas sin interés</label>
           <input
@@ -103,7 +102,7 @@ Escribir descripción del producto...</textarea
 
           <div class="newProdEnvioCheckbox">
             <label>Envío gratis</label>
-            <input type="checkbox" name="envioGratis" value="envioGratisSi" />
+            <input type="checkbox" name="envioGratis" value="1" />
           </div>
 
           <button type="reset">Resetear formulario</button>

@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
 
   let btn = document.querySelector("#btn");
 
-  cartItem1.addEventListener("mouseover", function () {
+  cartItem1?.addEventListener("mouseover", function () {
     btn.style.display = "block";
   });
 
@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
   const cartItem2 = document.querySelector("#cartItem");
   let btn = document.querySelector("#btn");
 
-  cartItem2.addEventListener("mouseover", function () {
+  cartItem2?.addEventListener("mouseover", function () {
     btn.style.display = "block";
   });
 
