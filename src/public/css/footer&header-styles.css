@@ -103,6 +103,7 @@
 }
 .profileUser img{
     width: 50px;
+    height: 50px;
     border-radius: 50%;   
   }
 
@@ -201,11 +202,12 @@ footer{
     }
 
     .profileUser{
-        width: 20%;
+        width: 30%;
     }
 
     .profileUser img{
-        width: 50%;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
     }
 }
@@ -303,7 +305,8 @@ footer{
     text-align: center;
 }
 .profileUser img{
-    width: 60%;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
    
   }

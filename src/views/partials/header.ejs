@@ -23,6 +23,8 @@
     <nav class="loginCarrito ">
 
       <!---SESSION: Condicional, si está logueado agregar nombre de usuario y foto perfil, sino... -->
+
+      <% if (locals.isLogged || locals.Logged ) { %>
      
       <% if (locals.isLogged) { %>
 
@@ -42,10 +44,32 @@
         <a href="/login/profile" class="profileUser"><img src="/imgRegister/<%= locals.userLogged.image%>"
             alt="No se encontro la imagen" /></a>
 
-        <% } else { %>
+            <% } %>
 
-          <a href="../login"><i class="fas fa-user-circle logoHeaderProfile"> </i></a>
-          <% } %>
+          <% if (locals.Logged) { %>
+
+            <ul class="barraProfile">
+              <li>
+                <a href="/login/profile">
+                  <%= locals.adminLogged.username%>
+                </a>
+                <ul>
+                  <li><a href="../construction">Configuración</a></li>
+                  <li><a href="../newProduct">New Product</a></li>
+                  <li><a href="../newProduct/allProducts">Todos los Productos</a></li>
+                  <li><a href="../login/logout">Cerrar Sesión</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="/login/profile" class="profileUser"><img src="/imgRegister/<%= locals.adminLogged.image%>"
+                alt="No se encontro la imagen" /></a>
+    
+            <% } %>
+    
+            <% } else { %>
+
+              <a href="../login"><i class="fas fa-user-circle logoHeaderProfile"> </i></a>
+              <% } %>
 
           <!-- (desactivado) MENÚ EN HOVER SOBRE CARRITO:
             <article class="btn" id="btn">
