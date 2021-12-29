@@ -8,6 +8,7 @@ FUNCIONALIDADES:
 --- */
 
 //IMPORTO BASE DE DATOS:
+//Va a buscar en la carpeta models el archivo "Product.js" que fue exportado con el alias "Products" 
 const db = require("../database/models");
 
 //OPERACIONES SOBRE BASE DE DATOS DE PRODUCTOS:
@@ -29,7 +30,7 @@ const Productos = {
   //📌 2) CREAR NUEVOS PRODUCTOS:
   create: async function (product) {
     const response = db.Products.create({
-      ...product,
+      ...product, //Los 3 puntos son el "spread operator" que trae/asigna todos los valores de ese objeto
     });
     return await response;
   },
