@@ -9,15 +9,15 @@
     <main class="mainProductIndex">
         <%- include('../partials/menuLateral') %>
         
-        <section class="productIndBarraLat">
+        <!-- <section class="productIndBarraLat">
             <ul>
                 <li class="latEnvioProducto">Envío gratis<i class="fas fa-toggle-on"></i></li>
                 <li class="latCuotasProducto">Cuotas sin interés<i class="fas fa-toggle-on"></i></li>
                 <li class="latDisponibleProducto">Destacados<i class="fas fa-toggle-on"></i></li>
             </ul>
 
-        </section>
-        <section class="productIndArticulos">
+        </section> -->
+        <section class="productIndArticulos allproductConteinerCard" >
             <% productInfo.forEach(function(product){ %>
                 <%- include('../partials/productCard', {item:product}) %>
               <% }); %>

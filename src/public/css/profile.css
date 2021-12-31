@@ -21,6 +21,8 @@ background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/64/55/72/68/700
 
 .datosProfile{
     text-align: center;
+    color: grey;
+    font-weight: bold;
 }
 .datosProfile h3{
     padding: 10px;
