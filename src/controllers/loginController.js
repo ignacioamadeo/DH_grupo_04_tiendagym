@@ -95,7 +95,7 @@ let loginController = {
       let id = req.params.id;
       let userEdit = {
         ...req.body,
-        image: req.file.filename,
+        image: `../imgRegister/${req.file.filename}`,
       };
       let newUser = await User.update(userEdit, id);
       let userToLogin = await User.findByField(req.body.email);
