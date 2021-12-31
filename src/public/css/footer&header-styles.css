@@ -113,20 +113,28 @@
   }
 
 /*<-- MOBILE: MODO NOCHE -->*/
-  .switchD {
-      color:rgb(255, 255, 255);
-      font-size: 35px;
+
+.apaEnce{
+    width: 50px;
+    height: 50px;
+    
+}
+  .fa-toggle-on {
+      color:#022B3A;
+      font-size: 40px;
       cursor: pointer;
-      margin: auto 0px auto 50px;
-      display:none;
+      
+       
   }
-  .switchN {
-    color:black;
+  .fa-toggle-off {
+    display:none;
+    color: white;
     font-size: 40px;
-    display:none;
-    cursor: pointer;
-    margin: auto 0px auto 0px;
-    display:none;
+    cursor: pointer; 
+}
+
+.modoNoc{
+    background-color: black !important;
 }
 
 /*<-- MOBILE: FOOTER -->*/
@@ -143,7 +151,7 @@ footer{
     margin: auto 0 auto 0;
 }
 .footerLinks ul li {
-    color: #022B3A;
+    color: black;
     list-style: none;
     text-align: center;
     font-size: 16px;
@@ -157,13 +165,19 @@ footer{
 }
 
 .redesSociales{
-    color: #022B3A;
+    color: black;
     text-align: center;
     font-size: 24px;
     margin: auto 0 auto 0;
+   
 }
-.redesSociales a i{
+.redesSociales a {
     padding: 0 6px;
+    color: black;
+}
+
+.footerNoc{
+    background-color:#022B3A !important ;
 }
 
 /*---- 
