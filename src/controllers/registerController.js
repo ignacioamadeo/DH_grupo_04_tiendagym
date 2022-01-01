@@ -43,7 +43,7 @@ let registerController = {
       let userToCreate = {
         ...req.body,
         password: await bcrypt.hash(req.body.password, 10),
-        image: req.file.filename,
+        image: `../imgRegister/${req.file.filename}`,
       };
 
       //Si no hay errores entonces crear usuario:

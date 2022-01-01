@@ -86,21 +86,21 @@
 
           <label>Precio</label>
           <input
-            type="text"
+            type="number"
             name="prodPrecio"
             value="<%= products.prodPrecio %>"
           />
 
           <label>Descuento</label>
           <input
-            type="text"
+            type="number"
             name="prodDescuento"
             value="<%= products.prodDescuento %>"
           />
 
           <label>Precio en Cuotas</label>
           <input
-            type="text"
+            type="number"
             name="prodPrecioCuotas"
             value="<%= products.prodPrecioCuotas %>"
           />
@@ -124,14 +124,14 @@
 
           <div class="newProdEnvioCheckbox">
             <label>Envío gratis</label>
-            <input type="checkbox" name="envioGratis" value="envioGratisSi" />
+            <input type="checkbox" name="envioGratis" value="1" />
           </div>
 
           <button type="reset">Resetear formulario</button>
           <button type="submit">Guardar producto</button>
         </form>
       </section>
-      <a href="/newProduct/allProducts">Todos los productos</a>
+      <a href="/newProduct/allProducts"><button class="buttonAllProducts">Todos los productos</button></a>
     </main>
     <!-- Footer importado -->
     <%- include('../partials/footer') %>

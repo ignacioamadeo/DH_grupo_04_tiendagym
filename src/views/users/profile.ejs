@@ -6,6 +6,7 @@
     <%- include('../partials/header') %>
 
     <main>
+      <section class="mainPorfile">
       <%- include('../partials/menuLateral') %>
       <h1 class="bienvenido">Bienvenido <%= user.username%></h1>
       <section class="imgProfile">
@@ -43,6 +44,7 @@
       <section class="cerrarSession">
         <a href="../login/logout">Cerrar Session</a>
       </section>
+    </section>
     </main>
 
     <%- include('../partials/footer') %>

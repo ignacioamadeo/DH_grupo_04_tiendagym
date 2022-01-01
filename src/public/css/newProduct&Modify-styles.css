@@ -2,6 +2,14 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
+.webAdmin{
+    margin-top: 100px;
+}
+
+.validationProduct{
+    background-color: white;
+    padding: 10px;
+}
 
 .adminHeader{
     display: flex;
@@ -144,6 +152,12 @@
 
 .newProdEnvioCheckbox{
     display: flex;
+}
+
+.buttonAllProducts{
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: turquoise;
 }
 
 

@@ -95,7 +95,7 @@ let loginController = {
       let id = req.params.id;
       let userEdit = {
         ...req.body,
-        image: req.file.filename,
+        image: `../imgRegister/${req.file.filename}`,
       };
       let newUser = await User.update(userEdit, id);
       let userToLogin = await User.findByField(req.body.email);
@@ -110,8 +110,14 @@ let loginController = {
   
   //📌 3) RENDER PERFIL USUARIO:
   profile: (req, res) => {
+    if(req.session.userLogged){
+
+      res.render("users/profile", { user: req.session.userLogged });
+    }
+    else if (  req.session.userAdmin){
+      res.render("users/profile", { user: req.session.userAdmin });
+    }
   
-    res.render("users/profile", { user: req.session.userLogged });
   },
 
   //📌 4) DESLOGUEARSE:

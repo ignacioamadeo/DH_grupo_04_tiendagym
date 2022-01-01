@@ -26,12 +26,14 @@ app.use(express.static(path.join(__dirname, "./public")));
 //CONFIG MIDDLEWARE - :
 const cookies = require("cookie-parser");
 const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
+const adminLoggedMiddleware = require("./middleware/adminLoggedMiddleware");
 
 
 // const recordameMiddleware = require('./middleware/recordameMiddleware');
 app.use(session({ secret: "shhhh", resave: false, saveUninitialized: false }));
 app.use(cookies());
 app.use(userLoggedMiddleware);
+app.use(adminLoggedMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use(recordameMiddleware);

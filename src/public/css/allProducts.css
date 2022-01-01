@@ -1,7 +1,12 @@
+.mainProductIndex{
+    margin-top: 150px;
+  
+}
+
 .titleAllProducts{
-margin-left: 20px;
-margin-top: 30px;
-margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
 }
 
 .editProduct{
@@ -14,4 +19,9 @@ margin-bottom: 30px;
     margin-left: 110px;
     margin-top: 5px;
     cursor: pointer;
+}
+
+.allproductConteinerCard{
+    margin: auto;
+    margin-bottom: 100px;
 }

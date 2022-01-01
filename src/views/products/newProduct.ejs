@@ -7,7 +7,8 @@
     <%- include('../partials/header') %>
 
     <!--Main -->
-    <main class="webAdmin">
+    <main >
+     <section class="webAdmin"> 
       <%- include('../partials/menuLateral') %>
       
       <section class="adminHeader">
@@ -49,23 +50,19 @@
           <% } %>
 
           <label for="prodDescrip1">Descripción-A</label>
-          <textarea name="prodDescrip1" id="prodDescrip1">
-Escribir descripción del producto...</textarea
+          <textarea name="prodDescrip1" id="prodDescrip1" placeholder="Escribir descripción del producto..."></textarea
           >
 
           <label for="prodDescrip2">Descripción-B</label>
-          <textarea name="prodDescrip2" id="prodDescrip2">
-Escribir descripción del producto...</textarea
+          <textarea name="prodDescrip2" id="prodDescrip2" placeholder="Escribir descripción del producto..."></textarea
           >
 
           <label for="prodDescrip3">Descripción-C</label>
-          <textarea name="prodDescrip3" id="prodDescrip3">
-Escribir descripción del producto...</textarea
+          <textarea name="prodDescrip3" id="prodDescrip3" placeholder="Escribir descripción del producto..."></textarea
           >
 
           <label for="prodDescrip4">Descripción-D</label>
-          <textarea name="prodDescrip4" id="prodDescrip4">
-Escribir descripción del producto...</textarea
+          <textarea name="prodDescrip4" id="prodDescrip4" placeholder="Escribir descripción del producto..."></textarea
           >
 
           <label for="prodImg">Cargar fotos producto:</label>
@@ -109,7 +106,8 @@ Escribir descripción del producto...</textarea
           <button type="guardar">Guardar producto</button>
         </form>
       </section>
-      <a href="/newProduct/allProducts">Todos los productos</a>
+      <a href="/newProduct/allProducts"><button class="buttonAllProducts">Todos los productos </button></a>
+    </section>
     </main>
     <!-- Footer importado -->
     <%- include('../partials/footer') %>
