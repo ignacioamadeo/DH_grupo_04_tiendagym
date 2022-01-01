@@ -20,7 +20,7 @@
     flex-direction: column;
     background-color: rgb(2, 43, 58);
     width: 100%;
-    height: 100px;
+    height: 200px;
     box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.2);
 
 }
@@ -28,7 +28,7 @@
 /*<-- MOBILE: LOGO -->*/
 .mobLogoPrincipal{
     max-width: 100vh;
-    margin: auto 0px auto 10px;
+    margin: 5px 0px 5px 10px;
     max-height: 68px;
 }
 
@@ -59,6 +59,45 @@
     margin-top: 2.5px;
 }
 
+
+/*<-- MOBILE: LOGIN+CARRITO -->*/
+.loginCarrito {
+    display: flex;  
+    color: white;
+    margin: auto 20px auto 0px ;
+    justify-content:center;
+
+}
+.logoHeaderProfile{
+    font-size: 30px;
+    color: white;
+    margin: 10px auto 10px auto;
+}
+
+/*<-- MOBILE: IMAGEN USUARIO LOGUEADO -->*/
+.profileUser{
+    width: 80%;
+   margin-right: 20px;
+   
+}
+.profileUser img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;   
+  }
+  .barraProfile{
+      display: none;
+  }
+.profileUser{
+    width: 30%;
+}
+.profileUser img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
 /*<-- MOBILE: BOTÓN SOLO MOBILE -->*/
 .botonMenuMobile{
     font-size: 22px;
@@ -66,7 +105,7 @@
     color: #022B3A;
     display: block;
     max-width: 40px;
-    padding: 6px 0 6px 0;
+    padding: 6px;
     border-radius: 50%;
     text-align: center;
     margin: auto;
@@ -74,18 +113,59 @@
     box-shadow: 0px 0px 14px 2px rgba(0,0,0,0.73);
 }
 
+/*<-- MOBILE Y DESKTOP: FOOTER -->*/
+footer{
+    background-color: #e1e5f2;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    justify-content: space-around;
+    margin: 10px 0 0 0;
+}
+.footerLinks{
+    margin: auto 0 auto 0;
+}
+.footerLinks ul li {
+    color: black;
+    list-style: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 6px 0 ;
+    transition: 1s;
+}
+.footerLinks ul li :hover {
+    color:rgb(226, 135, 15)
+}
+.redesSociales{
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    margin: auto 0 auto 0;
+}
+.redesSociales a {
+    padding: 0 6px;
+    color: black;
+}
+.footerNoc{
+    background-color:#022B3A !important ;
+}
+
+
+
 /*---- 
 ---- 
 ---
-📱 TABLET: 📱 ------------------------------------------------------------------->>> : 
+📱 TABLET Y DESKTOP: 💻  ------------------------------------------------------------------->>> : 
 ---
 ----
 ------*/
 
-@media (min-width: 481px){
+@media (min-width: 750px){
 
 
-/*<-- DSK: HEADER -->*/
+/*<-- DSK: HEADER TODO -->*/
 .mainHeader{
     display: flex;
     flex-wrap: nowrap;
@@ -132,19 +212,6 @@
     margin-top: 2.5px;
 }
 
-/*<-- MOBILE: LOGIN+CARRITO -->*/
-.loginCarrito {
-    display: flex;  
-    color: white;
-    margin: auto 20px auto 0px ;
-    justify-content:center;
-
-}
-.logoHeaderProfile{
-    font-size: 30px;
-    color: white;
-    margin: auto 0px auto 0px;
-}
 
 /*<-- MOBILE: HEADER SOLO MOBILE -->*/
 .mainHeaderMobile{
@@ -153,29 +220,6 @@
     background-color: #022B3A;
     padding: 10px 0;
 }
-
-/*<-- MOBILE: SUBHEADER OCULTAR EN MOBILE -->*/
-.mainHeaderBottom{
-    display: none;
-}
-
-
-/*<-- MOBILE: IMAGEN USUARIO LOGUEADO -->*/
-.profileUser{
-    width: 80%;
-   margin-right: 20px;
-   
-}
-.profileUser img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;   
-  }
-
-  .barraProfile{
-      display: none;
-
-  }
 
 /*<-- MOBILE: MODO NOCHE -->*/
 
@@ -202,51 +246,6 @@
     background-color: black !important;
 }
 
-/*<-- MOBILE: FOOTER -->*/
-footer{
-    background-color: #e1e5f2;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; 
-    justify-content: space-around;
-    margin: 10px 0 0 0;
-}
-.footerLinks{
-    margin: auto 0 auto 0;
-}
-.footerLinks ul li {
-    color: black;
-    list-style: none;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 300;
-    padding: 6px 0 ;
-    transition: 1s;
-}
-
-.footerLinks ul li :hover {
-    color:rgb(226, 135, 15)
-}
-
-.redesSociales{
-    color: black;
-    text-align: center;
-    font-size: 24px;
-    margin: auto 0 auto 0;
-   
-}
-.redesSociales a {
-    padding: 0 6px;
-    color: black;
-}
-
-.footerNoc{
-    background-color:#022B3A !important ;
-}
-
-
-
     .mobMainHeader{
         display:none;
     }
@@ -255,8 +254,6 @@ footer{
     .switchD {
         display:contents;
     }
-
-   
 
     .searchForm{
         width: 95%;
@@ -274,29 +271,7 @@ footer{
         border: none;
         margin-top: 2.5px;
     }
-
-    .profileUser{
-        width: 30%;
-    }
-
-    .profileUser img{
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-}
-
-/*---- 
----- 
----
-💻 DESKTOP: 💻 : 
----
-----
-------*/
-
-@media (min-width: 769px){
-    
-.mainHeaderMobile{
+    .mainHeaderMobile{
         display: none;
  }
 
@@ -374,6 +349,9 @@ footer{
 }
 
 /*<-- DESKTOP: PERFIL USUARIO EN BARRA -->*/
+.logoHeaderProfile{
+    margin: auto 0px auto 0px;
+}
 .profileUser{
     width: 100px;
     text-align: center;
@@ -435,5 +413,5 @@ footer{
     display: inline-block;
 }
 
-}
 
+}
