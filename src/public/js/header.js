@@ -1,4 +1,9 @@
-window.addEventListener("load", function () {
+  /* ---
+  ACHICAR HEADER EN SCROLL:
+  --- */
+
+window.addEventListener("load", function () { //Cuando se carga la página, ejectutar:
+
   let headerHome = document.querySelector(".mainHeader")
   let logoHeader = document.querySelector(".logoPrincipal")
   let modeButton = document.querySelector(".apaEnce")
@@ -8,13 +13,18 @@ window.addEventListener("load", function () {
   let switchModoA = document.querySelector(".switchD")
   //let logoLogin = document.querySelector(".logoHeaderProfile")
 
-  
-  /* ---
-  ACHICAR HEADER EN SCROLL:
-  --- */
-
   // When the user scrolls the page, execute myFunction
   window.onscroll = function () { achicarHeader() };
+
+  //
+  function checkMediaQuery() {
+    // If the inner width of the window is greater then 768px
+    if (window.innerWidth > 768) {
+      // Then log this message to the console
+      console.log('Media Query Matched!')
+    }
+  }
+  window.addEventListener('resize', checkMediaQuery());
 
   // Devuelve la distancia del elemento al borde exterior del elemento que lo contiene
   let position = primeraSeccion.offsetTop;

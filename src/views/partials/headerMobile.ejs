@@ -1,35 +1,25 @@
+<!--------------------------------- SOLO EN VERSIÓN MOBILE: --------------------------------->
+
 <!-- HEADER completo -->
-<header class="mainHeader">
+<header class="mobMainHeader">
 
     <!--LOGO-->
-    <a href="../" id="logo"><img src="../images/tgym_logos-12.png" class="logoPrincipal" /></a>
+    <a href="../" id="logo"><img src="../images/tgym_logos-12.png" class="mobLogoPrincipal" /></a>
     
     <!--BUSCADOR-->
-    <nav class="busqueda">
+    <nav class="mobBusqueda">
       <i class="fas fa-search"></i>
-      <form action="/search" method="GET" class="searchForm">
-        <input type="text" name="search" class="search" />
+      <form action="/search" method="GET" class="mobSearchForm">
+        <input type="text" name="search" class="mobSearch" />
       </form>
     </nav>
-
-    <!--MODO NOCTURNO-->
-   
-    <nav class="apaEnce">
-      <i class="fas fa-toggle-on switchD"></i>
-      
-    </nav>
   
-
-    <!--LOGIN + CARRITO -->
-
-    <nav class="loginCarrito ">
-
       <!---SESSION: Condicional, si está logueado agregar nombre de usuario y foto perfil, sino... -->
-
+  
       <% if (locals.isLogged || locals.Logged ) { %>
      
       <% if (locals.isLogged) { %>
-
+  
         <ul class="barraProfile">
           <li>
             <a href="/login/profile">
@@ -45,11 +35,11 @@
         </ul>
         <a href="/login/profile" class="profileUser"><img src="/imgRegister/<%= locals.userLogged.image%>"
             alt="No se encontro la imagen" /></a>
-
+  
             <% } %>
-
+  
           <% if (locals.Logged) { %>
-
+  
             <ul class="barraProfile">
               <li>
                 <a href="/login/profile">
@@ -69,56 +59,21 @@
             <% } %>
     
             <% } else { %>
-
+  
               <a href="../login"><i class="fas fa-user-circle logoHeaderProfile"> </i></a>
               <% } %>
-
-          <!-- (desactivado) MENÚ EN HOVER SOBRE CARRITO:
-            <article class="btn" id="btn">
-              <table class="cart" id="lista-carrito">
-                <thead>
-                  <tr>
-                    <th>Imagen</th>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-              <section class="definirCompra">
-                <a href="#" class="comparA" id="concluirCompra">
-                  <h6>Comprar</h6>
-                </a>
-                <br />
-                <a href="#" class="eliminarA" id="eliminarCompra">
-                  <h6>Vaciar Carrito</h6>
-                </a>
-              </section>
-            </article>
-          -->
+  
     </nav>
-
+  
   </div>
-
-
-  <!--(desactivado) SUB SITIOS COMPLEMENTARIOS:
-  <nav class="mainHeaderBottom">
-    <ul class="menuInferior">
-      <a href="../construction">
-        <li>Noticias</li>
-      </a>
-      <a href="../construction">
-        <li>Ofertas</li>
-      </a>
-      <a href="../construction">
-        <li>Hogar</li>
-      </a>
-      <a href="../construction">
-        <li>Empresas</li>
-      </a>
-    </ul>
-  </nav>
-  -->
-
-</header>
-
+  
+  <!--MOBILE: BOTÓN MENÚ -->
+  
+  <div class="mainHeaderMobile">
+    <a href="#" class="botonMenuMobile">
+      <i class="fas fa-dumbbell"></i>
+    </a>
+  
+  
+  </header>
+  
