@@ -56,8 +56,7 @@
     border-radius: 10px;
 }
 .mobBusqueda i{
-  margin: auto;
-  margin-right: 20px;
+  margin: auto auto auto 6px;
 }
 .mobBusqueda p{
     margin: auto 20px;
@@ -71,44 +70,6 @@
     margin-top: 2.5px;
 }
 
-
-/*<-- MOBILE: LOGIN+CARRITO -->*/
-.loginCarrito {
-    display: flex;  
-    color: white;
-    margin: auto 20px auto 0px ;
-    justify-content:center;
-
-}
-.logoHeaderProfile{
-    font-size: 30px;
-    color: white;
-    margin: 10px auto 10px auto;
-    display: none;
-}
-
-/*<-- MOBILE: IMAGEN USUARIO LOGUEADO -->*/
-.profileUser{
-    width: 80%;
-   margin-right: 20px;
-   
-}
-.profileUser img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;   
-  }
-  .barraProfile{
-      display: none;
-  }
-.profileUser{
-    width: 30%;
-}
-.profileUser img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
 
 
 /*<-- MOBILE: BOTÓN SOLO MOBILE -->*/
@@ -127,7 +88,6 @@
     top: 18px;
     transition: 1s;
 }
-
 .botonMenuMobileRot{
     background-color: #1F7A8C;
     display: block;
@@ -143,7 +103,6 @@
     top: 18px;
     transform: rotate(90deg);
 }
-
 .botonMenuMobile i{
     font-size: 28px;
     color: #022B3A;
@@ -151,6 +110,107 @@
     left: -1px;
     top: 2px;
 }
+
+/* Ocultar o mostrar el logo de profile de acuerdo a si de ejecuta 
+el javascript del menú hamburguesa: */
+.logoHeaderProfile{
+    font-size: 35px;
+    color: white;
+    margin: 10px auto 10px auto;
+    display: none;
+    transition: 1s;
+}
+@keyframes baliza {
+    from {color: rgb(255, 255, 255);}
+    to {color: #022B3A;}
+}
+.logoHeaderProfileShow{
+   font-size: 35px;
+    color: white;
+    margin: 10px auto 10px auto;
+    display: flex;
+    transition: 1s;
+    animation: baliza 2s infinite;
+    animation-direction: reverse;
+}
+.userLogHelp{
+    display: none; /* APAGADO */
+    color: white;
+    font-family: 'Lato', sans-serif;
+    transition: 1s;
+    animation: baliza 2s infinite;
+    animation-direction: reverse;
+}
+.userLogHelpNo{
+    display: flex; /* PRENDER */
+    color: white;
+    font-family: 'Lato', sans-serif;
+    transition: 1s;
+    animation: baliza 2s infinite;
+    animation-direction: reverse;
+}
+
+/*<-- MOBILE: IMAGEN USUARIO LOGUEADO -->*/
+
+.mobProfileUser{
+    display:block;
+    margin: 10px auto;
+   
+}
+.mobProfileUser img{
+    display: block;
+    margin: auto auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;   
+  }
+.mobNombreUsuario{
+    display: block;
+    width: 100%;
+    margin: auto auto 10px auto;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    color: whitesmoke;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+}
+.barraProfile{
+     display: none; /* PRENDER */
+      width: 100%;
+      height: 100%;
+      animation: baliza 2s;
+      animation-direction: reverse;
+}
+.barraProfileOff{
+    display: block; /* APAGAR */
+    width: 100%;
+    height: 100%;
+}
+.barraProfile ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+
+}
+  .mobLinksUsuario{
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    padding:4px 4px;
+    display:block;
+    color: whitesmoke;
+    font-size: 10px;
+  }
+ 
+
+
+
+
 
 
 
@@ -270,8 +330,8 @@ footer{
     
 }
   .fa-toggle-on {
-      color:#022B3A;
-      font-size: 40px;
+      color:#ffffff;
+      font-size: 35px;
       cursor: pointer;
       
        
@@ -279,7 +339,7 @@ footer{
   .fa-toggle-off {
     display:none;
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     cursor: pointer; 
 }
 
@@ -374,6 +434,36 @@ footer{
     margin: auto 0px auto 0px;
 }
 
+
+
+/*<-- DESKTOP: IMAGEN USUARIO LOGUEADO -->*/
+/* .profileUser{
+    width: 80%;
+   margin-right: 20px;
+   
+}
+.profileUser img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;   
+  }
+  .barraProfile{
+      display: none;
+  }
+.profileUser{
+    width: 30%;
+}
+.profileUser img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+} */
+.loginCarrito {
+    display: flex;  
+    color: white;
+    margin: auto 20px auto 0px ;
+    justify-content:center;
+}
 .profileUser{
     width: 100px;
     text-align: center;
