@@ -211,6 +211,11 @@ el javascript del menú hamburguesa: */
     background-color: #1F7A8C;
     border-radius: 10px;
   }
+
+  .apaEnce{
+   display:none; 
+}
+  
  
 /*<-- MOBILE: FOOTER -->*/
 footer{
@@ -275,7 +280,6 @@ footer{
     width: 100%;
     height: 100px;
     box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.2);
-
 }
 
 /*<-- DSK: LOGO -->*/
@@ -283,6 +287,7 @@ footer{
     max-width: 100vh;
     margin: auto 0px auto 10px;
     max-height: 68px;
+  
 }
 
 /*<-- DSK: BÚSQUEDA -->*/
@@ -323,13 +328,14 @@ footer{
 /*<-- MOBILE: MODO NOCHE -->*/
 
 .apaEnce{
+    display: block;
     width: 50px;
     height: 50px;
-    margin-top: 10px;
+    margin-top: 50px;
     
 }
   .fa-toggle-on {
-      color:#ffffff;
+      color:black;
       font-size: 40px;
       cursor: pointer;
       
@@ -465,8 +471,10 @@ footer{
     justify-content:center;
 }
 .profileUser{
-    width: 100px;
+    width: 60px;
     text-align: center;
+    display: none;
+   
 }
 .profileUser img{
     width: 60px;
@@ -477,7 +485,9 @@ footer{
 .barraProfile{
     display: block;
     margin-top: 10px;
+    width: 100px;
     background-color: rgba(255, 255, 255, 0);
+    
 }
   .barraProfile li a{
     padding:10px 12px;
@@ -532,5 +542,12 @@ footer{
     margin: auto auto;
 }
 
+
+}
+
+@media (min-width: 850px){
+    .profileUser{
+        display: block;
+    }
 
 }
