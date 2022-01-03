@@ -6,11 +6,11 @@ window.addEventListener('load', function(){
     const usuarioLogueado = document.getElementById('barraProfile'); //Perfil usuario
 
     menuHamb.onclick = function(e){
-        menuHamb.classList.toggle('botonMenuMobileRot');
-        menu.classList.toggle('mobMainHeaderAmpliado');
+        menuHamb?.classList.toggle('botonMenuMobileRot');
+        menu?.classList.toggle('mobMainHeaderAmpliado');
         logoProfile?.classList.toggle('logoHeaderProfileShow');
         textoLogoProfile?.classList.toggle('userLogHelpNo');
-        usuarioLogueado.classList.toggle('barraProfileOff');
+        usuarioLogueado?.classList.toggle('barraProfileOff');
     }
    
 })
