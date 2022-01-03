@@ -33,7 +33,7 @@
     flex-direction: column;
     background-color: rgb(2, 43, 58);
     width: 100%;
-    height: 250px;
+    height: 276px;
     box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.2);
 }
 
@@ -155,19 +155,21 @@ el javascript del menú hamburguesa: */
 .mobProfileUser{
     display:block;
     margin: 10px auto;
+
    
 }
 .mobProfileUser img{
     display: block;
     margin: auto auto;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;   
+
   }
 .mobNombreUsuario{
     display: block;
     width: 100%;
-    margin: auto auto 10px auto;
+    margin: auto auto 15px auto;
     font-family: 'Lato', sans-serif;
     text-align: center;
     font-size: 16px;
@@ -177,16 +179,17 @@ el javascript del menú hamburguesa: */
     text-decoration: none;
 }
 .barraProfile{
-     display: none; /* PRENDER */
+     display: none; /* APAGAR */
       width: 100%;
-      height: 100%;
-      animation: baliza 2s;
-      animation-direction: reverse;
+      height: 100%;   
+      transition: 1s;
+
 }
 .barraProfileOff{
-    display: block; /* APAGAR */
+    display: block; /* PRENDER */
     width: 100%;
     height: 100%;
+    transition: 1s;
 }
 .barraProfile ul{
     display: flex;
@@ -201,37 +204,32 @@ el javascript del menú hamburguesa: */
     list-style: none;
     margin: 0 auto;
     text-align: center;
-    padding:4px 4px;
+    padding:4px 8px;
     display:block;
     color: whitesmoke;
-    font-size: 10px;
+    font-size: 12px;
+    background-color: #1F7A8C;
+    border-radius: 10px;
   }
  
-
-
-
-
-
-
-
-/*<-- MOBILE Y DESKTOP: FOOTER -->*/
+/*<-- MOBILE: FOOTER -->*/
 footer{
     background-color: #e1e5f2;
-    height: 150px;
+    height: 160px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column; 
     justify-content: space-around;
     margin: 10px 0 0 0;
 }
 .footerLinks{
-    margin: auto 0 auto 0;
+    margin: 20px 0 auto 0;
 }
 .footerLinks ul li {
     color: black;
     list-style: none;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     padding: 6px 0 ;
     transition: 1s;
@@ -243,7 +241,7 @@ footer{
     color: black;
     text-align: center;
     font-size: 24px;
-    margin: auto 0 auto 0;
+    margin: 5px auto 15px auto;
 }
 .redesSociales a {
     padding: 0 6px;
@@ -510,11 +508,17 @@ li{
 /*<-- DESKTOP: FOOTER -->*/
 footer{
     background-color: #e1e5f2;
-    height: 138px;
-    flex-direction: row;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: space-around;
+    margin: 10px 0 0 0;
 }
+
 .footerLinks{
-    display: inline-block;
+    display: block;
+    margin: 20px auto auto auto;
 }
 .footerLinks ul li {
     font-size: 13px;
@@ -523,6 +527,7 @@ footer{
 
 .redesSociales{
     display: inline-block;
+    margin: auto auto;
 }
 
 

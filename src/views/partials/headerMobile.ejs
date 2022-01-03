@@ -14,65 +14,69 @@
     </form>
   </nav>
 
-  <!---SESSION: Condicional, si está logueado agregar nombre de usuario y foto perfil, sino... -->
+  <!---USUARIOS REGISTRADOS NORMAL: Condicional, si está logueado agregar nombre de usuario y foto perfil, sino... -->
 
   <% if (locals.isLogged || locals.Logged ) { %>
 
     <% if (locals.isLogged) { %>
 
-      <div class="barraProfile">
+      <div class="barraProfile" id="barraProfile">
 
-          <!---FOTO USUARIO:-->
-      <a href="/login/profile" class="mobProfileUser"><img src="/imgRegister/<%= locals.userLogged.image%>"
-        alt="No se encontro la imagen" /></a>
-          <!---USERNAME:-->
-          <a href="/login/profile" class="mobNombreUsuario">
-            <%= locals.userLogged.username%>
-          </a>
-          <!---MENÚ USUARIO:-->
-          <ul>
-            <li><a href="../construction" class="mobLinksUsuario">Configuración</a></li>
-            <li><a href="../construction" class="mobLinksUsuario">Mis Compras</a></li>
-            <li><a href="../construction" class="mobLinksUsuario">Mis Tarjetas</a></li>
-            <li><a href="../login/logout" class="mobLinksUsuario">Cerrar Sesión</a></li>
-          </ul>
-        </div>
+        <!---FOTO USUARIO:-->
+        <a href="/login/profile" class="mobProfileUser"><img src="/imgRegister/<%= locals.userLogged.image%>"
+            alt="No se encontro la imagen" /></a>
+        <!---USERNAME:-->
+        <a href="/login/profile" class="mobNombreUsuario">
+          <%= locals.userLogged.username%>
+        </a>
+        <!---MENÚ USUARIO:-->
+        <ul>
+          <li><a href="../construction" class="mobLinksUsuario">Configuración</a></li>
+          <li><a href="../construction" class="mobLinksUsuario">Mis Compras</a></li>
+          <li><a href="../construction" class="mobLinksUsuario">Mis Tarjetas</a></li>
+          <li><a href="../login/logout" class="mobLinksUsuario">Cerrar Sesión</a></li>
+        </ul>
+      </div>
 
 
       <% } %>
 
+        <!---USUARIOS ADMINISTRADOR: Condicional, si está logueado agregar nombre de usuario y foto perfil, sino... -->
+
         <% if (locals.Logged) { %>
 
-          <ul class="barraProfile">
-            <li>
-              <a href="/login/profile">
-                <%= locals.adminLogged.username%>
-              </a>
-              <ul>
-                <li><a href="../construction">Configuración</a></li>
-                <li><a href="../newProduct">New Product</a></li>
-                <li><a href="../newProduct/allProducts">Todos los Productos</a></li>
-                <li><a href="../login/logout">Cerrar Sesión</a></li>
-              </ul>
-            </li>
-          </ul>
-          <a href="/login/profile" class="mobProfileUser"><img src="/imgRegister/<%= locals.adminLogged.image%>"
-              alt="No se encontro la imagen" /></a>
+          <div class="barraProfile" id="barraProfile">
+
+            <!---FOTO USUARIO ADMIN:-->
+            <a href="/login/profile" class="mobProfileUser"><img src="/imgRegister/<%= locals.adminLogged.image%>"
+                alt="No se encontro la imagen" /></a>
+
+            <!---USERNAME ADMIN:-->
+            <a href="/login/profile">
+              <%= locals.adminLogged.username%>
+            </a>
+
+            <!---MENÚ USUARIO ADMIN:-->
+            <ul>
+              <li><a href="../construction">Configuración</a></li>
+              <li><a href="../newProduct">New Product</a></li>
+              <li><a href="../newProduct/allProducts">Todos los Productos</a></li>
+              <li><a href="../login/logout">Cerrar Sesión</a></li>
+            </ul>
+          </div>
 
           <% } %>
 
             <% } else { %>
 
+              <!--MOBILE: LOGO USUARIO NO INGRESADO -->
               <a href="../login"><i class="fas fa-user-circle logoHeaderProfile" id="logoHeaderProfile"> </i></a>
               <div class="userLogHelp">Usuario no ingresado</div>
               <% } %>
-
                 </nav>
-
                 </div>
 
-                <!--MOBILE: BOTÓN MENÚ -->
-
+                <!--MOBILE: BOTÓN MENÚ HAMBURGUESA -->
                 <div class="mainHeaderMobile">
                   <a href="#" class="botonMenuMobile">
                     <i class="fas fa-dumbbell"></i>
