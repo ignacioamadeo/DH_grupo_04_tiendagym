@@ -80,7 +80,7 @@ let productNewController = {
         await Productos.create(producto);
         res.redirect("./newProduct/allProducts");
       } else {
-        res.render("products/newProduct", { errors: errors.mapped() });
+        res.render("products/newProduct", { errors: errors.mapped(), old: req.body, });
       }
     } catch (error) {
       console.log(error);

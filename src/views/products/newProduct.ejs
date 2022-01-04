@@ -38,32 +38,33 @@
             name="prodNombre"
             id="prodNombre"
             placeholder="Cinta de correr CYNT 234rpm"
+            value="<%= locals.old && old.prodNombre ? old.prodNombre : ''%>"
           />
           <% if (locals.errors && errors.prodNombre) { %>
             <div class="msg-errors"><%= errors.prodNombre.msg %></div>
             <% } %>
 
           <label for="prodDescripcion">Descripción</label>
-          <textarea name="prodDescrip" id="prodDescripcion" placeholder="Escribir descripción del producto..."></textarea
+          <textarea name="prodDescrip" id="prodDescripcion" placeholder="Escribir descripción del producto..."  value="<%= locals.old && old.prodDescrip ? old.prodDescrip : ''%>" ></textarea
           >
    <% if (locals.errors && errors.prodDescrip) { %>
           <div class="msg-errors"><%= errors.prodDescrip.msg %></div>
           <% } %>
 
           <label for="prodDescrip1">Descripción-A</label>
-          <textarea name="prodDescrip1" id="prodDescrip1" placeholder="Escribir descripción del producto..."></textarea
+          <textarea name="prodDescrip1" id="prodDescrip1" placeholder="Escribir descripción del producto..." value="<%= locals.old && old.prodDescrip1 ? old.prodDescrip1 : ''%>"></textarea
           >
 
           <label for="prodDescrip2">Descripción-B</label>
-          <textarea name="prodDescrip2" id="prodDescrip2" placeholder="Escribir descripción del producto..."></textarea
+          <textarea name="prodDescrip2" id="prodDescrip2" placeholder="Escribir descripción del producto..." value="<%= locals.old && old.prodDescrip2 ? old.prodDescrip2 : ''%>"></textarea
           >
 
           <label for="prodDescrip3">Descripción-C</label>
-          <textarea name="prodDescrip3" id="prodDescrip3" placeholder="Escribir descripción del producto..."></textarea
+          <textarea name="prodDescrip3" id="prodDescrip3" placeholder="Escribir descripción del producto..." value="<%= locals.old && old.prodDescrip3 ? old.prodDescrip3 : ''%>"></textarea
           >
 
           <label for="prodDescrip4">Descripción-D</label>
-          <textarea name="prodDescrip4" id="prodDescrip4" placeholder="Escribir descripción del producto..."></textarea
+          <textarea name="prodDescrip4" id="prodDescrip4" placeholder="Escribir descripción del producto..." value="<%= locals.old && old.prodDescrip4 ? old.prodDescrip4 : ''%>"></textarea
           >
 
           <label for="prodImg">Cargar fotos producto:</label>
@@ -78,10 +79,10 @@
           </select>
 
           <label>Precio</label>
-          <input type="number" name="prodPrecio" placeholder="$20.000" />
+          <input type="number" name="prodPrecio" placeholder="$20.000" value="<%= locals.old && old.prodPrecio ? old.prodPrecio : ''%>" />
 
           <label>Descuento</label>
-          <input type="number" name="prodDesc" placeholder="%25" />
+          <input type="number" name="prodDesc" placeholder="%25" value="<%= locals.old && old.prodDesc ? old.prodDesc : ''%>" />
 
           <label>Precio en Cuotas</label>
           <input type="number" name="prodPrecioCuotas" placeholder="$20.000" />
@@ -93,10 +94,11 @@
             placeholder="1"
             min="0"
             max="12"
+            value="<%= locals.old && old.prodCantidadCuotas ? old.prodCantidadCuotas : ''%>"
           />
 
           <label>Cantidad</label>
-          <input type="number" name="prodCantidad" placeholder="1" min="0" />
+          <input type="number" name="prodCantidad" placeholder="1" min="0" value="<%= locals.old && old.prodCantidad ? old.prodCantidad : ''%>" />
 
           <div class="newProdEnvioCheckbox">
             <label>Envío gratis</label>

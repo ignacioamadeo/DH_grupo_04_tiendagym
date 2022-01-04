@@ -98,9 +98,17 @@ let loginController = {
         image: `../imgRegister/${req.file.filename}`,
       };
       let newUser = await User.update(userEdit, id);
+      let admi = await User.admi();
       let userToLogin = await User.findByField(req.body.email);
-      if (userToLogin) {
+      // if (userToLogin) {
+      //   req.session.userLogged = userToLogin;
+      // }
+      if( admi.email === userToLogin.email ){
+        req.session.userAdmin = admi
+      }
+      else{
         req.session.userLogged = userToLogin;
+        
       }
       res.redirect("/");
     } catch (error) {
