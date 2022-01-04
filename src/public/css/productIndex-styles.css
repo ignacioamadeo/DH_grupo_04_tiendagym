@@ -2,6 +2,33 @@
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile: */
 
+.indexCont1Imagen{
+display: none;
+}
+
+.indexCont1Texto{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    display: block;
+    margin: 30px auto 10px auto;
+    padding: 5px auto;
+    color: rgb(80, 80, 80);
+    top: 90px;
+}
+
+.indexCont1SubTexto{
+    text-align: center;
+    font-size: 15px;
+    display: block;
+    margin: 10px auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    color:  rgb(109, 109, 109)
+}
+
+
 
 .productIndArticulos{
     text-align: left;
@@ -12,12 +39,12 @@
     align-items: center;
     max-width: 1000px;
     margin: 0px auto;
-    padding-top: 180px;
+    padding-top: 0px;
 }
 
 .tarjetaProducto{
     background-color: white;
-    margin: 20px 0;
+    margin: 20px 5px;
     border-radius: 0px;
     width: 300px;
     max-height: 380px;
@@ -154,11 +181,18 @@
     margin-bottom: 100px;
 }
 
+/*---- 
+---- 
+---
+💻 TABLET Y DESKTOP: 💻 : 
+---
+----
+------*/
 
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Tablet: */
-@media (min-width: 481px){
+@media (min-width: 750px){
 
     .indexCont1Imagen{
+        display: block;
         width: 100%;
         height: auto;
         object-fit: cover;
@@ -183,16 +217,20 @@
         top: 90px;
         text-shadow: 3px 3px 10px #303030;
     }
+    .indexCont1SubTexto{
+        color: white;
+        position: absolute;
+        top: 160px;
+        width: 100%;
+        z-index: 100;
+        }
     .mainProductIndex{
         margin-top: 0px;
     }
-
-
-}
-
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Compu normal: */
-@media (min-width: 769px){
-
+    .productIndArticulos{
+        padding-top: 200px;
+    }
+    
 
 
 }

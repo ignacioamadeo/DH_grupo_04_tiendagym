@@ -6,10 +6,13 @@
 ----
 ------*/
 
+
+
 /*<-- MOBILE + DSK: BODY -->*/
-body{
-    width: 100vw
-}
+/* body{
+    width: 100vw;
+    height: auto;
+} */
 
 /*<-- MOBILE + DSK: BODY -->*/
 .bodyHome{
@@ -234,29 +237,17 @@ h2{
   }
 
 
-/*---- 
----- 
----
-📱 TABLET: 📱 : 
----
-----
-------*/
 
-@media (min-width: 481px){
-
- 
-
-}
 
 /*---- 
 ---- 
 ---
-💻 DESKTOP: 💻 : 
+💻 TABLET Y DESKTOP: 💻 : 
 ---
 ----
 ------*/
 
-@media (min-width: 769px){
+@media (min-width: 750px){
 
 
 /*<-- DSK: ANIMACIONES EN HOVER CATEGORÍAS PRODUCTOS -->*/
