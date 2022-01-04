@@ -14,11 +14,11 @@
     padding: 15px 10px 15px 10px;
 }
 
-.productIndArticulos article{
-    margin: 10px 0;
-    border-radius: 5px;
+.tarjetaProducto{
+    margin: 20px 0;
+    border-radius: 0px;
     width: 300px;
-    height: 380px;
+    max-height: 380px;
     position: relative;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     transition: 0.5s;
@@ -27,24 +27,47 @@
 .productIndArticulos article:hover{
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 16px 30px 0 rgba(0, 0, 0, 0.1);   
 }
-
+/* Imagen tarjeta */
+.imagenTarjeta{
+    height: 250px;
+    width: 100%;
+}
+/* Pie de imagen: */
 .productIndArticulos article ul {
     display: block;
     padding: 5px 20px;
+    background-image: linear-gradient(180deg,#eeeeee,#ffffff);
+    transition: 2s;
+}
+.productIndArticulos article ul:hover {
+    background-image: white;
 }
 
+
+/* General: listado con precio, cuotas y envío: */
 .productIndArticulos article ul li{
     list-style: none;
     display: block;
 }
-
-.precioProducto{
+/* Nombre producto: */
+.nombreProducto{
+    color: rgb(71, 71, 71);
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    padding: 5px 0 0 0;
-
+    padding: 7px 0;
+    height: 40px;
+    padding: 10px 0 10px 0;
 }
-
+/* Precio producto: */
+.precioProducto{
+    color: rgb(44, 44, 44);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 20px 0 10px 0;
+}
+/* Cuotas producto: */
 .cuotasProducto{
     color: rgb(15, 91, 179);
     font-size: 10px;
@@ -52,12 +75,6 @@
     padding: 2px 0 7px 0;
 }
 
-.nombreProducto{
-    font-size: 14px;
-    font-weight: 200;
-    padding: 7px 0;
-    height: 40px;
-}
 
 .envioProducto{
     color: rgb(63, 168, 21);
@@ -71,13 +88,41 @@
     display: block;
     width: 260px;
     height: 250px;
-    margin: 4px auto;
+    margin: 15px auto;
 }
 .imagenProducto img{
     max-width: 250px;
     max-height: 250px;
     margin: auto auto;
     display: block;
+}
+
+.mainProductIndex{
+    margin-top: 150px;
+  
+}
+
+.titleAllProducts{
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+}
+
+.editProduct{
+   padding: 10px;
+   cursor: pointer;
+}
+
+.deleteProdutc{
+    padding: 10px;
+    margin-left: 110px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.allproductConteinerCard{
+    margin: auto;
+    margin-bottom: 100px;
 }
 
 
@@ -92,7 +137,7 @@
 @media (min-width: 769px){
 
 .mainProductIndex{
-    margin: auto∫ auto;
+    margin: 72.68px auto auto auto;
 }
 
 

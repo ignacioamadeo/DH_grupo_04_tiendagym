@@ -1,10 +1,31 @@
+<!-- Cada tarjeta de productos a iterar: -->
 <article class="tarjetaProducto">
-    <a href="../productDetail/<%= item.prodID %>"><div class="imagenProducto"><img src='<%= item.prodImg %>'></div></a>
+
+    <!-- Imagen con hipervínculo del producto para clickear sobre la imacen: -->
+    <div class="imagenTarjeta">
+        <!-- Hipervínculo -->
+        <a href="../productDetail/<%= item.prodID %>"> 
+            <!-- Imagen -->
+            <div class="imagenProducto"><img src='<%= item.prodImg %>'></div>
+        </a>
+    </div>
+
     <ul>
-        <li class="precioProducto"><%= item.prodPrecio %></li>
-        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li>
-        <a href="../productDetail/<%= item.prodID %>"><li class="nombreProducto"><%= item.prodNombre %></li></a>
-        <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li>
+        <!-- Hipervínculo -->
+        <a href="../productDetail/<%= item.prodID %>">
+            <!-- Nombre del producto -->
+            <li class="nombreProducto">
+                <%= item.prodNombre %>
+            </li>
+        </a>
+
+        <!-- Precio: -->
+        <li class="precioProducto">$ <%= item.prodPrecio %> </li>
+        <!-- Cuotas: -->
+        <!-- <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li> -->
+        <!-- Envío: -->
+        <!-- <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li> -->
     </ul>
+    
 </article>
 
