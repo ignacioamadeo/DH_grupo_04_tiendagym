@@ -14,18 +14,34 @@
         <!-- Hipervínculo -->
         <a href="../productDetail/<%= item.prodID %>">
             <!-- Nombre del producto -->
-            <li class="nombreProducto">
-                <%= item.prodNombre %>
+            <li class="nombreProducto"> <%= item.prodNombre %>
+            <!-- Precio: -->
+            <li class="precioProducto">$ <%= item.prodPrecio %> </li>
             </li>
         </a>
-
-        <!-- Precio: -->
-        <li class="precioProducto">$ <%= item.prodPrecio %> </li>
-        <!-- Cuotas: -->
-        <!-- <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %></li> -->
-        <!-- Envío: -->
-        <!-- <li class="envioProducto">Envío gratis: <%= item.envioGratis %></li> -->
     </ul>
+    
+    <a href="../productDetail/<%= item.prodID %>">
+    <div class="overlayTarjetaProducto">
+       
+        <!-- Cuotas: -->
+        <% if (item.prodCantidadCuotas != 0) { %>
+        <div class="cuotasProducto">💳 <%= item.prodCantidadCuotas %> cuota/s sin interés
+        </div>
+        <% } %> 
+       
+        <!-- Envío: -->
+        <% if (item.envioGratis == 1) { %>
+        <div class="envioProducto">
+            <!-- <img src="../images/fast-delivery(1).png" >  -->
+            🚚 Envío gratis
+        </div>
+        <% } %> 
+
+    </div>
+    </a>
+
+
     
 </article>
 
