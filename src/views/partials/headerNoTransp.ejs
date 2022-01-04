@@ -1,0 +1,83 @@
+<!-- HEADER completo -->
+<header class="mainHeaderNoTransp">
+
+    <!--LOGO-->
+    <a href="../" ><img src="../images/tgym_logos-12.png" class="logoPrincipal" /></a>
+    
+    <!--BUSCADOR-->
+    <nav class="busqueda">
+      <i class="fas fa-search"></i>
+      <form action="/search" method="GET" class="searchForm">
+        <input type="text" name="search" class="search" />
+      </form>
+    </nav>
+
+    <!--MODO NOCTURNO-->
+   
+    <!-- <nav class="apaEnce">
+      <i class="fas fa-toggle-on switchD"></i>
+      
+    </nav> -->
+  
+
+    <!--LOGIN + CARRITO -->
+
+    <nav class="loginCarrito ">
+
+      <!---SESSION: Condicional, si está logueado agregar nombre de usuario y foto perfil, sino... -->
+
+      <% if (locals.isLogged || locals.Logged ) { %>
+     
+      <% if (locals.isLogged) { %>
+
+        <ul class="barraProfile">
+          <li>
+            <a href="/login/profile">
+              <%= locals.userLogged.username%>
+            </a>
+            <ul>
+              <li><a href="../construction">Configuración</a></li>
+              <li><a href="../construction">Mis Compras</a></li>
+              <li><a href="../construction">Mis Tarjetas</a></li>
+              <li><a href="../login/logout">Cerrar Sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="/login/profile" class="profileUser"><img src="/imgRegister/<%= locals.userLogged.image%>"
+            alt="No se encontro la imagen" /></a>
+
+            <% } %>
+
+          <% if (locals.Logged) { %>
+
+            <ul class="barraProfile">
+              <li>
+                <a href="/login/profile">
+                  <%= locals.adminLogged.username%>
+                </a>
+                <ul>
+                  <li><a href="../construction">Configuración</a></li>
+                  <li><a href="../newProduct">New Product</a></li>
+                  <li><a href="../newProduct/allProducts">Todos los Productos</a></li>
+                  <li><a href="../login/logout">Cerrar Sesión</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="/login/profile" class="profileUser"><img src="/imgRegister/<%= locals.adminLogged.image%>"
+                alt="No se encontro la imagen" /></a>
+    
+            <% } %>
+    
+            <% } else { %>
+
+              <a href="../login"><i class="fas fa-user-circle logoHeaderProfile" > </i></a>
+              <% } %>
+
+    </nav>
+
+  </div>
+
+
+
+</header>
+

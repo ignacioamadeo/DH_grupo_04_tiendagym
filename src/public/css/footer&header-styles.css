@@ -10,6 +10,9 @@
 .mainHeader{
     display: none;
 }
+.mainHeaderNoTransp{
+    display: none;
+}
 
 /*<-- MOBILE: HEADER -->*/
 .mobMainHeader{
@@ -43,7 +46,6 @@
     margin: 5px 0px 5px 10px;
     max-height: 68px;
 }
-
 
 /*<-- MOBILE: BÚSQUEDA -->*/
 .mobBusqueda{
@@ -226,6 +228,7 @@ footer{
     flex-direction: column; 
     justify-content: space-around;
     margin: 10px 0 0 0;
+    z-index: 100;
 }
 .footerLinks{
     margin: 20px 0 auto 0;
@@ -281,6 +284,21 @@ footer{
     height: 100px;
     box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.2);
 }
+
+/*<-- DSK: HEADER TODO -->*/
+.mainHeaderNoTransp{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(2, 43, 58);
+    transition: 2s; 
+    justify-content:space-around;
+}
+
 
 /*<-- DSK: LOGO -->*/
 .logoPrincipal{
@@ -433,14 +451,12 @@ footer{
 
 /*<-- DESKTOP: PERFIL USUARIO EN BARRA -->*/
 .logoHeaderProfile{
-    font-size: 40px;
+    font-size: 35px;
     color: white;
     margin: 10px auto 10px auto;
     display: block;
     margin: auto 0px auto 0px;
 }
-
-
 
 /*<-- DESKTOP: IMAGEN USUARIO LOGUEADO -->*/
 /* .profileUser{

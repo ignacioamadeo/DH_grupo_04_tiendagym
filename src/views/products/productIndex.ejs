@@ -1,23 +1,30 @@
+<!--Display de productos todos: productIndex.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 
+    <!-- IMPORT config -->
     <%- include('../partials/head') %>
 
 <body>
-    <%- include('../partials/header') %>
-    <!--Termina header y comienza main de la web -->
+
+  <!-- IMPORT headers -->
+    <%- include('../partials/headerNoTransp') %>
+    <%- include('../partials/headerMobile') %>
+
+    <!-- MAIN: -->
     <main class="mainProductIndex">
 
    <!-- HOME CONTENEDOR 1 -->
-   <section class="homeCont1">
+   <section class="indexCont1">
     <!--Título-->
-    <div class="homeCont1Titulo textoInspira">
-      Section name
+    <div class="indexCont1Texto">
+      Productos
+    </div>
+    <div class="indexCont1SubTexto">
+      Desplázate para encontrar cientos de productos
     </div>
     <!--Imagen-->
-    <video autoplay muted loop class="videoCarrousel">
-      <source src=".\videos\pexels-mart-production-7884024.mp4" type="video/mp4" />
-    </video>
+      <img src="..\images\pexels-mikhail-nilov-6740821.jpg" class="indexCont1Imagen"/>
 
   </section>
 
@@ -27,9 +34,12 @@
               <% }); %>
         </section>
     </main>
+
+
     <%- include('../partials/footer') %>
 
     <script src="/js/header.js"> </script>
+    <script src="/js/menuHamburguesa.js"> </script>
 </body>
 
 </html>
