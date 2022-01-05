@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+  <%- include('../partials/head') %>
 
   <body>
     <!--Video de fondo -->
@@ -10,108 +10,131 @@
     <main>
       <!--Comienza y termina main de la web con el formulario de register -->
       <div class="formRegister">
-        <form action="/register" method="POST" enctype="multipart/form-data" class="formValidationRegister">
-          <a href="./"><img class="logoHeaderLogin" src=".\images\tgym_logos-09.png" alt="No encontre Imagen" /></a>
-          
+        <form
+          action="/register"
+          method="POST"
+          enctype="multipart/form-data"
+          class="formValidationRegister"
+        >
+          <a href="./"
+            ><img
+              class="logoHeaderLogin"
+              src=".\images\tgym_logos-09.png"
+              alt="No encontre Imagen"
+          /></a>
+
           <!--ERRORES de validación (viene de public/js/validacionForm.js) -->
           <div class="errores">
-            <ul id="ulErrores"> </ul>
+            <ul id="ulErrores"></ul>
           </div>
           <!--INPUT NOMBRE: -->
           <div>
             <label> Nombre </label>
           </div>
           <div>
-            <input class="name" type="text" name="firstName" placeholder="Nombre"
-              value="<%= locals.old && old.firstName ? old.firstName : ''%>" />
+            <input
+              class="name"
+              type="text"
+              name="firstName"
+              placeholder="Nombre"
+              value="<%= locals.old && old.firstName ? old.firstName : ''%>"
+            />
           </div>
           <% if (locals.errors && errors.firstName) { %>
-            <div class="msg-errors">
-              <%= errors.firstName.msg %>
-            </div>
-            <% } %>
-              <!--INPUT APELLIDO: -->
-              <div>
-                <label> Apellido </label>
-              </div>
-              <div>
-                <input class="apellido" type="text" name="lastName" placeholder="Apellido"
-                  value="<%= locals.old && old.lastName ? old.lastName : ''%>" />
-              </div>
-              <% if (locals.errors && errors.lastName) { %>
-                <div class="msg-errors">
-                  <%= errors.lastName.msg %>
-                </div>
-                <% } %>
-                  <!--INPUT MAIL: -->
-                  <div>
-                    <label> Mail </label>
-                  </div>
+          <div class="msg-errors"><%= errors.firstName.msg %></div>
+          <% } %>
+          <!--INPUT APELLIDO: -->
+          <div>
+            <label> Apellido </label>
+          </div>
+          <div>
+            <input
+              class="apellido"
+              type="text"
+              name="lastName"
+              placeholder="Apellido"
+              value="<%= locals.old && old.lastName ? old.lastName : ''%>"
+            />
+          </div>
+          <% if (locals.errors && errors.lastName) { %>
+          <div class="msg-errors"><%= errors.lastName.msg %></div>
+          <% } %>
+          <!--INPUT MAIL: -->
+          <div>
+            <label> Mail </label>
+          </div>
 
-                  <div>
-                    <input class="emailF" type="email" name="email" placeholder="Correo Electronico"
-                      value="<%= locals.old && old.email ? old.email : ''%>" />
-                  </div>
-                  <% if (locals.errors && errors.email) { %>
-                    <div class="msg-errors">
-                      <%= errors.email.msg %>
-                    </div>
-                    <% } %>
-                      <!--INPUT USERNAME: -->
-                      <div>
-                        <label>Nombre de usuario</label>
-                      </div>
+          <div>
+            <input
+              class="emailF"
+              type="email"
+              name="email"
+              placeholder="Correo Electronico"
+              value="<%= locals.old && old.email ? old.email : ''%>"
+            />
+          </div>
+          <% if (locals.errors && errors.email) { %>
+          <div class="msg-errors"><%= errors.email.msg %></div>
+          <% } %>
+          <!--INPUT USERNAME: -->
+          <div>
+            <label>Nombre de usuario</label>
+          </div>
 
-                      <div>
-                        <input type="text" name="username" placeholder="Usuario" minlength="6" maxlength="10"
-                          value="<%= locals.old && old.username ? old.username : ''%>" />
-                      </div>
-                      <% if (locals.errors && errors.username) { %>
-                        <div class="msg-errors">
-                          <%= errors.username.msg %>
-                        </div>
-                        <% } %>
-                          <!--INPUT CONTRASEÑA: -->
-                          <div>
-                            <label> Contraseña </label>
-                          </div>
-                          <div>
-                            <input class="contrasenia" type="password" name="password" minlength="8"
-                              placeholder="Contraseña" />
-                          </div>
-                          <% if (locals.errors && errors.password) { %>
-                            <div class="msg-errors">
-                              <%= errors.password.msg %>
-                            </div>
-                            <% } %>
-                              <!--INPUT IMAGEN: -->
-                              <div>
-                                <label> Agregar imagen </label>
-                              </div>
-                              <div>
-                                <input type="file" name="image" class="fileImagen" />
-                              </div>
-                              <% if (locals.errors && errors.file) { %>
-                                <div class="msg-errors">
-                                  <%= errors.file.msg %>
-                                </div>
-                                <% } %>
-                                  <!--BOTONES: -->
-                                  <div>
-                                    <button type="reset">Borrar</button>
-                                  </div>
-                                  <div>
-                                    <button type="submit">Crear Usuario</button>
-                                  </div>
-                                  <!--OTROS VÍNCULOS: -->
-                                  <div class="terminosLogin">
-                                    <a href="#"> Términos y Condiciones </a>
-                                    <a href="#"> - Volver al Sitio </a>
-                                  </div>
+          <div>
+            <input
+              type="text"
+              name="username"
+              placeholder="Usuario"
+              minlength="6"
+              maxlength="10"
+              value="<%= locals.old && old.username ? old.username : ''%>"
+            />
+          </div>
+          <% if (locals.errors && errors.username) { %>
+          <div class="msg-errors"><%= errors.username.msg %></div>
+          <% } %>
+          <!--INPUT CONTRASEÑA: -->
+          <div>
+            <label> Contraseña </label>
+          </div>
+          <div>
+            <input
+              class="contrasenia"
+              type="password"
+              name="password"
+              minlength="8"
+              placeholder="Contraseña"
+            />
+          </div>
+          <% if (locals.errors && errors.password) { %>
+          <div class="msg-errors"><%= errors.password.msg %></div>
+          <% } %>
+          <!--INPUT IMAGEN: -->
+          <div>
+            <label> Agregar imagen </label>
+          </div>
+          <div>
+            <input type="file" name="image" class="fileImagen" />
+          </div>
+          <% if (locals.errors && errors.file) { %>
+          <div class="msg-errors"><%= errors.file.msg %></div>
+          <% } %>
+          <!--BOTONES: -->
+          <div>
+            <button type="reset">Borrar</button>
+          </div>
+          <div>
+            <button type="submit">Crear Usuario</button>
+          </div>
+          <!--OTROS VÍNCULOS: -->
+          <div class="terminosLogin">
+            <a href="#"> Términos y Condiciones </a>
+            <a href="#"> - Volver al Sitio </a>
+          </div>
         </form>
       </div>
     </main>
     <!-- <script src="/js/validacionForm.js"> </script> -->
   </body>
-
 </html>

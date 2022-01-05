@@ -1,11 +1,12 @@
 
 .mainPorfile{
-    margin-top: 150px;
+    margin-top: 110px;
 }
 
 .bienvenido{
     text-align: right;
     margin-right:40px ;
+    margin-bottom: 40px;
     
     
 }
@@ -42,4 +43,7 @@ background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/64/55/72/68/700
     margin-left: 10px;
     margin-bottom: 10px;
     padding: 7px;
+}
+.inputFile{
+    width: 100%;
 }

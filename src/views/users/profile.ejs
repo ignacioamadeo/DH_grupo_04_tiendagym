@@ -8,7 +8,7 @@
 
     <main>
       <section class="mainPorfile">
-      <%- include('../partials/menuLateral') %>
+      
       <h1 class="bienvenido">Bienvenido <%= user.username%></h1>
       <section class="imgProfile">
         <img
@@ -34,7 +34,7 @@
            <br/>
            <input name="username" value= <%= user.username %> />
            <br/>
-           <input type="file" name="image" />
+           <input type="file" name="image" class="inputFile"/>
            <br/>
            <input type="submit" name="enviar" id="" value="Guardar" />
            <br/>
