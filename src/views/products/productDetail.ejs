@@ -24,13 +24,13 @@
                             <p class="precioPrductMobile">
                                $ <%= product.prodPrecio %>
                             </p>
-                            <p class="cuotasProductMobile">en <%= product.prodCantidadCuotas %>x <%=
-                                        product.prodPrecioCuotas %>
+                            <p class="cuotasProductMobile">en <%= product.prodCantidadCuotas %> <%=
+                                        product.prodPrecioCuotas %> cuotas
                             </p>
                             <p class="parrDestacado">ver medios de pagos</p>
                         </article>
                         <article class="stockProduc">
-                            <h3>Stock disponible</h3>
+                            <div>Stock disponible</div>
                             <form action="/cantidad" method="GET">
                                 <label>Cantidad:</label>
                                 <select name="cantidad">
@@ -56,11 +56,11 @@
                         </article>
                         <article class="servicioDetai">
                             <i class="fas fa-truck"></i>
-                            <p>Formas de envio</p>
+                            <p>Consulte formas de envio</p>
                         </article>
                         <article class="servicioDetai">
                             <i class="fas fa-exchange-alt"></i>
-                            <p>Garantia</p>
+                            <p>Consulte por garantías</p>
                         </article>
                     </section>
                     <!---->
@@ -182,6 +182,7 @@
                             </article>
                             <article class="stockDetailDesk">
                                 <form action="/cantidad" method="GET">
+
                                     <label>Cantidad:</label>
                                     <select name="cantidad">
                                         <% for(let i=1; i <=product.prodCantidad; i++){ %>
