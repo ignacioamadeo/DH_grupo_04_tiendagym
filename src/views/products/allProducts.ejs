@@ -11,9 +11,14 @@
         <%- include('../partials/headerNoTransp') %>
             <%- include('../partials/headerMobile') %>
 
+                <!--Imagen de fondo-->
+                <div>
+                    <img src="..\images\pexels-karolina-grabowska-4397831.jpg" class="indexCont1Imagen" />
+                </div>
+
                 <!-- INICIO MAIN: -->
                 <main class="mainProductIndex">
-
+                    <div class="granContenedorProductIndex"> 
                     <!-- HOME CONTENEDOR 1 -->
                     <section class="indexCont1">
                         <!--Título-->
@@ -23,8 +28,7 @@
                         <div class="indexCont1SubTexto">
                             Desplázate para encontrar cientos de productos
                         </div>
-                        <!--Imagen-->
-                        <img src="..\images\pexels-mikhail-nilov-6740821.jpg" class="indexCont1Imagen" />
+
 
                     </section>
 
@@ -60,123 +64,221 @@
                                     </ul>
 
                                     <!-- Lado "B" Tarjeta (editar producto): -->
-                                    <a href="/modifyProduct/<%= item.prodID  %>">
                                         <div class="overlayTarjetaProducto">
-                                            Editar:
-                                            <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
-                                                method="POST" style="display: inline-flex">
 
-                                                <button type="submit">ELIMINAR</button>
+                                            <a href="/modifyProduct/<%= item.prodID  %>" class="modifyEditar">
+                                            
+                                            ✏️ Editar producto
+                                            </a>
+                                            <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" >
+        
+                                                <button type="submit" class="modifyEliminar">⚠️ ELIMINAR</button>
                                             </form>
                                         </div>
-                                    </a>
 
                                 </article>
                                 <% } %>
                                     <% }); %>
                     </section>
+                    <!-- FIN HOME CONTENEDOR 1 -->
 
 
-                    <!-- SECCION 1: BARRAS -->
-                    <h2 class="titleAllProducts">Pesas, Discos y Barras</h2>
+                    <!-- HOME CONTENEDOR 2 -->
+                    <section class="indexCont1">
+                        <!--Título-->
+                        <div class="indexCont1Texto">
+                            Pesas, discos y barras
+                        </div>
+                        <div class="indexCont1SubTexto">
+                            Desplázate para encontrar cientos de productos
+                        </div>
+
+                    </section>
+
+                    <!-- TARJETAS DE PRODUCTOS: -->
                     <section class="productIndArticulos allproductConteinerCard">
-                        <% productInfo.forEach(function(item){ %>
+
+                        <!-- Condicional con filtro de datos por categoría de productos: -->
+                        <% productInfo.filter(function(item){ %>
                             <% if (item.prodCategoria=="#PesDisBar" ) { %>
+
+                                <!-- Cada tarjeta de productos a iterar: -->
                                 <article class="tarjetaProducto">
-                                    <a href="../productDetail/<%= item.prodID %>">
-                                        <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
-                                    </a>
+
+                                    <!-- Imagen con hipervínculo del producto para clickear sobre la imacen: -->
+                                    <div class="imagenTarjeta">
+                                        <!-- Hipervínculo -->
+                                        <a href="../productDetail/<%= item.prodID %>">
+                                            <!-- Imagen -->
+                                            <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                                        </a>
+                                    </div>
+
                                     <ul>
-                                        <li class="precioProducto">$ <%= item.prodPrecio %>
-                                        </li>
-                                        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %>
-                                        </li>
+                                        <!-- Hipervínculo -->
                                         <a href="./productDetail/<%= item.prodID %>">
+                                            <!-- Nombre del producto -->
                                             <li class="nombreProducto">
                                                 <%= item.prodNombre %>
                                             </li>
+                                            <!-- Precio: -->
+                                            <li class="precioProducto">$ <%= item.prodPrecio %>
                                         </a>
-                                        <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
-                                        </li>
                                     </ul>
-                                    <a href="/modifyProduct/<%= item.prodID %>">Editar</a>
-                                    <form action="../modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
-                                        method="POST" style="display: inline-flex">
-                                        <button type="submit">ELIMINAR</button>
-                                    </form>
+
+                                    <!-- Lado "B" Tarjeta (editar producto): -->
+                                        <div class="overlayTarjetaProducto">
+
+                                            <a href="/modifyProduct/<%= item.prodID  %>" class="modifyEditar">
+                                            
+                                            ✏️ Editar producto
+                                            </a>
+                                            <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" >
+        
+                                                <button type="submit" class="modifyEliminar">⚠️ ELIMINAR</button>
+                                            </form>
+                                        </div>
+
                                 </article>
                                 <% } %>
                                     <% }); %>
                     </section>
+                    <!-- FIN HOME CONTENEDOR 2 -->
 
-                    <h2 class="titleAllProducts">Máquinas</h2>
+
+                    <!-- HOME CONTENEDOR 3 -->
+                    <section class="indexCont1">
+                        <!--Título-->
+                        <div class="indexCont1Texto">
+                            Máquinas
+                        </div>
+                        <div class="indexCont1SubTexto">
+                            Desplázate para encontrar cientos de productos
+                        </div>
+
+                    </section>
+
+                    <!-- TARJETAS DE PRODUCTOS: -->
                     <section class="productIndArticulos allproductConteinerCard">
-                        <% productInfo.forEach(function(item){ %>
+
+                        <!-- Condicional con filtro de datos por categoría de productos: -->
+                        <% productInfo.filter(function(item){ %>
                             <% if (item.prodCategoria=="#Maq" ) { %>
+
+                                <!-- Cada tarjeta de productos a iterar: -->
                                 <article class="tarjetaProducto">
-                                    <a href="../productDetail/<%= item.prodID %>">
-                                        <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
-                                    </a>
+
+                                    <!-- Imagen con hipervínculo del producto para clickear sobre la imacen: -->
+                                    <div class="imagenTarjeta">
+                                        <!-- Hipervínculo -->
+                                        <a href="../productDetail/<%= item.prodID %>">
+                                            <!-- Imagen -->
+                                            <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                                        </a>
+                                    </div>
+
                                     <ul>
-                                        <li class="precioProducto">$ <%= item.prodPrecio %>
-                                        </li>
-                                        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %>
-                                        </li>
+                                        <!-- Hipervínculo -->
                                         <a href="./productDetail/<%= item.prodID %>">
+                                            <!-- Nombre del producto -->
                                             <li class="nombreProducto">
                                                 <%= item.prodNombre %>
                                             </li>
+                                            <!-- Precio: -->
+                                            <li class="precioProducto">$ <%= item.prodPrecio %>
                                         </a>
-                                        <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
-                                        </li>
                                     </ul>
-                                    <a href="/modifyProduct/<%= item.prodID %>">Editar</a>
-                                    <form action="../modifyProduct/delete/<%= item.prodID %>?_method=DELETE"
-                                        method="POST" style="display: inline-flex">
-                                        <button type="submit">ELIMINAR</button>
-                                    </form>
+
+                                    <!-- Lado "B" Tarjeta (editar producto): -->
+                                        <div class="overlayTarjetaProducto">
+
+                                            <a href="/modifyProduct/<%= item.prodID  %>" class="modifyEditar">
+                                            
+                                            ✏️ Editar producto
+                                            </a>
+                                            <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" >
+        
+                                                <button type="submit" class="modifyEliminar">⚠️ ELIMINAR</button>
+                                            </form>
+                                        </div>
+
                                 </article>
                                 <% } %>
                                     <% }); %>
                     </section>
+                    <!-- FIN HOME CONTENEDOR 3 -->
 
-                    <h2 class="titleAllProducts">Indumentaria</h2>
+
+                    <!-- HOME CONTENEDOR 4 -->
+                    <section class="indexCont1">
+                        <!--Título-->
+                        <div class="indexCont1Texto">
+                            Indumentaria
+                        </div>
+                        <div class="indexCont1SubTexto">
+                            Desplázate para encontrar cientos de productos
+                        </div>
+
+                    </section>
+
+                    <!-- TARJETAS DE PRODUCTOS: -->
                     <section class="productIndArticulos allproductConteinerCard">
-                        <% productInfo.forEach(function(item){ %>
+
+                        <!-- Condicional con filtro de datos por categoría de productos: -->
+                        <% productInfo.filter(function(item){ %>
                             <% if (item.prodCategoria=="#Ind" ) { %>
+
+                                <!-- Cada tarjeta de productos a iterar: -->
                                 <article class="tarjetaProducto">
-                                    <a href="../productDetail/<%= item.prodID%>">
-                                        <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
-                                    </a>
+
+                                    <!-- Imagen con hipervínculo del producto para clickear sobre la imacen: -->
+                                    <div class="imagenTarjeta">
+                                        <!-- Hipervínculo -->
+                                        <a href="../productDetail/<%= item.prodID %>">
+                                            <!-- Imagen -->
+                                            <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                                        </a>
+                                    </div>
+
                                     <ul>
-                                        <li class="precioProducto">$ <%= item.prodPrecio %>
-                                        </li>
-                                        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %>
-                                        </li>
+                                        <!-- Hipervínculo -->
                                         <a href="./productDetail/<%= item.prodID %>">
+                                            <!-- Nombre del producto -->
                                             <li class="nombreProducto">
                                                 <%= item.prodNombre %>
                                             </li>
+                                            <!-- Precio: -->
+                                            <li class="precioProducto">$ <%= item.prodPrecio %>
                                         </a>
-                                        <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
-                                        </li>
                                     </ul>
-                                    <a href="/modifyProduct/<%= item.prodID  %>">Editar</a>
-                                    <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
-                                        method="POST" style="display: inline-flex">
-                                        <button type="submit">ELIMINAR</button>
-                                    </form>
+
+                                    <!-- Lado "B" Tarjeta (editar producto): -->
+                                        <div class="overlayTarjetaProducto">
+
+                                            <a href="/modifyProduct/<%= item.prodID  %>" class="modifyEditar">
+                                            
+                                            ✏️ Editar producto
+                                            </a>
+                                            <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE" method="POST" >
+        
+                                                <button type="submit" class="modifyEliminar">⚠️ ELIMINAR</button>
+                                            </form>
+                                        </div>
+
                                 </article>
                                 <% } %>
                                     <% }); %>
                     </section>
-
+                    <!-- FIN HOME CONTENEDOR 4 -->
+                </div>
                 </main>
+
                 <%- include('../partials/footer') %>
                     <script src="/js/home.js"> </script>
                     <!-- <script src="/js/homeFadeIn.js"> </script> -->
                     <!-- <script src="/js/header.js"> </script> -->
                     <script src="/js/menuHamburguesa.js"> </script>
+
     </body>
 
 </html>
