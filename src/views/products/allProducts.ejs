@@ -14,158 +14,163 @@
                 <!-- INICIO MAIN: -->
                 <main class="mainProductIndex">
 
-                 <!-- IMAGEN DE FONDO: -->
-                 <div class="headerBack">
-                    <img>
-                </div>
+                    <!-- HOME CONTENEDOR 1 -->
+                    <section class="indexCont1">
+                        <!--Título-->
+                        <div class="indexCont1Texto">
+                            Funcional, pilates y yoga
+                        </div>
+                        <div class="indexCont1SubTexto">
+                            Desplázate para encontrar cientos de productos
+                        </div>
+                        <!--Imagen-->
+                        <img src="..\images\pexels-mikhail-nilov-6740821.jpg" class="indexCont1Imagen" />
 
-                        <!-- SECCION 1: YOGA -->
-                        <h2 class="titleAllProducts">Funcional, Pilates y Yoga</h2>
+                    </section>
 
-                        <!-- TARJETAS DE PRODUCTOS: -->
-                        <section class="productIndArticulos allproductConteinerCard">
+                    <!-- TARJETAS DE PRODUCTOS: -->
+                    <section class="productIndArticulos allproductConteinerCard">
 
-                            <!-- Condicional con filtro de datos por categoría de productos: -->
-                            <% productInfo.filter(function(item){ %>
-                                <% if (item.prodCategoria=="#funcPilYog" ) { %>
+                        <!-- Condicional con filtro de datos por categoría de productos: -->
+                        <% productInfo.filter(function(item){ %>
+                            <% if (item.prodCategoria=="#funcPilYog" ) { %>
 
-                                    <!-- Cada tarjeta de productos a iterar: -->
-                                    <article class="tarjetaProducto">
-                                    
-                                        <!-- Imagen con hipervínculo del producto para clickear sobre la imacen: -->
-                                       <div class="imagenTarjeta">
+                                <!-- Cada tarjeta de productos a iterar: -->
+                                <article class="tarjetaProducto">
+
+                                    <!-- Imagen con hipervínculo del producto para clickear sobre la imacen: -->
+                                    <div class="imagenTarjeta">
                                         <!-- Hipervínculo -->
                                         <a href="../productDetail/<%= item.prodID %>">
                                             <!-- Imagen -->
                                             <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
                                         </a>
+                                    </div>
+
+                                    <ul>
+                                        <!-- Hipervínculo -->
+                                        <a href="./productDetail/<%= item.prodID %>">
+                                            <!-- Nombre del producto -->
+                                            <li class="nombreProducto">
+                                                <%= item.prodNombre %>
+                                            </li>
+                                            <!-- Precio: -->
+                                            <li class="precioProducto">$ <%= item.prodPrecio %>
+                                        </a>
+                                    </ul>
+
+                                    <!-- Lado "B" Tarjeta (editar producto): -->
+                                    <a href="/modifyProduct/<%= item.prodID  %>">
+                                        <div class="overlayTarjetaProducto">
+                                            Editar:
+                                            <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
+                                                method="POST" style="display: inline-flex">
+
+                                                <button type="submit">ELIMINAR</button>
+                                            </form>
                                         </div>
+                                    </a>
 
-                                        <ul>
-                                            <!-- Hipervínculo -->
-                                            <a href="./productDetail/<%= item.prodID %>">
-                                                <!-- Nombre del producto -->
-                                                <li class="nombreProducto"> <%= item.prodNombre %></li>
-                                                <!-- Precio: -->
-                                                <li class="precioProducto">$ <%= item.prodPrecio %>
-                                            </a>
-                                        </ul>
+                                </article>
+                                <% } %>
+                                    <% }); %>
+                    </section>
 
-                                        <!-- Lado "B" Tarjeta (editar producto): -->
-                                        <a href="/modifyProduct/<%= item.prodID  %>">
-                                            <div class="overlayTarjetaProducto">
-                                                Editar:
-                                                <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
-                                                  method="POST" style="display: inline-flex">
 
-                                                    <button type="submit">ELIMINAR</button>
-                                                  </form>
-                                            </div>
+                    <!-- SECCION 1: BARRAS -->
+                    <h2 class="titleAllProducts">Pesas, Discos y Barras</h2>
+                    <section class="productIndArticulos allproductConteinerCard">
+                        <% productInfo.forEach(function(item){ %>
+                            <% if (item.prodCategoria=="#PesDisBar" ) { %>
+                                <article class="tarjetaProducto">
+                                    <a href="../productDetail/<%= item.prodID %>">
+                                        <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                                    </a>
+                                    <ul>
+                                        <li class="precioProducto">$ <%= item.prodPrecio %>
+                                        </li>
+                                        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %>
+                                        </li>
+                                        <a href="./productDetail/<%= item.prodID %>">
+                                            <li class="nombreProducto">
+                                                <%= item.prodNombre %>
+                                            </li>
                                         </a>
+                                        <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
+                                        </li>
+                                    </ul>
+                                    <a href="/modifyProduct/<%= item.prodID %>">Editar</a>
+                                    <form action="../modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
+                                        method="POST" style="display: inline-flex">
+                                        <button type="submit">ELIMINAR</button>
+                                    </form>
+                                </article>
+                                <% } %>
+                                    <% }); %>
+                    </section>
 
-                                    </article>
-                                    <% } %>
-                                        <% }); %>
-                        </section>
-
-                        
-                        <!-- SECCION 1: BARRAS -->
-                        <h2 class="titleAllProducts">Pesas, Discos y Barras</h2>
-                        <section class="productIndArticulos allproductConteinerCard">
-                            <% productInfo.forEach(function(item){ %>
-                                <% if (item.prodCategoria=="#PesDisBar" ) { %>
-                                    <article class="tarjetaProducto">
-                                        <a href="../productDetail/<%= item.prodID %>">
-                                            <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                    <h2 class="titleAllProducts">Máquinas</h2>
+                    <section class="productIndArticulos allproductConteinerCard">
+                        <% productInfo.forEach(function(item){ %>
+                            <% if (item.prodCategoria=="#Maq" ) { %>
+                                <article class="tarjetaProducto">
+                                    <a href="../productDetail/<%= item.prodID %>">
+                                        <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                                    </a>
+                                    <ul>
+                                        <li class="precioProducto">$ <%= item.prodPrecio %>
+                                        </li>
+                                        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %>
+                                        </li>
+                                        <a href="./productDetail/<%= item.prodID %>">
+                                            <li class="nombreProducto">
+                                                <%= item.prodNombre %>
+                                            </li>
                                         </a>
-                                        <ul>
-                                            <li class="precioProducto">$ <%= item.prodPrecio %>
-                                            </li>
-                                            <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas
-                                                    %>
-                                            </li>
-                                            <a href="./productDetail/<%= item.prodID %>">
-                                                <li class="nombreProducto">
-                                                    <%= item.prodNombre %>
-                                                </li>
-                                            </a>
-                                            <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
-                                            </li>
-                                        </ul>
-                                        <a href="/modifyProduct/<%= item.prodID %>">Editar</a>
-                                        <form action="../modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
-                                            method="POST" style="display: inline-flex">
-                                            <button type="submit">ELIMINAR</button>
-                                        </form>
-                                    </article>
-                                    <% } %>
-                                        <% }); %>
-                        </section>
+                                        <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
+                                        </li>
+                                    </ul>
+                                    <a href="/modifyProduct/<%= item.prodID %>">Editar</a>
+                                    <form action="../modifyProduct/delete/<%= item.prodID %>?_method=DELETE"
+                                        method="POST" style="display: inline-flex">
+                                        <button type="submit">ELIMINAR</button>
+                                    </form>
+                                </article>
+                                <% } %>
+                                    <% }); %>
+                    </section>
 
-                        <h2 class="titleAllProducts">Máquinas</h2>
-                        <section class="productIndArticulos allproductConteinerCard">
-                            <% productInfo.forEach(function(item){ %>
-                                <% if (item.prodCategoria=="#Maq" ) { %>
-                                    <article class="tarjetaProducto">
-                                        <a href="../productDetail/<%= item.prodID %>">
-                                            <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                    <h2 class="titleAllProducts">Indumentaria</h2>
+                    <section class="productIndArticulos allproductConteinerCard">
+                        <% productInfo.forEach(function(item){ %>
+                            <% if (item.prodCategoria=="#Ind" ) { %>
+                                <article class="tarjetaProducto">
+                                    <a href="../productDetail/<%= item.prodID%>">
+                                        <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
+                                    </a>
+                                    <ul>
+                                        <li class="precioProducto">$ <%= item.prodPrecio %>
+                                        </li>
+                                        <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas %>
+                                        </li>
+                                        <a href="./productDetail/<%= item.prodID %>">
+                                            <li class="nombreProducto">
+                                                <%= item.prodNombre %>
+                                            </li>
                                         </a>
-                                        <ul>
-                                            <li class="precioProducto">$ <%= item.prodPrecio %>
-                                            </li>
-                                            <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas
-                                                    %>
-                                            </li>
-                                            <a href="./productDetail/<%= item.prodID %>">
-                                                <li class="nombreProducto">
-                                                    <%= item.prodNombre %>
-                                                </li>
-                                            </a>
-                                            <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
-                                            </li>
-                                        </ul>
-                                        <a href="/modifyProduct/<%= item.prodID %>">Editar</a>
-                                        <form action="../modifyProduct/delete/<%= item.prodID %>?_method=DELETE"
-                                            method="POST" style="display: inline-flex">
-                                            <button type="submit">ELIMINAR</button>
-                                        </form>
-                                    </article>
-                                    <% } %>
-                                        <% }); %>
-                        </section>
+                                        <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
+                                        </li>
+                                    </ul>
+                                    <a href="/modifyProduct/<%= item.prodID  %>">Editar</a>
+                                    <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
+                                        method="POST" style="display: inline-flex">
+                                        <button type="submit">ELIMINAR</button>
+                                    </form>
+                                </article>
+                                <% } %>
+                                    <% }); %>
+                    </section>
 
-                        <h2 class="titleAllProducts">Indumentaria</h2>
-                        <section class="productIndArticulos allproductConteinerCard">
-                            <% productInfo.forEach(function(item){ %>
-                                <% if (item.prodCategoria=="#Ind" ) { %>
-                                    <article class="tarjetaProducto">
-                                        <a href="../productDetail/<%= item.prodID%>">
-                                            <div class="imagenProducto"><img src=<%=item.prodImg %>></div>
-                                        </a>
-                                        <ul>
-                                            <li class="precioProducto">$ <%= item.prodPrecio %>
-                                            </li>
-                                            <li class="cuotasProducto">Cuotas sin interés: <%= item.prodCantidadCuotas
-                                                    %>
-                                            </li>
-                                            <a href="./productDetail/<%= item.prodID %>">
-                                                <li class="nombreProducto">
-                                                    <%= item.prodNombre %>
-                                                </li>
-                                            </a>
-                                            <li class="envioProducto">Envío gratis: <%= item.envioGratis %>
-                                            </li>
-                                        </ul>
-                                        <a href="/modifyProduct/<%= item.prodID  %>">Editar</a>
-                                        <form action="/modifyProduct/delete/<%= item.prodID  %>?_method=DELETE"
-                                            method="POST" style="display: inline-flex">
-                                            <button type="submit">ELIMINAR</button>
-                                        </form>
-                                    </article>
-                                    <% } %>
-                                        <% }); %>
-                        </section>
-  
                 </main>
                 <%- include('../partials/footer') %>
                     <script src="/js/home.js"> </script>
