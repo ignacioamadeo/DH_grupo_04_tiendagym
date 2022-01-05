@@ -70,15 +70,10 @@ width: 100px;
 }
 
 
-
-.myVideo2 {
-  left: 50%;
-  height: 170%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
+.myVideo2{
+  display: none;
 }
+
 
 .terminosLogin{
   padding: 5px 0 10px 0;
@@ -123,6 +118,18 @@ width: 100px;
   .gymLogo{
     width: 50%;
   }
+  .myVideo2 {
+    left: 50%;
+    width: 190%;
+    height: 170%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    display: block;
+  }
+
+  
   }
 
 
