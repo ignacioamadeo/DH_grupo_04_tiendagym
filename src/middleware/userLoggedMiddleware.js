@@ -1,14 +1,16 @@
 const { User } = require("../models");
 async function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false;
-  let admi = await User.admi()
   let emailInCookie = req.cookies.recordame;
-
+  
   if (emailInCookie) {
+    let admi = await User.admi()
     let userFromCookie = await User.findByField(emailInCookie);
-
     if (userFromCookie &&   userFromCookie.email != admi.email) {
       req.session.userLogged = userFromCookie;
+    }
+    else{
+      req.session.userAdmin = admi ;
     }
   }
 
